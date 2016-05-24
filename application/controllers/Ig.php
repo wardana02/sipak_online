@@ -20,12 +20,20 @@ class Ig extends MY_Controller {
 		}
 
 		public function AL(){
-			$wil = $this->session->userdata('wilayah');
-			$jenkel = $this->ig->jenkel_bayi();
-			$jenkel_wil = $this->ig->jenkel_bayi_will($wil);
+			$status = $this->session->userdata('status');
+			$periode = $this->input->post("tanggal");
+			$periode = explode('/', $periode);
+				
+			//KONTROL UNTUK PERIODE
+			if ($periode[0]!='') {
+				$judul = 'Grafik Data Kelahiran Periode '.$periode[0].' - '.$periode[1];
+				$between = "AND tgl_kelahiran BETWEEN '$periode[0]' AND '$periode[1]'";
+			}else {
+				$judul = 'Grafik Data Kelahiran';
+			}
 
+			$jenkel = $this->ig->jenkel_bayi($between);
 			$a = $jenkel->JL + $jenkel->JP;
-			$b = $jenkel_wil->JL + $jenkel_wil->JP;
 
 				$kat = array(
 					'0'	=> "Jumlah Kelahiran",
@@ -38,14 +46,23 @@ class Ig extends MY_Controller {
 					'laki'	=> $jenkel->JL,
 					'wanita'=> $jenkel->JP,
 					);
+			//KONTROL KONTEN PADA GAMBAR GRAFIK
+			if ($status!='ADMIN'){
+				$wil = $this->session->userdata('wilayah');
+				$jenkel_wil = $this->ig->jenkel_bayi_will($wil,$between);
+				$b = $jenkel_wil->JL + $jenkel_wil->JP;
+
 				$kel = array(
 					'jml'	=> $b,
 					'laki'	=> $jenkel_wil->JL,
 					'wanita'=> $jenkel_wil->JP,
 					);
-	        	$data = array(
+	
+			}
+
+			$data = array(
 	        		'chart'		=>'active',
-	        		'head_g3'	=> 'Grafik Data Kelahiran',
+	        		'head_g3'	=> $judul,
 	        		'ig'		=> 'active', 'ig1'	=> 'active',
 	        		'nama_user'	=>	$this->session->userdata('nama_user'),
 	        		'status'	=>	$this->session->userdata('status'),
@@ -60,17 +77,26 @@ class Ig extends MY_Controller {
 	        		'kat'		=> $kat,
 	        		'conten'	=>	"backend/admin/Infografik/aktakelahiran",
 	        		);
-
-				$this->load->view('backend/dashboard/index', $data);
+			$this->load->view('backend/dashboard/index', $data);
+			
 		}
 
 		public function AM(){
-			$wil = $this->session->userdata('wilayah');
-			$jenkel = $this->ig->jenkel_jenazah();
-			$jenkel_wil = $this->ig->jenkel_jenazah_will($wil);
+			$status = $this->session->userdata('status');
+			$periode = $this->input->post("tanggal");
+			$periode = explode('/', $periode);
+				
+			//KONTROL UNTUK PERIODE
+			if ($periode[0]!='') {
+				$judul = 'Grafik Data Kematian Periode '.$periode[0].' - '.$periode[1];
+				$between = "AND tgl_kematian BETWEEN '$periode[0]' AND '$periode[1]'";
+			}else {
+				$judul = 'Grafik Data Kematian';
+			}
 
+			$jenkel = $this->ig->jenkel_jenazah($between);
 			$a = $jenkel->JL + $jenkel->JP;
-			$b = $jenkel_wil->JL + $jenkel_wil->JP;
+			
 
 				$kat = array(
 					'0'	=> "Jumlah Kematian",
@@ -83,14 +109,25 @@ class Ig extends MY_Controller {
 					'laki'	=> $jenkel->JL,
 					'wanita'=> $jenkel->JP,
 					);
-				$kel = array(
+				
+
+				//KONTROL KONTEN PADA GAMBAR GRAFIK
+				if ($status!='ADMIN'){
+					$wil = $this->session->userdata('wilayah');
+					$jenkel_wil = $this->ig->jenkel_jenazah_will($wil,$between);
+					$b = $jenkel_wil->JL + $jenkel_wil->JP;
+
+					$kel = array(
 					'jml'	=> $b,
 					'laki'	=> $jenkel_wil->JL,
 					'wanita'=> $jenkel_wil->JP,
 					);
+		
+				}
+
 	        	$data = array(
 	        		'chart'		=>'active',
-	        		'head_g3'	=> 'Grafik Data Kematian',
+	        		'head_g3'	=> $judul,
 	        		'ig'		=> 'active', 'ig2'	=> 'active',
 	        		'nama_user'	=>	$this->session->userdata('nama_user'),
 	        		'status'	=>	$this->session->userdata('status'),
@@ -110,12 +147,21 @@ class Ig extends MY_Controller {
 		}
 
 		public function AP(){
-			$wil = $this->session->userdata('wilayah');
-			$jenkel = $this->ig->jenkel_mempelai();
-			$jenkel_wil = $this->ig->jenkel_mempelai_will($wil);
+			$status = $this->session->userdata('status');
+			$periode = $this->input->post("tanggal");
+			$periode = explode('/', $periode);
+				
+			//KONTROL UNTUK PERIODE
+			if ($periode[0]!='') {
+				$judul = 'Grafik Data Perkawinan Periode '.$periode[0].' - '.$periode[1];
+				$between = "AND tgl_pemberkatan BETWEEN '$periode[0]' AND '$periode[1]'";
+			}else {
+				$judul = 'Grafik Data Perkawinan';
+			}
 
+			$wil = $this->session->userdata('wilayah');
+			$jenkel = $this->ig->jenkel_mempelai($between);
 			$a = $jenkel->JL + $jenkel->JP;
-			$b = $jenkel_wil->JL + $jenkel_wil->JP;
 
 				$kat = array(
 					'0'	=> "Jumlah Perkawinan",
@@ -124,18 +170,28 @@ class Ig extends MY_Controller {
 					);
 
 				$total = array(
-					'jml'	=> $jenkel->JL,
+					'jml'	=> $jenkel->JL + $jenkel->JP,
 					'laki'	=> $jenkel->JL,
 					'wanita'=> $jenkel->JP,
 					);
-				$kel = array(
-					'jml'	=> $jenkel_wil->JL,
+
+				//KONTROL KONTEN PADA GAMBAR GRAFIK
+				if ($status!='ADMIN'){
+					$wil = $this->session->userdata('wilayah');
+					$jenkel_wil = $this->ig->jenkel_mempelai_will($wil,$between);
+					$b = $jenkel_wil->JL + $jenkel_wil->JP;
+
+					$kel = array(
+					'jml'	=> $b,
 					'laki'	=> $jenkel_wil->JL,
 					'wanita'=> $jenkel_wil->JP,
 					);
+		
+				}
+
 	        	$data = array(
 	        		'chart'		=>'active',
-	        		'head_g3'	=> 'Grafik Data Perkwainan',
+	        		'head_g3'	=> $judul,
 	        		'ig'		=> 'active', 'ig3'	=> 'active',
 	        		'nama_user'	=>	$this->session->userdata('nama_user'),
 	        		'status'	=>	$this->session->userdata('status'),
@@ -155,12 +211,20 @@ class Ig extends MY_Controller {
 		}
 
 		public function AC(){
-			$wil = $this->session->userdata('wilayah');
-			$jenkel = $this->ig->jenkel_bercerai();
-			$jenkel_wil = $this->ig->jenkel_bercerai_will($wil);
+			$status = $this->session->userdata('status');
+			$periode = $this->input->post("tanggal");
+			$periode = explode('/', $periode);
+				
+			//KONTROL UNTUK PERIODE
+			if ($periode[0]!='') {
+				$judul = 'Grafik Data Perceraian Periode '.$periode[0].' - '.$periode[1];
+				$between = "AND tgl_putusan BETWEEN '$periode[0]' AND '$periode[1]'";
+			}else {
+				$judul = 'Grafik Data Perceraian';
+			}
 
+			$jenkel = $this->ig->jenkel_bercerai($between);
 			$a = $jenkel->JL + $jenkel->JP;
-			$b = $jenkel_wil->JL + $jenkel_wil->JP;
 
 				$kat = array(
 					'0'	=> "Jumlah Perceraian",
@@ -169,18 +233,28 @@ class Ig extends MY_Controller {
 					);
 
 				$total = array(
-					'jml'	=> $jenkel->JL,
+					'jml'	=> $jenkel->JL + $jenkel->JP,
 					'laki'	=> $jenkel->JL,
 					'wanita'=> $jenkel->JP,
 					);
-				$kel = array(
-					'jml'	=> $jenkel_wil->JL,
+
+				//KONTROL KONTEN PADA GAMBAR GRAFIK
+				if ($status!='ADMIN'){
+					$wil = $this->session->userdata('wilayah');
+					$jenkel_wil = $this->ig->jenkel_bercerai_will($wil,$between);
+					$b = $jenkel_wil->JL + $jenkel_wil->JP;
+
+					$kel = array(
+					'jml'	=> $b,
 					'laki'	=> $jenkel_wil->JL,
 					'wanita'=> $jenkel_wil->JP,
 					);
+		
+				}
+
 	        	$data = array(
 	        		'chart'		=>'active',
-	        		'head_g3'	=> 'Grafik Data Perceraian',
+	        		'head_g3'	=> $judul,
 	        		'ig'		=> 'active', 'ig4'	=> 'active',
 	        		'nama_user'	=>	$this->session->userdata('nama_user'),
 	        		'status'	=>	$this->session->userdata('status'),

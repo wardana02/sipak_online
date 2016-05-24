@@ -12,58 +12,62 @@ class Ig_model extends CI_Model
         parent::__construct();
     }
 
-    function jenkel_bayi(){
-            $query = $this->db->query("SELECT (SELECT COUNT(id_bayi) FROM data_bayi WHERE jk='Laki-Laki') as JL ,(SELECT COUNT(id_bayi) FROM data_bayi WHERE jk='Perempuan') as JP");
+    function jenkel_bayi($B){
+            $query = $this->db->query("SELECT (SELECT COUNT(id_bayi) FROM data_bayi WHERE jk='Laki-Laki' $B) as JL ,(SELECT COUNT(id_bayi) FROM data_bayi WHERE jk='Perempuan' $B) as JP");
                 return $query->row();
 
         }
 
-    function jenkel_bayi_will($wil){
+    function jenkel_bayi_will($wil,$B){
             $query = $this->db->query("SELECT (
-                        SELECT COUNT(id_bayi) FROM data_bayi JOIN akta_kelahiran ON akta_kelahiran.id_al=data_bayi.id_al JOIN dps ON akta_kelahiran.nik_pengaju=dps.nik WHERE data_bayi.jk='Laki-Laki' $wil) as JL ,(
-                        SELECT COUNT(id_bayi) FROM data_bayi JOIN akta_kelahiran ON akta_kelahiran.id_al=data_bayi.id_al JOIN dps ON akta_kelahiran.nik_pengaju=dps.nik WHERE data_bayi.jk='Perempuan' $wil)as JP ");
+                        SELECT COUNT(id_bayi) FROM data_bayi JOIN akta_kelahiran ON akta_kelahiran.id_al=data_bayi.id_al JOIN dps ON akta_kelahiran.nik_pengaju=dps.nik WHERE data_bayi.jk='Laki-Laki' $wil $B) as JL ,(
+                        SELECT COUNT(id_bayi) FROM data_bayi JOIN akta_kelahiran ON akta_kelahiran.id_al=data_bayi.id_al JOIN dps ON akta_kelahiran.nik_pengaju=dps.nik WHERE data_bayi.jk='Perempuan' $wil $B)as JP ");
                 return $query->row();
 
         }
 
-    function jenkel_jenazah(){
-            $query = $this->db->query("SELECT (SELECT COUNT(id_jenazah) FROM data_jenazah WHERE jk='LAKI-LAKI') as JL ,(SELECT COUNT(id_jenazah) FROM data_jenazah WHERE jk='PEREMPUAN') as JP");
+    function jenkel_jenazah($B){
+            $query = $this->db->query("SELECT (SELECT COUNT(id_jenazah) FROM data_jenazah WHERE jk='LAKI-LAKI' $B) as JL ,(SELECT COUNT(id_jenazah) FROM data_jenazah WHERE jk='PEREMPUAN' $B) as JP");
                 return $query->row();
 
         }
 
-    function jenkel_jenazah_will($wil){
+    function jenkel_jenazah_will($wil,$B){
             $query = $this->db->query("SELECT (
-                        SELECT COUNT(id_jenazah) FROM data_jenazah JOIN akta_kematian ON akta_kematian.id_am=data_jenazah.id_am JOIN dps ON akta_kematian.nik_pengaju=dps.nik WHERE data_jenazah.jk='LAKI-LAKI' $wil) as JL ,(
-                        SELECT COUNT(id_jenazah) FROM data_jenazah JOIN akta_kematian ON akta_kematian.id_am=data_jenazah.id_am JOIN dps ON akta_kematian.nik_pengaju=dps.nik WHERE data_jenazah.jk='PEREMPUAN' $wil)as JP ");
+                        SELECT COUNT(id_jenazah) FROM data_jenazah JOIN akta_kematian ON akta_kematian.id_am=data_jenazah.id_am JOIN dps ON akta_kematian.nik_pengaju=dps.nik WHERE data_jenazah.jk='LAKI-LAKI' $wil $B) as JL ,(
+                        SELECT COUNT(id_jenazah) FROM data_jenazah JOIN akta_kematian ON akta_kematian.id_am=data_jenazah.id_am JOIN dps ON akta_kematian.nik_pengaju=dps.nik WHERE data_jenazah.jk='PEREMPUAN' $wil $B)as JP ");
                 return $query->row();
 
         }
 
-    function jenkel_mempelai(){
-            $query = $this->db->query("SELECT (SELECT COUNT(id_mempelai) FROM data_mempelai WHERE status_mempelai='SUAMI') as JL ,(SELECT COUNT(id_mempelai) FROM data_mempelai WHERE status_mempelai='ISTRI') as JP");
-                return $query->row();
-
-        }
-
-    function jenkel_mempelai_will($wil){
+    function jenkel_mempelai($B){
             $query = $this->db->query("SELECT (
-                        SELECT COUNT(id_mempelai) FROM data_mempelai JOIN dps ON dps.nik=data_mempelai.nik WHERE data_mempelai.status_mempelai='SUAMI' $wil)  as JL ,(
-                        SELECT COUNT(id_mempelai) FROM data_mempelai JOIN dps ON dps.nik=data_mempelai.nik WHERE data_mempelai.status_mempelai='ISTRI' $wil) as JP");
+                SELECT COUNT(data_mempelai.id_ap) FROM data_mempelai JOIN data_perkawinan ON data_mempelai.id_ap=data_perkawinan.id_ap WHERE status_mempelai='SUAMI' $B) as JL ,(
+                SELECT COUNT(data_mempelai.id_ap) FROM data_mempelai JOIN data_perkawinan ON data_mempelai.id_ap=data_perkawinan.id_ap WHERE status_mempelai='ISTRI' $B) as JP");
                 return $query->row();
 
         }
 
-    function jenkel_bercerai(){
-            $query = $this->db->query("SELECT (SELECT COUNT(id_bercerai) FROM data_bercerai WHERE status_mempelai='SUAMI') as JL ,(SELECT COUNT(id_bercerai) FROM data_bercerai WHERE status_mempelai='ISTRI') as JP");
-                return $query->row();
-
-        }
-
-    function jenkel_bercerai_will($wil){
+    function jenkel_mempelai_will($wil,$B){
             $query = $this->db->query("SELECT (
-                        SELECT COUNT(id_mempelai) FROM data_mempelai JOIN dps ON dps.nik=data_mempelai.nik WHERE data_mempelai.status_mempelai='SUAMI' $wil)  as JL ,(
-                        SELECT COUNT(id_mempelai) FROM data_mempelai JOIN dps ON dps.nik=data_mempelai.nik WHERE data_mempelai.status_mempelai='ISTRI' $wil) as JP");
+                        SELECT COUNT(data_mempelai.id_ap) FROM data_mempelai JOIN dps ON dps.nik=data_mempelai.nik JOIN data_perkawinan ON data_mempelai.id_ap=data_perkawinan.id_ap WHERE data_mempelai.status_mempelai='SUAMI' $wil $B)  as JL ,(
+                        SELECT COUNT(data_mempelai.id_ap) FROM data_mempelai JOIN dps ON dps.nik=data_mempelai.nik JOIN data_perkawinan ON data_mempelai.id_ap=data_perkawinan.id_ap WHERE data_mempelai.status_mempelai='ISTRI' $wil $B) as JP");
+                return $query->row();
+
+        }
+
+    function jenkel_bercerai($B){
+            $query = $this->db->query("SELECT (
+                SELECT COUNT(data_bercerai.id_ac) FROM data_bercerai JOIN data_perceraian ON data_bercerai.id_ac=data_perceraian.id_ac WHERE status_mempelai='SUAMI' $B) as JL ,(
+                SELECT COUNT(data_bercerai.id_ac) FROM data_bercerai JOIN data_perceraian ON data_bercerai.id_ac=data_perceraian.id_ac WHERE status_mempelai='ISTRI' $B) as JP");
+                return $query->row();
+
+        }
+
+    function jenkel_bercerai_will($wil,$B){
+            $query = $this->db->query("SELECT (
+                        SELECT COUNT(data_bercerai.id_ac) FROM data_bercerai JOIN dps ON dps.nik=data_bercerai.nik JOIN data_perceraian ON data_bercerai.id_ac=data_perceraian.id_ac  WHERE data_bercerai.status_mempelai='SUAMI' $wil $B)  as JL ,(
+                        SELECT COUNT(data_bercerai.id_ac) FROM data_bercerai JOIN dps ON dps.nik=data_bercerai.nik JOIN data_perceraian ON data_bercerai.id_ac=data_perceraian.id_ac  WHERE data_bercerai.status_mempelai='ISTRI' $wil $B) as JP");
                 return $query->row();
 
         }
