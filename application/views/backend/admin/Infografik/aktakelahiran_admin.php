@@ -86,34 +86,20 @@
                     <tbody><tr>
                       <th>Elemen Data</th>
                       <th>Data Total Kelahiran</th>
-                      <?php if($status!='ADMIN') { 
-                          echo "<th>Data Kelahiran Per Wilayah</th>";
-                        }?>
-                      
                     </tr>
                     <tr>
                       <td>Total Jumlah Kelahiran Bayi</td>
                        <td> <?php echo $total['jml'];?> Bayi</td>
-                       <?php if($status!='ADMIN') { 
-                          echo "<td>$kel[jml] Bayi</td>";
-                        }?>
                     </tr>
                     
                     <tr>
-                      <td>Bayi_Laki-Laki</td>
+                      <td>Bayi Laki-Laki</td>
                        <td> <?php echo $total['laki']?>  Bayi</td>
-                       <?php if($status!='ADMIN') { 
-                          echo "<td>$kel[laki] Bayi</td>";
-                        }?>
                     </tr>
 
                     <tr>
                       <td>Bayi Perempuan</td>
                        <td> <?php echo $total['wanita'];?> Bayi</td>
-                       <?php if($status!='ADMIN') { 
-                          echo "<td>$kel[wanita] Bayi</td>";
-                        }?>
-                       
                     </tr>
                   </tbody></table>
                 </div>

@@ -47,7 +47,7 @@
     <script src=<?=base_url("assets/frontend2/js/jquery-1.8.3.min.js");?>></script>
     <script src=<?=base_url("assets/frontend2/js/bootstrap.min.js");?>></script>
     <script type="text/javascript" src=<?=base_url("assets/frontend2/js/hover-dropdown.js");?>></script>
-    <script defer src=<?=base_url("assets/frontend2/js/jquery.flexslider.js");?>></script>
+    <script src=<?=base_url("assets/frontend2/js/jquery.flexslider.js");?>></script>
     <script type="text/javascript" src=<?=base_url("assets/frontend2/assets/bxslider/jquery.bxslider.js");?>></script>
     <script type="text/javascript" src=<?=base_url("assets/frontend2/js/jquery.parallax-1.1.3.js");?>></script>
 

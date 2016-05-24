@@ -63,6 +63,18 @@
                 </ul>
                 <div class="tab-content" data-find="_10">
                   <div class="tab-pane active" id="tab_1-1">
+                  <form action=<?=base_url("ig/AC")?> method="post">
+                    <div class="col-sm-2">
+                      <label class="label-form pull-right"> Periode : </label>
+                    </div>
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control pull-right" name="tanggal" id="reservation">
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="submit" class="btn btn-primary" value="Tampilkan Data">
+                    </div>
+                  </form>
+
                     <div id="g3" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                   </div><!-- /.tab-pane -->
                   <div class="tab-pane" id="tab_2-2">
@@ -72,24 +84,33 @@
                     <tbody><tr>
                       <th>Elemen Data</th>
                       <th>Data Total Pengajuan</th>
-                      <th>Data Pengajuan Per Wilayah</th>
+                      <?php if($status!='ADMIN') { 
+                          echo "<th>Data Pengajuan Per Wilayah</th>";
+                        }?>
+                      
                     </tr>
                     <tr>
                       <td>Total Jumlah Data Perceraian</td>
                        <td> <?php echo $total['jml'];?> Pasangan</td>
-                       <td> <?php echo $kel['jml'];?>  Pasangan</td>
+                       <?php if($status!='ADMIN') { 
+                          echo "<td>$kel[jml] Pasangan</td>";
+                        }?>
                     </tr>
                     
                     <tr>
                       <td>Suami Cerai/Wilayah</td>
                        <td> <?php echo $total['laki']?>  Orang</td>
-                       <td> <?php echo $kel['laki'];?> Orang</td>
+                       <?php if($status!='ADMIN') { 
+                          echo "<td>$kel[laki] Orang</td>";
+                        }?>
                     </tr>
 
                     <tr>
                       <td>Istri Cerai/Wilayah</td>
                        <td> <?php echo $total['wanita'];?> Orang</td>
-                       <td><?php echo $kel['wanita'];?> Orang</td>
+                       <?php if($status!='ADMIN') { 
+                          echo "<td>$kel[wanita] Orang</td>";
+                        }?>
                     </tr>
                   </tbody></table>
                 </div>

@@ -241,11 +241,15 @@ $(function () {
             type: 'column',
             name: 'Total Data',
             data: [<?php echo $total['jml'].",".$total['laki'].",".$total['wanita'];?>]
-        }, {
+        }
+        <?php if($status!='ADMIN') { ?>
+        , {
             type: 'column',
             name: 'Per Kelurahan',
             data: [<?php echo $kel['jml'].",".$kel['laki'].",".$kel['wanita'];?>]
-        }]
+        }
+        <?php } ?>
+        ]
     });
 });
 

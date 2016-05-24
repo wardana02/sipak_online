@@ -10,9 +10,6 @@
 
     <title>Aplikasi Akta Online || Kota Surakarta</title>
 
-    <!-- Bootstrap core CSS 
-    <?=base_url("assets/frontend2/");?> -->
-
     
     <script src=<?=base_url("assets/js/jquery-2.1.4.min.js");?>></script>
 
