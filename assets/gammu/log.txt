@@ -1,0 +1,1896 @@
+Sun 2016/02/21 14:56:46 gammu-smsd[1396]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/02/21 14:56:46 gammu-smsd[1396]: Warning: No PIN code in C:\xampp\htdocs\project\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/02/21 14:56:47 gammu-smsd[1396]: Error connecting to database!
+Sun 2016/02/21 14:56:47 gammu-smsd[1396]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/02/21 14:56:47 gammu-smsd[1396]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/02/21 14:56:47 gammu-smsd[1396]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/02/21 14:57:08 gammu-smsd[4868]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/02/21 14:57:08 gammu-smsd[4868]: Warning: No PIN code in C:\xampp\htdocs\project\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/02/21 14:57:09 gammu-smsd[4868]: Error connecting to database!
+Sun 2016/02/21 14:57:09 gammu-smsd[4868]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/02/21 14:57:09 gammu-smsd[4868]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/02/21 14:57:09 gammu-smsd[4868]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/02/21 14:57:33 gammu-smsd[716]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/02/21 14:57:33 gammu-smsd[716]: Warning: No PIN code in C:\xampp\htdocs\project\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/02/21 14:57:34 gammu-smsd[716]: Error connecting to database!
+Sun 2016/02/21 14:57:34 gammu-smsd[716]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/02/21 14:57:34 gammu-smsd[716]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/02/21 14:57:34 gammu-smsd[716]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/02/21 15:08:50 gammu-smsd[6984]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/02/21 15:08:50 gammu-smsd[6984]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/02/21 15:08:50 gammu-smsd[6984]: Connected to Database: db_sipcapil on localhost
+Sun 2016/02/21 15:08:50 gammu-smsd[6984]: Connected to Database native_mysql: db_sipcapil on localhost
+Sun 2016/02/21 15:08:50 gammu-smsd[6984]: Created Windows RW shared memory at 003F0000
+Sun 2016/02/21 15:08:50 gammu-smsd[6984]: Starting phone communication...
+Sun 2016/02/21 15:08:59 gammu-smsd[6984]: Inserting phone info
+Sun 2016/02/21 15:09:01 gammu-smsd[6984]: Read 5 messages
+Sun 2016/02/21 15:10:47 gammu-smsd[6984]: Read 1 messages
+Sun 2016/02/21 16:10:40 gammu-smsd[6984]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Sun 2016/02/21 16:10:40 gammu-smsd[6984]: You might want to set CheckSecurity = 0 to avoid checking security status
+Sun 2016/02/21 16:10:52 gammu-smsd[6984]: Error getting security status: No response in specified timeout. Probably phone not connected. (TIMEOUT[14])
+Sun 2016/02/21 16:10:52 gammu-smsd[6984]: You might want to set CheckSecurity = 0 to avoid checking security status
+Sun 2016/02/21 16:11:04 gammu-smsd[6984]: Error getting security status: No response in specified timeout. Probably phone not connected. (TIMEOUT[14])
+Sun 2016/02/21 16:11:04 gammu-smsd[6984]: You might want to set CheckSecurity = 0 to avoid checking security status
+Sun 2016/02/21 16:11:04 gammu-smsd[6984]: Already hit 3 errors
+Sun 2016/02/21 16:11:04 gammu-smsd[6984]: Terminating communication: Entry is empty. (EMPTY[22])
+Sun 2016/02/21 16:11:04 gammu-smsd[6984]: Starting phone communication...
+Sun 2016/02/21 16:11:17 gammu-smsd[6984]: Error at init connection: No response in specified timeout. Probably phone not connected. (TIMEOUT[14])
+Sun 2016/02/21 16:11:17 gammu-smsd[6984]: Already hit 250 errors
+Sun 2016/02/21 16:11:17 gammu-smsd[6984]: Terminating communication: No response in specified timeout. Probably phone not connected. (TIMEOUT[14])
+Sun 2016/02/21 16:11:17 gammu-smsd[6984]: Going to 30 seconds sleep because of too much connection errors
+Sun 2016/02/21 16:11:47 gammu-smsd[6984]: Starting phone communication...
+Sun 2016/02/21 16:11:54 gammu-smsd[908]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/02/21 16:11:54 gammu-smsd[908]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/02/21 16:11:54 gammu-smsd[908]: Connected to Database: db_sipcapil on localhost
+Sun 2016/02/21 16:11:54 gammu-smsd[908]: Connected to Database native_mysql: db_sipcapil on localhost
+Sun 2016/02/21 16:11:54 gammu-smsd[908]: Created Windows RW shared memory at 00F60000
+Sun 2016/02/21 16:11:54 gammu-smsd[908]: Starting phone communication...
+Sun 2016/02/21 16:11:54 gammu-smsd[908]: Can't open device: Error opening device. Unknown, busy or no permissions. (DEVICEOPENERROR[2])
+Sun 2016/02/21 16:11:54 gammu-smsd[908]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/02/21 16:12:02 gammu-smsd[6512]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/02/21 16:12:02 gammu-smsd[6512]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/02/21 16:12:02 gammu-smsd[6512]: Connected to Database: db_sipcapil on localhost
+Sun 2016/02/21 16:12:02 gammu-smsd[6512]: Connected to Database native_mysql: db_sipcapil on localhost
+Sun 2016/02/21 16:12:02 gammu-smsd[6512]: Created Windows RW shared memory at 00E60000
+Sun 2016/02/21 16:12:02 gammu-smsd[6512]: Starting phone communication...
+Sun 2016/02/21 16:12:10 gammu-smsd[6512]: Inserting phone info
+Sun 2016/02/21 16:13:40 gammu-smsd[6512]: Read 1 messages
+Sun 2016/02/21 16:25:31 gammu-smsd[6512]: Error code: 2006, Error: MySQL server has gone away
+Sun 2016/02/21 16:25:31 gammu-smsd[6512]: SQL failed (timeout): UPDATE phones SET `TimeOut`= (NOW() + INTERVAL 10 SECOND) + 0, `Battery` = 0, `Signal` = 27 WHERE `IMEI` = '863448018379963'
+Sun 2016/02/21 16:25:31 gammu-smsd[6512]: reconnecting to database!
+Sun 2016/02/21 16:25:31 gammu-smsd[6512]: Reconnecting after 1 seconds...
+Sun 2016/02/21 16:25:33 gammu-smsd[6512]: Error connecting to database!
+Sun 2016/02/21 16:25:33 gammu-smsd[6512]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/02/21 16:25:33 gammu-smsd[6512]: Reconnecting after 4 seconds...
+Sun 2016/02/21 18:48:44 gammu-smsd[1192]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/02/21 18:48:44 gammu-smsd[1192]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/02/21 18:48:49 gammu-smsd[1192]: Error connecting to database!
+Sun 2016/02/21 18:48:49 gammu-smsd[1192]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/02/21 18:48:49 gammu-smsd[1192]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/02/21 18:48:49 gammu-smsd[1192]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/02/22 08:38:23 gammu-smsd[1928]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/02/22 08:38:23 gammu-smsd[1928]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/02/22 08:38:27 gammu-smsd[1928]: Error connecting to database!
+Mon 2016/02/22 08:38:27 gammu-smsd[1928]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/02/22 08:38:27 gammu-smsd[1928]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/02/22 08:38:27 gammu-smsd[1928]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/02/22 19:29:22 gammu-smsd[1908]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/02/22 19:29:22 gammu-smsd[1908]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/02/22 19:29:23 gammu-smsd[1908]: Error connecting to database!
+Mon 2016/02/22 19:29:23 gammu-smsd[1908]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/02/22 19:29:23 gammu-smsd[1908]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/02/22 19:29:23 gammu-smsd[1908]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/02/22 20:51:48 gammu-smsd[2020]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/02/22 20:51:48 gammu-smsd[2020]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/02/22 20:51:50 gammu-smsd[2020]: Error connecting to database!
+Mon 2016/02/22 20:51:50 gammu-smsd[2020]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/02/22 20:51:50 gammu-smsd[2020]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/02/22 20:51:50 gammu-smsd[2020]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/02/23 09:01:41 gammu-smsd[1976]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/02/23 09:01:41 gammu-smsd[1976]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/02/23 09:01:43 gammu-smsd[1976]: Error connecting to database!
+Tue 2016/02/23 09:01:43 gammu-smsd[1976]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/02/23 09:01:43 gammu-smsd[1976]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/02/23 09:01:43 gammu-smsd[1976]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/02/24 11:50:57 gammu-smsd[1968]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/02/24 11:50:57 gammu-smsd[1968]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/02/24 11:51:00 gammu-smsd[1968]: Error connecting to database!
+Wed 2016/02/24 11:51:00 gammu-smsd[1968]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/02/24 11:51:00 gammu-smsd[1968]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/02/24 11:51:00 gammu-smsd[1968]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/02/24 19:22:38 gammu-smsd[1940]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/02/24 19:22:38 gammu-smsd[1940]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/02/24 19:22:41 gammu-smsd[1940]: Error connecting to database!
+Wed 2016/02/24 19:22:41 gammu-smsd[1940]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/02/24 19:22:41 gammu-smsd[1940]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/02/24 19:22:41 gammu-smsd[1940]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/02/25 08:47:50 gammu-smsd[1964]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/02/25 08:47:50 gammu-smsd[1964]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/02/25 08:47:52 gammu-smsd[1964]: Error connecting to database!
+Thu 2016/02/25 08:47:52 gammu-smsd[1964]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/02/25 08:47:52 gammu-smsd[1964]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/02/25 08:47:52 gammu-smsd[1964]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/02/25 13:35:27 gammu-smsd[1916]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/02/25 13:35:27 gammu-smsd[1916]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/02/25 13:35:31 gammu-smsd[1916]: Error connecting to database!
+Thu 2016/02/25 13:35:31 gammu-smsd[1916]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/02/25 13:35:31 gammu-smsd[1916]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/02/25 13:35:31 gammu-smsd[1916]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/02/25 13:47:39 gammu-smsd[1916]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/02/25 13:47:39 gammu-smsd[1916]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/02/25 13:47:42 gammu-smsd[1916]: Error connecting to database!
+Thu 2016/02/25 13:47:42 gammu-smsd[1916]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/02/25 13:47:42 gammu-smsd[1916]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/02/25 13:47:42 gammu-smsd[1916]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/02/26 19:13:04 gammu-smsd[1924]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/02/26 19:13:04 gammu-smsd[1924]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/02/26 19:13:07 gammu-smsd[1924]: Error connecting to database!
+Fri 2016/02/26 19:13:07 gammu-smsd[1924]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/02/26 19:13:07 gammu-smsd[1924]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/02/26 19:13:07 gammu-smsd[1924]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/02/26 19:44:07 gammu-smsd[2004]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/02/26 19:44:07 gammu-smsd[2004]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/02/26 19:44:09 gammu-smsd[2004]: Error connecting to database!
+Fri 2016/02/26 19:44:09 gammu-smsd[2004]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/02/26 19:44:09 gammu-smsd[2004]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/02/26 19:44:09 gammu-smsd[2004]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/02/27 23:04:41 gammu-smsd[1916]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/02/27 23:04:41 gammu-smsd[1916]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/02/27 23:04:42 gammu-smsd[1916]: Error connecting to database!
+Sat 2016/02/27 23:04:42 gammu-smsd[1916]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/02/27 23:04:42 gammu-smsd[1916]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/02/27 23:04:42 gammu-smsd[1916]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/02/28 09:44:40 gammu-smsd[1908]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/02/28 09:44:40 gammu-smsd[1908]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/02/28 09:44:42 gammu-smsd[1908]: Error connecting to database!
+Sun 2016/02/28 09:44:42 gammu-smsd[1908]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/02/28 09:44:42 gammu-smsd[1908]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/02/28 09:44:42 gammu-smsd[1908]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/02/29 10:19:59 gammu-smsd[1936]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/02/29 10:19:59 gammu-smsd[1936]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/02/29 10:20:01 gammu-smsd[1936]: Error connecting to database!
+Mon 2016/02/29 10:20:01 gammu-smsd[1936]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/02/29 10:20:01 gammu-smsd[1936]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/02/29 10:20:01 gammu-smsd[1936]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/02/29 19:17:19 gammu-smsd[1908]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/02/29 19:17:19 gammu-smsd[1908]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/02/29 19:17:21 gammu-smsd[1908]: Error connecting to database!
+Mon 2016/02/29 19:17:21 gammu-smsd[1908]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/02/29 19:17:21 gammu-smsd[1908]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/02/29 19:17:21 gammu-smsd[1908]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/03/01 15:33:52 gammu-smsd[1956]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/03/01 15:33:52 gammu-smsd[1956]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/03/01 15:33:54 gammu-smsd[1956]: Error connecting to database!
+Tue 2016/03/01 15:33:54 gammu-smsd[1956]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/03/01 15:33:54 gammu-smsd[1956]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/03/01 15:33:54 gammu-smsd[1956]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/03/01 19:23:17 gammu-smsd[1896]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/03/01 19:23:18 gammu-smsd[1896]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/03/01 19:23:19 gammu-smsd[1896]: Error connecting to database!
+Tue 2016/03/01 19:23:19 gammu-smsd[1896]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/03/01 19:23:19 gammu-smsd[1896]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/03/01 19:23:19 gammu-smsd[1896]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/03/02 11:44:15 gammu-smsd[1876]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/03/02 11:44:16 gammu-smsd[1876]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/03/02 11:44:17 gammu-smsd[1876]: Error connecting to database!
+Wed 2016/03/02 11:44:17 gammu-smsd[1876]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/03/02 11:44:17 gammu-smsd[1876]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/03/02 11:44:17 gammu-smsd[1876]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/03/02 20:25:35 gammu-smsd[1868]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/03/02 20:25:35 gammu-smsd[1868]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/03/02 20:25:38 gammu-smsd[1868]: Error connecting to database!
+Wed 2016/03/02 20:25:38 gammu-smsd[1868]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/03/02 20:25:38 gammu-smsd[1868]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/03/02 20:25:38 gammu-smsd[1868]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/03/03 19:18:17 gammu-smsd[1868]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/03/03 19:18:17 gammu-smsd[1868]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/03/03 19:18:19 gammu-smsd[1868]: Error connecting to database!
+Thu 2016/03/03 19:18:19 gammu-smsd[1868]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/03/03 19:18:19 gammu-smsd[1868]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/03/03 19:18:19 gammu-smsd[1868]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/03/03 19:21:02 gammu-smsd[1868]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/03/03 19:21:02 gammu-smsd[1868]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/03/03 19:21:04 gammu-smsd[1868]: Error connecting to database!
+Thu 2016/03/03 19:21:04 gammu-smsd[1868]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/03/03 19:21:04 gammu-smsd[1868]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/03/03 19:21:04 gammu-smsd[1868]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/03/04 07:43:22 gammu-smsd[1844]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/03/04 07:43:22 gammu-smsd[1844]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/03/04 07:43:25 gammu-smsd[1844]: Error connecting to database!
+Fri 2016/03/04 07:43:25 gammu-smsd[1844]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/03/04 07:43:25 gammu-smsd[1844]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/03/04 07:43:25 gammu-smsd[1844]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/03/04 14:11:59 gammu-smsd[1812]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/03/04 14:11:59 gammu-smsd[1812]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/03/04 14:12:01 gammu-smsd[1812]: Error connecting to database!
+Fri 2016/03/04 14:12:01 gammu-smsd[1812]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/03/04 14:12:01 gammu-smsd[1812]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/03/04 14:12:01 gammu-smsd[1812]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/03/04 15:46:09 gammu-smsd[1868]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/03/04 15:46:09 gammu-smsd[1868]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/03/04 15:46:11 gammu-smsd[1868]: Error connecting to database!
+Fri 2016/03/04 15:46:11 gammu-smsd[1868]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/03/04 15:46:11 gammu-smsd[1868]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/03/04 15:46:11 gammu-smsd[1868]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/03/05 08:41:08 gammu-smsd[1860]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/03/05 08:41:08 gammu-smsd[1860]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/03/05 08:41:10 gammu-smsd[1860]: Error connecting to database!
+Sat 2016/03/05 08:41:10 gammu-smsd[1860]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/03/05 08:41:10 gammu-smsd[1860]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/03/05 08:41:10 gammu-smsd[1860]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/03/05 14:40:08 gammu-smsd[1820]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/03/05 14:40:08 gammu-smsd[1820]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/03/05 14:40:10 gammu-smsd[1820]: Error connecting to database!
+Sat 2016/03/05 14:40:10 gammu-smsd[1820]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/03/05 14:40:10 gammu-smsd[1820]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/03/05 14:40:10 gammu-smsd[1820]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/03/05 19:55:47 gammu-smsd[1848]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/03/05 19:55:47 gammu-smsd[1848]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/03/05 19:55:49 gammu-smsd[1848]: Error connecting to database!
+Sat 2016/03/05 19:55:49 gammu-smsd[1848]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/03/05 19:55:49 gammu-smsd[1848]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/03/05 19:55:49 gammu-smsd[1848]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/03/06 14:00:46 gammu-smsd[1868]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/03/06 14:00:46 gammu-smsd[1868]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/03/06 14:00:49 gammu-smsd[1868]: Error connecting to database!
+Sun 2016/03/06 14:00:49 gammu-smsd[1868]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/03/06 14:00:49 gammu-smsd[1868]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/03/06 14:00:49 gammu-smsd[1868]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/03/07 12:45:33 gammu-smsd[1944]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/03/07 12:45:33 gammu-smsd[1944]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/03/07 12:45:35 gammu-smsd[1944]: Error connecting to database!
+Mon 2016/03/07 12:45:35 gammu-smsd[1944]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/03/07 12:45:35 gammu-smsd[1944]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/03/07 12:45:35 gammu-smsd[1944]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/03/07 20:12:42 gammu-smsd[1924]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/03/07 20:12:43 gammu-smsd[1924]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/03/07 20:12:45 gammu-smsd[1924]: Error connecting to database!
+Mon 2016/03/07 20:12:45 gammu-smsd[1924]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/03/07 20:12:45 gammu-smsd[1924]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/03/07 20:12:45 gammu-smsd[1924]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/03/08 09:42:50 gammu-smsd[1920]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/03/08 09:42:50 gammu-smsd[1920]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/03/08 09:42:52 gammu-smsd[1920]: Error connecting to database!
+Tue 2016/03/08 09:42:52 gammu-smsd[1920]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/03/08 09:42:52 gammu-smsd[1920]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/03/08 09:42:52 gammu-smsd[1920]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/03/08 10:39:21 gammu-smsd[1912]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/03/08 10:39:21 gammu-smsd[1912]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/03/08 10:39:23 gammu-smsd[1912]: Error connecting to database!
+Tue 2016/03/08 10:39:23 gammu-smsd[1912]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/03/08 10:39:23 gammu-smsd[1912]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/03/08 10:39:23 gammu-smsd[1912]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/03/09 07:36:57 gammu-smsd[1888]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/03/09 07:36:57 gammu-smsd[1888]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/03/09 07:36:59 gammu-smsd[1888]: Error connecting to database!
+Wed 2016/03/09 07:36:59 gammu-smsd[1888]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/03/09 07:36:59 gammu-smsd[1888]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/03/09 07:36:59 gammu-smsd[1888]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/03/10 08:28:57 gammu-smsd[1872]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/03/10 08:28:57 gammu-smsd[1872]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/03/10 08:28:59 gammu-smsd[1872]: Error connecting to database!
+Thu 2016/03/10 08:28:59 gammu-smsd[1872]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/03/10 08:28:59 gammu-smsd[1872]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/03/10 08:28:59 gammu-smsd[1872]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/03/10 11:10:51 gammu-smsd[1868]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/03/10 11:10:51 gammu-smsd[1868]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/03/10 11:10:54 gammu-smsd[1868]: Error connecting to database!
+Thu 2016/03/10 11:10:54 gammu-smsd[1868]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/03/10 11:10:54 gammu-smsd[1868]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/03/10 11:10:54 gammu-smsd[1868]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/03/10 11:51:17 gammu-smsd[1860]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/03/10 11:51:17 gammu-smsd[1860]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/03/10 11:51:20 gammu-smsd[1860]: Error connecting to database!
+Thu 2016/03/10 11:51:20 gammu-smsd[1860]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/03/10 11:51:20 gammu-smsd[1860]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/03/10 11:51:20 gammu-smsd[1860]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/03/10 21:34:43 gammu-smsd[1852]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/03/10 21:34:43 gammu-smsd[1852]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/03/10 21:34:47 gammu-smsd[1852]: Error connecting to database!
+Thu 2016/03/10 21:34:47 gammu-smsd[1852]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/03/10 21:34:47 gammu-smsd[1852]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/03/10 21:34:47 gammu-smsd[1852]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/03/11 08:54:17 gammu-smsd[1860]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/03/11 08:54:17 gammu-smsd[1860]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/03/11 08:54:20 gammu-smsd[1860]: Error connecting to database!
+Fri 2016/03/11 08:54:20 gammu-smsd[1860]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/03/11 08:54:20 gammu-smsd[1860]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/03/11 08:54:20 gammu-smsd[1860]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/03/11 09:35:32 gammu-smsd[1980]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/03/11 09:35:32 gammu-smsd[1980]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/03/11 09:35:34 gammu-smsd[1980]: Error connecting to database!
+Fri 2016/03/11 09:35:34 gammu-smsd[1980]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/03/11 09:35:34 gammu-smsd[1980]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/03/11 09:35:34 gammu-smsd[1980]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/03/11 16:37:16 gammu-smsd[1840]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/03/11 16:37:16 gammu-smsd[1840]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/03/11 16:37:19 gammu-smsd[1840]: Error connecting to database!
+Fri 2016/03/11 16:37:19 gammu-smsd[1840]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/03/11 16:37:19 gammu-smsd[1840]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/03/11 16:37:19 gammu-smsd[1840]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/03/11 16:41:54 gammu-smsd[1932]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/03/11 16:41:54 gammu-smsd[1932]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/03/11 16:41:57 gammu-smsd[1932]: Error connecting to database!
+Fri 2016/03/11 16:41:57 gammu-smsd[1932]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/03/11 16:41:57 gammu-smsd[1932]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/03/11 16:41:57 gammu-smsd[1932]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/03/11 16:57:28 gammu-smsd[1932]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/03/11 16:57:28 gammu-smsd[1932]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/03/11 16:57:30 gammu-smsd[1932]: Error connecting to database!
+Fri 2016/03/11 16:57:30 gammu-smsd[1932]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/03/11 16:57:30 gammu-smsd[1932]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/03/11 16:57:30 gammu-smsd[1932]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/03/14 09:18:54 gammu-smsd[2004]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/03/14 09:18:55 gammu-smsd[2004]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/03/14 09:18:56 gammu-smsd[2004]: Error connecting to database!
+Mon 2016/03/14 09:18:56 gammu-smsd[2004]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/03/14 09:18:56 gammu-smsd[2004]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/03/14 09:18:56 gammu-smsd[2004]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/03/14 15:31:07 gammu-smsd[1276]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/03/14 15:31:07 gammu-smsd[1276]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/03/14 15:31:10 gammu-smsd[1276]: Error connecting to database!
+Mon 2016/03/14 15:31:10 gammu-smsd[1276]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/03/14 15:31:10 gammu-smsd[1276]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/03/14 15:31:10 gammu-smsd[1276]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/03/14 21:48:31 gammu-smsd[1976]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/03/14 21:48:31 gammu-smsd[1976]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/03/14 21:48:33 gammu-smsd[1976]: Error connecting to database!
+Mon 2016/03/14 21:48:33 gammu-smsd[1976]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/03/14 21:48:33 gammu-smsd[1976]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/03/14 21:48:33 gammu-smsd[1976]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/03/15 10:17:20 gammu-smsd[1580]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/03/15 10:17:21 gammu-smsd[1580]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/03/15 10:17:23 gammu-smsd[1580]: Error connecting to database!
+Tue 2016/03/15 10:17:23 gammu-smsd[1580]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/03/15 10:17:23 gammu-smsd[1580]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/03/15 10:17:23 gammu-smsd[1580]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/03/15 15:20:34 gammu-smsd[1072]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/03/15 15:20:34 gammu-smsd[1072]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/03/15 15:20:36 gammu-smsd[1072]: Error connecting to database!
+Tue 2016/03/15 15:20:36 gammu-smsd[1072]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/03/15 15:20:36 gammu-smsd[1072]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/03/15 15:20:36 gammu-smsd[1072]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/03/15 16:37:55 gammu-smsd[828]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/03/15 16:37:56 gammu-smsd[828]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/03/15 16:37:57 gammu-smsd[828]: Error connecting to database!
+Tue 2016/03/15 16:37:57 gammu-smsd[828]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/03/15 16:37:57 gammu-smsd[828]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/03/15 16:37:57 gammu-smsd[828]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/03/15 20:22:23 gammu-smsd[1716]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/03/15 20:22:23 gammu-smsd[1716]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/03/15 20:22:25 gammu-smsd[1716]: Error connecting to database!
+Tue 2016/03/15 20:22:25 gammu-smsd[1716]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/03/15 20:22:25 gammu-smsd[1716]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/03/15 20:22:25 gammu-smsd[1716]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/03/15 21:17:44 gammu-smsd[1972]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/03/15 21:17:44 gammu-smsd[1972]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/03/15 21:17:45 gammu-smsd[1972]: Error connecting to database!
+Tue 2016/03/15 21:17:45 gammu-smsd[1972]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/03/15 21:17:45 gammu-smsd[1972]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/03/15 21:17:45 gammu-smsd[1972]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/03/16 10:27:17 gammu-smsd[1700]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/03/16 10:27:17 gammu-smsd[1700]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/03/16 10:27:19 gammu-smsd[1700]: Error connecting to database!
+Wed 2016/03/16 10:27:19 gammu-smsd[1700]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/03/16 10:27:19 gammu-smsd[1700]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/03/16 10:27:19 gammu-smsd[1700]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/03/16 11:05:19 gammu-smsd[1796]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/03/16 11:05:19 gammu-smsd[1796]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/03/16 11:05:20 gammu-smsd[1796]: Error connecting to database!
+Wed 2016/03/16 11:05:20 gammu-smsd[1796]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/03/16 11:05:20 gammu-smsd[1796]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/03/16 11:05:20 gammu-smsd[1796]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/03/16 11:07:17 gammu-smsd[1804]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/03/16 11:07:17 gammu-smsd[1804]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/03/16 11:07:19 gammu-smsd[1804]: Error connecting to database!
+Wed 2016/03/16 11:07:19 gammu-smsd[1804]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/03/16 11:07:19 gammu-smsd[1804]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/03/16 11:07:19 gammu-smsd[1804]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/03/16 11:10:28 gammu-smsd[1984]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/03/16 11:10:28 gammu-smsd[1984]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/03/16 11:10:29 gammu-smsd[1984]: Error connecting to database!
+Wed 2016/03/16 11:10:29 gammu-smsd[1984]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/03/16 11:10:29 gammu-smsd[1984]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/03/16 11:10:29 gammu-smsd[1984]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/03/16 18:39:16 gammu-smsd[2024]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/03/16 18:39:16 gammu-smsd[2024]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/03/16 18:39:18 gammu-smsd[2024]: Error connecting to database!
+Wed 2016/03/16 18:39:18 gammu-smsd[2024]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/03/16 18:39:18 gammu-smsd[2024]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/03/16 18:39:18 gammu-smsd[2024]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/03/17 11:47:43 gammu-smsd[1712]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/03/17 11:47:43 gammu-smsd[1712]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/03/17 11:47:44 gammu-smsd[1712]: Error connecting to database!
+Thu 2016/03/17 11:47:44 gammu-smsd[1712]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/03/17 11:47:44 gammu-smsd[1712]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/03/17 11:47:44 gammu-smsd[1712]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/03/17 20:59:10 gammu-smsd[1764]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/03/17 20:59:10 gammu-smsd[1764]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/03/17 20:59:12 gammu-smsd[1764]: Error connecting to database!
+Thu 2016/03/17 20:59:12 gammu-smsd[1764]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/03/17 20:59:12 gammu-smsd[1764]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/03/17 20:59:12 gammu-smsd[1764]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/03/18 08:38:59 gammu-smsd[1804]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/03/18 08:38:59 gammu-smsd[1804]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/03/18 08:39:01 gammu-smsd[1804]: Error connecting to database!
+Fri 2016/03/18 08:39:01 gammu-smsd[1804]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/03/18 08:39:01 gammu-smsd[1804]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/03/18 08:39:01 gammu-smsd[1804]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/03/18 13:34:09 gammu-smsd[1740]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/03/18 13:34:09 gammu-smsd[1740]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/03/18 13:34:11 gammu-smsd[1740]: Error connecting to database!
+Fri 2016/03/18 13:34:11 gammu-smsd[1740]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/03/18 13:34:11 gammu-smsd[1740]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/03/18 13:34:11 gammu-smsd[1740]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/03/19 08:55:27 gammu-smsd[1956]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/03/19 08:55:27 gammu-smsd[1956]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/03/19 08:55:29 gammu-smsd[1956]: Error connecting to database!
+Sat 2016/03/19 08:55:29 gammu-smsd[1956]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/03/19 08:55:29 gammu-smsd[1956]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/03/19 08:55:29 gammu-smsd[1956]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/03/19 18:49:24 gammu-smsd[1720]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/03/19 18:49:24 gammu-smsd[1720]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/03/19 18:49:26 gammu-smsd[1720]: Error connecting to database!
+Sat 2016/03/19 18:49:26 gammu-smsd[1720]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/03/19 18:49:26 gammu-smsd[1720]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/03/19 18:49:26 gammu-smsd[1720]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/03/20 17:49:02 gammu-smsd[1660]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/03/20 17:49:02 gammu-smsd[1660]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/03/20 17:49:04 gammu-smsd[1660]: Error connecting to database!
+Sun 2016/03/20 17:49:04 gammu-smsd[1660]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/03/20 17:49:04 gammu-smsd[1660]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/03/20 17:49:04 gammu-smsd[1660]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/03/21 10:59:28 gammu-smsd[1768]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/03/21 10:59:28 gammu-smsd[1768]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/03/21 10:59:30 gammu-smsd[1768]: Error connecting to database!
+Mon 2016/03/21 10:59:30 gammu-smsd[1768]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/03/21 10:59:30 gammu-smsd[1768]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/03/21 10:59:30 gammu-smsd[1768]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/03/21 18:36:02 gammu-smsd[1588]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/03/21 18:36:02 gammu-smsd[1588]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/03/21 18:36:04 gammu-smsd[1588]: Error connecting to database!
+Mon 2016/03/21 18:36:04 gammu-smsd[1588]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/03/21 18:36:04 gammu-smsd[1588]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/03/21 18:36:04 gammu-smsd[1588]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/03/22 09:23:54 gammu-smsd[1108]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/03/22 09:23:54 gammu-smsd[1108]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/03/22 09:23:56 gammu-smsd[1108]: Error connecting to database!
+Tue 2016/03/22 09:23:56 gammu-smsd[1108]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/03/22 09:23:56 gammu-smsd[1108]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/03/22 09:23:56 gammu-smsd[1108]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/03/22 10:43:13 gammu-smsd[1540]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/03/22 10:43:13 gammu-smsd[1540]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/03/22 10:43:14 gammu-smsd[1540]: Error connecting to database!
+Tue 2016/03/22 10:43:14 gammu-smsd[1540]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/03/22 10:43:14 gammu-smsd[1540]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/03/22 10:43:14 gammu-smsd[1540]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/03/22 14:31:03 gammu-smsd[1768]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/03/22 14:31:03 gammu-smsd[1768]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/03/22 14:31:05 gammu-smsd[1768]: Error connecting to database!
+Tue 2016/03/22 14:31:05 gammu-smsd[1768]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/03/22 14:31:05 gammu-smsd[1768]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/03/22 14:31:05 gammu-smsd[1768]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/03/22 19:16:05 gammu-smsd[1996]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/03/22 19:16:05 gammu-smsd[1996]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/03/22 19:16:06 gammu-smsd[1996]: Error connecting to database!
+Tue 2016/03/22 19:16:06 gammu-smsd[1996]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/03/22 19:16:06 gammu-smsd[1996]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/03/22 19:16:06 gammu-smsd[1996]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/03/23 15:56:05 gammu-smsd[1456]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/03/23 15:56:05 gammu-smsd[1456]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/03/23 15:56:06 gammu-smsd[1456]: Error connecting to database!
+Wed 2016/03/23 15:56:06 gammu-smsd[1456]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/03/23 15:56:06 gammu-smsd[1456]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/03/23 15:56:06 gammu-smsd[1456]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/03/23 20:27:18 gammu-smsd[1920]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/03/23 20:27:18 gammu-smsd[1920]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/03/23 20:27:21 gammu-smsd[1920]: Error connecting to database!
+Wed 2016/03/23 20:27:21 gammu-smsd[1920]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/03/23 20:27:21 gammu-smsd[1920]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/03/23 20:27:21 gammu-smsd[1920]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/03/24 10:09:58 gammu-smsd[2052]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/03/24 10:09:58 gammu-smsd[2052]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/03/24 10:10:00 gammu-smsd[2052]: Error connecting to database!
+Thu 2016/03/24 10:10:00 gammu-smsd[2052]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/03/24 10:10:00 gammu-smsd[2052]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/03/24 10:10:00 gammu-smsd[2052]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/03/24 22:24:16 gammu-smsd[748]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/03/24 22:24:16 gammu-smsd[748]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/03/24 22:24:18 gammu-smsd[748]: Error connecting to database!
+Thu 2016/03/24 22:24:18 gammu-smsd[748]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/03/24 22:24:18 gammu-smsd[748]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/03/24 22:24:18 gammu-smsd[748]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/03/25 13:10:24 gammu-smsd[1684]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/03/25 13:10:24 gammu-smsd[1684]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/03/25 13:10:25 gammu-smsd[1684]: Error connecting to database!
+Fri 2016/03/25 13:10:25 gammu-smsd[1684]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/03/25 13:10:25 gammu-smsd[1684]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/03/25 13:10:25 gammu-smsd[1684]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/03/25 18:45:14 gammu-smsd[2052]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/03/25 18:45:14 gammu-smsd[2052]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/03/25 18:45:15 gammu-smsd[2052]: Error connecting to database!
+Fri 2016/03/25 18:45:15 gammu-smsd[2052]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/03/25 18:45:15 gammu-smsd[2052]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/03/25 18:45:15 gammu-smsd[2052]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/03/26 19:36:31 gammu-smsd[2116]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/03/26 19:36:31 gammu-smsd[2116]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/03/26 19:36:33 gammu-smsd[2116]: Error connecting to database!
+Sat 2016/03/26 19:36:33 gammu-smsd[2116]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/03/26 19:36:33 gammu-smsd[2116]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/03/26 19:36:33 gammu-smsd[2116]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/03/27 20:45:06 gammu-smsd[2072]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/03/27 20:45:06 gammu-smsd[2072]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/03/27 20:45:08 gammu-smsd[2072]: Error connecting to database!
+Sun 2016/03/27 20:45:08 gammu-smsd[2072]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/03/27 20:45:08 gammu-smsd[2072]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/03/27 20:45:08 gammu-smsd[2072]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/03/28 14:13:16 gammu-smsd[1044]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/03/28 14:13:16 gammu-smsd[1044]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/03/28 14:13:17 gammu-smsd[1044]: Error connecting to database!
+Mon 2016/03/28 14:13:17 gammu-smsd[1044]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/03/28 14:13:17 gammu-smsd[1044]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/03/28 14:13:17 gammu-smsd[1044]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/03/28 16:04:17 gammu-smsd[1980]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/03/28 16:04:17 gammu-smsd[1980]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/03/28 16:04:19 gammu-smsd[1980]: Error connecting to database!
+Mon 2016/03/28 16:04:19 gammu-smsd[1980]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/03/28 16:04:19 gammu-smsd[1980]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/03/28 16:04:19 gammu-smsd[1980]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/03/28 17:54:19 gammu-smsd[2076]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/03/28 17:54:19 gammu-smsd[2076]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/03/28 17:54:20 gammu-smsd[2076]: Error connecting to database!
+Mon 2016/03/28 17:54:20 gammu-smsd[2076]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/03/28 17:54:20 gammu-smsd[2076]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/03/28 17:54:20 gammu-smsd[2076]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/03/28 20:00:08 gammu-smsd[1924]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/03/28 20:00:08 gammu-smsd[1924]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/03/28 20:00:10 gammu-smsd[1924]: Error connecting to database!
+Mon 2016/03/28 20:00:10 gammu-smsd[1924]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/03/28 20:00:10 gammu-smsd[1924]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/03/28 20:00:10 gammu-smsd[1924]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/03/29 10:39:03 gammu-smsd[1576]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/03/29 10:39:03 gammu-smsd[1576]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/03/29 10:39:05 gammu-smsd[1576]: Error connecting to database!
+Tue 2016/03/29 10:39:05 gammu-smsd[1576]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/03/29 10:39:05 gammu-smsd[1576]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/03/29 10:39:05 gammu-smsd[1576]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/03/30 10:18:54 gammu-smsd[1812]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/03/30 10:18:54 gammu-smsd[1812]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/03/30 10:18:56 gammu-smsd[1812]: Error connecting to database!
+Wed 2016/03/30 10:18:56 gammu-smsd[1812]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/03/30 10:18:56 gammu-smsd[1812]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/03/30 10:18:56 gammu-smsd[1812]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/03/30 19:20:20 gammu-smsd[1976]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/03/30 19:20:20 gammu-smsd[1976]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/03/30 19:20:24 gammu-smsd[1976]: Error connecting to database!
+Wed 2016/03/30 19:20:24 gammu-smsd[1976]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/03/30 19:20:24 gammu-smsd[1976]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/03/30 19:20:24 gammu-smsd[1976]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/03/31 10:30:55 gammu-smsd[1968]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/03/31 10:30:56 gammu-smsd[1968]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/03/31 10:30:58 gammu-smsd[1968]: Error connecting to database!
+Thu 2016/03/31 10:30:58 gammu-smsd[1968]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/03/31 10:30:58 gammu-smsd[1968]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/03/31 10:30:58 gammu-smsd[1968]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/03/31 18:40:27 gammu-smsd[1996]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/03/31 18:40:27 gammu-smsd[1996]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/03/31 18:40:30 gammu-smsd[1996]: Error connecting to database!
+Thu 2016/03/31 18:40:30 gammu-smsd[1996]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/03/31 18:40:30 gammu-smsd[1996]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/03/31 18:40:30 gammu-smsd[1996]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/04/03 13:48:25 gammu-smsd[1856]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/04/03 13:48:25 gammu-smsd[1856]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/04/03 13:48:27 gammu-smsd[1856]: Error connecting to database!
+Sun 2016/04/03 13:48:27 gammu-smsd[1856]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/04/03 13:48:27 gammu-smsd[1856]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/04/03 13:48:27 gammu-smsd[1856]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/04/04 12:49:35 gammu-smsd[1824]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/04/04 12:49:35 gammu-smsd[1824]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/04/04 12:49:38 gammu-smsd[1824]: Error connecting to database!
+Mon 2016/04/04 12:49:38 gammu-smsd[1824]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/04/04 12:49:38 gammu-smsd[1824]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/04/04 12:49:38 gammu-smsd[1824]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/04/04 13:12:52 gammu-smsd[1956]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/04/04 13:12:53 gammu-smsd[1956]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/04/04 13:12:54 gammu-smsd[1956]: Error connecting to database!
+Mon 2016/04/04 13:12:54 gammu-smsd[1956]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/04/04 13:12:54 gammu-smsd[1956]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/04/04 13:12:54 gammu-smsd[1956]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/04/05 20:18:42 gammu-smsd[408]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/04/05 20:18:42 gammu-smsd[408]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/04/05 20:18:44 gammu-smsd[408]: Error connecting to database!
+Tue 2016/04/05 20:18:44 gammu-smsd[408]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/04/05 20:18:44 gammu-smsd[408]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/04/05 20:18:44 gammu-smsd[408]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/04/06 11:07:00 gammu-smsd[1620]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/04/06 11:07:00 gammu-smsd[1620]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/04/06 11:07:02 gammu-smsd[1620]: Error connecting to database!
+Wed 2016/04/06 11:07:02 gammu-smsd[1620]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/04/06 11:07:02 gammu-smsd[1620]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/04/06 11:07:02 gammu-smsd[1620]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/04/06 14:18:07 gammu-smsd[1812]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/04/06 14:18:07 gammu-smsd[1812]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/04/06 14:18:09 gammu-smsd[1812]: Error connecting to database!
+Wed 2016/04/06 14:18:09 gammu-smsd[1812]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/04/06 14:18:09 gammu-smsd[1812]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/04/06 14:18:09 gammu-smsd[1812]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/04/06 14:22:10 gammu-smsd[1948]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/04/06 14:22:10 gammu-smsd[1948]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/04/06 14:22:12 gammu-smsd[1948]: Error connecting to database!
+Wed 2016/04/06 14:22:12 gammu-smsd[1948]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/04/06 14:22:12 gammu-smsd[1948]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/04/06 14:22:12 gammu-smsd[1948]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/04/06 15:19:10 gammu-smsd[1948]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/04/06 15:19:10 gammu-smsd[1948]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/04/06 15:19:12 gammu-smsd[1948]: Error connecting to database!
+Wed 2016/04/06 15:19:12 gammu-smsd[1948]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/04/06 15:19:12 gammu-smsd[1948]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/04/06 15:19:12 gammu-smsd[1948]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/04/06 19:44:57 gammu-smsd[1956]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/04/06 19:44:57 gammu-smsd[1956]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/04/06 19:44:59 gammu-smsd[1956]: Error connecting to database!
+Wed 2016/04/06 19:44:59 gammu-smsd[1956]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/04/06 19:44:59 gammu-smsd[1956]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/04/06 19:44:59 gammu-smsd[1956]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/04/07 11:12:54 gammu-smsd[1132]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/04/07 11:12:54 gammu-smsd[1132]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/04/07 11:12:56 gammu-smsd[1132]: Error connecting to database!
+Thu 2016/04/07 11:12:56 gammu-smsd[1132]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/04/07 11:12:56 gammu-smsd[1132]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/04/07 11:12:56 gammu-smsd[1132]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/04/07 13:27:41 gammu-smsd[2040]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/04/07 13:27:41 gammu-smsd[2040]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/04/07 13:27:43 gammu-smsd[2040]: Error connecting to database!
+Thu 2016/04/07 13:27:43 gammu-smsd[2040]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/04/07 13:27:43 gammu-smsd[2040]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/04/07 13:27:43 gammu-smsd[2040]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/04/07 16:16:39 gammu-smsd[1476]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/04/07 16:16:39 gammu-smsd[1476]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/04/07 16:16:41 gammu-smsd[1476]: Error connecting to database!
+Thu 2016/04/07 16:16:41 gammu-smsd[1476]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/04/07 16:16:41 gammu-smsd[1476]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/04/07 16:16:41 gammu-smsd[1476]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/04/07 19:22:05 gammu-smsd[1804]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/04/07 19:22:05 gammu-smsd[1804]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/04/07 19:22:08 gammu-smsd[1804]: Error connecting to database!
+Thu 2016/04/07 19:22:08 gammu-smsd[1804]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/04/07 19:22:10 gammu-smsd[1804]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/04/07 19:22:10 gammu-smsd[1804]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/04/08 08:18:43 gammu-smsd[1852]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/04/08 08:18:44 gammu-smsd[1852]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/04/08 08:18:46 gammu-smsd[1852]: Error connecting to database!
+Fri 2016/04/08 08:18:46 gammu-smsd[1852]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/04/08 08:18:46 gammu-smsd[1852]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/04/08 08:18:46 gammu-smsd[1852]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/04/08 17:01:59 gammu-smsd[1972]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/04/08 17:01:59 gammu-smsd[1972]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/04/08 17:02:01 gammu-smsd[1972]: Error connecting to database!
+Fri 2016/04/08 17:02:01 gammu-smsd[1972]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/04/08 17:02:01 gammu-smsd[1972]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/04/08 17:02:01 gammu-smsd[1972]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/04/09 10:23:01 gammu-smsd[1944]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/04/09 10:23:01 gammu-smsd[1944]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/04/09 10:23:03 gammu-smsd[1944]: Error connecting to database!
+Sat 2016/04/09 10:23:03 gammu-smsd[1944]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/04/09 10:23:03 gammu-smsd[1944]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/04/09 10:23:03 gammu-smsd[1944]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/04/09 17:39:35 gammu-smsd[1912]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/04/09 17:39:35 gammu-smsd[1912]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/04/09 17:39:37 gammu-smsd[1912]: Error connecting to database!
+Sat 2016/04/09 17:39:37 gammu-smsd[1912]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/04/09 17:39:37 gammu-smsd[1912]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/04/09 17:39:37 gammu-smsd[1912]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/04/09 20:14:45 gammu-smsd[1144]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/04/09 20:14:45 gammu-smsd[1144]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/04/09 20:14:47 gammu-smsd[1144]: Error connecting to database!
+Sat 2016/04/09 20:14:47 gammu-smsd[1144]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/04/09 20:14:47 gammu-smsd[1144]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/04/09 20:14:47 gammu-smsd[1144]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/04/11 13:44:04 gammu-smsd[1972]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/04/11 13:44:04 gammu-smsd[1972]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/04/11 13:44:05 gammu-smsd[1972]: Error connecting to database!
+Mon 2016/04/11 13:44:05 gammu-smsd[1972]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/04/11 13:44:05 gammu-smsd[1972]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/04/11 13:44:05 gammu-smsd[1972]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/04/11 20:13:18 gammu-smsd[1928]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/04/11 20:13:18 gammu-smsd[1928]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/04/11 20:13:20 gammu-smsd[1928]: Error connecting to database!
+Mon 2016/04/11 20:13:20 gammu-smsd[1928]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/04/11 20:13:20 gammu-smsd[1928]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/04/11 20:13:20 gammu-smsd[1928]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/04/12 10:57:24 gammu-smsd[2008]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/04/12 10:57:24 gammu-smsd[2008]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/04/12 10:57:25 gammu-smsd[2008]: Error connecting to database!
+Tue 2016/04/12 10:57:25 gammu-smsd[2008]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/04/12 10:57:25 gammu-smsd[2008]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/04/12 10:57:25 gammu-smsd[2008]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/04/12 20:19:19 gammu-smsd[1952]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/04/12 20:19:19 gammu-smsd[1952]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/04/12 20:19:20 gammu-smsd[1952]: Error connecting to database!
+Tue 2016/04/12 20:19:20 gammu-smsd[1952]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/04/12 20:19:20 gammu-smsd[1952]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/04/12 20:19:20 gammu-smsd[1952]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/04/12 21:31:56 gammu-smsd[1956]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/04/12 21:31:56 gammu-smsd[1956]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/04/12 21:31:58 gammu-smsd[1956]: Error connecting to database!
+Tue 2016/04/12 21:31:58 gammu-smsd[1956]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/04/12 21:31:58 gammu-smsd[1956]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/04/12 21:31:58 gammu-smsd[1956]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/04/13 08:13:34 gammu-smsd[1952]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/04/13 08:13:34 gammu-smsd[1952]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/04/13 08:13:35 gammu-smsd[1952]: Error connecting to database!
+Wed 2016/04/13 08:13:35 gammu-smsd[1952]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/04/13 08:13:35 gammu-smsd[1952]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/04/13 08:13:35 gammu-smsd[1952]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/04/13 11:57:37 gammu-smsd[1976]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/04/13 11:57:37 gammu-smsd[1976]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/04/13 11:57:39 gammu-smsd[1976]: Error connecting to database!
+Wed 2016/04/13 11:57:39 gammu-smsd[1976]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/04/13 11:57:39 gammu-smsd[1976]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/04/13 11:57:39 gammu-smsd[1976]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/04/13 18:56:37 gammu-smsd[1136]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/04/13 18:56:37 gammu-smsd[1136]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/04/13 18:56:39 gammu-smsd[1136]: Error connecting to database!
+Wed 2016/04/13 18:56:39 gammu-smsd[1136]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/04/13 18:56:39 gammu-smsd[1136]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/04/13 18:56:39 gammu-smsd[1136]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/04/14 19:38:10 gammu-smsd[1948]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/04/14 19:38:10 gammu-smsd[1948]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/04/14 19:38:12 gammu-smsd[1948]: Error connecting to database!
+Thu 2016/04/14 19:38:12 gammu-smsd[1948]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/04/14 19:38:12 gammu-smsd[1948]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/04/14 19:38:12 gammu-smsd[1948]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/04/15 17:18:57 gammu-smsd[1104]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/04/15 17:18:57 gammu-smsd[1104]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/04/15 17:18:59 gammu-smsd[1104]: Error connecting to database!
+Fri 2016/04/15 17:18:59 gammu-smsd[1104]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/04/15 17:18:59 gammu-smsd[1104]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/04/15 17:18:59 gammu-smsd[1104]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/04/16 11:39:20 gammu-smsd[2000]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/04/16 11:39:21 gammu-smsd[2000]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/04/16 11:39:22 gammu-smsd[2000]: Error connecting to database!
+Sat 2016/04/16 11:39:22 gammu-smsd[2000]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/04/16 11:39:22 gammu-smsd[2000]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/04/16 11:39:22 gammu-smsd[2000]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/04/16 20:57:01 gammu-smsd[1960]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/04/16 20:57:01 gammu-smsd[1960]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/04/16 20:57:02 gammu-smsd[1960]: Error connecting to database!
+Sat 2016/04/16 20:57:02 gammu-smsd[1960]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/04/16 20:57:02 gammu-smsd[1960]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/04/16 20:57:02 gammu-smsd[1960]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/04/17 12:08:34 gammu-smsd[2024]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/04/17 12:08:34 gammu-smsd[2024]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/04/17 12:08:35 gammu-smsd[2024]: Error connecting to database!
+Sun 2016/04/17 12:08:35 gammu-smsd[2024]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/04/17 12:08:35 gammu-smsd[2024]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/04/17 12:08:35 gammu-smsd[2024]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/04/17 20:11:40 gammu-smsd[1980]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/04/17 20:11:40 gammu-smsd[1980]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/04/17 20:11:42 gammu-smsd[1980]: Error connecting to database!
+Sun 2016/04/17 20:11:42 gammu-smsd[1980]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/04/17 20:11:42 gammu-smsd[1980]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/04/17 20:11:42 gammu-smsd[1980]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/04/19 10:25:26 gammu-smsd[736]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/04/19 10:25:26 gammu-smsd[736]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/04/19 10:25:28 gammu-smsd[736]: Error connecting to database!
+Tue 2016/04/19 10:25:28 gammu-smsd[736]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/04/19 10:25:28 gammu-smsd[736]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/04/19 10:25:28 gammu-smsd[736]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/04/19 21:39:37 gammu-smsd[1960]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/04/19 21:39:37 gammu-smsd[1960]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/04/19 21:39:39 gammu-smsd[1960]: Error connecting to database!
+Tue 2016/04/19 21:39:39 gammu-smsd[1960]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/04/19 21:39:39 gammu-smsd[1960]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/04/19 21:39:39 gammu-smsd[1960]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/04/20 07:35:10 gammu-smsd[1956]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/04/20 07:35:10 gammu-smsd[1956]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/04/20 07:35:12 gammu-smsd[1956]: Error connecting to database!
+Wed 2016/04/20 07:35:12 gammu-smsd[1956]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/04/20 07:35:12 gammu-smsd[1956]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/04/20 07:35:12 gammu-smsd[1956]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/04/20 08:00:14 gammu-smsd[1948]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/04/20 08:00:14 gammu-smsd[1948]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/04/20 08:00:16 gammu-smsd[1948]: Error connecting to database!
+Wed 2016/04/20 08:00:16 gammu-smsd[1948]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/04/20 08:00:16 gammu-smsd[1948]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/04/20 08:00:16 gammu-smsd[1948]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/04/20 13:58:42 gammu-smsd[1960]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/04/20 13:58:42 gammu-smsd[1960]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/04/20 13:58:43 gammu-smsd[1960]: Error connecting to database!
+Wed 2016/04/20 13:58:43 gammu-smsd[1960]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/04/20 13:58:43 gammu-smsd[1960]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/04/20 13:58:43 gammu-smsd[1960]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/04/20 19:26:00 gammu-smsd[2020]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/04/20 19:26:00 gammu-smsd[2020]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/04/20 19:26:02 gammu-smsd[2020]: Error connecting to database!
+Wed 2016/04/20 19:26:02 gammu-smsd[2020]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/04/20 19:26:02 gammu-smsd[2020]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/04/20 19:26:02 gammu-smsd[2020]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/04/21 03:28:13 gammu-smsd[1996]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/04/21 03:28:13 gammu-smsd[1996]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/04/21 03:28:15 gammu-smsd[1996]: Error connecting to database!
+Thu 2016/04/21 03:28:15 gammu-smsd[1996]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/04/21 03:28:15 gammu-smsd[1996]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/04/21 03:28:15 gammu-smsd[1996]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/04/21 10:30:28 gammu-smsd[1120]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/04/21 10:30:28 gammu-smsd[1120]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/04/21 10:30:30 gammu-smsd[1120]: Error connecting to database!
+Thu 2016/04/21 10:30:30 gammu-smsd[1120]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/04/21 10:30:30 gammu-smsd[1120]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/04/21 10:30:30 gammu-smsd[1120]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Thu 2016/04/21 19:12:17 gammu-smsd[1948]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/04/21 19:12:17 gammu-smsd[1948]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/04/21 19:12:18 gammu-smsd[1948]: Error connecting to database!
+Thu 2016/04/21 19:12:18 gammu-smsd[1948]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/04/21 19:12:18 gammu-smsd[1948]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/04/21 19:12:18 gammu-smsd[1948]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/04/22 09:57:55 gammu-smsd[1964]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/04/22 09:57:55 gammu-smsd[1964]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/04/22 09:57:57 gammu-smsd[1964]: Error connecting to database!
+Fri 2016/04/22 09:57:57 gammu-smsd[1964]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/04/22 09:57:57 gammu-smsd[1964]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/04/22 09:57:57 gammu-smsd[1964]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/04/24 21:26:24 gammu-smsd[1944]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/04/24 21:26:24 gammu-smsd[1944]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/04/24 21:26:25 gammu-smsd[1944]: Error connecting to database!
+Sun 2016/04/24 21:26:25 gammu-smsd[1944]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/04/24 21:26:25 gammu-smsd[1944]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/04/24 21:26:25 gammu-smsd[1944]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/04/25 12:47:07 gammu-smsd[1952]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/04/25 12:47:07 gammu-smsd[1952]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/04/25 12:47:09 gammu-smsd[1952]: Error connecting to database!
+Mon 2016/04/25 12:47:09 gammu-smsd[1952]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/04/25 12:47:09 gammu-smsd[1952]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/04/25 12:47:09 gammu-smsd[1952]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/04/25 12:54:59 gammu-smsd[1988]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/04/25 12:54:59 gammu-smsd[1988]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/04/25 12:55:01 gammu-smsd[1988]: Error connecting to database!
+Mon 2016/04/25 12:55:01 gammu-smsd[1988]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/04/25 12:55:01 gammu-smsd[1988]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/04/25 12:55:01 gammu-smsd[1988]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/04/25 13:22:24 gammu-smsd[1972]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/04/25 13:22:24 gammu-smsd[1972]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/04/25 13:22:26 gammu-smsd[1972]: Error connecting to database!
+Mon 2016/04/25 13:22:26 gammu-smsd[1972]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/04/25 13:22:26 gammu-smsd[1972]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/04/25 13:22:26 gammu-smsd[1972]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/04/25 15:02:46 gammu-smsd[1956]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/04/25 15:02:46 gammu-smsd[1956]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/04/25 15:02:48 gammu-smsd[1956]: Error connecting to database!
+Mon 2016/04/25 15:02:48 gammu-smsd[1956]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/04/25 15:02:48 gammu-smsd[1956]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/04/25 15:02:48 gammu-smsd[1956]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/04/25 16:22:16 gammu-smsd[1952]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/04/25 16:22:16 gammu-smsd[1952]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/04/25 16:22:18 gammu-smsd[1952]: Error connecting to database!
+Mon 2016/04/25 16:22:18 gammu-smsd[1952]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/04/25 16:22:18 gammu-smsd[1952]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/04/25 16:22:18 gammu-smsd[1952]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/04/25 19:54:42 gammu-smsd[1960]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/04/25 19:54:42 gammu-smsd[1960]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/04/25 19:54:45 gammu-smsd[1960]: Error connecting to database!
+Mon 2016/04/25 19:54:45 gammu-smsd[1960]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/04/25 19:54:45 gammu-smsd[1960]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/04/25 19:54:45 gammu-smsd[1960]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/04/25 19:59:07 gammu-smsd[1932]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/04/25 19:59:07 gammu-smsd[1932]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/04/25 19:59:09 gammu-smsd[1932]: Error connecting to database!
+Mon 2016/04/25 19:59:09 gammu-smsd[1932]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/04/25 19:59:09 gammu-smsd[1932]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/04/25 19:59:09 gammu-smsd[1932]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/04/26 07:33:53 gammu-smsd[1008]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/04/26 07:33:53 gammu-smsd[1008]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/04/26 07:33:55 gammu-smsd[1008]: Error connecting to database!
+Tue 2016/04/26 07:33:55 gammu-smsd[1008]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/04/26 07:33:55 gammu-smsd[1008]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/04/26 07:33:55 gammu-smsd[1008]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/04/26 14:54:00 gammu-smsd[1996]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/04/26 14:54:00 gammu-smsd[1996]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/04/26 14:54:05 gammu-smsd[1996]: Error connecting to database!
+Tue 2016/04/26 14:54:05 gammu-smsd[1996]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/04/26 14:54:05 gammu-smsd[1996]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/04/26 14:54:05 gammu-smsd[1996]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/04/27 11:45:19 gammu-smsd[1972]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/04/27 11:45:19 gammu-smsd[1972]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/04/27 11:45:21 gammu-smsd[1972]: Error connecting to database!
+Wed 2016/04/27 11:45:21 gammu-smsd[1972]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/04/27 11:45:21 gammu-smsd[1972]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/04/27 11:45:21 gammu-smsd[1972]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/04/27 18:14:47 gammu-smsd[2004]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/04/27 18:14:47 gammu-smsd[2004]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/04/27 18:14:49 gammu-smsd[2004]: Error connecting to database!
+Wed 2016/04/27 18:14:49 gammu-smsd[2004]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/04/27 18:14:49 gammu-smsd[2004]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/04/27 18:14:49 gammu-smsd[2004]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/04/28 09:40:01 gammu-smsd[2008]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/04/28 09:40:01 gammu-smsd[2008]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/04/28 09:40:02 gammu-smsd[2008]: Error connecting to database!
+Thu 2016/04/28 09:40:02 gammu-smsd[2008]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/04/28 09:40:02 gammu-smsd[2008]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/04/28 09:40:02 gammu-smsd[2008]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/04/29 09:32:13 gammu-smsd[1984]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/04/29 09:32:13 gammu-smsd[1984]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/04/29 09:32:14 gammu-smsd[1984]: Error connecting to database!
+Fri 2016/04/29 09:32:14 gammu-smsd[1984]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/04/29 09:32:14 gammu-smsd[1984]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/04/29 09:32:14 gammu-smsd[1984]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/04/29 13:26:46 gammu-smsd[1980]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/04/29 13:26:46 gammu-smsd[1980]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/04/29 13:26:47 gammu-smsd[1980]: Error connecting to database!
+Fri 2016/04/29 13:26:47 gammu-smsd[1980]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/04/29 13:26:47 gammu-smsd[1980]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/04/29 13:26:47 gammu-smsd[1980]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/04/30 22:20:39 gammu-smsd[2028]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/04/30 22:20:39 gammu-smsd[2028]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/04/30 22:20:41 gammu-smsd[2028]: Error connecting to database!
+Sat 2016/04/30 22:20:41 gammu-smsd[2028]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/04/30 22:20:41 gammu-smsd[2028]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/04/30 22:20:41 gammu-smsd[2028]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/01 09:13:37 gammu-smsd[2004]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/01 09:13:37 gammu-smsd[2004]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/01 09:13:38 gammu-smsd[2004]: Error connecting to database!
+Sun 2016/05/01 09:13:38 gammu-smsd[2004]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/01 09:13:38 gammu-smsd[2004]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/01 09:13:38 gammu-smsd[2004]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/01 09:18:59 gammu-smsd[1964]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/01 09:18:59 gammu-smsd[1964]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/01 09:19:00 gammu-smsd[1964]: Error connecting to database!
+Sun 2016/05/01 09:19:00 gammu-smsd[1964]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/01 09:19:00 gammu-smsd[1964]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/01 09:19:00 gammu-smsd[1964]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/01 09:21:08 gammu-smsd[1904]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/01 09:21:08 gammu-smsd[1904]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/01 09:21:10 gammu-smsd[1904]: Error connecting to database!
+Sun 2016/05/01 09:21:10 gammu-smsd[1904]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/01 09:21:10 gammu-smsd[1904]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/01 09:21:10 gammu-smsd[1904]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/01 09:33:31 gammu-smsd[2008]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/01 09:33:31 gammu-smsd[2008]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/01 09:33:34 gammu-smsd[2008]: Error connecting to database!
+Sun 2016/05/01 09:33:34 gammu-smsd[2008]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/01 09:33:34 gammu-smsd[2008]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/01 09:33:34 gammu-smsd[2008]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/01 09:42:38 gammu-smsd[2044]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/01 09:42:38 gammu-smsd[2044]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/01 09:42:40 gammu-smsd[2044]: Error connecting to database!
+Sun 2016/05/01 09:42:40 gammu-smsd[2044]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/01 09:42:40 gammu-smsd[2044]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/01 09:42:40 gammu-smsd[2044]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/01 19:52:46 gammu-smsd[1980]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/01 19:52:46 gammu-smsd[1980]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/01 19:52:47 gammu-smsd[1980]: Error connecting to database!
+Sun 2016/05/01 19:52:47 gammu-smsd[1980]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/01 19:52:47 gammu-smsd[1980]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/01 19:52:47 gammu-smsd[1980]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/05/02 10:41:58 gammu-smsd[1960]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/05/02 10:41:58 gammu-smsd[1960]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/05/02 10:42:00 gammu-smsd[1960]: Error connecting to database!
+Mon 2016/05/02 10:42:00 gammu-smsd[1960]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/05/02 10:42:00 gammu-smsd[1960]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/05/02 10:42:00 gammu-smsd[1960]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/05/02 21:00:45 gammu-smsd[1640]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/05/02 21:00:45 gammu-smsd[1640]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/05/02 21:00:47 gammu-smsd[1640]: Error connecting to database!
+Mon 2016/05/02 21:00:47 gammu-smsd[1640]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/05/02 21:00:47 gammu-smsd[1640]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/05/02 21:00:47 gammu-smsd[1640]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/05/02 21:34:31 gammu-smsd[1740]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/05/02 21:34:31 gammu-smsd[1740]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/05/02 21:34:32 gammu-smsd[1740]: Error connecting to database!
+Mon 2016/05/02 21:34:32 gammu-smsd[1740]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/05/02 21:34:32 gammu-smsd[1740]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/05/02 21:34:32 gammu-smsd[1740]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/05/03 07:19:20 gammu-smsd[1752]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/05/03 07:19:20 gammu-smsd[1752]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/05/03 07:19:21 gammu-smsd[1752]: Error connecting to database!
+Tue 2016/05/03 07:19:21 gammu-smsd[1752]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/05/03 07:19:21 gammu-smsd[1752]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/05/03 07:19:21 gammu-smsd[1752]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/05/03 16:35:40 gammu-smsd[1804]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/05/03 16:35:40 gammu-smsd[1804]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/05/03 16:35:41 gammu-smsd[1804]: Error connecting to database!
+Tue 2016/05/03 16:35:41 gammu-smsd[1804]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/05/03 16:35:41 gammu-smsd[1804]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/05/03 16:35:41 gammu-smsd[1804]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/05/03 17:29:00 gammu-smsd[1832]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/05/03 17:29:00 gammu-smsd[1832]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/05/03 17:29:02 gammu-smsd[1832]: Error connecting to database!
+Tue 2016/05/03 17:29:02 gammu-smsd[1832]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/05/03 17:29:02 gammu-smsd[1832]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/05/03 17:29:02 gammu-smsd[1832]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/05/03 21:23:05 gammu-smsd[1860]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/05/03 21:23:05 gammu-smsd[1860]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/05/03 21:23:06 gammu-smsd[1860]: Error connecting to database!
+Tue 2016/05/03 21:23:06 gammu-smsd[1860]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/05/03 21:23:06 gammu-smsd[1860]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/05/03 21:23:06 gammu-smsd[1860]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/05/04 15:46:23 gammu-smsd[1840]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/05/04 15:46:23 gammu-smsd[1840]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/05/04 15:46:24 gammu-smsd[1840]: Error connecting to database!
+Wed 2016/05/04 15:46:24 gammu-smsd[1840]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/05/04 15:46:24 gammu-smsd[1840]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/05/04 15:46:24 gammu-smsd[1840]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/05/05 18:02:20 gammu-smsd[1840]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/05/05 18:02:21 gammu-smsd[1840]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/05/05 18:02:22 gammu-smsd[1840]: Error connecting to database!
+Thu 2016/05/05 18:02:22 gammu-smsd[1840]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/05/05 18:02:22 gammu-smsd[1840]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/05/05 18:02:22 gammu-smsd[1840]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/05/06 01:51:05 gammu-smsd[1884]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/05/06 01:51:05 gammu-smsd[1884]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/05/06 01:51:07 gammu-smsd[1884]: Error connecting to database!
+Fri 2016/05/06 01:51:07 gammu-smsd[1884]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/05/06 01:51:07 gammu-smsd[1884]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/05/06 01:51:07 gammu-smsd[1884]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/05/06 09:51:28 gammu-smsd[1896]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/05/06 09:51:28 gammu-smsd[1896]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/05/06 09:51:30 gammu-smsd[1896]: Error connecting to database!
+Fri 2016/05/06 09:51:30 gammu-smsd[1896]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/05/06 09:51:30 gammu-smsd[1896]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/05/06 09:51:30 gammu-smsd[1896]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/05/06 13:33:46 gammu-smsd[1872]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/05/06 13:33:46 gammu-smsd[1872]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/05/06 13:33:48 gammu-smsd[1872]: Error connecting to database!
+Fri 2016/05/06 13:33:48 gammu-smsd[1872]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/05/06 13:33:48 gammu-smsd[1872]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/05/06 13:33:48 gammu-smsd[1872]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/05/06 20:21:49 gammu-smsd[1856]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/05/06 20:21:49 gammu-smsd[1856]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/05/06 20:21:51 gammu-smsd[1856]: Error connecting to database!
+Fri 2016/05/06 20:21:51 gammu-smsd[1856]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/05/06 20:21:51 gammu-smsd[1856]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/05/06 20:21:51 gammu-smsd[1856]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/05/07 08:40:48 gammu-smsd[1884]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/05/07 08:40:48 gammu-smsd[1884]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/05/07 08:40:49 gammu-smsd[1884]: Error connecting to database!
+Sat 2016/05/07 08:40:49 gammu-smsd[1884]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/05/07 08:40:49 gammu-smsd[1884]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/05/07 08:40:49 gammu-smsd[1884]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/05/07 10:31:24 gammu-smsd[1888]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/05/07 10:31:24 gammu-smsd[1888]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/05/07 10:31:26 gammu-smsd[1888]: Error connecting to database!
+Sat 2016/05/07 10:31:26 gammu-smsd[1888]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/05/07 10:31:26 gammu-smsd[1888]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/05/07 10:31:26 gammu-smsd[1888]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/05/07 10:38:56 gammu-smsd[1880]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/05/07 10:38:56 gammu-smsd[1880]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/05/07 10:38:57 gammu-smsd[1880]: Error connecting to database!
+Sat 2016/05/07 10:38:57 gammu-smsd[1880]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/05/07 10:38:57 gammu-smsd[1880]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/05/07 10:38:57 gammu-smsd[1880]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/05/07 16:21:34 gammu-smsd[1892]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/05/07 16:21:34 gammu-smsd[1892]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/05/07 16:21:35 gammu-smsd[1892]: Error connecting to database!
+Sat 2016/05/07 16:21:35 gammu-smsd[1892]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/05/07 16:21:35 gammu-smsd[1892]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/05/07 16:21:35 gammu-smsd[1892]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/05/07 18:54:02 gammu-smsd[1860]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/05/07 18:54:02 gammu-smsd[1860]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/05/07 18:54:04 gammu-smsd[1860]: Error connecting to database!
+Sat 2016/05/07 18:54:04 gammu-smsd[1860]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/05/07 18:54:04 gammu-smsd[1860]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/05/07 18:54:04 gammu-smsd[1860]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/05/07 23:33:39 gammu-smsd[1880]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/05/07 23:33:39 gammu-smsd[1880]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/05/07 23:33:41 gammu-smsd[1880]: Error connecting to database!
+Sat 2016/05/07 23:33:41 gammu-smsd[1880]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/05/07 23:33:41 gammu-smsd[1880]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/05/07 23:33:41 gammu-smsd[1880]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/08 13:35:41 gammu-smsd[1884]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/08 13:35:41 gammu-smsd[1884]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/08 13:35:43 gammu-smsd[1884]: Error connecting to database!
+Sun 2016/05/08 13:35:43 gammu-smsd[1884]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/08 13:35:43 gammu-smsd[1884]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/08 13:35:43 gammu-smsd[1884]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/08 16:52:25 gammu-smsd[1828]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/08 16:52:25 gammu-smsd[1828]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/08 16:52:27 gammu-smsd[1828]: Error connecting to database!
+Sun 2016/05/08 16:52:27 gammu-smsd[1828]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/08 16:52:27 gammu-smsd[1828]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/08 16:52:27 gammu-smsd[1828]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/08 21:32:14 gammu-smsd[1900]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/08 21:32:14 gammu-smsd[1900]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/08 21:32:16 gammu-smsd[1900]: Error connecting to database!
+Sun 2016/05/08 21:32:16 gammu-smsd[1900]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/08 21:32:16 gammu-smsd[1900]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/08 21:32:16 gammu-smsd[1900]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/05/09 02:33:36 gammu-smsd[1880]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/05/09 02:33:36 gammu-smsd[1880]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/05/09 02:33:38 gammu-smsd[1880]: Error connecting to database!
+Mon 2016/05/09 02:33:38 gammu-smsd[1880]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/05/09 02:33:38 gammu-smsd[1880]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/05/09 02:33:38 gammu-smsd[1880]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/05/09 09:57:53 gammu-smsd[1864]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/05/09 09:57:53 gammu-smsd[1864]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/05/09 09:57:55 gammu-smsd[1864]: Error connecting to database!
+Mon 2016/05/09 09:57:55 gammu-smsd[1864]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/05/09 09:57:55 gammu-smsd[1864]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/05/09 09:57:55 gammu-smsd[1864]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/05/09 11:42:43 gammu-smsd[1980]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/05/09 11:42:43 gammu-smsd[1980]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/05/09 11:42:45 gammu-smsd[1980]: Error connecting to database!
+Mon 2016/05/09 11:42:45 gammu-smsd[1980]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/05/09 11:42:45 gammu-smsd[1980]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/05/09 11:42:45 gammu-smsd[1980]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/05/09 12:42:48 gammu-smsd[1972]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/05/09 12:42:48 gammu-smsd[1972]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/05/09 12:42:50 gammu-smsd[1972]: Error connecting to database!
+Mon 2016/05/09 12:42:50 gammu-smsd[1972]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/05/09 12:42:50 gammu-smsd[1972]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/05/09 12:42:50 gammu-smsd[1972]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/05/09 14:33:24 gammu-smsd[1880]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/05/09 14:33:24 gammu-smsd[1880]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/05/09 14:33:26 gammu-smsd[1880]: Error connecting to database!
+Mon 2016/05/09 14:33:26 gammu-smsd[1880]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/05/09 14:33:26 gammu-smsd[1880]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/05/09 14:33:26 gammu-smsd[1880]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/05/09 21:03:12 gammu-smsd[1860]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/05/09 21:03:12 gammu-smsd[1860]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/05/09 21:03:13 gammu-smsd[1860]: Error connecting to database!
+Mon 2016/05/09 21:03:13 gammu-smsd[1860]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/05/09 21:03:13 gammu-smsd[1860]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/05/09 21:03:13 gammu-smsd[1860]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/05/10 09:17:48 gammu-smsd[1876]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/05/10 09:17:48 gammu-smsd[1876]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/05/10 09:17:49 gammu-smsd[1876]: Error connecting to database!
+Tue 2016/05/10 09:17:49 gammu-smsd[1876]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/05/10 09:17:49 gammu-smsd[1876]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/05/10 09:17:49 gammu-smsd[1876]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/05/10 09:28:14 gammu-smsd[1820]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/05/10 09:28:14 gammu-smsd[1820]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/05/10 09:28:16 gammu-smsd[1820]: Error connecting to database!
+Tue 2016/05/10 09:28:16 gammu-smsd[1820]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/05/10 09:28:16 gammu-smsd[1820]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/05/10 09:28:16 gammu-smsd[1820]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/05/10 10:36:51 gammu-smsd[2024]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/05/10 10:36:51 gammu-smsd[2024]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/05/10 10:36:52 gammu-smsd[2024]: Error connecting to database!
+Tue 2016/05/10 10:36:52 gammu-smsd[2024]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/05/10 10:36:52 gammu-smsd[2024]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/05/10 10:36:52 gammu-smsd[2024]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/05/10 14:33:58 gammu-smsd[2020]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/05/10 14:33:58 gammu-smsd[2020]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/05/10 14:34:00 gammu-smsd[2020]: Error connecting to database!
+Tue 2016/05/10 14:34:00 gammu-smsd[2020]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/05/10 14:34:00 gammu-smsd[2020]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/05/10 14:34:00 gammu-smsd[2020]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/05/10 21:22:58 gammu-smsd[1984]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/05/10 21:22:58 gammu-smsd[1984]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/05/10 21:22:59 gammu-smsd[1984]: Error connecting to database!
+Tue 2016/05/10 21:22:59 gammu-smsd[1984]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/05/10 21:22:59 gammu-smsd[1984]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/05/10 21:22:59 gammu-smsd[1984]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/05/11 09:57:07 gammu-smsd[1944]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/05/11 09:57:07 gammu-smsd[1944]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/05/11 09:57:08 gammu-smsd[1944]: Error connecting to database!
+Wed 2016/05/11 09:57:08 gammu-smsd[1944]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/05/11 09:57:08 gammu-smsd[1944]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 09:57:08 gammu-smsd[1944]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/05/11 10:06:25 gammu-smsd[2004]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/05/11 10:06:25 gammu-smsd[2004]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/05/11 10:06:28 gammu-smsd[2004]: Error connecting to database!
+Wed 2016/05/11 10:06:28 gammu-smsd[2004]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/05/11 10:06:28 gammu-smsd[2004]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 10:06:28 gammu-smsd[2004]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/05/11 13:07:09 gammu-smsd[1788]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/05/11 13:07:10 gammu-smsd[1788]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/05/11 13:07:11 gammu-smsd[1788]: Error connecting to database!
+Wed 2016/05/11 13:07:11 gammu-smsd[1788]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/05/11 13:07:11 gammu-smsd[1788]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 13:07:11 gammu-smsd[1788]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/05/11 18:52:23 gammu-smsd[1716]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/05/11 18:52:23 gammu-smsd[1716]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/05/11 18:52:24 gammu-smsd[1716]: Error connecting to database!
+Wed 2016/05/11 18:52:24 gammu-smsd[1716]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/05/11 18:52:24 gammu-smsd[1716]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 18:52:24 gammu-smsd[1716]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/05/11 19:07:39 gammu-smsd[2576]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/05/11 19:07:39 gammu-smsd[2576]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/05/11 19:07:39 gammu-smsd[2576]: Connected to Database: db_sipcapil on localhost
+Wed 2016/05/11 19:07:39 gammu-smsd[2576]: Connected to Database native_mysql: db_sipcapil on localhost
+Wed 2016/05/11 19:07:39 gammu-smsd[2576]: Created Windows RW shared memory at 00580000
+Wed 2016/05/11 19:07:39 gammu-smsd[2576]: Starting phone communication...
+Wed 2016/05/11 19:07:39 gammu-smsd[2576]: Error at init connection: Error opening device, it doesn't exist. (DEVICENOTEXIST[4])
+Wed 2016/05/11 19:07:39 gammu-smsd[2576]: Starting phone communication...
+Wed 2016/05/11 19:07:39 gammu-smsd[2576]: Error at init connection: Error opening device, it doesn't exist. (DEVICENOTEXIST[4])
+Wed 2016/05/11 19:07:39 gammu-smsd[2576]: Starting phone communication...
+Wed 2016/05/11 19:07:39 gammu-smsd[2576]: Error at init connection: Error opening device, it doesn't exist. (DEVICENOTEXIST[4])
+Wed 2016/05/11 19:07:39 gammu-smsd[2576]: Starting phone communication...
+Wed 2016/05/11 19:07:39 gammu-smsd[2576]: Error at init connection: Error opening device, it doesn't exist. (DEVICENOTEXIST[4])
+Wed 2016/05/11 19:07:39 gammu-smsd[2576]: Going to 30 seconds sleep because of too much connection errors
+Wed 2016/05/11 19:08:09 gammu-smsd[2576]: Starting phone communication...
+Wed 2016/05/11 19:08:09 gammu-smsd[2576]: Error at init connection: Error opening device, it doesn't exist. (DEVICENOTEXIST[4])
+Wed 2016/05/11 19:08:09 gammu-smsd[2576]: Going to 30 seconds sleep because of too much connection errors
+Wed 2016/05/11 19:08:39 gammu-smsd[2576]: Starting phone communication...
+Wed 2016/05/11 19:08:39 gammu-smsd[2576]: Error at init connection: Error opening device, it doesn't exist. (DEVICENOTEXIST[4])
+Wed 2016/05/11 19:08:39 gammu-smsd[2576]: Going to 30 seconds sleep because of too much connection errors
+Wed 2016/05/11 19:10:08 gammu-smsd[4468]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/05/11 19:10:08 gammu-smsd[4468]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/05/11 19:10:08 gammu-smsd[4468]: Connected to Database: db_sipcapil on localhost
+Wed 2016/05/11 19:10:08 gammu-smsd[4468]: Connected to Database native_mysql: db_sipcapil on localhost
+Wed 2016/05/11 19:10:08 gammu-smsd[4468]: Created Windows RW shared memory at 003F0000
+Wed 2016/05/11 19:10:08 gammu-smsd[4468]: Starting phone communication...
+Wed 2016/05/11 19:10:16 gammu-smsd[4468]: Inserting phone info
+Wed 2016/05/11 19:10:47 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:11:19 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:11:51 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:12:23 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:12:55 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:13:22 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:13:54 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:14:26 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:14:58 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:15:30 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:16:02 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:16:34 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:17:06 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:17:38 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:18:10 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:18:38 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:19:06 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:19:09 gammu-smsd[4468]: Read 1 messages
+Wed 2016/05/11 19:19:40 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:20:12 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:20:44 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:21:16 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:21:44 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:22:16 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:22:48 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:23:20 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:23:52 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:24:24 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:24:56 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:25:28 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:26:00 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:34:35 gammu-smsd[4468]: Read 1 messages
+Wed 2016/05/11 19:35:07 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:38:30 gammu-smsd[4468]: Read 1 messages
+Wed 2016/05/11 19:39:11 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:40:16 gammu-smsd[4468]: Read 1 messages
+Wed 2016/05/11 19:41:14 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:41:50 gammu-smsd[4468]: Read 1 messages
+Wed 2016/05/11 19:42:47 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 19:44:35 gammu-smsd[4468]: Read 1 messages
+Wed 2016/05/11 19:45:20 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 20:02:56 gammu-smsd[4468]: Read 1 messages
+Wed 2016/05/11 20:03:37 gammu-smsd[4468]: Error getting send status of message: Unknown error. (UNKNOWN[27])
+Wed 2016/05/11 22:30:33 gammu-smsd[4468]: Error code: 2006, Error: MySQL server has gone away
+Wed 2016/05/11 22:30:33 gammu-smsd[4468]: SQL failed (timeout): UPDATE phones SET `TimeOut`= (NOW() + INTERVAL 10 SECOND) + 0, `Battery` = 0, `Signal` = 21 WHERE `IMEI` = '863448018379963'
+Wed 2016/05/11 22:30:33 gammu-smsd[4468]: reconnecting to database!
+Wed 2016/05/11 22:30:33 gammu-smsd[4468]: Reconnecting after 1 seconds...
+Wed 2016/05/11 22:30:35 gammu-smsd[4468]: Error connecting to database!
+Wed 2016/05/11 22:30:35 gammu-smsd[4468]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/05/11 22:30:35 gammu-smsd[4468]: Reconnecting after 4 seconds...
+Wed 2016/05/11 22:30:40 gammu-smsd[4468]: Error connecting to database!
+Wed 2016/05/11 22:30:40 gammu-smsd[4468]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/05/11 22:30:40 gammu-smsd[4468]: Reconnecting after 9 seconds...
+Thu 2016/05/12 11:33:43 gammu-smsd[1912]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/05/12 11:33:43 gammu-smsd[1912]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/05/12 11:33:46 gammu-smsd[1912]: Error connecting to database!
+Thu 2016/05/12 11:33:46 gammu-smsd[1912]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/05/12 11:33:46 gammu-smsd[1912]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/05/12 11:33:46 gammu-smsd[1912]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/05/12 20:48:06 gammu-smsd[1744]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/05/12 20:48:07 gammu-smsd[1744]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/05/12 20:48:08 gammu-smsd[1744]: Error connecting to database!
+Thu 2016/05/12 20:48:08 gammu-smsd[1744]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/05/12 20:48:09 gammu-smsd[1744]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/05/12 20:48:09 gammu-smsd[1744]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/05/13 08:39:01 gammu-smsd[1932]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/05/13 08:39:01 gammu-smsd[1932]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/05/13 08:39:05 gammu-smsd[1932]: Error connecting to database!
+Fri 2016/05/13 08:39:05 gammu-smsd[1932]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/05/13 08:39:05 gammu-smsd[1932]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/05/13 08:39:05 gammu-smsd[1932]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/05/13 10:16:39 gammu-smsd[1968]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/05/13 10:16:39 gammu-smsd[1968]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/05/13 10:16:42 gammu-smsd[1968]: Error connecting to database!
+Fri 2016/05/13 10:16:42 gammu-smsd[1968]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/05/13 10:16:42 gammu-smsd[1968]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/05/13 10:16:42 gammu-smsd[1968]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/05/13 12:58:27 gammu-smsd[1824]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/05/13 12:58:27 gammu-smsd[1824]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/05/13 12:58:29 gammu-smsd[1824]: Error connecting to database!
+Fri 2016/05/13 12:58:29 gammu-smsd[1824]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/05/13 12:58:29 gammu-smsd[1824]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/05/13 12:58:29 gammu-smsd[1824]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/15 09:37:11 gammu-smsd[1832]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/15 09:37:11 gammu-smsd[1832]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/15 09:37:13 gammu-smsd[1832]: Error connecting to database!
+Sun 2016/05/15 09:37:13 gammu-smsd[1832]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/15 09:37:13 gammu-smsd[1832]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/15 09:37:13 gammu-smsd[1832]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/15 11:21:23 gammu-smsd[1812]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/15 11:21:23 gammu-smsd[1812]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/15 11:21:26 gammu-smsd[1812]: Error connecting to database!
+Sun 2016/05/15 11:21:26 gammu-smsd[1812]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/15 11:21:26 gammu-smsd[1812]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/15 11:21:26 gammu-smsd[1812]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/15 15:03:28 gammu-smsd[2000]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/15 15:03:28 gammu-smsd[2000]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/15 15:03:30 gammu-smsd[2000]: Error connecting to database!
+Sun 2016/05/15 15:03:30 gammu-smsd[2000]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/15 15:03:30 gammu-smsd[2000]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/15 15:03:30 gammu-smsd[2000]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/15 15:11:37 gammu-smsd[1912]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/15 15:11:37 gammu-smsd[1912]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/15 15:11:39 gammu-smsd[1912]: Error connecting to database!
+Sun 2016/05/15 15:11:39 gammu-smsd[1912]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/15 15:11:39 gammu-smsd[1912]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/15 15:11:39 gammu-smsd[1912]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/15 20:19:16 gammu-smsd[1844]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/15 20:19:16 gammu-smsd[1844]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/15 20:19:17 gammu-smsd[1844]: Error connecting to database!
+Sun 2016/05/15 20:19:17 gammu-smsd[1844]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/15 20:19:17 gammu-smsd[1844]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/15 20:19:17 gammu-smsd[1844]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/15 22:30:27 gammu-smsd[1988]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/15 22:30:27 gammu-smsd[1988]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/15 22:30:29 gammu-smsd[1988]: Error connecting to database!
+Sun 2016/05/15 22:30:29 gammu-smsd[1988]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/15 22:30:29 gammu-smsd[1988]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/15 22:30:29 gammu-smsd[1988]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/05/16 08:36:45 gammu-smsd[1880]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/05/16 08:36:45 gammu-smsd[1880]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/05/16 08:36:48 gammu-smsd[1880]: Error connecting to database!
+Mon 2016/05/16 08:36:48 gammu-smsd[1880]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/05/16 08:36:48 gammu-smsd[1880]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/05/16 08:36:48 gammu-smsd[1880]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/05/16 13:49:23 gammu-smsd[1956]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/05/16 13:49:23 gammu-smsd[1956]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/05/16 13:49:26 gammu-smsd[1956]: Error connecting to database!
+Mon 2016/05/16 13:49:26 gammu-smsd[1956]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/05/16 13:49:26 gammu-smsd[1956]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/05/16 13:49:26 gammu-smsd[1956]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/05/16 22:49:34 gammu-smsd[1768]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/05/16 22:49:34 gammu-smsd[1768]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/05/16 22:49:40 gammu-smsd[1768]: Error connecting to database!
+Mon 2016/05/16 22:49:40 gammu-smsd[1768]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/05/16 22:49:40 gammu-smsd[1768]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/05/16 22:49:40 gammu-smsd[1768]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/05/17 09:23:20 gammu-smsd[1844]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/05/17 09:23:20 gammu-smsd[1844]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/05/17 09:23:23 gammu-smsd[1844]: Error connecting to database!
+Tue 2016/05/17 09:23:23 gammu-smsd[1844]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/05/17 09:23:23 gammu-smsd[1844]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/05/17 09:23:23 gammu-smsd[1844]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/05/17 14:21:07 gammu-smsd[1848]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/05/17 14:21:07 gammu-smsd[1848]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/05/17 14:21:10 gammu-smsd[1848]: Error connecting to database!
+Tue 2016/05/17 14:21:10 gammu-smsd[1848]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/05/17 14:21:10 gammu-smsd[1848]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/05/17 14:21:10 gammu-smsd[1848]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/05/18 08:14:33 gammu-smsd[1864]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/05/18 08:14:33 gammu-smsd[1864]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/05/18 08:14:37 gammu-smsd[1864]: Error connecting to database!
+Wed 2016/05/18 08:14:37 gammu-smsd[1864]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/05/18 08:14:37 gammu-smsd[1864]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/05/18 08:14:37 gammu-smsd[1864]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/05/18 10:50:14 gammu-smsd[2020]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/05/18 10:50:14 gammu-smsd[2020]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/05/18 10:50:16 gammu-smsd[2020]: Error connecting to database!
+Wed 2016/05/18 10:50:16 gammu-smsd[2020]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/05/18 10:50:16 gammu-smsd[2020]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/05/18 10:50:16 gammu-smsd[2020]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/05/18 14:37:26 gammu-smsd[1996]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/05/18 14:37:26 gammu-smsd[1996]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/05/18 14:37:27 gammu-smsd[1996]: Error connecting to database!
+Wed 2016/05/18 14:37:27 gammu-smsd[1996]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/05/18 14:37:27 gammu-smsd[1996]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/05/18 14:37:27 gammu-smsd[1996]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Wed 2016/05/18 16:08:01 gammu-smsd[2000]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/05/18 16:08:01 gammu-smsd[2000]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/05/18 16:08:03 gammu-smsd[2000]: Error connecting to database!
+Wed 2016/05/18 16:08:03 gammu-smsd[2000]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/05/18 16:08:03 gammu-smsd[2000]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/05/18 16:08:03 gammu-smsd[2000]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/05/19 12:01:04 gammu-smsd[1648]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/05/19 12:01:04 gammu-smsd[1648]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/05/19 12:01:06 gammu-smsd[1648]: Error connecting to database!
+Thu 2016/05/19 12:01:06 gammu-smsd[1648]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/05/19 12:01:06 gammu-smsd[1648]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/05/19 12:01:06 gammu-smsd[1648]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/05/19 18:31:02 gammu-smsd[1952]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/05/19 18:31:02 gammu-smsd[1952]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/05/19 18:31:05 gammu-smsd[1952]: Error connecting to database!
+Thu 2016/05/19 18:31:05 gammu-smsd[1952]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/05/19 18:31:05 gammu-smsd[1952]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/05/19 18:31:05 gammu-smsd[1952]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/05/19 18:44:35 gammu-smsd[1956]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/05/19 18:44:35 gammu-smsd[1956]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/05/19 18:44:38 gammu-smsd[1956]: Error connecting to database!
+Thu 2016/05/19 18:44:38 gammu-smsd[1956]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/05/19 18:44:38 gammu-smsd[1956]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/05/19 18:44:38 gammu-smsd[1956]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/05/19 18:48:01 gammu-smsd[1976]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/05/19 18:48:01 gammu-smsd[1976]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/05/19 18:48:02 gammu-smsd[1976]: Error connecting to database!
+Thu 2016/05/19 18:48:02 gammu-smsd[1976]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/05/19 18:48:02 gammu-smsd[1976]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/05/19 18:48:02 gammu-smsd[1976]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/05/19 18:53:17 gammu-smsd[1964]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/05/19 18:53:17 gammu-smsd[1964]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/05/19 18:53:18 gammu-smsd[1964]: Error connecting to database!
+Thu 2016/05/19 18:53:18 gammu-smsd[1964]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/05/19 18:53:18 gammu-smsd[1964]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/05/19 18:53:18 gammu-smsd[1964]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/05/20 09:51:31 gammu-smsd[1736]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/05/20 09:51:31 gammu-smsd[1736]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/05/20 09:51:34 gammu-smsd[1736]: Error connecting to database!
+Fri 2016/05/20 09:51:34 gammu-smsd[1736]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/05/20 09:51:34 gammu-smsd[1736]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/05/20 09:51:34 gammu-smsd[1736]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/05/20 21:20:44 gammu-smsd[1740]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/05/20 21:20:44 gammu-smsd[1740]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/05/20 21:20:46 gammu-smsd[1740]: Error connecting to database!
+Fri 2016/05/20 21:20:46 gammu-smsd[1740]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/05/20 21:20:46 gammu-smsd[1740]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/05/20 21:20:46 gammu-smsd[1740]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/22 13:07:24 gammu-smsd[1908]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/22 13:07:24 gammu-smsd[1908]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/22 13:07:25 gammu-smsd[1908]: Error connecting to database!
+Sun 2016/05/22 13:07:25 gammu-smsd[1908]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/22 13:07:25 gammu-smsd[1908]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/22 13:07:25 gammu-smsd[1908]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/05/22 21:11:07 gammu-smsd[1960]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/05/22 21:11:07 gammu-smsd[1960]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/05/22 21:11:09 gammu-smsd[1960]: Error connecting to database!
+Sun 2016/05/22 21:11:09 gammu-smsd[1960]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/05/22 21:11:09 gammu-smsd[1960]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/05/22 21:11:09 gammu-smsd[1960]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/05/23 09:58:02 gammu-smsd[2012]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/05/23 09:58:02 gammu-smsd[2012]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/05/23 09:58:04 gammu-smsd[2012]: Error connecting to database!
+Mon 2016/05/23 09:58:04 gammu-smsd[2012]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/05/23 09:58:04 gammu-smsd[2012]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/05/23 09:58:04 gammu-smsd[2012]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/05/24 09:58:00 gammu-smsd[1644]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/05/24 09:58:00 gammu-smsd[1644]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/05/24 09:58:02 gammu-smsd[1644]: Error connecting to database!
+Tue 2016/05/24 09:58:02 gammu-smsd[1644]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/05/24 09:58:02 gammu-smsd[1644]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/05/24 09:58:02 gammu-smsd[1644]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
