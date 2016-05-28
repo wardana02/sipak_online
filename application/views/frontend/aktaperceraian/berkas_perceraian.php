@@ -140,7 +140,9 @@
                                                             <?php if ($data->$value=='') {
                                                                 echo "<img src= ".base_url("assets/frontend2/img/u26972115.jpg")." alt=Data Berkas>";
                                                             }else{
-                                                                echo "<img src= base_url(assets/uploads/$NODAFTAR/$data->$value); alt=Data Berkas>";
+                                                                $rel = base_url()."assets/uploads/$NODAFTAR/".$data->$value."";
+                                                                //echo "$rel";
+                                                                echo "<img src=$rel alt='Data Berkas'>";
                                                             }
                                                             ?>
                                                                 
@@ -150,7 +152,7 @@
                                                              <span class="btn btn-primary btn-file">
                                                              <span class="fileupload-new"><i class="glyphicon glyphicon-pencil"></i> Pilih Berkas</span>
                                                              <span class="fileupload-exists"><i class="fa fa-undo"></i> Ganti</span>
-                                                             <input type="file" name="<?php echo $value;?>" class="default">
+                                                             <input type="file" accept="image/*"  name="<?php echo $value;?>" class="default">
                                                              </span>
                                                              <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash"></i> Batalkan</a>
                                                             </div>
@@ -187,8 +189,8 @@
                                       <div class="form-group"></center>
                                           
                                   </fieldset>
-                                  <input type="text" name="id_al" value="<?php echo $ID_AC?>">
-                                  <input type="text" name="id_berkas" value="<?php echo $id_berkas?>">
+                                  <input type="hidden" name="id_al" value="<?php echo $ID_AC?>">
+                                  <input type="hidden" name="id_berkas" value="<?php echo $id_berkas?>">
 
                                   <input type="submit" class="finish btn btn-danger" value="Simpan Data Formulir!"/>
                               </form>

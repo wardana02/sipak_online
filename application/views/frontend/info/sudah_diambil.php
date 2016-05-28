@@ -50,6 +50,14 @@
                           <td>Diserahkan Oleh Petugas </td><td><b><?php echo $oleh;?></b></td>
                         </tr>
                         <tr>
+                          <td>Denda Administrasi </td><td><b><?php echo "Rp ".$denda.",-";?></b></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">
+                             Peraturan Tentang denda administratif <b><a href=<?=base_url("home/unduh_sk")?>>Lihat Disini</a></b>
+                          </td>
+                        </tr>
+                        <tr>
                           <td colspan="2">Dengan pernyataan tersebut
                           dapaat dijadikan sebagai bukti tanda terima yang sah. Terimakasih</td>
                         </tr>

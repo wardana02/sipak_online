@@ -255,7 +255,7 @@ $(function () {
 
 
     </script>
-    <?php } ?>
+    <?php }$scroll=false; ?>
 
     <!-- date-range-picker -->
     <script src=<?=base_url("assets/backend/adminlte/plugins/daterangepicker/daterangepicker.js");?> type="text/javascript"></script>
@@ -271,8 +271,14 @@ $(function () {
     <script src="<?php echo base_url() ?>assets/backend/adminlte/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
     <script type="text/javascript">
       $(document).ready(function() {
+            $('#example').DataTable( {
+                "scrollX": true,
+            } );
+        } );
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
             $('#example1').DataTable( {
-                "scrollX": '100%'
             } );
         } );
     </script>

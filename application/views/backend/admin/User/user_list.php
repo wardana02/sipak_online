@@ -5,7 +5,7 @@
         <section class="content">
           <div class="row">
             <div class="col-md-12">
-                <h2 style="margin-top:0px">Data User Sistem Capil Online</h2>
+                
             </div>
             <div class="col-md-12 text-center">
                 <div style="margin-top: 4px"  id="message">
@@ -14,19 +14,20 @@
             </div><br>
             <div class="col-md-12">
               <div class="box box-primary">
-                <div class="box-header with-border">
-                  <h3 class="box-title">
-                    <?php echo anchor(site_url('user/create'), 'Tambah User Baru', 'class="btn btn-success"'); ?>
-                  </h3>
+                <div class="box-header with-border" style="background: #3c8dbc">
+                  <div class="box-title"><font color="#ffffff"><i class="glyphicon glyphicon-user"></i>  Data User Sistem Capil Online</font></div>
                 </div><!-- /.box-header -->
 
                 <div class="box-body">
                   <div class="">
+                  <h3 class="box-title">
+                    <?php echo anchor(site_url('user/create'), 'Tambah User Baru', 'class="btn btn-success"'); ?>
+                  </h3>
                   
                   <!--FRO GENERATE -->
                     <table class="table table-bordered table-striped" id="example1">
-                        <thead>
-                            <tr>
+                        <thead style="background: #3c8dbc">
+                            <tr style="color: #ffffff">
                                 <th width="80px">No</th>
             		    <th>Previlage</th>
             		    <th>Username</th>

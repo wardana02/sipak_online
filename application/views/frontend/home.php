@@ -312,7 +312,7 @@
                                         <img src=<?=base_url("assets/frontend2/img/grafik.jpg");?> alt="">
                                     </a>
                                     <div class="media-body">
-                                        <a href=<?=base_url("home/infografik");?> class=" p-head">Data Jumlah Penduduk</a>
+                                        <a href=<?=base_url("home/ig2");?> class=" p-head">Data Jumlah Penduduk</a>
                                         <p>Data Penduduk Kota Surakarta dalam Grafik berdasarkan jenis kelamin</p>
                                     </div>
                                 </article>
@@ -389,8 +389,8 @@
                                     <span class="about-testimonial-company">Walikota Surakarta</span>
                                     <div class="about-testimonial-content">
                                         <p class="about-testimonial-quote">
-                                            Pellentesque et pulvinar enim. Quisque at tempor ligula. Maecenas augue ante, euismod vitae egestas sit amet, accumsan eu nulla. Nullam tempor lectus a ligula lobortis pretium. Donec ut purus sed tortor malesuada venenatis eget eget lorem.
-                                        </p>
+                                            Rudyatmo maju sebagai Wali Kota Surakarta kembali pada Pemilihan Kepala Daerah (Pilkada) Serentak 2015 yang akan digelar pada tanggal 9 Desember 2015. 
+                                            </p>
                                     </div>
                                 </li>
                                 <li>
@@ -401,8 +401,8 @@
                                     <span class="about-testimonial-company">Wakil Walikota Surakarta</span>
                                     <div class="about-testimonial-content">
                                         <p class="about-testimonial-quote">
-                                            Pellentesque et pulvinar enim. Quisque at tempor ligula. Maecenas augue ante, euismod vitae egestas sit amet, accumsan eu nulla. Nullam tempor lectus a ligula lobortis pretium. Donec ut purus sed tortor malesuada venenatis eget eget lorem.
-                                        </p>
+                                            Rudyatmo maju sebagai Wali Kota Surakarta kembali pada Pemilihan Kepala Daerah (Pilkada) Serentak 2015 yang akan digelar pada tanggal 9 Desember 2015. 
+                                            </p>
                                     </div>
                                 </li>
                             </ul>

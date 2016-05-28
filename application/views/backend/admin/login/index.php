@@ -72,11 +72,13 @@
 
           <div class="row">
           
-            <div class="col-xs-4">
+            <div class="col-sm-6">
               <input type="submit" class="btn btn-primary btn-block btn-flat" value="Masuk!">
+            </div>
+            <div class="col-sm-6">
               <a href=<?=base_url('home');?> class="btn btn-danger btn-block btn-flat" >Kembali!!</a>
-              
             </div><!-- /.col -->
+            
           </div>
 
         </form>

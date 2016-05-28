@@ -42,6 +42,14 @@
                           <td>Tanggal Pendaftaran </td><td><b><?php echo dateindo($tgl_daftar);?></b></td>
                         </tr>
                         <tr>
+                          <td>Denda Administrasi </td><td><b><?php echo "Rp ".$denda.",-";?></b></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">
+                             Peraturan Tentang denda administratif <b><a href=<?=base_url("home/unduh_sk")?>>Lihat Disini</a></b>
+                          </td>
+                        </tr>
+                        <tr>
                           <td colspan="2"> Berikut adalah data riwayat verifikasi berkas anda :</td>
                         </tr>
                         
