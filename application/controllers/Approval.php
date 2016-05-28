@@ -216,13 +216,14 @@ class Approval extends CI_Controller
         }elseif ($c=="AC") {
             $jensi="Akta Perceraian";
             $true = $this->Akta_perceraian_model->get_by_id($value);
-            $cerai = $this->Data_perceraian_model->get_by_al($true->id_ac);
+            $cerai = $this->perceraian->get_by_al($true->id_ac);
             $tgl_terjadi  = $cerai->tgl_putusan; $jenis = "akta_perceraian";
-            $id_upd = $true->id_am; $f_id = 'id_am';
+            $id_upd = $true->id_ac; $f_id = 'id_ac';
             $re = site_url("b2_19/selesai/".$this->session->userdata('s_idac'));
         }
-        
+        //echo "string";exit();
         $NODAFTAR = $this->session->userdata('s_no_daftar');
+
   
         if ((isset($true))&&($NODAFTAR == $true->no_registrasi)) {
             $data = array(

@@ -604,6 +604,13 @@ class Home extends CI_Controller {
             }
         }
 
+        public function unduh_sk(){
+        $isi = file_get_contents(base_url().'assets/doc/perda.pdf');
+                    $tgl = date('Y-m-d');
+                    $nama = "perda nomor 10 tahun 2010 tentang penyelenggaraan adminduk.pdf";
+                    force_download($nama,$isi);
+    }
+
 		
 
 

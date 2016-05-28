@@ -110,6 +110,7 @@ class F2_12 extends CI_Controller
 		        			'tgl_ambil'	=>	$app->tgl_ambil,
 		        			's_no_daftar'=>	$app->no_registrasi,
 		        			'oleh'		=>	$app->oleh_ambil,
+		        			'denda'		=>	$app->denda,
 		        			'jenis'		=> "Akta Perkawinan #VE",
 		        			);
 		        		$data['conten'] = "frontend/info/terkunci";
@@ -123,6 +124,7 @@ class F2_12 extends CI_Controller
 		        			'tgl_ambil'	=>	$app->tgl_ambil,
 		        			's_no_daftar'=>	$app->no_registrasi,
 		        			'oleh'		=>	$app->oleh_ambil,
+		        			'denda'		=>	$app->denda,
 		        			'jenis'		=> "Akta Perkawinan #AM",
 		        			);
 		        		$data['conten'] = "frontend/info/sudah_diambil";
