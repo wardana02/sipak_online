@@ -62,3 +62,33 @@ DELIMITER ;
 	 ) as kata
 		FROM mess_replay JOIN approval ON mess_replay.no_pendaftaran=approval.no_regis
 		 WHERE mess_replay.ID='10'
+
+
+DELIMITER //
+CREATE TRIGGER ganti_hp
+AFTER INSERT
+   ON inbox FOR EACH ROW
+
+BEGIN
+
+DECLARE Vjenis VARCHAR(20);
+DECLARE Vhp VARCHAR(20);
+UPDATE Vjenis SET no_hp=Vhp WHERE no_pendaftaran=kueri.kode(
+SELECT
+ 	TextDecoded,
+ 	SenderNumber,
+ 	SUBSTRING(TextDecoded,9,13) as no, 
+ 	SUBSTRING(TextDecoded,11,2) as kode,
+ 	IF(SUBSTRING(TextDecoded,11,2) = '02','akta_kelahiran',
+ 		IF(SUBSTRING(TextDecoded,11,2) = '29','akta_kematian',
+ 			IF(SUBSTRING(TextDecoded,11,2) = '12','akta_perkawinan',
+ 				IF(SUBSTRING(TextDecoded,11,2) = '19','akta_perceraian','tidak_tahu')
+ 			)
+ 		)
+ 	) jenis INTO Vjenis,
+  SUBSTRING(TextDecoded,23,13) as hp_baru INTO Vhp
+ 	FROM inbox WHERE TextDecoded LIKE 'GANTIHP_%' AND inbox.ID=(SELECT MAX(ID) FROM inbox)
+)as kueri ;
+
+END; //
+DELIMITER ;

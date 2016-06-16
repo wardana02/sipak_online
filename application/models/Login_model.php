@@ -52,7 +52,8 @@ class Login_model extends CI_Model {
         $query = $this->db->query("SELECT 
             *
             FROM user 
-            where username='$a' AND password='$b'");
+            where username='$a' AND password='$b'
+            AND aktif='1'");
         if ($query->num_rows() == 1)
         {
             $keyword = explode('_', $a);

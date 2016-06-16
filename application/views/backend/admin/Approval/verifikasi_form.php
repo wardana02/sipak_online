@@ -76,7 +76,7 @@
                                   <div id="Bayi" class="tab-pane active">
                                       <h2 style="margin-top:0px">Data Bayi</h2>
                                         <table class="table">
-                                          <tr><td>Nama Bayi</td><td><?php echo $bayi_data->nama; ?></td></tr>
+                                          <tr><td width="350">Nama Bayi</td><td><?php echo $bayi_data->nama; ?></td></tr>
                                           <tr><td>Jenis Kelamin</td><td><?php echo $bayi_data->jk; ?></td></tr>
                                           <tr><td>Tempat Lahir</td><td><?php echo $bayi_data->tmp_lahir; ?></td></tr>
                                           <tr><td>Tempat Kelahiran</td><td><?php echo $bayi_data->tmp_kelahiran; ?></td></tr>
@@ -93,7 +93,7 @@
                                         <ul class="mailbox-attachments clearfix"> 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->sk_lahir"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->sk_lahir"); ?>
                                            title="Bukti Scan Surat Keterangan Kelahiran">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->sk_lahir"); ?> width="320px" alt="" />
                                         </a> 
@@ -109,7 +109,7 @@
 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->kk_baru"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->kk_baru"); ?>
                                            title="Scan Kartu Keluarga Baru">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->kk_baru"); ?> width="320px" alt="" />
                                         </a>
@@ -131,7 +131,7 @@
                                   <div id="Ibu" class="tab-pane">
                                       <h2 style="margin-top:0px">Data Ibu</h2>
                                          <table class="table">
-                                        <tr><td>NIK</td><td><?php echo $ibu_data->nik; ?></td></tr>
+                                          <tr><td width="350">NIK</td><td><?php echo $ibu_data->nik; ?></td></tr>
                                         <tr><td>Nama Ibu</td><td><?php echo $ibu_data->nama; ?></td></tr>
                                         <tr><td>Tanggal Lahir Ibu</td><td><?php echo $ibu_data->tgl_lahir; ?></td></tr>
                                         <tr><td>Umur</td><td><?php echo $ibu_data->umur; ?></td></tr>
@@ -146,7 +146,7 @@
                                     <ul class="mailbox-attachments clearfix"> 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_ortu1"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_ortu1"); ?>
                                            title="Scan KTP Ibu">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_ortu1"); ?> width="320px" alt="" />
                                         </a> 
@@ -162,7 +162,7 @@
 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->akta_nikah_ortu"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->akta_nikah_ortu"); ?>
                                            title="Scan Akta Perkawinan Orang Tua Bayi">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->akta_nikah_ortu"); ?> width="320px" alt="" />
                                         </a>
@@ -181,7 +181,7 @@
                                   <div id="Ayah" class="tab-pane">
                                       <h2 style="margin-top:0px">Data Ayah</h2>
                                         <table class="table">
-                                        <tr><td>NIK</td><td><?php echo $ayah_data->nik; ?></td></tr>
+                                          <tr><td width="350">NIK</td><td><?php echo $ayah_data->nik; ?></td></tr>
                                         <tr><td>Nama Ibu</td><td><?php echo $ayah_data->nama; ?></td></tr>
                                         <tr><td>Tanggal Lahir Ibu</td><td><?php echo $ayah_data->tgl_lahir; ?></td></tr>
                                         <tr><td>Umur</td><td><?php echo $ayah_data->umur; ?></td></tr>
@@ -195,7 +195,7 @@
                                     <ul class="mailbox-attachments clearfix"> 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_ortu2"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_ortu2"); ?>
                                            title="Scan KTP Ayah">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_ortu2"); ?> width="320px" alt="" />
                                         </a>
@@ -216,7 +216,7 @@
                                   <div id="Pelapor" class="tab-pane">
                                       <h2 style="margin-top:0px">Data Pelapor Read</h2>
                                           <table class="table">
-                                          <tr><td>NIK</td><td><?php echo $pelapor_data->nik; ?></td></tr>
+                                          <tr><td width="350">NIK</td><td><?php echo $pelapor_data->nik; ?></td></tr>
                                           <tr><td>Nama</td><td><?php echo $pelapor_data->nama; ?></td></tr>
                                           <tr><td>Umur</td><td><?php echo $pelapor_data->umur; ?></td></tr>
                                           <tr><td>Desa</td><td><?php echo $pelapor_data->a_desa; ?></td></tr>
@@ -231,7 +231,7 @@
                                   <div id="Saksi-1" class="tab-pane">
                                       <h2 style="margin-top:0px">Data Saksi 1</h2>
                                       <table class="table">
-                                          <tr><td>Nik</td><td><?php echo $saksi1_data->nik; ?></td></tr>
+                                          <tr><td width="350">Nik</td><td><?php echo $saksi1_data->nik; ?></td></tr>
                                           <tr><td>Nama</td><td><?php echo $saksi1_data->nama; ?></td></tr>
                                           <tr><td>Umur</td><td><?php echo $saksi1_data->umur; ?></td></tr>
                                           <tr><td>A Alamat</td><td><?php echo $saksi1_data->a_alamat; ?></td></tr>
@@ -244,7 +244,7 @@
                                       <ul class="mailbox-attachments clearfix"> 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_saksi1"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_saksi1"); ?>
                                            title="Bukti Scan KTP Saksi 1">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_saksi1"); ?> width="320px" alt="" />
                                         </a> 
@@ -263,7 +263,7 @@
                                   <div id="Saksi-2" class="tab-pane">
                                       <h2 style="margin-top:0px">Data Saksi 2</h2>
                                       <table class="table">
-                                          <tr><td>Nik</td><td><?php echo $saksi2_data->nik; ?></td></tr>
+                                          <tr><td width="350">Nik</td><td><?php echo $saksi2_data->nik; ?></td></tr>
                                           <tr><td>Nama</td><td><?php echo $saksi2_data->nama; ?></td></tr>
                                           <tr><td>Umur</td><td><?php echo $saksi2_data->umur; ?></td></tr>
                                           <tr><td>A Alamat</td><td><?php echo $saksi2_data->a_alamat; ?></td></tr>
@@ -276,7 +276,7 @@
                                       <ul class="mailbox-attachments clearfix"> 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_saksi2"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_saksi2"); ?>
                                            title="Bukti Scan KTP Saksi 2">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_saksi2"); ?> width="320px" alt="" />
                                         </a> 

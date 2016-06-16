@@ -26,19 +26,19 @@
                    <form action="<?php echo $action; ?>" method="post">
                             <div class="form-group">
                                 <label for="varchar">Jenis <?php echo form_error('jenis') ?></label>
-                                <input type="text" class="form-control" name="jenis" id="jenis" placeholder="Jenis" value="<?php echo $jenis; ?>" />
+                                <input type="text" class="form-control" name="jenis" id="jenis" placeholder="Jenis" readonly="" value="<?php echo $jenis; ?>" />
                             </div>
                             <div class="form-group">
                                 <label for="int">Denda <?php echo form_error('denda') ?></label>
-                                <input type="text" class="form-control" name="denda" id="denda" placeholder="Denda" value="<?php echo $denda; ?>" />
+                                <input type="text" onkeypress="return runScript(event)" class="form-control" name="denda" id="denda" placeholder="Denda" value="<?php echo $denda; ?>" />
                             </div>
                             <div class="form-group">
                                 <label for="int">Durasi <?php echo form_error('durasi') ?></label>
-                                <input type="text" class="form-control" name="durasi" id="durasi" placeholder="Durasi" value="<?php echo $durasi; ?>" />
+                                <input type="text" onkeypress="return runScript(event)" class="form-control" name="durasi" id="durasi" placeholder="Durasi" value="<?php echo $durasi; ?>" />
                             </div>
                             <input type="hidden" name="id_parameter" value="<?php echo $id_parameter; ?>" /> 
                             <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
-                            <a href="<?php echo site_url('parameter2') ?>" class="btn btn-default">Cancel</a>
+                            <a href="<?php echo site_url('parameter') ?>" class="btn btn-default">Cancel</a>
                         </form>
                     <!--FRO GENERATE -->
 

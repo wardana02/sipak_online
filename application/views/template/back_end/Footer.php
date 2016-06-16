@@ -53,13 +53,29 @@
         });
     </script>
 
-    <!-- Modal reate Data -->
+    <!-- Modal Create Data -->
     <script>
         $(function(){
             $(document).on('click','.create',function(e){
                 e.preventDefault();
                 $("#myModal").appendTo("body").modal('show');
                 $.post('<?php echo $modal_create ;?>',
+                    {id:$(this).attr('data-id')},
+                    function(html){
+                        $(".modal-body").html(html);
+                    }   
+                );
+            });
+        });
+    </script>
+
+    <!-- Modal Create Data -->
+    <script>
+        $(function(){
+            $(document).on('click','.create2',function(e){
+                e.preventDefault();
+                $("#myModal").appendTo("body").modal('show');
+                $.post('<?php echo $modal_create2 ;?>',
                     {id:$(this).attr('data-id')},
                     function(html){
                         $(".modal-body").html(html);
@@ -123,10 +139,31 @@
         $(document).ready(function() {
             $('.fancybox').fancybox();
         });
+    </script>
+
+    <?php if($q=='active'){ ?>
+    <!-- Password validation  -->
+    <script src=<?=base_url("assets/backend/adminlte/plugins/validation/js/jquery.validate.min.js");?>></script>
+    <script src=<?=base_url("assets/backend/adminlte/plugins/validation/js/additional-methods.min.js");?>></script>
+    <link rel="stylesheet" href="http://jqueryvalidation.org/files/demo/site-demos.css">
+    <script>
+    // just for the demos, avoids form submit 082134368854e QK7X
+    jQuery.validator.setDefaults({
+      success: "valid"
+    });
+    $( "#myform" ).validate({
+      rules: {
+        password: "",
+        repassword: {
+          equalTo: "#password"
+        }
+      }
+    });
     </script> 
 
 
-    <?php if($chart=='active'){ ?>
+
+    <?php } if($chart=='active'){ ?>
     <!-- Highchart -->
     <script src=<?=base_url("assets/highchart/js/highcharts.js");?>></script>
     <script src=<?=base_url("assets/highchart/js/highcharts-3d.js");?>></script>
@@ -255,6 +292,49 @@ $(function () {
 
 
     </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            $('#g4').highcharts({
+                title: {
+                    text: '<?php echo $judul;?>'
+                },
+                xAxis: {
+                    categories: ['Kec.Banjarsari', 'Kec.Jebres', 'Kec.Laweyan', 'Kec.Ps Kliwon', 'Kec.Serengan']
+                },
+                credits: {
+                    text: 'Aplikasi Akta Online Dukcapil Surakarta',
+                    href: '#'
+                  },
+                series: [{
+                    type: 'column',
+                    name: 'Akta Kelahiran',
+                    data: [<?php foreach ($al_kec as $key => $value) {
+                            echo $value.", ";
+                          }?>]
+                }, {
+                    type: 'column',
+                    name: 'Akta Kematian',
+                    data: [<?php foreach ($am_kec as $key => $value) {
+                            echo $value.", ";
+                          }?>]
+                }, {
+                    type: 'column',
+                    name: 'Akta Perkawinan',
+                    data: [<?php foreach ($ap_kec as $key => $value) {
+                            echo $value.", ";
+                          }?>]
+                }, {
+                    type: 'column',
+                    name: 'Akta Perceraian',
+                    data: [<?php foreach ($ac_kec as $key => $value) {
+                            echo $value.", ";
+                          }?>]
+                }]
+            });
+        });
+    </script>
     <?php }$scroll=false; ?>
 
     <!-- date-range-picker -->
@@ -279,6 +359,12 @@ $(function () {
     <script type="text/javascript">
       $(document).ready(function() {
             $('#example1').DataTable( {
+            } );
+        } );
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+            $('#example2').DataTable( {
             } );
         } );
     </script>

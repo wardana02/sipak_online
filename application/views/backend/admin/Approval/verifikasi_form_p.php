@@ -128,7 +128,7 @@
                                         <ul class="mailbox-attachments clearfix"> 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->pasfoto"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->pasfoto"); ?>
                                            title=" Pas Foto Berdampingan">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->pasfoto"); ?> width="310px" alt="" />
                                         </a> 
@@ -147,7 +147,7 @@
                                         <ul class="mailbox-attachments clearfix"> 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->kk_suami"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->kk_suami"); ?>
                                            title="Bukti Scan Surat Keterangan Kematian">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->kk_suami"); ?> width="310px" alt="" />
                                         </a> 
@@ -163,7 +163,7 @@
 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_suami"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_suami"); ?>
                                            title="Bukti Scan Akta Kelahiran">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_suami"); ?> width="310px" alt="" />
                                         </a> 
@@ -179,7 +179,7 @@
 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->al_suami"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->al_suami"); ?>
                                            title=" Akta Kelahiran Suami">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->al_suami"); ?> width="310px" alt="" />
                                         </a> 
@@ -196,7 +196,7 @@
                                         <?php if($berkas_data->am_ayah_suami != ''){?>
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->am_ayah_suami"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->am_ayah_suami"); ?>
                                            title="Bukti Scan Akta Perkawinan (Bila Sudah Menikah)">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->am_ayah_suami"); ?> width="320px" alt="" />
                                         </a> 
@@ -214,7 +214,7 @@
                                         <?php if($berkas_data->am_ibu_suami != ''){?>
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->am_ibu_suami"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->am_ibu_suami"); ?>
                                            title="Bukti Scan Akta Perkawinan (Bila Sudah Menikah)">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->am_ibu_suami"); ?> width="320px" alt="" />
                                         </a> 
@@ -294,7 +294,7 @@
                                         <ul class="mailbox-attachments clearfix"> 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->kk_istri"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->kk_istri"); ?>
                                            title=" Kartu Keluarga Istri">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->kk_istri"); ?> width="310px" alt="" />
                                         </a> 
@@ -310,7 +310,7 @@
 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_istri"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_istri"); ?>
                                            title="Bukti Scan KTP Istri">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_istri"); ?> width="310px" alt="" />
                                         </a> 
@@ -326,7 +326,7 @@
 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->al_istri"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->al_istri"); ?>
                                            title=" Akta Kelahiran Istri">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->al_istri"); ?> width="310px" alt="" />
                                         </a> 
@@ -343,7 +343,7 @@
                                         <?php if($berkas_data->am_ayah_istri != ''){?>
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->am_ayah_istri"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->am_ayah_istri"); ?>
                                            title=" Akta Kematian Ayah (Istri))">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->am_ayah_istri"); ?> width="320px" alt="" />
                                         </a> 
@@ -361,7 +361,7 @@
                                         <?php if($berkas_data->am_ibu_istri != ''){?>
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->am_ibu_istri"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->am_ibu_istri"); ?>
                                            title=" Akta Kematian Ibu (Istri)">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->am_ibu_istri"); ?> width="320px" alt="" />
                                         </a> 
@@ -419,7 +419,7 @@
                                       <ul class="mailbox-attachments clearfix"> 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_saksi1"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_saksi1"); ?>
                                            title="Bukti Scan KTP Saksi 1">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_saksi1"); ?> width="320px" alt="" />
                                         </a> 
@@ -437,7 +437,7 @@
                                       <ul class="mailbox-attachments clearfix"> 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_saksi2"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_saksi2"); ?>
                                            title="Bukti Scan KTP Saksi 2">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->ktp_saksi2"); ?> width="320px" alt="" />
                                         </a> 
@@ -473,7 +473,7 @@
                                       <ul class="mailbox-attachments clearfix"> 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->sk_pernikahan"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->sk_pernikahan"); ?>
                                            title=" Surat Keterangan Pernikahan">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->sk_pernikahan"); ?> width="320px" alt="" />
                                         </a> 
@@ -489,7 +489,7 @@
 
                                         <li>
                                           <span class="mailbox-attachment-icon has-img">
-                                          <a class="fancybox-effects-b" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->sk_kelurahan"); ?>
+                                          <a class="fancybox"  data-fancybox-group="gallery" href=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->sk_kelurahan"); ?>
                                            title=" Surat Keterangan Kelurahan">
                                            <img src=<?php echo base_url("assets/uploads/$no_registrasi/$berkas_data->sk_kelurahan"); ?> width="320px" alt="" />
                                         </a> 

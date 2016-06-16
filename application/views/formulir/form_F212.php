@@ -44,7 +44,7 @@
   <b>I. DATA SUAMI</b>
       <table>
           <tr><td width="30">1.</td><td width="170">NIK</td><td>:</td><td width="600"><?php echo $suami_data->nik; ?></td></tr>
-          <tr><td>2.</td><td>Nomor KK</td><td>:</td><td><?php echo $suami_data->nama; ?></td></tr>
+          <tr><td>2.</td><td>Nomor KK</td><td>:</td><td><?php echo $suami_data->no_kk; ?></td></tr>
           <tr><td>3.</td><td>Nama Lengkap</td><td>:</td><td><?php echo $suami_data->nama; ?></td></tr>
           <tr><td>4.</td><td>Tanggal Lahir</td><td>:</td><td><?php echo $suami_data->tgl_lahir; ?></td></tr>
           <tr><td>5.</td><td>Tempat Lahir</td><td>:</td><td><?php echo $suami_data->tmp_lahir; ?></td></tr>
@@ -57,18 +57,18 @@
                 </tr>
                 <tr>
                   <td>c.</td><td> Kab/Kota </td><td>:</td><td> <?php echo $suami_data->a_kabkota; ?></td>
-                  <td>d.</td><td> Provinsi </td><td>:</td><td> <?php echo $suami_data->a_provinsi; ?></td>
+                  <td>d.</td><td> Provinsi </td><td>:</td><td> JAWA TENGAH</td>
                 </tr>
               </table></td>
           </tr>
-          <tr><td>7.</td><td>Pendidikan Terakhir</td><td>:</td><td><?php echo $suami_data->agama; ?></td></tr>
+          <tr><td>7.</td><td>Pendidikan Terakhir</td><td>:</td><td><?php echo $suami_data->pendidikan_terakhir; ?></td></tr>
           <tr><td>8.</td><td>Agama</td><td>:</td><td><?php echo $suami_data->agama; ?></td></tr>
-          <tr><td>9.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php echo $suami_data->agama; ?></td></tr>
+          <tr><td>9.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php if($suami_data->nm_organisasi!=NULL) echo $suami_data->nm_organisasi;else echo "-"; ?></td></tr>
           <tr><td>10.</td><td>Pekerjaan</td><td>:</td><td><?php echo $suami_data->pekerjaan; ?></td></tr>
           <tr><td>11.</td><td>Anak Ke</td><td>:</td><td><?php echo $suami_data->anak_ke; ?></td></tr>
-          <tr><td>12.</td><td>Status Perkawinan Sebelum Nikah</td><td>:</td><td><?php echo $suami_data->tgl_kematian; ?></td></tr>
-          <tr><td>13.</td><td>Perkawinan Yang Ke</td><td>:</td><td><?php echo $suami_data->anak_ke; ?></td></tr>
-          <tr><td>14.</td><td>Istri Yang Ke</td><td>:</td><td><?php echo $suami_data->anak_ke; ?></td></tr>
+          <tr><td>12.</td><td>Status Perkawinan Sebelum Nikah</td><td>:</td><td><?php echo $suami_data->status_sebelum_nikah; ?></td></tr>
+          <tr><td>13.</td><td>Perkawinan Yang Ke</td><td>:</td><td><?php echo $suami_data->perkawinan_ke; ?></td></tr>
+          <tr><td>14.</td><td>Istri Yang Ke</td><td>:</td><td><?php echo $suami_data->istri_ke; ?></td></tr>
       </table>
       <br>
       <b>II. DATA AYAH DARI SUAMI</b>
@@ -76,7 +76,7 @@
           <tr><td width="30">15.</td><td width="170">NIK</td><td>:</td><td width="600"><?php echo $ayah_s_data->nik; ?></td></tr>
           <tr><td>16.</td><td>Nama Lengkap</td><td>:</td><td><?php echo $ayah_s_data->nama; ?></td></tr>
           <tr><td>17.</td><td>Agama</td><td>:</td><td><?php echo $ayah_s_data->agama; ?></td></tr>
-          <tr><td>18.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php echo $ayah_s_data->agama; ?></td></tr>
+          <tr><td>18.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php if($ayah_s_data->nm_organisasi!=NULL) echo $ayah_s_data->nm_organisasi;else echo "-"; ?></td></tr>
           <tr><td>19.</td><td>Tanggal Lahir</td><td>:</td><td><?php echo $ayah_s_data->tgl_lahir; ?></td></tr>
           <tr><td>20.</td><td>Tempat Lahir</td><td>:</td><td><?php echo $ayah_s_data->tmp_lahir; ?></td></tr>
           <tr><td>21.</td><td>Alamat</td><td>:</td><td> <?php echo $ayah_s_data->a_alamat; ?></td></tr>
@@ -101,7 +101,7 @@
           <tr><td width="30">23.</td><td width="170">NIK</td><td>:</td><td width="600"><?php echo $ibu_s_data->nik; ?></td></tr>
           <tr><td>24.</td><td>Nama Lengkap</td><td>:</td><td><?php echo $ibu_s_data->nama; ?></td></tr>
           <tr><td>25.</td><td>Agama</td><td>:</td><td><?php echo $ibu_s_data->agama; ?></td></tr>
-          <tr><td>26.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php echo $ibu_s_data->agama; ?></td></tr>
+          <tr><td>26.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php if($ibu_s_data->nm_organisasi!=NULL) echo $ibu_s_data->nm_organisasi;else echo "-"; ?></td></tr>
           <tr><td>27.</td><td>Tanggal Lahir</td><td>:</td><td><?php echo $ibu_s_data->tgl_lahir; ?></td></tr>
           <tr><td>28.</td><td>Tempat Lahir</td><td>:</td><td><?php echo $ibu_s_data->tmp_lahir; ?></td></tr>
           <tr><td>29.</td><td>Alamat</td><td>:</td><td> <?php echo $ibu_s_data->a_alamat; ?></td></tr>
@@ -127,7 +127,7 @@
   <b>IV. DATA ISTRI</b>
       <table>
           <tr><td width="30">31.</td><td width="170">NIK</td><td>:</td><td width="600"><?php echo $istri_data->nik; ?></td></tr>
-          <tr><td>32.</td><td>Nomor KK</td><td>:</td><td><?php echo $istri_data->nama; ?></td></tr>
+          <tr><td>32.</td><td>Nomor KK</td><td>:</td><td><?php echo $istri_data->no_kk; ?></td></tr>
           <tr><td>33.</td><td>Nama Lengkap</td><td>:</td><td><?php echo $istri_data->nama; ?></td></tr>
           <tr><td>34.</td><td>Tanggal Lahir</td><td>:</td><td><?php echo $istri_data->tgl_lahir; ?></td></tr>
           <tr><td>35.</td><td>Tempat Lahir</td><td>:</td><td><?php echo $istri_data->tmp_lahir; ?></td></tr>
@@ -140,17 +140,17 @@
                 </tr>
                 <tr>
                   <td>c.</td><td> Kab/Kota </td><td>:</td><td> <?php echo $istri_data->a_kabkota; ?></td>
-                  <td>d.</td><td> Provinsi </td><td>:</td><td> <?php echo $istri_data->a_provinsi; ?></td>
+                  <td>d.</td><td> Provinsi </td><td>:</td><td> JAWA TENGAH</td>
                 </tr>
               </table></td>
           </tr>
           <tr><td>37.</td><td>Pendidikan Terakhir</td><td>:</td><td><?php echo $istri_data->agama; ?></td></tr>
           <tr><td>38.</td><td>Agama</td><td>:</td><td><?php echo $istri_data->agama; ?></td></tr>
-          <tr><td>39.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php echo $istri_data->agama; ?></td></tr>
+          <tr><td>39.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php if($istri_data->nm_organisasi!=NULL) echo $istri_data->nm_organisasi;else echo "-"; ?></td></tr>
           <tr><td>40.</td><td>Pekerjaan</td><td>:</td><td><?php echo $istri_data->pekerjaan; ?></td></tr>
           <tr><td>41.</td><td>Anak Ke</td><td>:</td><td><?php echo $istri_data->anak_ke; ?></td></tr>
-          <tr><td>42.</td><td>Status Perkawinan Sebelum Nikah</td><td>:</td><td><?php echo $istri_data->tgl_kematian; ?></td></tr>
-          <tr><td>43.</td><td>Perkawinan Yang Ke</td><td>:</td><td><?php echo $istri_data->anak_ke; ?></td></tr>
+          <tr><td>42.</td><td>Status Perkawinan Sebelum Nikah</td><td>:</td><td><?php echo $istri_data->status_sebelum_nikah; ?></td></tr>
+          <tr><td>43.</td><td>Perkawinan Yang Ke</td><td>:</td><td><?php echo $istri_data->perkawinan_ke; ?></td></tr>
       </table>
       <br>
       <b>V. DATA AYAH DARI ISTRI</b>
@@ -158,7 +158,7 @@
           <tr><td width="30">44.</td><td width="170">NIK</td><td>:</td><td width="600"><?php echo $ayah_i_data->nik; ?></td></tr>
           <tr><td>45.</td><td>Nama Lengkap</td><td>:</td><td><?php echo $ayah_i_data->nama; ?></td></tr>
           <tr><td>46.</td><td>Agama</td><td>:</td><td><?php echo $ayah_i_data->agama; ?></td></tr>
-          <tr><td>47.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php echo $ayah_i_data->agama; ?></td></tr>
+          <tr><td>47.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php if($ayah_i_data->nm_organisasi!=NULL) echo $ayah_i_data->nm_organisasi;else echo "-"; ?></td></tr>
           <tr><td>48.</td><td>Tanggal Lahir</td><td>:</td><td><?php echo $ayah_i_data->tgl_lahir; ?></td></tr>
           <tr><td>49.</td><td>Tempat Lahir</td><td>:</td><td><?php echo $ayah_i_data->tmp_lahir; ?></td></tr>
           <tr><td>50.</td><td>Alamat</td><td>:</td><td> <?php echo $ayah_i_data->a_alamat; ?></td></tr>
@@ -183,7 +183,7 @@
           <tr><td width="30">52.</td><td width="170">NIK</td><td>:</td><td width="600"><?php echo $ibu_i_data->nik; ?></td></tr>
           <tr><td>53.</td><td>Nama Lengkap</td><td>:</td><td><?php echo $ibu_i_data->nama; ?></td></tr>
           <tr><td>54.</td><td>Agama</td><td>:</td><td><?php echo $ibu_i_data->agama; ?></td></tr>
-          <tr><td>55.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php echo $ibu_i_data->agama; ?></td></tr>
+          <tr><td>55.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php if($ibu_i_data->nm_organisasi!=NULL) echo $ibu_i_data->nm_organisasi;else echo "-"; ?></td></tr>
           <tr><td>56.</td><td>Tanggal Lahir</td><td>:</td><td><?php echo $ibu_i_data->tgl_lahir; ?></td></tr>
           <tr><td>57.</td><td>Tempat Lahir</td><td>:</td><td><?php echo $ibu_i_data->tmp_lahir; ?></td></tr>
           <tr><td>58.</td><td>Alamat</td><td>:</td><td> <?php echo $ibu_i_data->a_alamat; ?></td></tr>
@@ -214,7 +214,7 @@
           <tr><td>62.</td><td>Tempat Lahir</td><td>:</td><td><?php echo $saksi1_data->tmp_lahir; ?></td></tr>
           <tr><td>63.</td><td>Tanggal Lahir</td><td>:</td><td><?php echo $saksi1_data->tgl_lahir; ?></td></tr>
           <tr><td>64.</td><td>Agama</td><td>:</td><td> <?php echo $saksi1_data->agama; ?></td></tr>
-          <tr><td>65.</td><td>Nama Organisasi</td><td>:</td><td> <?php echo $saksi1_data->nama_organisasi; ?></td></tr>
+          <tr><td>65.</td><td>Nama Organisasi</td><td>:</td><td><?php if($saksi1_data->nm_organisasi!=NULL) echo $saksi1_data->nm_organisasi;else echo "-"; ?></td></tr>
           <tr><td>66.</td><td>Alamat</td><td>:</td><td> <?php echo $saksi1_data->a_alamat; ?></td></tr>
           <tr><td></td><td></td><td> </td>
               <td><table>
@@ -239,7 +239,7 @@
           <tr><td>70.</td><td>Tempat Lahir</td><td>:</td><td><?php echo $saksi2_data->tmp_lahir; ?></td></tr>
           <tr><td>71.</td><td>Tanggal Lahir</td><td>:</td><td><?php echo $saksi3_data->tgl_lahir; ?></td></tr>
           <tr><td>72.</td><td>Agama</td><td>:</td><td> <?php echo $saksi2_data->agama; ?></td></tr>
-          <tr><td>73.</td><td>Nama Organisasi</td><td>:</td><td> <?php echo $saksi2_data->nama_organisasi; ?></td></tr>
+          <tr><td>73.</td><td>Nama Organisasi</td><td>:</td><td><?php if($saksi2_data->nm_organisasi!=NULL) echo $saksi2_data->nm_organisasi;else echo "-"; ?></td></tr>
           <tr><td>74.</td><td>Alamat</td><td>:</td><td> <?php echo $saksi2_data->a_alamat; ?></td></tr>
           <tr><td></td><td></td><td> </td>
               <td><table>
@@ -268,7 +268,7 @@
           <tr><td>77.</td><td>Tanggal Melapor</td><td>:</td><td><?php echo dateindo($perkawinan_data->tgl_lapor); ?></td></tr>
           <tr><td>78.</td><td>Pukul</td><td>:</td><td><?php echo $perkawinan_data->pukul; ?></td></tr>
           <tr><td>79.</td><td>Agama/Penghayat Kepercayaan</td><td>:</td><td><?php echo $perkawinan_data->agama; ?></td></tr>
-          <tr><td>80.</td><td>Nama Organisasi Penghayat Kepercayaan</td><td>:</td><td><?php echo $perkawinan_data->nama_organisasi; ?></td></tr>
+          <tr><td>80.</td><td>Nama Organisasi Penghayat Kepercayaan</td><td>:</td><td><?php if($perkawinan_data->nm_organisasi!=NULL) echo $perkawinan_data->nm_organisasi;else echo "-"; ?></td></tr>
           <tr><td>81.</td><td>Nama Badan Peradilan</td><td>:</td><td> <?php echo $perkawinan_data->nama_peradilan; ?></td></tr>
           <tr><td>82.</td><td>Nomor Putusan Penetapan Pengadilan</td><td>:</td><td> <?php echo $perkawinan_data->nomor_putusan; ?></td></tr>
           <tr><td>83.</td><td>Nama Pemuka Agama/Pghyt Kepercayaan</td><td>:</td><td><?php echo $perkawinan_data->nama_pemuka; ?></td></tr>

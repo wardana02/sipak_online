@@ -115,7 +115,7 @@ class Home extends CI_Controller {
                 redirect('F2_29/edit/'.$ST->id_am);
             }else{
                 echo "<script language=\"Javascript\">\n";
-                echo "window.alert('Data Pendaftaran Tidak Ditemukan')";
+                echo "window.alert('Data Pendaftaran Tidak Ditemukan #NF')";
                 header("refresh:0; mati");
                 echo "</script>";
             }

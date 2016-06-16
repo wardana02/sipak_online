@@ -16,7 +16,7 @@
             </div>
           </div>
 
-          <!-- search form -->
+          <!-- search form
           <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
               <input type="text" name="q" class="form-control" placeholder="Cari Data ..."/>
@@ -24,7 +24,7 @@
                 <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
               </span>
             </div>
-          </form>
+          </form> -->
           <!-- /.search form -->
 
           <!-- Sidebar Menu -->
@@ -45,6 +45,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
+                <li class="<?php echo $ig5;?>"><a href=<?=base_url("ig/ig4");?>><i class="glyphicon glyphicon-gift"></i> Infografik Per Kecamatan</a></li>
                 <li class="<?php echo $ig1;?>"><a href=<?=base_url("ig/AL");?>><i class="glyphicon glyphicon-inbox"></i> Infografik Akta Kelahiran</a></li>  
                 <li class="<?php echo $ig2;?>"><a href=<?=base_url("ig/AM");?>><i class="glyphicon glyphicon-search"></i> Infografik Akta Kematian</a></li>  
                 <li class="<?php echo $ig3;?>"><a href=<?=base_url("ig/AP");?>><i class="glyphicon glyphicon-check"></i> Infografik Akta Perkawinan</a></li>
@@ -76,7 +77,7 @@
               </a>
               <ul class="treeview-menu">
                 <li class="<?php echo $b1;?>"><a href=<?=base_url("data/import");?>><i class="glyphicon glyphicon-chevron-down"></i>Update Data</a></li>
-                <li class="<?php echo $b3;?>"><a href=<?=base_url("data");?>><i class="glyphicon glyphicon-chevron-down"></i>Lihat Data</a></li>
+                <li class="<?php echo $b2;?>"><a href=<?=base_url("data");?>><i class="glyphicon glyphicon-chevron-down"></i>Lihat Data</a></li>
                 <li class="<?php echo $b4;?>"><a href=<?=base_url("parameter");?>><i class="glyphicon glyphicon-chevron-down"></i>Parameter</a></li>
                 <li class="<?php echo $b3;?>"><a href=<?=base_url("data/hapus_data");?>><i class="glyphicon glyphicon-chevron-down"></i> Bersihkan Data Pendaftaran</a></li>
               </ul>

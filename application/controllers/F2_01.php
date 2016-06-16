@@ -23,7 +23,7 @@ class F2_01 extends CI_Controller
        		$this->load->helper('sms');
        		$R = $this->session->userdata('on_register');
        		if ($R == FALSE) {
-    			//redirect('error404','refresh');
+    			redirect('error404','refresh');
     		}
 			
 		}
@@ -56,11 +56,12 @@ class F2_01 extends CI_Controller
 
 		    public function edit($id_al){
 		    	//select ke data bayi,ortu,saksi,pelapor berdasarkan id_al, then redirect to f2_01
+		    	$RE = base_url("home");
 		    	$t = $this->session->userdata('s_idal');
 		    	if ($id_al!=$t) {
 		    		echo "<script language=\"Javascript\">\n";
-					echo "window.alert('Data Formulir Pendaftaran Tidak Ditemukan')";
-					header("refresh:0; ../../");
+					echo "window.alert('Data Formulir Pendaftaran Tidak Ditemukan #NS')";
+					header("refresh:0;".$RE);
 					echo "</script>";
 		    	}
         		$row 	= $this->Data_bayi_model->get_by_al($id_al);
@@ -80,7 +81,7 @@ class F2_01 extends CI_Controller
         		$i=0;$j=0;$k=0;$l=0;$m=0;$n=0;
         		
 		        if ($row) {
-		        	if ($app->progres==1) {
+		        	if (($app->locked=='1')&&($app->progres!="diambil")) {
 		        		$data = array(
 		        			'header'	=> "Akta Kelahiran Online",
 		        			'hasil'		=>  $app,
@@ -95,7 +96,7 @@ class F2_01 extends CI_Controller
 		        		$data['conten'] = "frontend/info/terkunci";
 		        		$this->load->view('backend/dashboard/index2', $data);
 		        	}
-		        	if ($app->progres=="diambil") {
+		        	elseif ($app->progres=="diambil") {
 		        		$data = array(
 		        			'header'	=> "Akta Kelahiran Online",
 		        			'nama'		=>	$app->nama,
@@ -111,13 +112,13 @@ class F2_01 extends CI_Controller
 
 		        	}else{
 
-		        	
-		        		foreach ($row as $key => $value) { $data["$field[$i]"] = $value; $i++;}
-		        		foreach ($IBU as $key => $value) { $data["i_$ortu[$j]"] = $value; $j++;}
-		        		foreach ($AYAH as $key => $value) { $data["a_$ortu[$k]"] = $value; $k++;}
-		        		foreach ($PELAPOR as $key => $value) { $data["p_$pelapor[$n]"] = $value; $n++;}
-		        		foreach ($S1 as $key => $value) { $data["s1_$saksi[$l]"] = $value; $l++;}
-		        		foreach ($S2 as $key => $value) { $data["s2_$saksi[$m]"] = $value; $m++;}
+		        		
+		        		foreach ($row as $key => $value) { $data["$field[$i]"] = set_value("$field[$i]", $value); $i++;}
+		        		foreach ($IBU as $key => $value) { $data["i_$ortu[$j]"] = set_value("i_$ortu[$j]", $value); $j++;}
+		        		foreach ($AYAH as $key => $value) { $data["a_$ortu[$k]"] = set_value("a_$ortu[$k]", $value); $k++;}
+		        		foreach ($PELAPOR as $key => $value) { $data["p_$pelapor[$n]"] = set_value("p_$pelapor[$n]", $value); $n++;}
+		        		foreach ($S1 as $key => $value) { $data["s1_$saksi[$l]"] = set_value("s1_$saksi[$l]", $value); $l++;}
+		        		foreach ($S2 as $key => $value) { $data["s2_$saksi[$m]"] = set_value("s2_$saksi[$m]", $value); $m++;}
 		 
 		        		$data['button']		= 'Update';
 		        		$data['action'] = site_url('F2_01/update_action');
@@ -134,17 +135,15 @@ class F2_01 extends CI_Controller
 		        	}
 		        } else {
 		            echo "<script language=\"Javascript\">\n";
-				echo "window.alert('SData Formulir Pendaftaran Tidak Ditemukan')";
-				header("refresh:0; ../../");
+				echo "window.alert('SData Formulir Pendaftaran Tidak Ditemukan #NF')";
+				header("refresh:0;".$RE);
 				echo "</script>";
 		        }
 		    }
 
 		    public function update_action() 
 		    {
-		    	echo "<br>string";
 		        $this->_rules();
-		        echo "<br>string";
 		        if ($this->form_validation->run() == FALSE) {
 		            $this->edit($this->input->post('id_al'));
 		        } else {
@@ -154,8 +153,7 @@ class F2_01 extends CI_Controller
 		           	$IDPEL = $this->input->post('id_pelapor');
 		           	$IDS1 = $this->input->post('id_saksi1');
 		           	$IDS2 = $this->input->post('id_saksi2');
-		           	echo "string";
-		           	$this->_arrayBayi($IDBAYI,"U");echo "string";
+		           	$this->_arrayBayi($IDBAYI,"U");
 		            $this->_arrayIbu($IDBAYI,$ID_IBU,"U");
 		            $this->_arrayAyah($IDBAYI,$ID_AYAH,"U");
 		            $this->_arrayPelapor($IDPEL,"U");
@@ -239,11 +237,11 @@ class F2_01 extends CI_Controller
 					'tgl_lahir' => $this->input->post('a_tgl_lahir',TRUE),
 					'umur' => $this->input->post('a_umur',TRUE),
 					'pekerjaan' => $this->input->post('a_pekerjaan',TRUE),
-					'a_alamat' => $this->input->post('aa_alamat',TRUE),
-					'a_desa' => $this->input->post('aa_desa',TRUE),
-					'a_kecamatan' => $this->input->post('aa_kecamatan',TRUE),
-					'a_kabkota' => $this->input->post('aa_kabkota',TRUE),
-					'a_provinsi' => $this->input->post('aa_provinsi',TRUE),
+					'a_alamat' => $this->input->post('a_a_alamat',TRUE),
+					'a_desa' => $this->input->post('a_a_desa',TRUE),
+					'a_kecamatan' => $this->input->post('a_a_kecamatan',TRUE),
+					'a_kabkota' => $this->input->post('a_a_kabkota',TRUE),
+					'a_provinsi' => $this->input->post('a_a_provinsi',TRUE),
 					'status' => "AYAH",
 				    );
            		 if ($c=="I") {
@@ -286,11 +284,11 @@ class F2_01 extends CI_Controller
 					'nik' => $this->input->post('s1_nik',TRUE),
 					'nama' => $this->input->post('s1_nama',TRUE),
 					'umur' => $this->input->post('s1_umur',TRUE),
-					'a_alamat' => $this->input->post('s1a_alamat',TRUE),
-					'a_desa' => $this->input->post('s1a_desa',TRUE),
-					'a_kecamatan' => $this->input->post('s1a_kecamatan',TRUE),
-					'a_kabkota' => $this->input->post('s1a_kabkota',TRUE),
-					'a_provinsi' => $this->input->post('s1a_provinsi',TRUE),
+					'a_alamat' => $this->input->post('s1_a_alamat',TRUE),
+					'a_desa' => $this->input->post('s1_a_desa',TRUE),
+					'a_kecamatan' => $this->input->post('s1_a_kecamatan',TRUE),
+					'a_kabkota' => $this->input->post('s1_a_kabkota',TRUE),
+					'a_provinsi' => $this->input->post('s1_a_provinsi',TRUE),
 					'pekerjaan' => $this->input->post('s1_pekerjaan',TRUE),
 					'ke'	=> "1",
 				    );
@@ -309,11 +307,11 @@ class F2_01 extends CI_Controller
 					'nik' => $this->input->post('s2_nik',TRUE),
 					'nama' => $this->input->post('s2_nama',TRUE),
 					'umur' => $this->input->post('s2_umur',TRUE),
-					'a_alamat' => $this->input->post('s2a_alamat',TRUE),
-					'a_desa' => $this->input->post('s2a_desa',TRUE),
-					'a_kecamatan' => $this->input->post('s2a_kecamatan',TRUE),
-					'a_kabkota' => $this->input->post('s2a_kabkota',TRUE),
-					'a_provinsi' => $this->input->post('s2a_provinsi',TRUE),
+					'a_alamat' => $this->input->post('s2_a_alamat',TRUE),
+					'a_desa' => $this->input->post('s2_a_desa',TRUE),
+					'a_kecamatan' => $this->input->post('s2_a_kecamatan',TRUE),
+					'a_kabkota' => $this->input->post('s2_a_kabkota',TRUE),
+					'a_provinsi' => $this->input->post('s2_a_provinsi',TRUE),
 					'pekerjaan' => $this->input->post('s2_pekerjaan',TRUE),
 					'ke'	=> "2",
 				    );
@@ -346,8 +344,8 @@ class F2_01 extends CI_Controller
 			$this->form_validation->set_rules('tmp_lahir', 'tmp lahir', 'required');
 			$this->form_validation->set_rules('tmp_kelahiran', 'tempat kelahiran', 'required');
 			$this->form_validation->set_rules('tgl_kelahiran', 'tanggal kelahiran', 'required');
-			$this->form_validation->set_rules('panjang_bayi', 'panjang bayi', 'required|numeric');
-			$this->form_validation->set_rules('berat_bayi', 'berat bayi', 'required|numeric');
+			$this->form_validation->set_rules('panjang_bayi', 'panjang bayi', 'required');
+			$this->form_validation->set_rules('berat_bayi', 'berat bayi', 'required');
 			$this->form_validation->set_rules('penolong', 'penolong', 'required');
 			$this->form_validation->set_rules('kelahiran_ke', 'kelahiran ke', 'required');
 			$this->form_validation->set_rules('jenis_kelahiran', 'jenis kelahiran', 'required');

@@ -191,7 +191,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="i_nik" id="i_nik" required value="<?php echo $i_nik; ?>" class="form-control tooltips"data-toggle="tooltip " data-original-title="Isi Dengan Benar NIK" >
+                                              <input type="text" onkeypress="return runScript(event)"  maxlength="16" name="i_nik" id="i_nik" required value="<?php echo $i_nik; ?>" class="form-control tooltips"data-toggle="tooltip " data-original-title="Isi Dengan Benar NIK" >
                                               <p class="help-block"><?php echo form_error('i_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
@@ -291,7 +291,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="a_nik" id="a_nik" value="<?php echo $a_nik; ?>" class="form-control tooltips" placeholder="" data-toggle="tooltip " placeholder="" data-original-title="Isi Dengan Benar NIK" >
+                                              <input type="text" onkeypress="return runScript(event)" maxlength="16" name="a_nik" id="a_nik" value="<?php echo $a_nik; ?>" class="form-control tooltips" placeholder="" data-toggle="tooltip " placeholder="" data-original-title="Isi Dengan Benar NIK" >
                                               <p class="help-block"><?php echo form_error('a_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
@@ -376,7 +376,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="p_nik" id="p_nik" value="<?php echo $p_nik; ?>" class="form-control tooltips" data-toggle="tooltip " onblur="updateDataPelapor()" data-original-title="Isi Dengan Benar NIK" >
+                                              <input type="text" onkeypress="return runScript(event)" maxlength="16" name="p_nik" id="p_nik" value="<?php echo $p_nik; ?>" class="form-control tooltips" data-toggle="tooltip " onblur="updateDataPelapor()" data-original-title="Isi Dengan Benar NIK" >
                                               <p class="help-block"><?php echo form_error('p_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
@@ -463,7 +463,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="s1_nik" id="s1_nik" value="<?php echo $s1_nik; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Benar NIK" >
+                                              <input type="text" onkeypress="return runScript(event)" maxlength="16" name="s1_nik" id="s1_nik" value="<?php echo $s1_nik; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Benar NIK" >
                                               <p class="help-block"><?php echo form_error('s1_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
@@ -497,8 +497,8 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Alamat</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="s1a_alamat" readonly="" id="s1a_alamat" value="<?php echo $s1_a_alamat; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Nama Dusun/Jalan" >
-                                              <p class="help-block"><?php echo form_error('s1a_alamat') ?></p>
+                                              <input type="text" name="s1_a_alamat" readonly="" id="s1_a_alamat" value="<?php echo $s1_a_alamat; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Nama Dusun/Jalan" >
+                                              <p class="help-block"><?php echo form_error('s1_a_alamat') ?></p>
                                           </div>
                                       </div>
 
@@ -506,28 +506,28 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Desa/Kelurahan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s1a_desa" readonly="" id="s1a_desa" value="<?php echo $s1_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Desa Alamat">
-                                              <p class="help-block"><?php echo form_error('s1a_desa') ?></p>
+                                              <input type="text" name="s1_a_desa" readonly="" id="s1_a_desa" value="<?php echo $s1_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Desa Alamat">
+                                              <p class="help-block"><?php echo form_error('s1_a_desa') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Kecamatan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s1a_kecamatan" readonly="" id="s1a_kecamatan" value="<?php echo $s1_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kecamatan Alamat">
-                                              <p class="help-block"><?php echo form_error('s1a_kecamatan') ?></p>
+                                              <input type="text" name="s1_a_kecamatan" readonly="" id="s1_a_kecamatan" value="<?php echo $s1_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kecamatan Alamat">
+                                              <p class="help-block"><?php echo form_error('s1_a_kecamatan') ?></p>
                                           </div>
                                       </div>
 
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Kabupaten/Kota</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s1a_kabkota" readonly="" id="s1a_kabkota" value="<?php echo $s1_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kabupaten/Kota Alamat">
-                                              <p class="help-block"><?php echo form_error('s1a_kabkota') ?></p>
+                                              <input type="text" name="s1_a_kabkota" readonly="" id="s1_a_kabkota" value="<?php echo $s1_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kabupaten/Kota Alamat">
+                                              <p class="help-block"><?php echo form_error('s1_a_kabkota') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Provinsi</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s1a_provinsi" readonly="" id="s1a_provinsi" value="<?php echo $s1_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Proinsi Alamat">
-                                              <p class="help-block"><?php echo form_error('s1a_provinsi') ?></p>
+                                              <input type="text" name="s1_a_provinsi" readonly="" id="s1_a_provinsi" value="<?php echo $s1_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Proinsi Alamat">
+                                              <p class="help-block"><?php echo form_error('s1_a_provinsi') ?></p>
                                           </div>
                                       </div>
 
@@ -537,7 +537,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="s2_nik" id="s2_nik" value="<?php echo $s2_nik; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Benar NIK" >
+                                              <input type="text" onkeypress="return runScript(event)" maxlength="16" name="s2_nik" id="s2_nik" value="<?php echo $s2_nik; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Benar NIK" >
                                               <p class="help-block"><?php echo form_error('s2_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
@@ -571,8 +571,8 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Alamat</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="s2a_alamat" readonly="" id="s2a_alamat" value="<?php echo $s2_a_alamat; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Nama Dusun/Jalan" >
-                                              <p class="help-block"><?php echo form_error('s2a_alamat') ?></p>
+                                              <input type="text" name="s2_a_alamat" readonly="" id="s2_a_alamat" value="<?php echo $s2_a_alamat; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Nama Dusun/Jalan" >
+                                              <p class="help-block"><?php echo form_error('s2_a_alamat') ?></p>
                                           </div>
                                       </div>
 
@@ -580,28 +580,28 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Desa/Kelurahan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s2a_desa" readonly="" id="s2a_desa" value="<?php echo $s2_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Desa Alamat">
-                                              <p class="help-block"><?php echo form_error('s2a_desa') ?></p>
+                                              <input type="text" name="s2_a_desa" readonly="" id="s2_a_desa" value="<?php echo $s2_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Desa Alamat">
+                                              <p class="help-block"><?php echo form_error('s2_a_desa') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Kecamatan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s2a_kecamatan" readonly="" id="s2a_kecamatan" value="<?php echo $s2_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kecamatan Alamat">
-                                              <p class="help-block"><?php echo form_error('s2a_kecamatan') ?></p>
+                                              <input type="text" name="s2_a_kecamatan" readonly="" id="s2_a_kecamatan" value="<?php echo $s2_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kecamatan Alamat">
+                                              <p class="help-block"><?php echo form_error('s2_a_kecamatan') ?></p>
                                           </div>
                                       </div>
 
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Kabupaten/Kota</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s2a_kabkota" readonly="" id="s2a_kabkota" value="<?php echo $s2_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kabupaten/Kota Alamat">
+                                              <input type="text" name="s2_a_kabkota" readonly="" id="s2_a_kabkota" value="<?php echo $s2_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kabupaten/Kota Alamat">
                                               <p class="help-block"><?php echo form_error('s2a_kabkota') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Provinsi</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s2a_provinsi" readonly="" id="s2a_provinsi" value="<?php echo $s2_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Proinsi Alamat">
-                                              <p class="help-block"><?php echo form_error('s2a_provinsi') ?></p>
+                                              <input type="text" name="s2_a_provinsi" readonly="" id="s2_a_provinsi" value="<?php echo $s2_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Proinsi Alamat">
+                                              <p class="help-block"><?php echo form_error('s2_a_provinsi') ?></p>
                                           </div>
                                       </div>
 

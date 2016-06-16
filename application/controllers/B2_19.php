@@ -13,7 +13,7 @@ class B2_19 extends CI_Controller
 			$this->load->model('Data_bercerai_model','mempelai',TRUE);
 			$this->load->model('Data_perceraian_model','perceraian',TRUE);
 			$this->load->model('Berkas_cerai_model','m_berkas',TRUE);
-			
+
 			$this->load->model('Outbox_model','outbox',TRUE);
 			$this->load->model('Approval_model','app',TRUE);
 
@@ -22,13 +22,14 @@ class B2_19 extends CI_Controller
        		$this->load->helper('sms');
        		$R = $this->session->userdata('on_register');
        		if ($R == FALSE) {
-    			//redirect('error404','refresh');
+    			redirect('error404','refresh');
     		}
 			
 		}
 
 		public function berkas($id){
-
+			$c = $this->_akses($id);
+    		if ($c) {
 			$field = $this->m_berkas->getField();
 			$row   = $this->m_berkas->get_by_al($id);
 			$ak    = $this->m_akta->get_by_al($id);
@@ -55,6 +56,7 @@ class B2_19 extends CI_Controller
 			$data['data'] = $row;
 			$data['judul'] = $berkas_name;
 			$this->load->view('backend/dashboard/index2', $data);
+		}
 		}
 
 		public function loop($id){
@@ -116,7 +118,12 @@ class B2_19 extends CI_Controller
     }
 
     public function selesai($id){
+    		$c = $this->_akses($id);
+    		if ($c) {
+    			
+    		$akta = $this->m_akta->get_by_al($id);
 			$data = array(
+				'akta'	=> $akta,
 				'berkas' => site_url('b2_19/berkas/'.$id),
 				'formulir' => site_url('f2_19/edit/'.$id),
 				'conten' => "frontend/aktaperceraian/sudah_selesai",
@@ -128,6 +135,46 @@ class B2_19 extends CI_Controller
 				);
 
 			$this->load->view('backend/dashboard/index2', $data);
+		}
+    }
+
+     public function _akses($id){
+     	
+     	$app = $this->app->get_join($id,"akta_perceraian","id_ac");
+    	if (($app->locked=='1')&&($app->progres!="diambil")) {
+		        		$data = array(
+		        			'header'	=> "Akta Perceraian Online",
+		        			'hasil'		=>  $app,
+		        			'nama'		=>	$app->nama,
+		        			'tgl_daftar'=>	$app->tgl_registrasi,
+		        			'tgl_ambil'	=>	$app->tgl_ambil,
+		        			's_no_daftar'=>	$app->no_registrasi,
+		        			'oleh'		=>	$app->oleh_ambil,
+		        			'denda'		=>	$app->denda,
+		        			'jenis'		=> "Akta Perceraian #VE",
+		        			);
+		        		$data['conten'] = "frontend/info/terkunci";
+		        		$this->load->view('backend/dashboard/index2', $data);
+		        		return false;
+		        	}
+		        	elseif ($app->progres=="diambil") {
+		        		$data = array(
+		        			'header'	=> "Akta Perceraian Online",
+		        			'nama'		=>	$app->nama,
+		        			'tgl_daftar'=>	$app->tgl_registrasi,
+		        			'tgl_ambil'	=>	$app->tgl_ambil,
+		        			's_no_daftar'=>	$app->no_registrasi,
+		        			'oleh'		=>	$app->oleh_ambil,
+		        			'denda'		=>	$app->denda,
+		        			'jenis'		=> "Akta Perceraian #AM",
+		        			);
+		        		$data['conten'] = "frontend/info/sudah_diambil";
+		        		$this->load->view('backend/dashboard/index2', $data);
+		        		return false;
+
+		        	}else{
+		        		return true;
+		        	}
     }
 
 	}

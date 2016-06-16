@@ -16,21 +16,24 @@ class B2_01 extends CI_Controller
 			$this->load->model('Ortu_bayi_model');
 			$this->load->model('Berkas_lahir_model');
 
+			$this->load->model('Approval_model','app',TRUE);
+
        		$this->load->library('form_validation');
        		$this->load->helper('string');
        		$this->load->helper('sms');
        		$R = $this->session->userdata('on_register');
        		if ($R == FALSE) {
-    			redirect('error404','refresh');
+    			//redirect('error404','refresh');
     		}
 			
 		}
 
 		public function berkas($id){
-
+			$this->_akses($id);
 			$field = $this->Berkas_lahir_model->getField();
 			$row   = $this->Berkas_lahir_model->get_by_al($id);
 			$akta  = $this->Akta_kelahiran_model->get_by_al($id);
+			//print_r($row);exit();
 			$i=0;
 			$data = array(
 				'berkas' => site_url('F2_01/edit/'.$id),
@@ -114,10 +117,14 @@ class B2_01 extends CI_Controller
     }
 
     public function selesai($id){
+			$c = $this->_akses($id);
+			if ($c) {
+				$akta = $this->Akta_kelahiran_model->get_by_al($id);
 			$data = array(
+				'akta'	=> $akta,
 				'berkas' => site_url('b2_01/berkas/'.$id),
 				'formulir' => site_url('f2_01/edit/'.$id),
-				'conten' => "frontend/aktakelahiran/sudah_selesai",
+				'conten' => "frontend/aktalahir/sudah_selesai",
 				'B'		 => "active",'B1'		 => "active",
 				'ID_AC'  => $this->session->userdata('s_idac'),
 				'PENGAJU'  => $this->session->userdata('s_nama'),
@@ -126,6 +133,49 @@ class B2_01 extends CI_Controller
 				);
 
 			$this->load->view('backend/dashboard/index2', $data);
+			}
+    		
     }
+
+    public function _akses($id){
+
+    	$app = $this->app->get_join($id,"akta_kelahiran","id_al");//print_r($app);
+    	if (($app->locked=='1')&&($app->progres!="diambil")) {
+		        		$data = array(
+		        			'header'	=> "Akta Kelahiran Online",
+		        			'hasil'		=>  $app,
+		        			'nama'		=>	$app->nama,
+		        			'tgl_daftar'=>	$app->tgl_registrasi,
+		        			'tgl_ambil'	=>	$app->tgl_ambil,
+		        			's_no_daftar'=>	$app->no_registrasi,
+		        			'oleh'		=>	$app->oleh_ambil,
+		        			'denda'		=>	$app->denda,
+		        			'jenis'		=> "Akta Kematian",
+		        			);
+		        		$data['conten'] = "frontend/info/terkunci";
+		        		$this->load->view('backend/dashboard/index2', $data);
+		        		return false;
+		        	}
+		        	elseif ($app->progres=="diambil") {
+		        		$data = array(
+		        			'header'	=> "Akta Kelahiran Online",
+		        			'nama'		=>	$app->nama,
+		        			'tgl_daftar'=>	$app->tgl_registrasi,
+		        			'tgl_ambil'	=>	$app->tgl_ambil,
+		        			's_no_daftar'=>	$app->no_registrasi,
+		        			'oleh'		=>	$app->oleh_ambil,
+		        			'denda'		=>	$app->denda,
+		        			'jenis'		=> "Akta Kelahiran",
+		        			);
+		        		$data['conten'] = "frontend/info/sudah_diambil";
+		        		$this->load->view('backend/dashboard/index2', $data);
+		        		return false;
+
+		        	}else{
+		        		return true;
+		        	}
+    }
+
+
 
 	}

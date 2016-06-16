@@ -18,7 +18,7 @@ class Data extends CI_Controller {
         $data = array(
             'nama_user' =>  $this->session->userdata('nama_user'),
             'status'    =>  $this->session->userdata('status'),
-            'b' =>  "active",'b3'   =>  "active",
+            'b' =>  "active",'b2'   =>  "active",
             'dpse_data' => $dps,
             'conten' => 'backend/admin/Data/list',
         );

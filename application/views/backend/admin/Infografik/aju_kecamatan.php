@@ -13,44 +13,7 @@
         <section class="content">
 
           <!--ISINE -->
-          <div class="row">
-            <div class="col-lg-4 col-xs-6">
-              <!-- small box -->
-              <div class="small-box bg-green">
-                <div class="inner">
-                  <h3><?php echo $tot;?><sup style="font-size: 20px"> kali</sup></h3>
-                  <p> Jumlah Kelahiran Bayi</p>
-                </div>
-                <div class="icon">
-                  <i class=""></i>
-                </div>
-                </div>
-            </div><!-- ./col -->
-            <div class="col-lg-4 col-xs-6">
-              <!-- small box -->
-              <div class="small-box bg-red">
-                <div class="inner">
-                  <h3><?php echo $lak;?><sup style="font-size: 20px"> kali</sup></h3>
-                  <p>Kelahiran Bayi Laki-Laki</p>
-                </div>
-                <div class="icon">
-                  <i class=""></i>
-                </div>
-                </div>
-            </div><!-- ./col -->
-            <div class="col-lg-4 col-xs-6">
-              <!-- small box -->
-              <div class="small-box bg-aqua">
-                <div class="inner">
-                  <h3><?php echo $wan;?><sup style="font-size: 20px"> kali</sup></h3>
-                  <p>Kelahiran Bayi Perempuan</p>
-                </div>
-                <div class="icon">
-                  <i class=""></i>
-                </div>
-                </div>
-            </div><!-- ./col -->
-          </div>
+        
 
           <div class="row" data-find="_4">
             <div class="col-md-12">
@@ -58,12 +21,12 @@
               <div class="nav-tabs-custom" data-find="_11">
                 <ul class="nav nav-tabs pull-right">
                   <li class="active"><a href="#tab_1-1" data-toggle="tab"> Grafik Data</a></li>
-                  <li><a href="#tab_2-2" data-toggle="tab"> Tabel Data</a></li>
-                  <li class="pull-left header"><i class="fa fa-th"></i> Infografik Data Akta Kelahiran</li>
+                  <!--<li><a href="#tab_2-2" data-toggle="tab"> Tabel Data</a></li>-->
+                  <li class="pull-left header"><i class="fa fa-th"></i> Infografik Pengajuan Per Kecamatan</li>
                 </ul>
                 <div class="tab-content" data-find="_10">
                   <div class="tab-pane active" id="tab_1-1">
-                  <form action=<?=base_url("ig/AL")?> method="post">
+                  <form action=<?=base_url("ig/ig4")?> method="post">
                     <div class="col-sm-2">
                       <label class="label-form pull-right"> Periode : </label>
                     </div>
@@ -77,7 +40,7 @@
                   </form>
                     <hr />
                     
-                    <div id="g3" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                    <div id="g4" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                   </div><!-- /.tab-pane -->
                   <div class="tab-pane" id="tab_2-2">
                    
@@ -86,20 +49,34 @@
                     <tbody><tr>
                       <th>Elemen Data</th>
                       <th>Data Total Kelahiran</th>
+                      <?php if($status!='ADMIN') { 
+                          echo "<th>Data Kelahiran Per Wilayah</th>";
+                        }?>
+                      
                     </tr>
                     <tr>
                       <td>Total Jumlah Kelahiran Bayi</td>
                        <td> <?php echo $total['jml'];?> Bayi</td>
+                       <?php if($status!='ADMIN') { 
+                          echo "<td>$kel[jml] Bayi</td>";
+                        }?>
                     </tr>
                     
                     <tr>
-                      <td>Bayi Laki-Laki</td>
+                      <td>Bayi_Laki-Laki</td>
                        <td> <?php echo $total['laki']?>  Bayi</td>
+                       <?php if($status!='ADMIN') { 
+                          echo "<td>$kel[laki] Bayi</td>";
+                        }?>
                     </tr>
 
                     <tr>
                       <td>Bayi Perempuan</td>
                        <td> <?php echo $total['wanita'];?> Bayi</td>
+                       <?php if($status!='ADMIN') { 
+                          echo "<td>$kel[wanita] Bayi</td>";
+                        }?>
+                       
                     </tr>
                   </tbody></table>
                 </div>

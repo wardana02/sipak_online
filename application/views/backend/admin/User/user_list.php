@@ -28,12 +28,13 @@
                     <table class="table table-bordered table-striped" id="example1">
                         <thead style="background: #3c8dbc">
                             <tr style="color: #ffffff">
-                                <th width="80px">No</th>
+                                <th width="30px">No</th>
             		    <th>Previlage</th>
+                    <th>Nama User</th>
             		    <th>Username</th>
             		    <th>Jabatan</th>
             		    <th>Last Log</th>
-            		    <th>Nama User</th>
+            		    <th>Aktif</th>
             		    <th>Action</th>
                             </tr>
                         </thead>
@@ -46,10 +47,14 @@
                             <tr>
             		    <td><?php echo ++$start ?></td>
             		    <td><?php echo $user->previlage ?></td>
+                    <td><?php echo $user->nama_user ?></td>
             		    <td><?php echo $user->username ?></td>
             		    <td><?php echo $user->jabatan ?></td>
             		    <td><?php echo $user->last_log ?></td>
-            		    <td><?php echo $user->nama_user ?></td>
+            		    <td style="text-align:center"><?php 
+                      if($user->aktif == '0'){echo "<span class='label label-warning'><i class='glyphicon glyphicon-cog'></i></span>";}
+                      else {echo "<span class='label label-success'><i class='glyphicon glyphicon-thumbs-up'></i></span>";} ?>
+                    </td>
             		    <td style="text-align:center" width="150px">
                         <div class="btn-group"> 
                                 <button type="button" class="btn btn.bg-navy dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -61,6 +66,12 @@
                                   <li><a href="#" class="read" data-id="<?php echo $user->id_user; ?>"> Lihat</a></li>
                                   <li><a href=<?php echo site_url('user/update/'.$user->id_user); ?> >Ubah</a></li>
                                   <li><a href=<?php echo site_url('user/delete/'.$user->id_user); ?> onclick="javasciprt: return confirm('Anda Yakin Menghapus Data Alumni Ini ?')">Hapus</a></li>
+                                  <li>
+                                  <?php
+                                    if($user->aktif == '0'){echo "<a href=".site_url('user/ubah/1/'.$user->id_user)." onclick=\"javasciprt: return confirm('Anda Yakin Mengaktifkan Data User Ini ?')\">Aktifkan User</a>";}
+                                    else {echo "<a href=".site_url('user/ubah/0/'.$user->id_user)." onclick=\"javasciprt: return confirm('Anda Nonaktifkan Data User Ini ?')\">NonAktifkan User</a>";}
+                                  ?>
+                                  </li>
                                 
                                 </ul>
                               </div> 

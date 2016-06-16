@@ -48,14 +48,7 @@
   </tr>
 </table>
 
-<table>
-  <tr>
-    <td width="200">Nama Kepala Keluarga</td><td width="15">:</td><td width="400"></td>
-  </tr>
-  <tr>
-    <td>Nama Kepala Keluarga</td><td>:</td><td></td>
-  </tr>
-</table>
+
 
     
 
@@ -67,11 +60,12 @@
           <tr><td width="30">1.</td><td width="170">NIK</td><td>:</td><td width="500"><?php echo $jenazah_data->nik; ?></td></tr>
           <tr><td>2.</td><td>Nama Lengkap</td><td>:</td><td><?php echo $jenazah_data->nama; ?></td></tr>
           <tr><td>3.</td><td>Jenis Kelamin</td><td>:</td><td><?php echo $jenazah_data->jk; ?></td></tr>
-          <tr><td>4.</td><td>Tanggal Lahir / Umur</td><td>:</td><td><?php echo $jenazah_data->tgl_lahir; ?></td></tr>
-          <tr><td>5.</td><td>Tempat Lahir</td><td>:</td><td><?php echo $jenazah_data->tmp_lahir; ?></td></tr>
-          <tr><td>6.</td><td>Agama</td><td>:</td><td><?php echo $jenazah_data->agama; ?></td></tr>
-          <tr><td>7.</td><td>Pekerjaan</td><td>:</td><td><?php echo $jenazah_data->pekerjaan; ?></td></tr>
-          <tr><td>8.</td><td>Alamat</td><td>:</td><td> <?php echo $jenazah_data->a_alamat; ?></td></tr>
+          <tr><td>4.</td><td>Tanggal Lahir </td><td>:</td><td><?php echo $jenazah_data->tgl_lahir; ?></td></tr>
+          <tr><td>5.</td><td>Umur </td><td>:</td><td><?php echo $jenazah_data->umur; ?> Tahun</td></tr>
+          <tr><td>6.</td><td>Tempat Lahir</td><td>:</td><td><?php echo $jenazah_data->tmp_lahir; ?></td></tr>
+          <tr><td>7.</td><td>Agama</td><td>:</td><td><?php echo $jenazah_data->agama; ?></td></tr>
+          <tr><td>8.</td><td>Pekerjaan</td><td>:</td><td><?php echo $jenazah_data->pekerjaan; ?></td></tr>
+          <tr><td>9.</td><td>Alamat</td><td>:</td><td> <?php echo $jenazah_data->a_alamat; ?></td></tr>
           <tr><td></td><td></td><td> </td>
               <td><table>
                 <tr>
@@ -80,16 +74,16 @@
                 </tr>
                 <tr>
                   <td>c.</td><td> Kab/Kota </td><td>:</td><td> <?php echo $jenazah_data->a_kabkota; ?></td>
-                  <td>d.</td><td> Provinsi </td><td>:</td><td> <?php echo $jenazah_data->a_provinsi; ?></td>
+                  <td>d.</td><td> Provinsi </td><td>:</td><td> JAWA TENGAH</td>
                 </tr>
               </table></td>
           </tr>
-          <tr><td>9.</td><td>Anak Ke</td><td>:</td><td><?php echo $jenazah_data->anak_ke; ?></td></tr>
-          <tr><td>10.</td><td>Tanggal Kematian</td><td>:</td><td><?php echo $jenazah_data->tgl_kematian; ?></td></tr>
-          <tr><td>11.</td><td>Pukul</td><td>:</td><td><?php echo $jenazah_data->pukul; ?></td></tr>
-          <tr><td>12.</td><td>Sebab Kematian</td><td>:</td><td><?php echo $jenazah_data->sebab_kematian ?></td></tr>
-          <tr><td>13.</td><td>Tempat Kematian</td><td>:</td><td><?php echo $jenazah_data->tmp_kematian; ?></td></tr>
-          <tr><td>14.</td><td>Yang Menerangkan</td><td>:</td><td><?php echo $jenazah_data->menerangkan; ?></td></tr>
+          <tr><td>10.</td><td>Anak Ke</td><td>:</td><td><?php echo $jenazah_data->anak_ke; ?></td></tr>
+          <tr><td>11.</td><td>Tanggal Kematian</td><td>:</td><td><?php echo $jenazah_data->tgl_kematian; ?></td></tr>
+          <tr><td>12.</td><td>Pukul</td><td>:</td><td><?php echo $jenazah_data->pukul; ?></td></tr>
+          <tr><td>13.</td><td>Sebab Kematian</td><td>:</td><td><?php echo $jenazah_data->sebab_kematian ?></td></tr>
+          <tr><td>14.</td><td>Tempat Kematian</td><td>:</td><td><?php echo $jenazah_data->tmp_kematian; ?></td></tr>
+          <tr><td>15.</td><td>Yang Menerangkan</td><td>:</td><td><?php echo $jenazah_data->menerangkan; ?></td></tr>
       
       </table>
   </td>
@@ -100,7 +94,7 @@
       <table>
           <tr><td width="30">1.</td><td width="170">NIK</td><td>:</td><td><?php echo $ayah_data->nik; ?></td></tr>
           <tr><td>2.</td><td>Nama Lengkap</td><td>:</td><td><?php echo $ayah_data->nama; ?></td></tr>
-          <tr><td>3.</td><td>Tanggal Lahir / Umur</td><td>:</td><td><?php echo $ayah_data->tgl_lahir; ?></td></tr>
+          <tr><td>3.</td><td>Tanggal Lahir</td><td>:</td><td><?php echo $ayah_data->tgl_lahir; ?></td></tr>
           <tr><td>4.</td><td>Pekerjaan</td><td>:</td><td><?php echo $ayah_data->pekerjaan; ?></td></tr>
           <tr><td>5.</td><td>Alamat</td><td>:</td><td> <?php echo $ayah_data->a_alamat; ?></td></tr>
           <tr><td></td><td></td><td> </td>
@@ -124,7 +118,7 @@
       <table>
           <tr><td width="30">1.</td><td width="170">NIK</td><td>:</td><td><?php echo $ibu_data->nik; ?></td></tr>
           <tr><td>2.</td><td>Nama Lengkap</td><td>:</td><td><?php echo $ibu_data->nama; ?></td></tr>
-          <tr><td>3.</td><td>Tanggal Lahir / Umur</td><td>:</td><td><?php echo $ibu_data->tgl_lahir; ?></td></tr>
+          <tr><td>3.</td><td>Tanggal Lahir </td><td>:</td><td><?php echo $ibu_data->tgl_lahir; ?></td></tr>
           <tr><td>4.</td><td>Pekerjaan</td><td>:</td><td><?php echo $ibu_data->pekerjaan; ?></td></tr>
           <tr><td>5.</td><td>Alamat</td><td>:</td><td> <?php echo $ibu_data->a_alamat; ?></td></tr>
           <tr><td></td><td></td><td> </td>
@@ -150,7 +144,7 @@
       <table>
           <tr><td width="30">1.</td><td width="170">NIK</td><td>:</td><td><?php echo $pelapor_data->nik; ?></td></tr>
           <tr><td>2.</td><td>Nama Lengkap</td><td>:</td><td><?php echo $pelapor_data->nama; ?></td></tr>
-          <tr><td>3.</td><td>Umur</td><td>:</td><td><?php echo $pelapor_data->umur; ?></td></tr>
+          <tr><td>3.</td><td>Umur</td><td>:</td><td><?php echo $pelapor_data->umur; ?> Tahun</td></tr>
           <tr><td>4.</td><td>Pekerjaan</td><td>:</td><td><?php echo $pelapor_data->pekerjaan; ?></td></tr>
           <tr><td>5.</td><td>Alamat</td><td>:</td><td> <?php echo $pelapor_data->a_alamat; ?></td></tr>
           <tr><td></td><td></td><td> </td>
@@ -177,7 +171,7 @@
       <table>
           <tr><td width="30">1.</td><td width="170">NIK</td><td>:</td><td><?php echo $saksi1_data->nik; ?></td></tr>
           <tr><td>2.</td><td>Nama Lengkap</td><td>:</td><td><?php echo $saksi1_data->nama; ?></td></tr>
-          <tr><td>3.</td><td>Umur</td><td>:</td><td><?php echo $saksi1_data->umur; ?></td></tr>
+          <tr><td>3.</td><td>Umur</td><td>:</td><td><?php echo $saksi1_data->umur; ?> Tahun</td></tr>
           <tr><td>4.</td><td>Pekerjaan</td><td>:</td><td><?php echo $saksi1_data->pekerjaan; ?></td></tr>
           <tr><td>5.</td><td>Alamat</td><td>:</td><td> <?php echo $saksi1_data->a_alamat; ?></td></tr>
           <tr><td></td><td></td><td> </td>
@@ -202,7 +196,7 @@
       <table>
           <tr><td width="30">1.</td><td width="170">NIK</td><td>:</td><td><?php echo $saksi2_data->nik; ?></td></tr>
           <tr><td>2.</td><td>Nama Lengkap</td><td>:</td><td><?php echo $saksi2_data->nama; ?></td></tr>
-          <tr><td>3.</td><td>Umur</td><td>:</td><td><?php echo $saksi2_data->umur; ?></td></tr>
+          <tr><td>3.</td><td>Umur</td><td>:</td><td><?php echo $saksi2_data->umur; ?> Tahun</td></tr>
           <tr><td>4.</td><td>Pekerjaan</td><td>:</td><td><?php echo $saksi2_data->pekerjaan; ?></td></tr>
           <tr><td>5.</td><td>Alamat</td><td>:</td><td> <?php echo $saksi2_data->a_alamat; ?></td></tr>
           <tr><td></td><td></td><td> </td>

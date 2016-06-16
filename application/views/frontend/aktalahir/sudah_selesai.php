@@ -8,7 +8,7 @@
                       <section class="panel">
                       <center>
                       <?php echo "
-                        <h2>Akta Kematian Online</h2>
+                        <h2>Akta Kelahiran Online</h2>
                         <h4>Nomor Pendaftaran : $NODAFTAR</h4>
                         <h4>a.n : $PENGAJU | $TELEPON </h4>";
                       ?>
@@ -22,13 +22,13 @@
                             <center>
                           <a href="<?php echo "$formulir";?>">
                             <header class="panel-heading btn btn-default">
-                                1. Formulir Akta Kematian
+                                1. Formulir Akta Perceraian
                             </header>
                           </a>
                           
                           <a href="<?php echo "$berkas";?>">
                             <header class="panel-heading btn btn-default">
-                                2. Formulir Akta Kematian
+                                2. Formulir Akta Perceraian
                             </header>
                           </a>
 
@@ -67,6 +67,13 @@
                                       </div>
                                       <center>
 
+                                      <div class="alert alert-warning fade in">
+                                       <center><h4>
+                                          <strong>Denda Administrasi!!</strong>
+                                          Rp <?= $akta->denda ?> ,-
+                                          </h4></center>
+                                      </div> 
+
                                       <div class="alert alert-success fade in">
                                        <center><h4>
                                           <strong>Anda Sudah!!</strong>
@@ -84,7 +91,8 @@
                                           <strong>Sekarang!!</strong>
                                           Tahap Verifikasi Data Pendaftaran
                                           </h4></center>
-                                      </div>   
+                                      </div>
+                                          
                                       <div class="form-group"></center>
                                           
                                   </fieldset>

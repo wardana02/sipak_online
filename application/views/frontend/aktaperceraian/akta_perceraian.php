@@ -24,15 +24,37 @@
                           <header class="panel-heading">
                               Formulir Akta Perceraian Online
                           </header>
+                          <div class="col-sm-12">
+                          <div class="col-sm-4"></div>
+                          <div class="col-sm-4 alert alert-warning fade in">
+                             <center><h4>
+                               <strong>Harap Revisi!</strong> 
+                               
+                          <?php
+                            if ($app->by_rw=='revisi') {
+                              echo $app->status_rw;
+                            }elseif ($app->by_kelurahan=='revisi') {
+                              echo $app->status_kelurahan;
+                            }elseif ($app->by_dukcapil=='revisi') {
+                              echo $app->status_dukcapil;
+                            }
+                          ?>
+                          </h4></center>
+                          </div>
+                          </div>
+
                           <center>
-                            <div class="btn btn-group">
                             <header class="panel-heading btn btn-primary">
                                 1. Formulir Akta Perceraian
                             </header>
                             <a href="<?php echo site_url('b2_19/berkas/'.$ID_AC) ?>">
                             <header class="panel-heading btn btn-default">
                                 2. Berkas Akta Perceraian
-                            </header></a></div>
+                            </header></a>
+                            <a href="<?php echo "$selesai";?>" onclick="javasciprt: return confirm('Anda Yakin Telah Melengkapi Data dan Masuk Tahap Verifikasi?? ?')">
+                          <header class="panel-heading btn btn-default">
+                              3. Oke, Saya Selesai
+                          </header></a>
                           </center>
                           <div class="panel-body">
                               <div class="stepy-tab">
@@ -70,7 +92,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="s_nik" id="s_nik" value="3311112302960002" class="form-control tooltips" data-toggle="tooltip"  data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="s_nik" id="s_nik" value="<?php echo $s_nik; ?>" class="form-control tooltips" data-toggle="tooltip"  data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('s_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
@@ -222,7 +244,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="i_nik" id="i_nik" value="3311112302960002" class="form-control tooltips" data-toggle="tooltip"  data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="i_nik" id="i_nik" value="<?php echo $i_nik; ?>" class="form-control tooltips" data-toggle="tooltip"  data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('i_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">

@@ -33,7 +33,7 @@ class Akta_perkawinan_model extends CI_Model
         $qw = "SELECT * FROM approval 
         JOIN akta_perkawinan ON approval.id_akta=akta_perkawinan.id_ap
         JOIN dps ON akta_perkawinan.nik_pengaju=dps.nik
-        $wil AND approval.by_".$status." IS NULL OR approval.by_".$status."='revisi' ORDER BY selesai";
+        WHERE approval.by_".$status." IS NULL OR approval.by_".$status."='revisi' $wil ORDER BY selesai";
         $query = $this->db->query($qw);
                 return $query->result();
     }

@@ -8,7 +8,7 @@
                       <section class="panel">
                       <center>
                       <?php echo "
-                        <h2>Akta Kelahiran Online</h2>
+                        <h2>Akta Perkawinan Online</h2>
                         <h4>Nomor Pendaftaran : $NODAFTAR</h4>
                         <h4>a.n : $PENGAJU | $TELEPON </h4>";
                       ?>
@@ -276,10 +276,24 @@
                                               <p class="help-block"><?php echo form_error('as_nama') ?></p>
                                           </div>
                                       </div>
+
+                                      <script type="text/javascript">
+                                        function agamaAyahSuami() {
+                                            var selMenu = document.getElementById('as_agama');
+                                            var hasil = document.getElementById('as_nama_organisasi');
+                                            if(selMenu.value == 'Penghayat Kepercayaan'){
+                                              hasil.disabled = false;
+                                            }   
+                                            else{
+                                              hasil.disabled = true;
+                                            }    
+                                        }
+                                      </script>
+
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Agama / Penghayat Kepercayaan</label>
                                           <div class="col-lg-10">
-                                              <select class="form-control" name="as_agama">
+                                              <select class="form-control" name="as_agama" id="as_agama" onchange="agamaAyahSuami()">
                                                 <option value="Islam">Islam</option>
                                                 <option value="Kristen">Kristen</option>
                                                 <option value="Katolik">Katolik</option>
@@ -295,8 +309,8 @@
 
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Nama Organisasi Penghayat Kepecrayaan</label>
-                                          <div class="col-lg-10">
-                                              <input type="text" name="as_nama_organisasi" class="form-control tooltips" value="<?php echo $as_nama_organisasi; ?>" placeholder="" data-toggle="tooltip " placeholder="" data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
+                                          <div class="col-lg-10"> 
+                                              <input type="text" name="as_nama_organisasi" id="as_nama_organisasi" class="form-control tooltips" value="<?php echo $as_nama_organisasi; ?>" disabled="" data-toggle="tooltip " placeholder="" data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
                                               <p class="help-block"><?php echo form_error('as_nama_organisasi') ?></p>
                                           </div>
                                       </div>
@@ -386,10 +400,24 @@
                                               <p class="help-block"><?php echo form_error('is_nama') ?></p>
                                           </div>
                                       </div>
+
+                                      <script type="text/javascript">
+                                        function agamaIbuSuami() {
+                                            var selMenu = document.getElementById('is_agama');
+                                            var hasil = document.getElementById('is_nama_organisasi');
+                                            if(selMenu.value == 'Penghayat Kepercayaan'){
+                                              hasil.disabled = false;
+                                            }   
+                                            else{
+                                              hasil.disabled = true;
+                                            }    
+                                        }
+                                      </script>
+
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Agama / Penghayat Kepercayaan</label>
                                           <div class="col-lg-10">
-                                              <select class="form-control" name="is_agama">
+                                              <select class="form-control" name="is_agama" id="is_agama" onchange="agamaIbuSuami()">
                                                 <option value="Islam">Islam</option>
                                                 <option value="Kristen">Kristen</option>
                                                 <option value="Katolik">Katolik</option>
@@ -406,7 +434,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Nama Organisasi Penghayat Kepecrayaan</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="is_nama_organisasi" class="form-control tooltips" value="<?php echo $is_nama_organisasi; ?>" placeholder="" data-toggle="tooltip " placeholder="" data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
+                                              <input type="text" name="is_nama_organisasi" id="is_nama_organisasi" disabled="" class="form-control tooltips" value="<?php echo $is_nama_organisasi; ?>" placeholder="" data-toggle="tooltip " placeholder="" data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
                                               <p class="help-block"><?php echo form_error('is_nama_organisasi') ?></p>
                                           </div>
                                       </div>

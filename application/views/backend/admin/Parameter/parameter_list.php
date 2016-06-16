@@ -15,9 +15,7 @@
             <div class="col-md-12">
               <div class="box box-primary">
                 <div class="box-header with-border">
-                  <h3 class="box-title"> 
-                    <?php echo anchor(site_url('parameter/create'), 'Tambah Parameter', 'class="btn btn-success"'); ?>
-                  </h3>
+                  
                 </div><!-- /.box-header -->
 
                 <div class="box-body">
@@ -25,9 +23,9 @@
                   
                   <!--FRO GENERATE -->
 
-                  <table class="table table-bordered table-striped" id="example1">
-            <thead>
-                <tr>
+            <table class="table table-bordered table-striped" id="example1">
+                        <thead style="background: #3c8dbc">
+                            <tr style="color: #ffffff">
                     <th width="80px">No</th>
             <th>Jenis</th>
             <th>Denda</th>
@@ -44,8 +42,8 @@
                 <tr>
             <td><?php echo ++$start ?></td>
             <td><?php echo $parameter->jenis ?></td>
-            <td><?php echo $parameter->denda ?></td>
-            <td><?php echo $parameter->durasi ?></td>
+            <td><?php echo "Rp ".rupiah($parameter->denda).",-" ?></td>
+            <td><?php echo $parameter->durasi." Hari" ?></td>
             <td style="text-align:center" width="200px">
             <?php 
             echo anchor(site_url('parameter/update/'.$parameter->id_parameter),'Update','onclick="javasciprt: return confirm(\'Anda Yakin Ubah Data ?\')"'); 

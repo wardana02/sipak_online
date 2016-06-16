@@ -76,6 +76,7 @@ class User extends CI_Controller
             'status'    => $this->session->userdata('status'),
             'title' => 'Tambah Data User Sistem Capil Online Baru',
             'button' => 'Create',
+            'require'   => "required=''",
             'action' => site_url('user/create_action'),
 	    'id_user' => set_value('id_user'),
 	    'previlage' => set_value('previlage'),
@@ -83,6 +84,7 @@ class User extends CI_Controller
 	    'password' => set_value('password'),
 	    'jabatan' => set_value('jabatan'),
 	    'nama_user' => set_value('nama_user'),
+        'no_hp' => set_value('no_hp'),
 	);
         $data['conten'] = "backend/admin/User/user_form";
             $this->load->view('backend/dashboard/index', $data);
@@ -103,6 +105,8 @@ class User extends CI_Controller
 		'password' => sha1($this->input->post('password',TRUE)),
 		'jabatan' => $this->input->post('jabatan',TRUE),
 		'nama_user' => $this->input->post('nama_user',TRUE),
+        'no_hp' => $this->input->post('no_hp',TRUE),
+        'aktif' => "0",
 	    );
 
             $this->User_model->insert($data);
@@ -133,9 +137,9 @@ class User extends CI_Controller
 		'id_user' => set_value('id_user', $row->id_user),
 		'previlage' => set_value('previlage', $row->previlage),
 		'username' => set_value('username', $row->username),
-		'password' => set_value('password', $row->password),
 		'jabatan' => set_value('jabatan', $row->jabatan),
 		'nama_user' => set_value('nama_user', $row->nama_user),
+        'no_hp' => set_value('no_hp', $row->no_hp),
 	    );
             $this->load->view('backend/dashboard/index', $data);
         } else {
@@ -160,11 +164,17 @@ class User extends CI_Controller
             $data = array(
 		'previlage' => $this->input->post('previlage',TRUE),
 		'username' => $this->input->post('username',TRUE),
-		'password' => $this->input->post('password',TRUE),
 		'jabatan' => $this->input->post('jabatan',TRUE),
 		'last_log' => $this->input->post('last_log',TRUE),
 		'nama_user' => $this->input->post('nama_user',TRUE),
+        'no_hp' => $this->input->post('no_hp',TRUE),
 	    );
+            if ($this->input->post('password')!='') {
+                 $data['password'] = sha1($this->input->post('password',TRUE));
+            }
+
+            //print_r($data);exit();
+           
 
             $this->User_model->update($this->input->post('id_user', TRUE), $data);
             $this->session->set_flashdata('message', "
@@ -176,6 +186,19 @@ class User extends CI_Controller
                 ");
             redirect(site_url('user'));
         }
+    }
+
+    public function ubah($value,$id){
+        $data = array('aktif' => $value,);
+        $this->User_model->update($id, $data);
+            $this->session->set_flashdata('message', "
+                <div class='alert alert-success alert-dismissable'>
+              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+                <h4><i class='icon fa fa-ban'></i> Berhasil!</h4>
+                    Data Berhasil Diperbaharui, !
+            </div>
+                ");
+            redirect(site_url('user'));
     }
     
     public function delete($id) 
@@ -208,9 +231,9 @@ class User extends CI_Controller
     {
 	$this->form_validation->set_rules('previlage', 'previlage', 'trim|required');
 	$this->form_validation->set_rules('username', 'username', 'trim|required');
-	$this->form_validation->set_rules('password', 'password', 'required');
 	$this->form_validation->set_rules('jabatan', 'jabatan', 'required');
 	$this->form_validation->set_rules('nama_user', 'nama user', 'required');
+    $this->form_validation->set_rules('no_hp', 'nama no_hp', 'numeric|required');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
     }
 

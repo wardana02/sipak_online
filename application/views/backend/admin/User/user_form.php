@@ -21,15 +21,15 @@
                   <div class="">
                   
                   <!--FRO GENERATE -->
-                    <form class="form-horizontal" action="<?php echo $action; ?>" method="post">
+                    <form class="form-horizontal" action="<?php echo $action; ?>" id="myform" method="post">
                             <div class="form-group">
                                   <label for="varchar" class="col-lg-2 control-label">Previlage <?php echo form_error('previlage') ?></label>
                                   <div class="col-lg-10">
                                      <select name="previlage" class="form-control">
                                        <option value="ADMIN" <?php if($previlage=='ADMIN') echo "selected"; ?>> ADMIN</option>
                                        <option value="DUKCAPIL" <?php if($previlage=='DUKCAPIL') echo "selected"; ?>> DUKCAPIL</option>
-                                       O<option value="KELURAHAN" <?php if($previlage=='KELURAHAN') echo "selected"; ?>> KELURAHAN</option>
-                                       <option value="KETUA RW" <?php if($previlage=='KETUA RW') echo "selected"; ?>> KETUA RW</option>
+                                       <option value="KELURAHAN" <?php if($previlage=='KELURAHAN') echo "selected"; ?>> KELURAHAN</option>
+                                       <option value="RW" <?php if($previlage=='RW') echo "selected"; ?>> KETUA RW</option>
                                      </select>
                                   </div>
                               </div>
@@ -44,7 +44,14 @@
                             <div class="form-group" class="col-lg-2 control-label">
                                 <label for="varchar" class="col-lg-2 control-label" >Password <?php echo form_error('password') ?></label>
                                 <div class="col-lg-10">
-                                    <input type="text" class="form-control" name="password" id="password" placeholder="Password" value="<?php echo $password; ?>" />
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="Password" <?=$require ?> />
+                                </div>
+                            </div>
+
+                            <div class="form-group" class="col-lg-2 control-label">
+                                <label for="varchar" class="col-lg-2 control-label" >Ulangi Password <?php echo form_error('repassword') ?></label>
+                                <div class="col-lg-10">
+                                    <input type="password" class="form-control" name="repassword" id="repassword" placeholder="Ulangi Password" <?=$require ?>  />
                                 </div>
                             </div>
 
@@ -61,6 +68,26 @@
                                     <input type="text" class="form-control" name="nama_user" id="nama_user" placeholder="Nama User" value="<?php echo $nama_user; ?>" />
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label for="varchar" class="col-lg-2 control-label">Nomor HP <?php echo form_error('no_hp') ?></label>
+                                <div class="col-lg-10">
+                                    <input type="text" onkeypress="return runScript(event)" class="form-control" name="no_hp" id="no_hp" placeholder="Nomor HP" value="<?php echo $no_hp; ?>" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                            <label class='col-lg-12'> 
+                                  <p> [PENTING].<br>USERNAME diisikan sesuai dengan ketentuan yang telah ditentukan, karena akan mempengaruhi 
+                                  pada saat proses verifikasi online.</p>
+                                </label>
+                            <?php if ($button=='Update') {
+                              echo "<label class='col-lg-12'> 
+                                  <p> **.Kosongkan Kolom password apabila tidak ingin mengganti pasword pada user tersebut.</p>
+                                </label>
+                                ";
+                            }?>
+                                
+                            </div>
+
                             <input type="hidden" name="id_user" value="<?php echo $id_user; ?>" /> 
                             <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
                             <a href="<?php echo site_url('user') ?>" class="btn btn-default">Cancel</a>

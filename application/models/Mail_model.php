@@ -34,17 +34,6 @@
 		 	 $this->db->insert('outbox', $data);
 		}
 
-		function get_cetak($id_bk){
-		  $this->db->select('*');
-		  $this->db->from('bebas_kopma');
-		  $this->db->where('id_bk ', $id_bk);
-		  return $this->db->get();
-		 }
-
-		 function update($data2, $condition){
-			$this->db->where($condition); 
-        	$this->db->update('bebas_kopma', $data2);
-		}
 
 		// delete data
 	    function delete($id)

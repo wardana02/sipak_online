@@ -19,6 +19,6 @@
           <td colspan="2">sudah Jadi??</td>
         </tr>
 	       </table>
-         <a href=<?php echo base_url("approval/akta/jadi/".$id)?> class="btn btn-large btn-success">Oke, Berkas Akta Sudah Jadi!!</a>
+         <a href=<?php echo base_url("approval/akta/jadi/".$id."/".$tname."/".$no_regis)?> class="btn btn-large btn-success">Oke, Berkas Akta Sudah Jadi!!</a>
         </body>
 </html>

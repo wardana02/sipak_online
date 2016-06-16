@@ -57,7 +57,15 @@
     <!-- Jasny bootstrap -->
     <link href="<?php echo base_url(); ?>assets/css/jasny-bootstrap.min.css" rel="stylesheet" media="screen">
     
-
+        <script type="text/javascript">
+        function runScript(e){
+        
+            if(e.keyCode<48 || e.keyCode>57){
+                return false
+            }        
+        }
+    
+    </script>
        
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->

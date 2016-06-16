@@ -15,6 +15,7 @@ class B2_29 extends CI_Controller
 			$this->load->model('Data_pelapor_model');
 			$this->load->model('Ortu_jenazah_model');
 			$this->load->model('Berkas_kematian_model');
+			$this->load->model('Approval_model','app',TRUE);
 
        		$this->load->library('form_validation');
        		$this->load->helper('string');
@@ -27,7 +28,8 @@ class B2_29 extends CI_Controller
 		}
 
 		public function berkas($id){
-
+			$c = $this->_akses($id);
+    		if ($c) {
 			$field = $this->Berkas_kematian_model->getField();
 			$row   = $this->Berkas_kematian_model->get_by_al($id);
 			$akta  = $this->Akta_kematian_model->get_by_am($id);
@@ -53,6 +55,7 @@ class B2_29 extends CI_Controller
 			$data['data'] = $row;
 			$data['judul'] = $berkas_name;
 			$this->load->view('backend/dashboard/index2', $data);
+		}
 		}
 
 		public function loop($id){
@@ -114,7 +117,12 @@ class B2_29 extends CI_Controller
     }
 
      public function selesai($id){
+     	$c = $this->_akses($id);
+    		if ($c) {
+    			
+    		$akta = $this->m_akta->get_by_al($id);
 			$data = array(
+				'akta'	=> $akta,
 				'berkas' => site_url('b2_29/berkas/'.$id),
 				'formulir' => site_url('f2_29/edit/'.$id),
 				'conten' => "frontend/aktakematian/sudah_selesai",
@@ -126,6 +134,43 @@ class B2_29 extends CI_Controller
 				);
 
 			$this->load->view('backend/dashboard/index2', $data);
+		}
+    }
+
+    public function _akses($id){
+     	$app = $this->app->get_join($id,"akta_kematian","id_am");
+    	if (($app->locked=='1')&&($app->progres!="diambil")) {
+		        		$data = array(
+		        			'hasil'		=>  $app,
+		        			'nama'		=>	$app->nama,
+		        			'tgl_daftar'=>	$app->tgl_registrasi,
+		        			'tgl_ambil'	=>	$app->tgl_ambil,
+		        			's_no_daftar'=>	$app->no_registrasi,
+		        			'oleh'		=>	$app->oleh_ambil,
+		        			'denda'		=>	$app->denda,
+		        			'jenis'		=> "Akta Kematian #VE",
+		        			);
+		        		$data['conten'] = "frontend/info/terkunci";
+		        		$this->load->view('backend/dashboard/index2', $data);
+		        		return false;
+		        	}
+		        	elseif ($app->progres=="diambil") {
+		        		$data = array(
+
+		        			'nama'		=>	$app->nama,
+		        			'tgl_daftar'=>	$app->tgl_registrasi,
+		        			'tgl_ambil'	=>	$app->tgl_ambil,
+		        			's_no_daftar'=>	$app->no_registrasi,
+		        			'oleh'		=>	$app->oleh_ambil,
+		        			'denda'		=>	$app->denda,
+		        			'jenis'		=> "Akta Kematian #AM",
+		        			);
+		        		$data['conten'] = "frontend/info/sudah_diambil";
+		        		$this->load->view('backend/dashboard/index2', $data);
+		        		return false;
+		        	}else{
+		        		return true;
+		        	}
     }
 
 	}

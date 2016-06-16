@@ -29,11 +29,14 @@
                   </div>
                   <div class="form-group">
                     <label class="label-control">Jumlah Pesan Masal : </label>
-                    <input class="form-control" name="banyak" required placeholder="Masukan Angka Banyaknya Pesan Yang Akan Dikirim"/>
+                    <input class="form-control" onkeypress="return runScript(event)" name="banyak" required placeholder="Masukan Angka Banyaknya Pesan Yang Akan Dikirim"/>
                   </div>
 
                   <div class="form-group">
-                    <textarea name="TextDecoded" required class="form-control" style="height: 150px"></textarea>
+                    <textarea name="TextDecoded" class="form-control" style="height: 150px" maxlength="160" required="required"></textarea>
+                  </div>
+                  <div class="form-group">
+                    *. Panjang katakter pesan adalah 160 karakter.
                   </div>
                   <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Kirim Pesan Masal !!</button>
                   

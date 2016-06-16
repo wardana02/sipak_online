@@ -273,4 +273,42 @@ class Ig extends MY_Controller {
 				$this->load->view('backend/dashboard/index', $data);
 		}
 
+		 public function ig4(){
+            $status = $this->session->userdata('status');
+			$periode = $this->input->post("tanggal");
+			$periode = explode('/', $periode);
+
+
+            if ($this->input->post("tanggal")!='') {
+                $judul = " Perbandingan Pengajuan Akta Per Kecamatan Periode $periode[0] s.d $periode[1]";
+                 $between = "AND tgl_registrasi BETWEEN '$periode[0]' AND '$periode[1]'";
+            }else{
+                $judul = " Perbandingan Pengajuan Akta Per Kecamatan";
+            }
+
+
+            $al_kec = $this->ig->al_by_kecamatan($between);
+            $am_kec = $this->ig->am_by_kecamatan($between);
+            $ap_kec = $this->ig->ap_by_kecamatan($between);
+            $ac_kec = $this->ig->ac_by_kecamatan($between);
+
+                    
+            $data = array(
+	        		'chart'		=>'active',
+	        		'head_g3'	=> $judul,
+	        		'ig'		=> 'active', 'ig5'	=> 'active',
+	        		'nama_user'	=>	$this->session->userdata('nama_user'),
+	        		'status'	=>	$this->session->userdata('status'),
+	        		'wilayah'	=>	$this->session->userdata('wilayah'),
+                    'al_kec'    =>  $al_kec,
+                    'am_kec'    =>  $am_kec,
+                    'ap_kec'    =>  $ap_kec,
+                    'ac_kec'    =>  $ac_kec,
+                    'judul'     => $judul,
+	        		'conten'	=>	"backend/admin/Infografik/aju_kecamatan"
+	        		);
+
+				$this->load->view('backend/dashboard/index', $data);
+        }
+
 }

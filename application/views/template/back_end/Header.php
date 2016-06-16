@@ -63,6 +63,16 @@
     
   </style>
 
+  <style type='text/css' scoped='scoped'>     
+     #BounceToTop{
+      position:fixed; bottom:0px; 
+      right:3px; 
+      cursor:pointer;
+      display:none;
+      z-index: 9999;
+    }     
+      </style>  
+
   <!-- Preloader -->
   <script type="text/javascript">
     $(window).load(function() { $("#loading").fadeOut("slow"); })
@@ -124,18 +134,37 @@
         }
     
     </script>
+
+    <script type='text/javascript'>     
+        $(function() { 
+          $(window).scroll(function() { 
+            if($(this).scrollTop()>100) { 
+              $('#BounceToTop').fadeIn(); } else { 
+                $('#BounceToTop').fadeOut(); } });     
+                $('#BounceToTop').click(function() { 
+                  $('body,html').animate({scrollTop:0},800) .animate({scrollTop:25},200) .animate({scrollTop:0},150) .animate({scrollTop:10},100) .animate({scrollTop:0},50); }); });     
+        </script>
   </head>
 
   <body class="skin-black sidebar-mini fixed<?php echo $sb;?>">
   <div id="loading"></div>
   
     <div class="wrapper">
+    <div id='BounceToTop'>
+        <img alt='Back to top' 
+        src=<?=base_url("assets/img/top.png")?>>
+      </div> 
 
       <!-- Main Header -->
 
       <header class="main-header">
         <!-- Logo -->
-        <a href=<?=base_url('index.php/dashboard');?> class="logo"><b>AKTA ONLINE </b></a>
+        <a href=<?=base_url('dashboard');?> class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>A</b>ON</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>Akta</b>ONLINE</span>
+        </a>
 
         <!-- Header Navbar -->
         <nav class="navbar navbar-static-top" role="navigation">

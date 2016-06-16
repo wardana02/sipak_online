@@ -31,7 +31,8 @@ class B2_12 extends CI_Controller
 		}
 
 		public function berkas($id){
-
+			$c = $this->_akses($id);
+    		if ($c) {
 			$field = $this->m_berkas->getField();
 			$row   = $this->m_berkas->get_by_al($id);
 			$ak    = $this->m_akta->get_by_al($id);
@@ -62,6 +63,7 @@ class B2_12 extends CI_Controller
 			$data['data'] = $row;
 			$data['judul'] = $berkas_name;
 			$this->load->view('backend/dashboard/index2', $data);
+		}
 		}
 
 		public function loop($id){
@@ -123,7 +125,12 @@ class B2_12 extends CI_Controller
     }
 
     public function selesai($id){
+			$c = $this->_akses($id);
+    		if ($c) {
+    			
+    		$akta = $this->m_akta->get_by_al($id);
 			$data = array(
+				'akta'	=> $akta,
 				'berkas' => site_url('b2_12/berkas/'.$id),
 				'formulir' => site_url('f2_12/edit/'.$id),
 				'conten' => "frontend/aktaperkawinan/sudah_selesai",
@@ -135,6 +142,46 @@ class B2_12 extends CI_Controller
 				);
 
 			$this->load->view('backend/dashboard/index2', $data);
+		}
     }
+
+    public function _akses($id){
+    	$app = $this->app->get_join($id,"akta_perkawinan","id_ap");
+    	if (($app->locked=='1')&&($app->progres!="diambil")) {
+		        		$data = array(
+		        			'header'	=> "Akta Perkawinan Online",
+		        			'hasil'		=>  $app,
+		        			'nama'		=>	$app->nama,
+		        			'tgl_daftar'=>	$app->tgl_registrasi,
+		        			'tgl_ambil'	=>	$app->tgl_ambil,
+		        			's_no_daftar'=>	$app->no_registrasi,
+		        			'oleh'		=>	$app->oleh_ambil,
+		        			'denda'		=>	$app->denda,
+		        			'jenis'		=> "Akta Perkawinan #VE",
+		        			);
+		        		$data['conten'] = "frontend/info/terkunci";
+		        		$this->load->view('backend/dashboard/index2', $data);
+		        		return false;
+		        	}
+		        	else if ($app->progres=="diambil") {
+		        		$data = array(
+		        			'header'	=> "Akta Perkawinan Online",
+		        			'nama'		=>	$app->nama,
+		        			'tgl_daftar'=>	$app->tgl_registrasi,
+		        			'tgl_ambil'	=>	$app->tgl_ambil,
+		        			's_no_daftar'=>	$app->no_registrasi,
+		        			'oleh'		=>	$app->oleh_ambil,
+		        			'denda'		=>	$app->denda,
+		        			'jenis'		=> "Akta Perkawinan #AM",
+		        			);
+		        		$data['conten'] = "frontend/info/sudah_diambil";
+		        		$this->load->view('backend/dashboard/index2', $data);
+		        		return false;
+
+		        	}else{
+		        		return true;
+		        	}
+    }
+
 
 	}

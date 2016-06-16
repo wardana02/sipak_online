@@ -8,6 +8,7 @@ class Approval extends CI_Controller
     function __construct()
     {
         parent::__construct();
+
         $this->load->model('Approval_model');
         $this->load->model('Akta_kelahiran_model');
         $this->load->model('Akta_kematian_model');
@@ -49,33 +50,41 @@ class Approval extends CI_Controller
         $wil = $this->session->userdata('wilayah');
         $ID_USER = $this->session->userdata('id_user');
         if ($kode=="AL") {
+            $pendaftaran = $this->Approval_model->get_not_app("akta_kelahiran","id_al",$wil);
             $approval = $this->Approval_model->get_app_list($wil);
             $head = "Data Pendaftaran Akta Kelahiran";
-            $na = "Nama Bayi";$nc = "Nama Ibu"; $n = 'z1';
+            $na = "Nama Bayi";$nc = "Nama Ibu"; $n = 'z1'; $tname = 'akta_kelahiran';
         }elseif ($kode=="AM") {
+            $pendaftaran = $this->Approval_model->get_not_app("akta_kematian","id_am",$wil);
             $approval = $this->Approval_model->get_am_list($wil);
              $head = "Data Pendafaran Akta Kematian";
-             $na = "Nama Jenazah";$nc = "Nama Ibu"; $n = 'z2';
+             $na = "Nama Jenazah";$nc = "Nama Ibu"; $n = 'z2'; $tname = 'akta_kematian';
         }elseif ($kode=="AP") {
+            $pendaftaran = $this->Approval_model->get_not_app("akta_perkawinan","id_ap",$wil);
             $approval = $this->Approval_model->get_ap_list($wil);
              $head = "Data Pendafaran Akta Perkawinan";
-             $na = "Nama Suami";$nc = "Nama Istri"; $n = 'z3';
+             $na = "Nama Suami";$nc = "Nama Istri"; $n = 'z3'; $tname = 'akta_perkawinan';
         }elseif ($kode=="AC") {
+            $pendaftaran = $this->Approval_model->get_not_app("akta_perceraian","id_ac",$wil);
             $approval = $this->Approval_model->get_ac_list($wil);
              $head = "Data Pendafaran Akta Perkawinan";
-             $na = "Nama Suami";$nc = "Nama Istri"; $n = 'z4';
+             $na = "Nama Suami";$nc = "Nama Istri"; $n = 'z4'; $tname = 'akta_perceraian';
         }
+
         $this->Approval_model->make_ready($ID_USER);
 
         $data = array(
+            'pendaftaran_data' => $pendaftaran,
             'approval_data' => $approval,
             'modal_title'=> "Verifikasi Data Pendaftaran",
             'head'  => $head,
             'nama'  => $na,
             'nama2'  => $nc,
+            'tname'    => $tname,
             're'    => $kode,
             'modal_read'=> base_url('approval/read'),
             'modal_create'=> base_url('approval/jadi'),
+            'modal_create2'=> base_url('approval/pesan'),
             'modal_pengambilan'=> base_url('approval/ambil'),
             'conten'    => 'backend/admin/Approval/approval_list',
             'z'         => 'active',$n         => 'active',
@@ -116,10 +125,45 @@ class Approval extends CI_Controller
             $dt = $this->input->post('id');
             $arr = explode(",", $dt);
             $data['bayi'] = $arr[0];
-            $data['ibu'] = $arr[1];
+            $data['ibu'] = $arr[p1];
             $data['id'] = $arr[2];
+            $data['tname'] = $arr[3];
+            $data['no_regis'] = $arr[4];
+            //print_r($data);
             $this->load->view('backend/admin/Approval/approval_jadi', $data);
     }
+
+    //tampil modals untuk tampilan klik Kirim pesan
+    public function pesan(){
+            $dt = $this->input->post('id');
+            $arr = explode(",", $dt);
+            $data['nama'] = $arr[0];
+            $data['nomor'] = $arr[1];
+            $data['regis'] = $arr[2];
+            $data['re'] = $arr[3];
+            //print_r($data);
+            $this->load->view('backend/admin/Approval/buat_pesan', $data);
+    }
+
+    public function do_pesan($hp,$regis,$re){
+        $sms = array(
+            'DestinationNumber' => $hp,
+            'TextDecoded'   => " No.pendaftaran $regis. Segera Lengkapi Data Pendaftaran Akta Online Anda." 
+            );
+        //print_r($sms);exit();
+        $this->Outbox_model->insert($sms);
+        $this->session->set_flashdata('message', "
+                <div class='alert alert-success alert-dismissable'>
+              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
+                    Pesan SMS Berhasil Dikirimkan Ke Nomor $hp. No.Pendaftaran $regis !
+            </div>
+                ");
+
+        redirect("approval/index/".$re);
+
+    }
+
     //tampil modals untuk tampilan klik akta akan diambil YBS
     public function ambil(){
             $dt = $this->input->post('id');
@@ -268,9 +312,8 @@ class Approval extends CI_Controller
             }
             
             $this->session->set_flashdata('message', "
-                        <div class='alert alert-success alert-dismissable'>
-                      <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-                        <h4><i class='icon fa fa-ban'></i> SELESAI!</h4>
+                        <div class='alert alert-success'>
+                        <h4><i class='glyphicon glyphicon-ok'></i> SELESAI!</h4>
                            <p>Data Formulir Pendaftaran Anda Telah Selesai, 
                            akan segera masuk ke tahap Approval
                            </p>
@@ -336,11 +379,12 @@ class Approval extends CI_Controller
                         'berkas_data'   => $BERKAS,
                         'no_registrasi' => $no,
                         'no_hp' => $akta->no_hp,
+                        'z1'    => 'active',
                         'conten'    => 'backend/admin/Approval/verifikasi_form',
                     );
 
             }elseif ($keyword=='AM') {
-                $akta = $this->Akta_perceraian_model->get_by_am($id);
+                $akta    = $this->Akta_kematian_model->get_by_am($id);
                 $jenazah = $this->Data_jenazah_model->get_by_am($id);
                 $IBU    = $this->Ortu_jenazah_model->get_by_jenazah($jenazah->id_jenazah,"IBU");
                 $AYAH   = $this->Ortu_jenazah_model->get_by_jenazah($jenazah->id_jenazah,"AYAH");
@@ -359,6 +403,7 @@ class Approval extends CI_Controller
                         'berkas_data'   => $BERKAS,
                         'no_registrasi' => $no,
                         'no_hp' => $akta->no_hp,
+                        'z2'    => 'active',
                         'conten'    => 'backend/admin/Approval/verifikasi_form_j',
                     );
 
@@ -392,6 +437,7 @@ class Approval extends CI_Controller
                         'anak_data'   => $ANAK,
                         'no_registrasi' => $no,
                         'no_hp' => $akta->no_hp,
+                        'z3'    => 'active',
                         'conten'    => 'backend/admin/Approval/verifikasi_form_p',
                     );
             }elseif ($keyword=='AC') {
@@ -410,13 +456,13 @@ class Approval extends CI_Controller
                         'berkas_data'   => $BERKAS,
                         'no_registrasi' => $no,
                         'no_hp' => $akta->no_hp,
+                        'z4'    => 'active',
                         'conten'    => 'backend/admin/Approval/verifikasi_form_c',
                     );
             }
 
         
             $data['z']         = 'active';
-            $data['z4']         = 'active';
             $data['nama_user'] = $this->session->userdata('nama_user');
             $data['status']    = $this->session->userdata('status');
             $data['action']    = site_url('approval/update_action');
@@ -483,7 +529,7 @@ class Approval extends CI_Controller
     }
 
     //FUNGSI Untuk set nilai tb.approval bahwa akta sudah diambil
-    public function akta($status,$id_akta){
+    public function akta($status,$id_akta,$tname,$regis){
         $ctrl = substr($id_akta,0,2);
         $re = base_url().'approval/index/'.$ctrl;
 
@@ -504,6 +550,20 @@ class Approval extends CI_Controller
             $data['tgl_ambil'] = date("Y-m-d");
         }
         $this->Approval_model->update($id_akta, $data);
+        if ($status=='jadi') {
+             $dt_akta = $this->Approval_model->get_data_akta($tname,$regis);
+             $item = array(  'no_pendaftaran' => $dt_akta->no_registrasi, 
+                );
+                $sms = array(
+                    'TextDecoded' => sms_jadi($item),
+                    'DestinationNumber' => $dt_akta->no_hp, 
+                    );
+                //print_r($dt_akta);print_r($item);print_r($sms);exit();
+                /*
+                PENDAFTARAN BERHASIL!!.Jenis: Akta Kelahiran diproses pada tanggal 30/05/2016, NO.REG: PF02300516003, KODE UNIK: EcT481. Lengkapi data pendaftaran maksimal 7 Ha
+                */
+                $this->Outbox_model->insert($sms);
+        }
 
 
         $this->session->set_flashdata('message', "

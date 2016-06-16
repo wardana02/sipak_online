@@ -70,7 +70,7 @@
                                       <div class="alert alert-warning fade in">
                                        <center><h4>
                                           <strong>Denda Administrasi!!</strong>
-                                          Rp<?= $denda ?> ,-
+                                          Rp <?= $akta->denda ?> ,-
                                           </h4></center>
                                       </div> 
 

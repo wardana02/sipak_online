@@ -23,7 +23,7 @@ class F2_29 extends CI_Controller
        		$this->load->helper('sms');
        		$R = $this->session->userdata('on_register');
        		if ($R == FALSE) {
-    			//redirect('error404','refresh');
+    			redirect('error404','refresh');
     		}
 			
 		}
@@ -60,10 +60,10 @@ class F2_29 extends CI_Controller
 		    public function edit($id_am){
 		    	//select ke data bayi,ortu,saksi,pelapor berdasarkan id_al, then redirect to f2_01
 		    	$re = base_url("home/mati");
-		    	$t = $this->session->userdata('s_idal');
+		    	$t = $this->session->userdata('s_idam');
 		    	if ($id_am!=$t) {
 		    		echo "<script language=\"Javascript\">\n";
-					echo "window.alert('@ Data Formulir Pendaftaran Tidak Ditemukan')";
+					echo "window.alert('@ Data Formulir Pendaftaran Tidak Ditemukan #DTS')";
 					header("refresh:0; $re");
 					echo "</script>";
 		    	}
@@ -85,7 +85,7 @@ class F2_29 extends CI_Controller
         		$i=0;$j=0;$k=0;$l=0;$m=0;$n=0;
         		
 		        if ($row) {
-		        	if ($app->locked=='1') {
+		        	if (($app->locked=='1')&&($app->progres!="diambil")) {
 		        		$data = array(
 		        			'hasil'		=>  $app,
 		        			'nama'		=>	$app->nama,
@@ -99,7 +99,7 @@ class F2_29 extends CI_Controller
 		        		$data['conten'] = "frontend/info/terkunci";
 		        		$this->load->view('backend/dashboard/index2', $data);
 		        	}
-		        	if ($app->progres=="diambil") {
+		        	elseif ($app->progres=="diambil") {
 		        		$data = array(
 
 		        			'nama'		=>	$app->nama,

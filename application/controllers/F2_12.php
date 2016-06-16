@@ -24,7 +24,7 @@ class F2_12 extends CI_Controller
        		$this->load->helper('sms');
        		$R = $this->session->userdata('on_register');
        		if ($R == FALSE) {
-    			//redirect('error404','refresh');
+    			redirect('error404','refresh');
     		}
 			
 		}
@@ -101,7 +101,7 @@ class F2_12 extends CI_Controller
         		
         		
 		        if ($row) {
-		        	if ($app->locked=='1') {
+		        	if (($app->locked=='1')&&($app->progres!="diambil")) {
 		        		$data = array(
 		        			'header'	=> "Akta Perkawinan Online",
 		        			'hasil'		=>  $app,
@@ -255,7 +255,7 @@ class F2_12 extends CI_Controller
 		            $this->session->set_flashdata('message', "
 		                <div class='alert alert-success alert-dismissable'>
 		              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-		                <h4><i class='icon fa fa-ban'></i> Berhasil!</h4>
+		                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
 		                   Data Formulir Akta Anda Telah Diperbaharui<br>
 		                   <h4>Lanjut Ke Tahap Unggah Berkas Anda?</h4>
 		                   
@@ -329,7 +329,10 @@ class F2_12 extends CI_Controller
 					'id_akta' => $this->session->userdata('s_idap'),
 					'nik' => $this->input->post("s".$n."_nik",TRUE),
 					'nama' => $this->input->post("s".$n."_nama",TRUE),
-					'umur' => $this->input->post("s".$n."_umur",TRUE),
+					'tmp_lahir' => $this->input->post("s".$n."_tmp_lahir",TRUE),
+					'tgl_lahir' => $this->input->post("s".$n."_tgl_lahir",TRUE),
+					'agama' => $this->input->post("s".$n."_agama",TRUE),
+					'nama_organisasi' => $this->input->post("s".$n."_nama_organisasi",TRUE),
 					'a_alamat' => $this->input->post("s".$n."_a_alamat",TRUE),
 					'a_desa' => $this->input->post("s".$n."_a_desa",TRUE),
 					'a_kecamatan' => $this->input->post("s".$n."_a_kecamatan",TRUE),

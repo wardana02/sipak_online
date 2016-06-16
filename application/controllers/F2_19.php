@@ -21,7 +21,7 @@ class F2_19 extends CI_Controller
        		$this->load->helper('sms');
        		$R = $this->session->userdata('on_register');
        		if ($R == FALSE) {
-    			//redirect('error404','refresh');
+    			redirect('error404','refresh');
     		}
 			
 		}
@@ -117,6 +117,7 @@ class F2_19 extends CI_Controller
 		        		$l=0;$m=0;$n=0;
 		        		foreach ($PERCERAIAN as $key => $value) { $data["$perceraian[$n]"] = set_value("$perceraian[$n]", $value); $n++;}
 		        		
+		        		$data['app'] = $app;
 		        		$data['button']		= 'Update';
 		        		$data['action'] = site_url('f2_19/update_action');
 		        		$data['berkas'] = site_url('b2_19/berkas');
@@ -144,7 +145,6 @@ class F2_19 extends CI_Controller
 		    {
 		    	$this->_rules();//$this->form_validation->run() == 
 		        if (FALSE) {
-		        	echo "GAGAL";
 		            $this->edit($this->session->userdata('s_idap'));
 		        } else {
 		        	//echo "MASUK";
