@@ -115,11 +115,11 @@
 
             var fullname = document.getElementById('a_nama');
             var date = document.getElementById('a_tgl_lahir');
-            var place = document.getElementById('aa_alamat');
-            var desa = document.getElementById('aa_desa');
-            var kecamatan = document.getElementById('aa_kecamatan');
-            var kabkota = document.getElementById('aa_kabkota');
-            var provinsi = document.getElementById('aa_provinsi');
+            var place = document.getElementById('a_a_alamat');
+            var desa = document.getElementById('a_a_desa');
+            var kecamatan = document.getElementById('a_a_kecamatan');
+            var kabkota = document.getElementById('a_a_kabkota');
+            var provinsi = document.getElementById('a_a_provinsi');
             var pekerjaan = document.getElementById('a_pekerjaan');
             
 
@@ -164,11 +164,11 @@
 
             var fullname = document.getElementById('i_nama');
             var date = document.getElementById('i_tgl_lahir');
-            var place = document.getElementById('ia_alamat');
-            var desa = document.getElementById('ia_desa');
-            var kecamatan = document.getElementById('ia_kecamatan');
-            var kabkota = document.getElementById('ia_kabkota');
-            var provinsi = document.getElementById('ia_provinsi');
+            var place = document.getElementById('i_a_alamat');
+            var desa = document.getElementById('i_a_desa');
+            var kecamatan = document.getElementById('i_a_kecamatan');
+            var kabkota = document.getElementById('i_a_kabkota');
+            var provinsi = document.getElementById('i_a_provinsi');
             var pekerjaan = document.getElementById('i_pekerjaan');
             
 
@@ -263,11 +263,11 @@
 
             var fullname = document.getElementById('s1_nama');
 
-            var place = document.getElementById('s1a_alamat');
-            var desa = document.getElementById('s1a_desa');
-            var kecamatan = document.getElementById('s1a_kecamatan');
-            var kabkota = document.getElementById('s1a_kabkota');
-            var provinsi = document.getElementById('s1a_provinsi');
+            var place = document.getElementById('s1_a_alamat');
+            var desa = document.getElementById('s1_a_desa');
+            var kecamatan = document.getElementById('s1_a_kecamatan');
+            var kabkota = document.getElementById('s1_a_kabkota');
+            var provinsi = document.getElementById('s1_a_provinsi');
             var job = document.getElementById('s1_pekerjaan');
             var tlahir = document.getElementById('s1_tmp_lahir');
             var dlahir = document.getElementById('s1_tgl_lahir');
@@ -316,11 +316,11 @@
 
             var fullname = document.getElementById('s2_nama');
 
-            var place = document.getElementById('s2a_alamat');
-            var desa = document.getElementById('s2a_desa');
-            var kecamatan = document.getElementById('s2a_kecamatan');
-            var kabkota = document.getElementById('s2a_kabkota');
-            var provinsi = document.getElementById('s2a_provinsi');
+            var place = document.getElementById('s2_a_alamat');
+            var desa = document.getElementById('s2_a_desa');
+            var kecamatan = document.getElementById('s2_a_kecamatan');
+            var kabkota = document.getElementById('s2_a_kabkota');
+            var provinsi = document.getElementById('s2_a_provinsi');
             var job = document.getElementById('s2_pekerjaan');
             var tlahir = document.getElementById('s2_tmp_lahir');
             var dlahir = document.getElementById('s2_tgl_lahir');

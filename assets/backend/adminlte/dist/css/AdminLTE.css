@@ -3091,7 +3091,6 @@ table.text-center th {
 }
 .mailbox-attachments li {
   float: left;
-  width: 200px;
   border: 1px solid #eee;
   margin-bottom: 10px;
   margin-right: 10px;
