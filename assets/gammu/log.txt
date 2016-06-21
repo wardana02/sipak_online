@@ -2534,3 +2534,419 @@ Thu 2016/06/16 20:14:52 gammu-smsd[2148]: Initialisation failed, stopping Gammu 
 Thu 2016/06/16 20:14:52 gammu-smsd[2148]: Failed to start SMSD, Error 3: The system cannot find the path specified.
 
 
+Thu 2016/06/16 22:01:20 gammu-smsd[2564]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/06/16 22:01:20 gammu-smsd[2564]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/06/16 22:01:21 gammu-smsd[2564]: Error connecting to database!
+Thu 2016/06/16 22:01:21 gammu-smsd[2564]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/06/16 22:01:21 gammu-smsd[2564]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/06/16 22:01:21 gammu-smsd[2564]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/06/17 08:28:31 gammu-smsd[2496]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/06/17 08:28:31 gammu-smsd[2496]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/06/17 08:28:32 gammu-smsd[2496]: Error connecting to database!
+Fri 2016/06/17 08:28:32 gammu-smsd[2496]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/06/17 08:28:32 gammu-smsd[2496]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/06/17 08:28:32 gammu-smsd[2496]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/06/17 12:54:39 gammu-smsd[2348]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/06/17 12:54:39 gammu-smsd[2348]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/06/17 12:54:40 gammu-smsd[2348]: Error connecting to database!
+Fri 2016/06/17 12:54:40 gammu-smsd[2348]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/06/17 12:54:40 gammu-smsd[2348]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/06/17 12:54:40 gammu-smsd[2348]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/06/17 13:48:06 gammu-smsd[3896]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/06/17 13:48:06 gammu-smsd[3896]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/06/17 13:48:06 gammu-smsd[3896]: Connected to Database: db_sipcapil on localhost
+Fri 2016/06/17 13:48:07 gammu-smsd[3896]: Connected to Database native_mysql: db_sipcapil on localhost
+Fri 2016/06/17 13:48:07 gammu-smsd[3896]: Created Windows RW shared memory at 00E30000
+Fri 2016/06/17 13:48:07 gammu-smsd[3896]: Starting phone communication...
+Fri 2016/06/17 13:48:17 gammu-smsd[3896]: Inserting phone info
+Fri 2016/06/17 14:24:43 gammu-smsd[3896]: Read 1 messages
+Fri 2016/06/17 14:27:35 gammu-smsd[3896]: Read 1 messages
+Fri 2016/06/17 14:36:23 gammu-smsd[3896]: Read 1 messages
+Fri 2016/06/17 14:36:52 gammu-smsd[3896]: Error code: 2013, Error: Lost connection to MySQL server during query
+Fri 2016/06/17 14:36:52 gammu-smsd[3896]: SQL failed (timeout): UPDATE phones SET `TimeOut`= (NOW() + INTERVAL 10 SECOND) + 0, `Battery` = 0, `Signal` = 36 WHERE `IMEI` = '863448018379963'
+Fri 2016/06/17 14:36:52 gammu-smsd[3896]: reconnecting to database!
+Fri 2016/06/17 14:36:52 gammu-smsd[3896]: Reconnecting after 1 seconds...
+Fri 2016/06/17 14:36:54 gammu-smsd[3896]: Error connecting to database!
+Fri 2016/06/17 14:36:54 gammu-smsd[3896]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/06/17 14:36:54 gammu-smsd[3896]: Reconnecting after 4 seconds...
+Fri 2016/06/17 14:36:59 gammu-smsd[3896]: Error connecting to database!
+Fri 2016/06/17 14:36:59 gammu-smsd[3896]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/06/17 14:36:59 gammu-smsd[3896]: Reconnecting after 9 seconds...
+Fri 2016/06/17 14:37:09 gammu-smsd[3896]: Error connecting to database!
+Fri 2016/06/17 14:37:09 gammu-smsd[3896]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/06/17 14:37:09 gammu-smsd[3896]: Reconnecting after 16 seconds...
+Fri 2016/06/17 15:32:52 gammu-smsd[2272]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/06/17 15:32:52 gammu-smsd[2272]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/06/17 15:32:54 gammu-smsd[2272]: Error connecting to database!
+Fri 2016/06/17 15:32:54 gammu-smsd[2272]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/06/17 15:32:54 gammu-smsd[2272]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/06/17 15:32:54 gammu-smsd[2272]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/06/17 21:53:14 gammu-smsd[2696]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/06/17 21:53:14 gammu-smsd[2696]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/06/17 21:53:15 gammu-smsd[2696]: Error connecting to database!
+Fri 2016/06/17 21:53:15 gammu-smsd[2696]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/06/17 21:53:15 gammu-smsd[2696]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/06/17 21:53:15 gammu-smsd[2696]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/06/17 21:57:47 gammu-smsd[5920]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/06/17 21:57:47 gammu-smsd[5920]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/06/17 21:57:47 gammu-smsd[5920]: Connected to Database: db_sipcapil on localhost
+Fri 2016/06/17 21:57:47 gammu-smsd[5920]: Connected to Database native_mysql: db_sipcapil on localhost
+Fri 2016/06/17 21:57:47 gammu-smsd[5920]: Created Windows RW shared memory at 003B0000
+Fri 2016/06/17 21:57:47 gammu-smsd[5920]: Starting phone communication...
+Fri 2016/06/17 21:57:56 gammu-smsd[5920]: Inserting phone info
+Fri 2016/06/17 23:21:09 gammu-smsd[5920]: Read 1 messages
+Sat 2016/06/18 04:39:12 gammu-smsd[2728]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/06/18 04:39:12 gammu-smsd[2728]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/06/18 04:39:13 gammu-smsd[2728]: Error connecting to database!
+Sat 2016/06/18 04:39:13 gammu-smsd[2728]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/06/18 04:39:13 gammu-smsd[2728]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/06/18 04:39:13 gammu-smsd[2728]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/06/18 08:59:03 gammu-smsd[2800]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/06/18 08:59:03 gammu-smsd[2800]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/06/18 08:59:04 gammu-smsd[2800]: Error connecting to database!
+Sat 2016/06/18 08:59:04 gammu-smsd[2800]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/06/18 08:59:04 gammu-smsd[2800]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/06/18 08:59:04 gammu-smsd[2800]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/06/18 19:35:02 gammu-smsd[2684]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/06/18 19:35:02 gammu-smsd[2684]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/06/18 19:35:03 gammu-smsd[2684]: Error connecting to database!
+Sat 2016/06/18 19:35:03 gammu-smsd[2684]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/06/18 19:35:03 gammu-smsd[2684]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/06/18 19:35:03 gammu-smsd[2684]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/06/18 22:20:35 gammu-smsd[2956]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/06/18 22:20:35 gammu-smsd[2956]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/06/18 22:20:36 gammu-smsd[2956]: Error connecting to database!
+Sat 2016/06/18 22:20:36 gammu-smsd[2956]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/06/18 22:20:36 gammu-smsd[2956]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/06/18 22:20:36 gammu-smsd[2956]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/06/19 03:53:03 gammu-smsd[2924]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/06/19 03:53:03 gammu-smsd[2924]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/06/19 03:53:04 gammu-smsd[2924]: Error connecting to database!
+Sun 2016/06/19 03:53:04 gammu-smsd[2924]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/06/19 03:53:04 gammu-smsd[2924]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/06/19 03:53:04 gammu-smsd[2924]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/06/19 09:42:12 gammu-smsd[2552]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/06/19 09:42:12 gammu-smsd[2552]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/06/19 09:42:13 gammu-smsd[2552]: Error connecting to database!
+Sun 2016/06/19 09:42:13 gammu-smsd[2552]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/06/19 09:42:13 gammu-smsd[2552]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/06/19 09:42:13 gammu-smsd[2552]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/06/19 09:45:07 gammu-smsd[6808]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/06/19 09:45:07 gammu-smsd[6808]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/06/19 09:45:07 gammu-smsd[6808]: Connected to Database: db_sipcapil on localhost
+Sun 2016/06/19 09:45:08 gammu-smsd[6808]: Connected to Database native_mysql: db_sipcapil on localhost
+Sun 2016/06/19 09:45:08 gammu-smsd[6808]: Created Windows RW shared memory at 003F0000
+Sun 2016/06/19 09:45:08 gammu-smsd[6808]: Starting phone communication...
+Sun 2016/06/19 09:45:17 gammu-smsd[6808]: Inserting phone info
+Sun 2016/06/19 11:07:02 gammu-smsd[6808]: Read 1 messages
+Sun 2016/06/19 11:58:51 gammu-smsd[6808]: Read 1 messages
+Sun 2016/06/19 13:27:21 gammu-smsd[6808]: Error code: 2006, Error: MySQL server has gone away
+Sun 2016/06/19 13:27:21 gammu-smsd[6808]: SQL failed (timeout): SELECT `ID`, `InsertIntoDB`, `SendingDateTime`, `SenderID` FROM outbox WHERE `SendingDateTime` < NOW() AND `SendingTimeOut` < NOW() AND `SendBefore` >= CURTIME() AND `SendAfter` <= CURTIME() AND ( `SenderID` is NULL OR `SenderID` = '' OR `SenderID` = '' ) ORDER BY `InsertIntoDB` ASC LIMIT 1
+Sun 2016/06/19 13:27:21 gammu-smsd[6808]: reconnecting to database!
+Sun 2016/06/19 13:27:21 gammu-smsd[6808]: Reconnecting after 1 seconds...
+Sun 2016/06/19 13:27:23 gammu-smsd[6808]: Error connecting to database!
+Sun 2016/06/19 13:27:23 gammu-smsd[6808]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/06/19 13:27:23 gammu-smsd[6808]: Reconnecting after 4 seconds...
+Sun 2016/06/19 13:27:28 gammu-smsd[6808]: Error connecting to database!
+Sun 2016/06/19 13:27:28 gammu-smsd[6808]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/06/19 13:27:28 gammu-smsd[6808]: Reconnecting after 9 seconds...
+Sun 2016/06/19 14:56:04 gammu-smsd[2492]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/06/19 14:56:04 gammu-smsd[2492]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/06/19 14:56:05 gammu-smsd[2492]: Error connecting to database!
+Sun 2016/06/19 14:56:05 gammu-smsd[2492]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/06/19 14:56:05 gammu-smsd[2492]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/06/19 14:56:05 gammu-smsd[2492]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/06/19 19:19:44 gammu-smsd[2496]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/06/19 19:19:44 gammu-smsd[2496]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/06/19 19:19:45 gammu-smsd[2496]: Error connecting to database!
+Sun 2016/06/19 19:19:45 gammu-smsd[2496]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/06/19 19:19:45 gammu-smsd[2496]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/06/19 19:19:45 gammu-smsd[2496]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/06/19 20:39:07 gammu-smsd[788]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/06/19 20:39:07 gammu-smsd[788]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/06/19 20:39:09 gammu-smsd[788]: Error connecting to database!
+Sun 2016/06/19 20:39:09 gammu-smsd[788]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/06/19 20:39:09 gammu-smsd[788]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/06/19 20:39:09 gammu-smsd[788]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sun 2016/06/19 21:06:47 gammu-smsd[5544]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/06/19 21:06:47 gammu-smsd[5544]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/06/19 21:06:47 gammu-smsd[5544]: Connected to Database: db_sipcapil on localhost
+Sun 2016/06/19 21:06:47 gammu-smsd[5544]: Connected to Database native_mysql: db_sipcapil on localhost
+Sun 2016/06/19 21:06:47 gammu-smsd[5544]: Created Windows RW shared memory at 003B0000
+Sun 2016/06/19 21:06:47 gammu-smsd[5544]: Starting phone communication...
+Sun 2016/06/19 21:06:56 gammu-smsd[5544]: Inserting phone info
+Sun 2016/06/19 21:15:19 gammu-smsd[5544]: Read 1 messages
+Sun 2016/06/19 22:46:44 gammu-smsd[808]: mysql service is deprecated. Please use SQL service with correct driver.
+Sun 2016/06/19 22:46:44 gammu-smsd[808]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sun 2016/06/19 22:46:46 gammu-smsd[808]: Error connecting to database!
+Sun 2016/06/19 22:46:46 gammu-smsd[808]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sun 2016/06/19 22:46:46 gammu-smsd[808]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sun 2016/06/19 22:46:46 gammu-smsd[808]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/06/20 10:39:13 gammu-smsd[2496]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/06/20 10:39:13 gammu-smsd[2496]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/06/20 10:39:14 gammu-smsd[2496]: Error connecting to database!
+Mon 2016/06/20 10:39:14 gammu-smsd[2496]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/06/20 10:39:14 gammu-smsd[2496]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/06/20 10:39:14 gammu-smsd[2496]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/06/20 10:52:50 gammu-smsd[1804]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/06/20 10:52:50 gammu-smsd[1804]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/06/20 10:52:50 gammu-smsd[1804]: Connected to Database: db_sipcapil on localhost
+Mon 2016/06/20 10:52:50 gammu-smsd[1804]: Connected to Database native_mysql: db_sipcapil on localhost
+Mon 2016/06/20 10:52:50 gammu-smsd[1804]: Created Windows RW shared memory at 00600000
+Mon 2016/06/20 10:52:50 gammu-smsd[1804]: Starting phone communication...
+Mon 2016/06/20 10:52:59 gammu-smsd[1804]: Inserting phone info
+Mon 2016/06/20 11:51:24 gammu-smsd[1804]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 11:51:24 gammu-smsd[1804]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 11:54:23 gammu-smsd[1804]: Error getting security status: No response in specified timeout. Probably phone not connected. (TIMEOUT[14])
+Mon 2016/06/20 11:54:23 gammu-smsd[1804]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 11:54:35 gammu-smsd[1804]: Error getting security status: No response in specified timeout. Probably phone not connected. (TIMEOUT[14])
+Mon 2016/06/20 11:54:35 gammu-smsd[1804]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 11:54:47 gammu-smsd[1804]: Error getting security status: No response in specified timeout. Probably phone not connected. (TIMEOUT[14])
+Mon 2016/06/20 11:54:47 gammu-smsd[1804]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 11:54:47 gammu-smsd[1804]: Already hit 3 errors
+Mon 2016/06/20 11:54:47 gammu-smsd[1804]: Terminating communication: Entry is empty. (EMPTY[22])
+Mon 2016/06/20 11:54:47 gammu-smsd[1804]: Starting phone communication...
+Mon 2016/06/20 11:54:54 gammu-smsd[1804]: Soft reset return code: Function not supported by phone. (NOTSUPPORTED[21])
+Mon 2016/06/20 12:00:09 gammu-smsd[1804]: Error getting SMS status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 12:00:13 gammu-smsd[1804]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 12:00:13 gammu-smsd[1804]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 12:02:28 gammu-smsd[1804]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 12:02:28 gammu-smsd[1804]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 12:02:40 gammu-smsd[1804]: Error getting security status: No response in specified timeout. Probably phone not connected. (TIMEOUT[14])
+Mon 2016/06/20 12:02:40 gammu-smsd[1804]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 12:02:52 gammu-smsd[1804]: Error getting security status: No response in specified timeout. Probably phone not connected. (TIMEOUT[14])
+Mon 2016/06/20 12:02:52 gammu-smsd[1804]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 12:02:52 gammu-smsd[1804]: Already hit 3 errors
+Mon 2016/06/20 12:02:52 gammu-smsd[1804]: Terminating communication: Entry is empty. (EMPTY[22])
+Mon 2016/06/20 12:02:52 gammu-smsd[1804]: Starting phone communication...
+Mon 2016/06/20 12:02:55 gammu-smsd[1804]: Can't open device: Error opening device. Unknown, busy or no permissions. (DEVICEOPENERROR[2])
+Mon 2016/06/20 12:02:55 gammu-smsd[1804]: Failed to start SMSD, Error 5: Access is denied.
+
+
+Mon 2016/06/20 12:31:16 gammu-smsd[7200]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/06/20 12:31:16 gammu-smsd[7200]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/06/20 12:31:16 gammu-smsd[7200]: Connected to Database: db_sipcapil on localhost
+Mon 2016/06/20 12:31:16 gammu-smsd[7200]: Connected to Database native_mysql: db_sipcapil on localhost
+Mon 2016/06/20 12:31:16 gammu-smsd[7200]: Created Windows RW shared memory at 003F0000
+Mon 2016/06/20 12:31:16 gammu-smsd[7200]: Starting phone communication...
+Mon 2016/06/20 12:31:19 gammu-smsd[7200]: Can't open device: Error opening device. Unknown, busy or no permissions. (DEVICEOPENERROR[2])
+Mon 2016/06/20 12:31:19 gammu-smsd[7200]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/06/20 12:33:05 gammu-smsd[7304]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/06/20 12:33:05 gammu-smsd[7304]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/06/20 12:33:05 gammu-smsd[7304]: Connected to Database: db_sipcapil on localhost
+Mon 2016/06/20 12:33:05 gammu-smsd[7304]: Connected to Database native_mysql: db_sipcapil on localhost
+Mon 2016/06/20 12:33:05 gammu-smsd[7304]: Created Windows RW shared memory at 01150000
+Mon 2016/06/20 12:33:05 gammu-smsd[7304]: Starting phone communication...
+Mon 2016/06/20 12:33:14 gammu-smsd[7304]: Inserting phone info
+Mon 2016/06/20 13:37:19 gammu-smsd[7304]: Error code: 2006, Error: MySQL server has gone away
+Mon 2016/06/20 13:37:19 gammu-smsd[7304]: SQL failed (timeout): UPDATE phones SET `TimeOut`= (NOW() + INTERVAL 10 SECOND) + 0, `Battery` = 0, `Signal` = 27 WHERE `IMEI` = '863448018379963'
+Mon 2016/06/20 13:37:19 gammu-smsd[7304]: reconnecting to database!
+Mon 2016/06/20 13:37:19 gammu-smsd[7304]: Reconnecting after 1 seconds...
+Mon 2016/06/20 13:37:21 gammu-smsd[7304]: Error connecting to database!
+Mon 2016/06/20 13:37:21 gammu-smsd[7304]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/06/20 13:37:21 gammu-smsd[7304]: Reconnecting after 4 seconds...
+Mon 2016/06/20 13:37:26 gammu-smsd[7304]: Error connecting to database!
+Mon 2016/06/20 13:37:26 gammu-smsd[7304]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/06/20 13:37:26 gammu-smsd[7304]: Reconnecting after 9 seconds...
+Mon 2016/06/20 18:49:41 gammu-smsd[2896]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/06/20 18:49:41 gammu-smsd[2896]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/06/20 18:49:42 gammu-smsd[2896]: Error connecting to database!
+Mon 2016/06/20 18:49:42 gammu-smsd[2896]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Mon 2016/06/20 18:49:42 gammu-smsd[2896]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Mon 2016/06/20 18:49:42 gammu-smsd[2896]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/06/20 18:57:07 gammu-smsd[6608]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/06/20 18:57:07 gammu-smsd[6608]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/06/20 18:57:07 gammu-smsd[6608]: Connected to Database: db_sipcapil on localhost
+Mon 2016/06/20 18:57:07 gammu-smsd[6608]: Connected to Database native_mysql: db_sipcapil on localhost
+Mon 2016/06/20 18:57:07 gammu-smsd[6608]: Created Windows RW shared memory at 003F0000
+Mon 2016/06/20 18:57:07 gammu-smsd[6608]: Starting phone communication...
+Mon 2016/06/20 18:57:16 gammu-smsd[6608]: Inserting phone info
+Mon 2016/06/20 19:14:47 gammu-smsd[6608]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 19:14:47 gammu-smsd[6608]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 19:15:48 gammu-smsd[6608]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 19:15:48 gammu-smsd[6608]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 20:53:34 gammu-smsd[6608]: Error getting SMS status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 20:53:38 gammu-smsd[6608]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 20:53:38 gammu-smsd[6608]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 20:53:45 gammu-smsd[6608]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 20:53:45 gammu-smsd[6608]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 20:53:49 gammu-smsd[6608]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 20:53:49 gammu-smsd[6608]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 20:54:18 gammu-smsd[6608]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 20:54:18 gammu-smsd[6608]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 20:54:28 gammu-smsd[6608]: Error getting SMS status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 20:54:32 gammu-smsd[6608]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 20:54:32 gammu-smsd[6608]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 20:54:40 gammu-smsd[6608]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 20:54:40 gammu-smsd[6608]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 20:54:44 gammu-smsd[6608]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 20:54:44 gammu-smsd[6608]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:01:27 gammu-smsd[6608]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:01:27 gammu-smsd[6608]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:06:33 gammu-smsd[6608]: Error getting SMS status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:06:37 gammu-smsd[6608]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:06:37 gammu-smsd[6608]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:06:41 gammu-smsd[6608]: Error getting SMS status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:06:45 gammu-smsd[6608]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:06:45 gammu-smsd[6608]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:06:49 gammu-smsd[6608]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:06:49 gammu-smsd[6608]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:06:49 gammu-smsd[6608]: Already hit 3 errors
+Mon 2016/06/20 21:06:49 gammu-smsd[6608]: Terminating communication: Entry is empty. (EMPTY[22])
+Mon 2016/06/20 21:06:49 gammu-smsd[6608]: Starting phone communication...
+Mon 2016/06/20 21:10:26 gammu-smsd[6608]: Error getting SMS status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:10:45 gammu-smsd[7788]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/06/20 21:10:45 gammu-smsd[7788]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/06/20 21:10:45 gammu-smsd[7788]: Connected to Database: db_sipcapil on localhost
+Mon 2016/06/20 21:10:45 gammu-smsd[7788]: Connected to Database native_mysql: db_sipcapil on localhost
+Mon 2016/06/20 21:10:45 gammu-smsd[7788]: Created Windows RW shared memory at 01120000
+Mon 2016/06/20 21:10:45 gammu-smsd[7788]: Starting phone communication...
+Mon 2016/06/20 21:10:45 gammu-smsd[7788]: Can't open device: Error opening device. Unknown, busy or no permissions. (DEVICEOPENERROR[2])
+Mon 2016/06/20 21:10:45 gammu-smsd[7788]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/06/20 21:10:53 gammu-smsd[2328]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/06/20 21:10:53 gammu-smsd[2328]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/06/20 21:10:54 gammu-smsd[2328]: Connected to Database: db_sipcapil on localhost
+Mon 2016/06/20 21:10:54 gammu-smsd[2328]: Connected to Database native_mysql: db_sipcapil on localhost
+Mon 2016/06/20 21:10:54 gammu-smsd[2328]: Created Windows RW shared memory at 003C0000
+Mon 2016/06/20 21:10:54 gammu-smsd[2328]: Starting phone communication...
+Mon 2016/06/20 21:11:02 gammu-smsd[2328]: Inserting phone info
+Mon 2016/06/20 21:16:22 gammu-smsd[2328]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:16:22 gammu-smsd[2328]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:16:29 gammu-smsd[2328]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:16:29 gammu-smsd[2328]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:16:33 gammu-smsd[2328]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:16:33 gammu-smsd[2328]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:33:40 gammu-smsd[2328]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:33:40 gammu-smsd[2328]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:33:47 gammu-smsd[2328]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:33:47 gammu-smsd[2328]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:33:51 gammu-smsd[2328]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:33:51 gammu-smsd[2328]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:36:13 gammu-smsd[2328]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:36:13 gammu-smsd[2328]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:36:20 gammu-smsd[2328]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:36:20 gammu-smsd[2328]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:36:24 gammu-smsd[2328]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:36:24 gammu-smsd[2328]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:43:23 gammu-smsd[2328]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:43:23 gammu-smsd[2328]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:43:30 gammu-smsd[2328]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:43:30 gammu-smsd[2328]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:43:34 gammu-smsd[2328]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 21:43:34 gammu-smsd[2328]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 21:51:07 gammu-smsd[7596]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/06/20 21:51:07 gammu-smsd[7596]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/06/20 21:51:07 gammu-smsd[7596]: Connected to Database: db_sipcapil on localhost
+Mon 2016/06/20 21:51:07 gammu-smsd[7596]: Connected to Database native_mysql: db_sipcapil on localhost
+Mon 2016/06/20 21:51:07 gammu-smsd[7596]: Created Windows RW shared memory at 003F0000
+Mon 2016/06/20 21:51:07 gammu-smsd[7596]: Starting phone communication...
+Mon 2016/06/20 21:51:07 gammu-smsd[7596]: Can't open device: Error opening device. Unknown, busy or no permissions. (DEVICEOPENERROR[2])
+Mon 2016/06/20 21:51:07 gammu-smsd[7596]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Mon 2016/06/20 21:51:12 gammu-smsd[52]: mysql service is deprecated. Please use SQL service with correct driver.
+Mon 2016/06/20 21:51:12 gammu-smsd[52]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Mon 2016/06/20 21:51:12 gammu-smsd[52]: Connected to Database: db_sipcapil on localhost
+Mon 2016/06/20 21:51:12 gammu-smsd[52]: Connected to Database native_mysql: db_sipcapil on localhost
+Mon 2016/06/20 21:51:12 gammu-smsd[52]: Created Windows RW shared memory at 003F0000
+Mon 2016/06/20 21:51:12 gammu-smsd[52]: Starting phone communication...
+Mon 2016/06/20 21:51:21 gammu-smsd[52]: Inserting phone info
+Mon 2016/06/20 23:29:06 gammu-smsd[52]: Error getting SMS status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:29:10 gammu-smsd[52]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:29:10 gammu-smsd[52]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 23:29:14 gammu-smsd[52]: Error getting SMS status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:29:18 gammu-smsd[52]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:29:18 gammu-smsd[52]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 23:29:22 gammu-smsd[52]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:29:22 gammu-smsd[52]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 23:29:22 gammu-smsd[52]: Already hit 3 errors
+Mon 2016/06/20 23:29:22 gammu-smsd[52]: Terminating communication: Entry is empty. (EMPTY[22])
+Mon 2016/06/20 23:29:22 gammu-smsd[52]: Starting phone communication...
+Mon 2016/06/20 23:30:10 gammu-smsd[52]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:30:10 gammu-smsd[52]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 23:30:14 gammu-smsd[52]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:30:14 gammu-smsd[52]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 23:34:21 gammu-smsd[52]: Error getting SMS status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:34:25 gammu-smsd[52]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:34:25 gammu-smsd[52]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 23:34:29 gammu-smsd[52]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:34:29 gammu-smsd[52]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 23:34:29 gammu-smsd[52]: Already hit 3 errors
+Mon 2016/06/20 23:34:29 gammu-smsd[52]: Terminating communication: Entry is empty. (EMPTY[22])
+Mon 2016/06/20 23:34:29 gammu-smsd[52]: Starting phone communication...
+Mon 2016/06/20 23:35:40 gammu-smsd[52]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:35:40 gammu-smsd[52]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 23:35:44 gammu-smsd[52]: Error getting SMS status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:35:48 gammu-smsd[52]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:35:48 gammu-smsd[52]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 23:35:52 gammu-smsd[52]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:35:52 gammu-smsd[52]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 23:35:52 gammu-smsd[52]: Already hit 3 errors
+Mon 2016/06/20 23:35:52 gammu-smsd[52]: Terminating communication: Entry is empty. (EMPTY[22])
+Mon 2016/06/20 23:35:52 gammu-smsd[52]: Starting phone communication...
+Mon 2016/06/20 23:36:14 gammu-smsd[52]: Error getting SMS status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:36:18 gammu-smsd[52]: Error getting security status: Error writing to the device. (DEVICEWRITEERROR[11])
+Mon 2016/06/20 23:36:18 gammu-smsd[52]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 23:36:30 gammu-smsd[52]: Error getting security status: No response in specified timeout. Probably phone not connected. (TIMEOUT[14])
+Mon 2016/06/20 23:36:30 gammu-smsd[52]: You might want to set CheckSecurity = 0 to avoid checking security status
+Mon 2016/06/20 23:36:30 gammu-smsd[52]: Already hit 3 errors
+Mon 2016/06/20 23:36:30 gammu-smsd[52]: Terminating communication: Entry is empty. (EMPTY[22])
+Mon 2016/06/20 23:36:30 gammu-smsd[52]: Starting phone communication...
+Mon 2016/06/20 23:36:33 gammu-smsd[52]: Can't open device: Error opening device. Unknown, busy or no permissions. (DEVICEOPENERROR[2])
+Mon 2016/06/20 23:36:33 gammu-smsd[52]: Failed to start SMSD, Error 5: Access is denied.
+
+
+Tue 2016/06/21 10:29:07 gammu-smsd[2456]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/06/21 10:29:07 gammu-smsd[2456]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/06/21 10:29:08 gammu-smsd[2456]: Error connecting to database!
+Tue 2016/06/21 10:29:08 gammu-smsd[2456]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/06/21 10:29:08 gammu-smsd[2456]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/06/21 10:29:08 gammu-smsd[2456]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Tue 2016/06/21 11:05:38 gammu-smsd[2328]: mysql service is deprecated. Please use SQL service with correct driver.
+Tue 2016/06/21 11:05:38 gammu-smsd[2328]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Tue 2016/06/21 11:05:39 gammu-smsd[2328]: Error connecting to database!
+Tue 2016/06/21 11:05:39 gammu-smsd[2328]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Tue 2016/06/21 11:05:39 gammu-smsd[2328]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2016/06/21 11:05:39 gammu-smsd[2328]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+

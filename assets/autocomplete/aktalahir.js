@@ -213,11 +213,11 @@
 
             var fullname = document.getElementById('p_nama');
 
-            var place = document.getElementById('pa_alamat');
-            var desa = document.getElementById('pa_desa');
-            var kecamatan = document.getElementById('pa_kecamatan');
-            var kabkota = document.getElementById('pa_kabkota');
-            var provinsi = document.getElementById('pa_provinsi');
+            var place = document.getElementById('p_a_alamat');
+            var desa = document.getElementById('p_a_desa');
+            var kecamatan = document.getElementById('p_a_kecamatan');
+            var kabkota = document.getElementById('p_a_kabkota');
+            var provinsi = document.getElementById('p_a_provinsi');
 
             var job = document.getElementById('p_pekerjaan');
             
@@ -368,9 +368,11 @@
             }
 
             var fullname = document.getElementById('nama');
+            var fullname2 = document.getElementById('nama2');
             
 
             fullname.value = valBack[0];
+            fullname2.value = valBack[0];
           }
         }
 
