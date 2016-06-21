@@ -212,8 +212,7 @@ class F2_12 extends CI_Controller
 		    public function update_action() 
 		    {
 		    	$this->_rules();//$this->form_validation->run() == 
-		        if (FALSE) {
-		        	echo "GAGAL";
+		        if ($this->form_validation->run() == FALSE) {
 		            $this->edit($this->session->userdata('s_idap'));
 		        } else {
 		        	//echo "MASUK";
@@ -254,10 +253,9 @@ class F2_12 extends CI_Controller
 		            $link = site_url('F2_12/edit/'.$IDAKTA);
 		            $this->session->set_flashdata('message', "
 		                <div class='alert alert-success alert-dismissable'>
-		              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
 		                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
 		                   Data Formulir Akta Anda Telah Diperbaharui<br>
-		                   <h4>Lanjut Ke Tahap Unggah Berkas Anda?</h4>
+		                   <h4>Lanjut Ke Tahap Unggah Berkas Anda? Klik Pada Tombol 2. Berkas Akta Perkawinan </h4>
 		                   
 		            </div>
 		                ");
@@ -384,7 +382,7 @@ class F2_12 extends CI_Controller
 		    	$k = array(0 => 'as_',1 => 'is_',2 => 'ai_',3 => 'ii_', );
 
 		    	for ($i=0; $i <4 ; $i++) { 
-		    		$this->form_validation->set_rules("$k[$i]nik", 'nik', 'trim|required');
+		    		$this->form_validation->set_rules($k[$i].'nik', 'nik', 'trim|required');
 					$this->form_validation->set_rules($k[$i].'nama', 'nama', 'trim|required');
 					$this->form_validation->set_rules($k[$i].'agama', 'agama', 'trim|required');
 					$this->form_validation->set_rules($k[$i].'tmp_lahir', 'tmp lahir', 'trim|required');
@@ -397,7 +395,7 @@ class F2_12 extends CI_Controller
 		    	}
 
 		    	$s = array(0 => 's_',1 => 'i_',);
-		    	for ($i=0; $i <3 ; $i++) { 
+		    	for ($i=0; $i <2 ; $i++) { 
 				$this->form_validation->set_rules($s[$i].'no_kk', 'no kk', 'trim|required');
 				$this->form_validation->set_rules($s[$i].'nik', 'nik', 'trim|required');
 				$this->form_validation->set_rules($s[$i].'nama', 'nama', 'trim|required');
@@ -409,14 +407,13 @@ class F2_12 extends CI_Controller
 				$this->form_validation->set_rules($s[$i].'anak_ke', 'anak ke', 'trim|required');
 				$this->form_validation->set_rules($s[$i].'status_sebelum_nikah', 'status sebelum nikah', 'trim|required');
 				$this->form_validation->set_rules($s[$i].'perkawinan_ke', 'perkawinan ke', 'trim|required');
-				$this->form_validation->set_rules($s[$i].'a_alamat', 'a alamat', 'trim|required');
-				$this->form_validation->set_rules($s[$i].'a_desa', 'a desa', 'trim|required');
-				$this->form_validation->set_rules($s[$i].'a_kecamatan', 'a kecamatan', 'trim|required');
-				$this->form_validation->set_rules($s[$i].'a_kabkota', 'a kabkota', 'trim|required');
+				$this->form_validation->set_rules($s[$i].'a_alamat', 'Nama Dukuh/Jalan', 'trim|required');
+				$this->form_validation->set_rules($s[$i].'a_desa', 'Nama Desa/Kelurahan', 'trim|required');
+				$this->form_validation->set_rules($s[$i].'a_kecamatan', 'Nama Kecamatan', 'trim|required');
+				$this->form_validation->set_rules($s[$i].'a_kabkota', 'Kabupaten/Kota', 'trim|required');
 			}
 			
 
-			$this->form_validation->set_rules('id_ap', 'id ap', 'trim|required');
 			$this->form_validation->set_rules('tgl_pemberkatan', 'tgl pemberkatan', 'trim|required');
 			$this->form_validation->set_rules('hari_lapor', 'hari lapor', 'trim|required');
 			$this->form_validation->set_rules('tgl_lapor', 'tgl lapor', 'trim|required');
@@ -429,7 +426,6 @@ class F2_12 extends CI_Controller
 
 			$this->form_validation->set_rules('s1_nik', 'nik', 'trim|required');
 			$this->form_validation->set_rules('s1_nama', 'nama', 'trim|required');
-			$this->form_validation->set_rules('s1_umur', 'umur', 'trim|required');
 			$this->form_validation->set_rules('s1_a_alamat', 'alamat', 'trim|required');
 			$this->form_validation->set_rules('s1_a_desa', 'desa', 'trim|required');
 			$this->form_validation->set_rules('s1_a_kecamatan', 'kecamatan', 'trim|required');
@@ -439,7 +435,6 @@ class F2_12 extends CI_Controller
 
 			$this->form_validation->set_rules('s2_nik', 'nik', 'trim|required');
 			$this->form_validation->set_rules('s2_nama', 'nama', 'trim|required');
-			$this->form_validation->set_rules('s2_umur', 'umur', 'trim|required');
 			$this->form_validation->set_rules('s2_a_alamat', 'alamat', 'trim|required');
 			$this->form_validation->set_rules('s2_a_desa', 'desa', 'trim|required');
 			$this->form_validation->set_rules('s2_a_kecamatan', 'kecamatan', 'trim|required');

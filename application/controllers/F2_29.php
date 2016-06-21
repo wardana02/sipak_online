@@ -35,7 +35,7 @@ class F2_29 extends CI_Controller
 		        if (FALSE) {
 		            $this->index();
 		        } else {
-		        	//echo $this->session->userdata('s_idal');exit();
+		        	//echo $this->session->userdata('s_idam');exit();
 		        	$DT = date("ymdhis");
 		        	$TD = date("sihdmy");
 		        	$IDJENAZAH = "DJ".$DT;
@@ -45,14 +45,14 @@ class F2_29 extends CI_Controller
 		            $this->_arrayPelapor("PL".$DT,"I");
 		            $this->_arraySaksi1("SI".$DT,"I");
 		            $this->_arraySaksi2("SI".$TD,"I");
-		            $this->_arrayBerkas("BM".$DT,$this->session->userdata('s_idal'),"I");
+		            $this->_arrayBerkas("BM".$DT,$this->session->userdata('s_idam'),"I");
 
 		            $this->session->set_flashdata('message', 'Create Record Success');
 		            echo "<script language=\"Javascript\">\n";
 					echo "window.alert('Data Formulir Pendaftaran Berhasil Disimpan')";
 					echo "</script>";
 
-		            $this->edit($this->session->userdata('s_idal'));
+		            $this->edit($this->session->userdata('s_idam'));
 		        }
 
 		    }
@@ -114,12 +114,12 @@ class F2_29 extends CI_Controller
 		        		$this->load->view('backend/dashboard/index2', $data);
 
 		        	}else{
-		        		foreach ($row as $key => $value) { $data["j_$field[$i]"] = $value; $i++;}
-		        		foreach ($IBU as $key => $value) { $data["i_$ortu[$j]"] = $value; $j++;}
-		        		foreach ($AYAH as $key => $value) { $data["a_$ortu[$k]"] = $value; $k++;}
-		        		foreach ($PELAPOR as $key => $value) { $data["p_$pelapor[$n]"] = $value; $n++;}
-		        		foreach ($S1 as $key => $value) { $data["s1_$saksi[$l]"] = $value; $l++;}
-		        		foreach ($S2 as $key => $value) { $data["s2_$saksi[$m]"] = $value; $m++;}
+		        		foreach ($row as $key => $value) { $data["j_$field[$i]"] = set_value("j_$field[$i]", $value); $i++;}
+		        		foreach ($IBU as $key => $value) { $data["i_$ortu[$j]"] = set_value("i_$ortu[$j]", $value); $j++;}
+		        		foreach ($AYAH as $key => $value) { $data["a_$ortu[$k]"] = set_value("a_$ortu[$k]", $value); $k++;}
+		        		foreach ($PELAPOR as $key => $value) { $data["p_$pelapor[$n]"] = set_value("p_$pelapor[$n]", $value); $n++;}
+		        		foreach ($S1 as $key => $value) { $data["s1_$saksi[$l]"] = set_value("s1_$saksi[$l]", $value); $l++;}
+		        		foreach ($S2 as $key => $value) { $data["s2_$saksi[$m]"] = set_value("s2_$saksi[$m]", $value); $m++;}
 		 
 		        		$data['button']		= 'Update';
 		        		$data['action'] = site_url('f2_29/update_action');
@@ -148,7 +148,6 @@ class F2_29 extends CI_Controller
 		    {
 		    	$this->_rules();
 		        if ($this->form_validation->run() == FALSE) {
-		        	echo "GAGAL";
 		            $this->edit($this->input->post('j_id_AM'));
 		        } else {
 		        	//echo "MASUK";
@@ -165,17 +164,16 @@ class F2_29 extends CI_Controller
 		            $this->_arraySaksi1($IDS1,"U");
 		            $this->_arraySaksi2($IDS2,"U");
 
-		            $link = site_url('F2_01/edit/'.$this->session->userdata('s_idal'));
+		            $link = site_url('F2_29/edit/'.$this->session->userdata('s_idam'));
 		            $this->session->set_flashdata('message', "
 		                <div class='alert alert-success alert-dismissable'>
-		              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-		                <h4><i class='icon fa fa-ban'></i> Berhasil!</h4>
+		                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
 		                   Data Formulir Akta Anda Telah Diperbaharui<br>
-		                   <h4>Lanjut Ke Tahap Unggah Berkas Anda?</h4>
+		                   <h4>Lanjut Ke Tahap Unggah Berkas Anda? Klik Pada Tombol 2. Berkas Akta Kematian </h4>
 		                   
 		            </div>
 		                ");
-		            redirect(site_url("F2_29/edit/".$this->session->userdata('s_idal')));
+		            redirect(site_url("F2_29/edit/".$this->session->userdata('s_idam')));
 		        }
 		    }
 
@@ -187,7 +185,7 @@ class F2_29 extends CI_Controller
 		    			$data[$value] = $this->input->post("j_".$value,TRUE);
 		    		}
 		    			$data['id_jenazah'] = $IDJENAZAH;
-		    			$data['id_AM'] = $this->session->userdata('s_idal');
+		    			$data['id_AM'] = $this->session->userdata('s_idam');
 		    		if ($c=="I") {
 		    			$this->Data_jenazah_model->insert($data);
 		    		}elseif ($c=="U") {
@@ -240,7 +238,7 @@ class F2_29 extends CI_Controller
 		    			$data[$value] = $this->input->post("p_".$value,TRUE);
 		    		}
 		    		$data['id_pelapor'] = $ID;
-		    		$data['id_akta'] = $this->session->userdata('s_idal');
+		    		$data['id_akta'] = $this->session->userdata('s_idam');
 	         
 	            	if ($c=="I") {
 		    			$this->Data_pelapor_model->insert($data);
@@ -253,7 +251,7 @@ class F2_29 extends CI_Controller
 	        	$saksi 	 		 = $this->Data_saksi_model->getField();
 	        	$data = array(
 	        		'id_saksi' => $ID,
-					'id_akta' => $this->session->userdata('s_idal'),
+					'id_akta' => $this->session->userdata('s_idam'),
 					'nik' => $this->input->post('s1_nik',TRUE),
 					'nama' => $this->input->post('s1_nama',TRUE),
 					'umur' => $this->input->post('s1_umur',TRUE),
@@ -277,7 +275,7 @@ class F2_29 extends CI_Controller
 	        	$saksi 	 		 = $this->Data_saksi_model->getField();
 	        	$data = array(
 	        		'id_saksi' => $ID,
-					'id_akta' => $this->session->userdata('s_idal'),
+					'id_akta' => $this->session->userdata('s_idam'),
 					'nik' => $this->input->post('s2_nik',TRUE),
 					'nama' => $this->input->post('s2_nama',TRUE),
 					'umur' => $this->input->post('s2_umur',TRUE),

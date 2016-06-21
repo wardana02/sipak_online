@@ -156,7 +156,7 @@ class Pbk extends CI_Controller
             $this->session->set_flashdata('message', "
                 <div class='alert alert-success alert-dismissable'>
               <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-                <h4><i class='icon fa fa-ban'></i> Berhasil!</h4>
+                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
                     Data Kontak Berhasil Dihapus !
             </div>
                 ");

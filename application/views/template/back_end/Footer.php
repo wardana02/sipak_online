@@ -51,6 +51,19 @@
                 );
             });
         });
+        //Modal Untuk lihat detail pengaju
+        $(function(){
+            $(document).on('click','.read2',function(e){
+                e.preventDefault();
+                $("#myModal").appendTo("body").modal('show');
+                $.post('<?php echo $modal_read2 ;?>',
+                    {id:$(this).attr('data-id')},
+                    function(html){
+                        $(".modal-body").html(html);
+                    }   
+                );
+            });
+        });
     </script>
 
     <!-- Modal Create Data -->
@@ -103,9 +116,6 @@
    
       <!-- AdminLTE App -->
     <script src=<?=base_url("assets/backend/adminlte/dist/js/app.min.js");?> type="text/javascript"></script>
-   <!-- Slimscroll -->
-    <script src=<?=base_url("assets/backend/adminlte/plugins/slimScroll/jquery.slimscroll.min.js");?> type="text/javascript"></script>
-    
 
     <script src=<?=base_url("assets/timeline/js/main.js");?> type="text/javascript"></script>
     <script src=<?=base_url("assets/timeline/js/modernizr.js");?> type="text/javascript"></script>
@@ -352,19 +362,51 @@ $(function () {
     <script type="text/javascript">
       $(document).ready(function() {
             $('#example').DataTable( {
+                "language": {
+                "search": "Pencarian : ",
+                "lengthMenu": "Menampilkan _MENU_ data per Halaman",
+                "zeroRecords": "Tidak Ditemukan Data Sesuai Pencarian",
+                "info": "Showing page _PAGE_ of _PAGES_",
+                "infoEmpty": "Tidak Ada Data Yang Ditampilan / Data Kosong",
+                "infoFiltered": "(filtered from _MAX_ total records)",
+                "Next": "Selanjutnya",
+                "Previous": "Sebelumnya"
+            },
+                "info": false,
                 "scrollX": true,
+                "lengthChange": false,
             } );
         } );
-    </script>
-    <script type="text/javascript">
       $(document).ready(function() {
             $('#example1').DataTable( {
+            "language": {
+                "search": "Pencarian : ",
+                "lengthMenu": "Menampilkan _MENU_ data per Halaman",
+                "zeroRecords": "Tidak Ditemukan Data Sesuai Pencarian",
+                "info": "Showing page _PAGE_ of _PAGES_",
+                "infoEmpty": "Tidak Ada Data Yang Ditampilan / Data Kosong",
+                "infoFiltered": "(filtered from _MAX_ total records)",
+                "Next": "Selanjutnya",
+                "Previous": "Sebelumnya"
+            },
+            "info": false,
+
+
             } );
         } );
-    </script>
-    <script type="text/javascript">
       $(document).ready(function() {
             $('#example2').DataTable( {
+                "language": {
+                    "search": "Pencarian : ",
+                "lengthMenu": "Menampilkan _MENU_ data per Halaman",
+                "zeroRecords": "Tidak Ditemukan Data Sesuai Pencarian",
+                "info": "Showing page _PAGE_ of _PAGES_",
+                "infoEmpty": "Tidak Ada Data Yang Ditampilan / Data Kosong",
+                "infoFiltered": "(filtered from _MAX_ total records)",
+                "Next": "Selanjutnya",
+                "Previous": "Sebelumnya"
+            },
+            "info": false,
             } );
         } );
     </script>
@@ -400,12 +442,6 @@ $(function () {
           $('#reportrange span').html(start.format('DDDD M, YYYY') + '-' + end.format('DDDD M, YYYY'));
         }
         );
-
-      
-        //Timepicker
-        $(".timepicker").timepicker({
-          showInputs: false
-        });
       });
     </script>
   </body>

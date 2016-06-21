@@ -5,7 +5,7 @@
         <section class="content">
           <div class="row">
             <div class="col-md-12">
-                <h2 style="margin-top:0px">Data Kontak Tersimpan</h2>
+                <h2 style="margin-top:0px">Form Pengambilan Akta Jadi</h2>
             </div>
             <div class="col-md-12 text-center">
                 <div style="margin-top: 4px"  id="message">

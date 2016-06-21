@@ -36,6 +36,7 @@ class Data extends CI_Controller {
         $this->load->view('backend/dashboard/index', $data);
     }
     public function upload(){
+        $NIKNULL=0;$NIKISI=0;
         $fileName = time().$_FILES['file']['name'];
          
         $config['upload_path'] = './assets/dataexcel/'; //buat folder dengan nama assets di root folder
@@ -66,13 +67,14 @@ class Data extends CI_Controller {
             $highestRow = $sheet->getHighestRow();
             $highestColumn = $sheet->getHighestColumn();
              
-            for ($row = 2; $row <= $highestRow; $row++){                  //  Read a row of data into an array                 
+            for ($row = 2; $row <= $highestRow; $row++){ 
+                             //  Read a row of data into an array                 
                 $rowData = $sheet->rangeToArray('A' . $row . ':' . $highestColumn . $row,
                                                 NULL,
                                                 TRUE,
                                                 FALSE);
                                                  
-                //Sesuaikan sama nama kolom tabel di database                                
+                //Sesuaikan sama nama kolom tabel di database membuat array data                                
                  $data = array(
                     "NIK"=> $rowData[0][0],
                     "nama_lengkap"=> $rowData[0][1],
@@ -89,42 +91,56 @@ class Data extends CI_Controller {
                     "ps_kecamatan"=> $rowData[0][12],
                     "pekerjaan"=> $rowData[0][13]
                 );
-                 
-                //sesuaikan nama dengan nama tabel
+                 if ($data['NIK']!=NULL) {
+                     $insert = $this->db->insert("dps_temp",$data);
+                     $NIKISI = $NIKISI+1;
+                 }else{
+                    $NIKNULL = $NIKNULL+1;
+                 }
+                     
+            }//END OF LOOP READ DATA INSERT DPS TEMP
+
+                //QUERY INSERT FROM SELECT
                  $qi = "insert into dps 
-				(nik,nama_lengkap,tmp_lahir,tgl_lahir,jk,gol_darah,agama,
-				status_perkawinan,ps_alamat,ps_rt,ps_rw,ps_kelurahan,
-				ps_kecamatan,pekerjaan) (
-				select nik,nama_lengkap,tmp_lahir,tgl_lahir,jk,gol_darah,agama,
-				status_perkawinan,ps_alamat,ps_rt,ps_rw,ps_kelurahan,ps_kecamatan,
-				pekerjaan from dps_temp where dps_temp.nik NOT IN (select nik from dps))";
+                (nik,nama_lengkap,tmp_lahir,tgl_lahir,jk,gol_darah,agama,
+                status_perkawinan,ps_alamat,ps_rt,ps_rw,ps_kelurahan,
+                ps_kecamatan,pekerjaan) (
+                select nik,nama_lengkap,tmp_lahir,tgl_lahir,jk,gol_darah,agama,
+                status_perkawinan,ps_alamat,ps_rt,ps_rw,ps_kelurahan,ps_kecamatan,
+                pekerjaan from dps_temp where dps_temp.nik NOT IN (select nik from dps))";
 
-				$qu = "UPDATE dps CROSS JOIN
-				(SELECT * FROM dps_temp WHERE nik IN (SELECT nik FROM dps)) as cari
-				SET 
-				dps.nama_lengkap=(cari.nama_lengkap),
-				dps.tmp_lahir=(cari.tmp_lahir),
-				dps.tgl_lahir=(cari.tgl_lahir),
-				dps.jk=(cari.jk),
-				dps.gol_darah=(cari.gol_darah),
-				dps.agama=(cari.agama),
-				dps.status_perkawinan=(cari.status_perkawinan),
-				dps.ps_alamat=(cari.ps_alamat),
-				dps.ps_rt=(cari.ps_rt),
-				dps.ps_rw=(cari.ps_rw),
-				dps.ps_kelurahan=(cari.ps_kelurahan),
-				dps.ps_kecamatan=(cari.ps_kecamatan),
-				dps.pekerjaan=(cari.pekerjaan)
-				WHERE dps.nik=(cari.nik)";
+                //QUERY UPDATE FROM SELECT DPS_TEMP
+                $qu = "UPDATE dps CROSS JOIN
+                (SELECT * FROM dps_temp WHERE nik IN (SELECT nik FROM dps)) as cari
+                SET 
+                dps.nama_lengkap=(cari.nama_lengkap),
+                dps.tmp_lahir=(cari.tmp_lahir),
+                dps.tgl_lahir=(cari.tgl_lahir),
+                dps.jk=(cari.jk),
+                dps.gol_darah=(cari.gol_darah),
+                dps.agama=(cari.agama),
+                dps.status_perkawinan=(cari.status_perkawinan),
+                dps.ps_alamat=(cari.ps_alamat),
+                dps.ps_rt=(cari.ps_rt),
+                dps.ps_rw=(cari.ps_rw),
+                dps.ps_kelurahan=(cari.ps_kelurahan),
+                dps.ps_kecamatan=(cari.ps_kecamatan),
+                dps.pekerjaan=(cari.pekerjaan)
+                WHERE dps.nik=(cari.nik)";
+                //delete_files($media['file_path']);
 
-                $insert = $this->db->insert("dps_temp",$data);
+            //query jalan setelah proses insret from dps selesai
                 $cu = $this->db->query("$qu");
                 $cp = $this->db->query("$qi");
                 $del = $this->db->query("DELETE FROM dps_temp");
-                //delete_files($media['file_path']);
-                     
-            }
-        redirect('data');
+                $this->session->set_flashdata('message', "
+                <div class='alert alert-success alert-dismissable'>
+                  <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+                    <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
+                        Data Penduduk Berhasil diperbaharui. Ket => Sukses : $NIKISI Data, Gagal : $NIKNULL Data (Data Tidak Lengkap)
+                </div>
+                ");
+                redirect('data');
     }
 
         // download rekap excel
@@ -208,13 +224,13 @@ class Data extends CI_Controller {
             if ($waktu->days > 7) {
                 
                 if ($tabel=="akta_kelahiran") {
-                    $this->mread->hapus_lengkap_al($key->$id);echo "HAPUS IS AKTA LEHIR";
+                    $this->mread->hapus_lengkap_al($key->$id);
                 }elseif ($tabel=="akta_kematian") {
-                    $this->mread->hapus_lengkap_am($key->$id);echo "HAPUS IS AKTA M";
+                    $this->mread->hapus_lengkap_am($key->$id);
                 }elseif ($tabel=="akta_perkawinan") {
-                    $this->mread->hapus_lengkap_ap($key->$id);echo "HAPUS IS AKTA P";
+                    $this->mread->hapus_lengkap_ap($key->$id);
                 }elseif ($tabel=="akta_perceraian") {
-                    $this->mread->hapus_lengkap_ac($key->$id);echo "HAPUS IS AKTA C";
+                    $this->mread->hapus_lengkap_ac($key->$id);
                 }
                 $this->mread->hapus($tabel,$id,$key->$id);
 

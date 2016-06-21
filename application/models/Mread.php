@@ -50,9 +50,9 @@ class Mread extends CI_Model{
     function hapus_lengkap_ap($id){
         $this->db->query("DELETE FROM berkas_perkawinan WHERE id_ap='$id';");
         $this->db->query("DELETE FROM ortu_mempelai where id_mempelai=(SELECT id_mempelai from data_mempelai where id_ap='$id' AND status_mempelai='SUAMI');");
-        $this->db->query("DELETE FROM ortu_mempelai where id_mempelai=(SELECT id_mempelai from data_mempelai where id_ap='$id' AND status_mempelai='ISTRI');");
+        $this->db->query("DELETE FROM ortu_mempelai where id_mempelai IN (SELECT id_mempelai from data_mempelai where id_ap='$id' AND status_mempelai='ISTRI');");
         $this->db->query("DELETE FROM data_mempelai WHERE id_ap='$id';");
-        $this->db->query("DELETE FROM data_anak WHERE id_dataper=(SELECT id_dataper from data_perkawinan where id_ap='$id');");
+        $this->db->query("DELETE FROM data_anak WHERE id_dataper IN (SELECT id_dataper from data_perkawinan where id_ap='$id');");
         $this->db->query("DELETE FROM data_perkawinan WHERE id_ap='$id';");
         $this->db->query("DELETE FROM data_saksi WHERE id_akta='$id';");
       

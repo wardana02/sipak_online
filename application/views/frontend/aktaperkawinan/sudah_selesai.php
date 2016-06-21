@@ -67,6 +67,13 @@
                                       </div>
                                       <center>
 
+                                      <div class="alert alert-warning fade in">
+                                       <center><h4>
+                                          <strong>Denda Administrasi!!</strong>
+                                          Rp <?= $akta->denda ?> ,-
+                                          </h4></center>
+                                      </div>
+
                                       <div class="alert alert-success fade in">
                                        <center><h4>
                                           <strong>Anda Sudah!!</strong>

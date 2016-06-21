@@ -35,6 +35,7 @@ class Mail extends MY_Controller {
 			$data['status']=$this->session->userdata('status');
 			$data['d']='active';$data['d1']='active';
 
+        $data['re'] = "mail";
 		$data['conten'] = "backend/admin/Pesan/index";
 		$data['data'] = $this->m_mail->get_all_data();
 		$this->load->view('backend/dashboard/index', $data);
@@ -52,6 +53,7 @@ class Mail extends MY_Controller {
 			$data['status']=$this->session->userdata('status');
 			$data['d']='active';$data['d3']='active';
 
+        $data['re'] = "mail/smst";
 		$data['conten'] = "backend/admin/Pesan/index";
 		$data['data'] = $this->m_mail->get_tracking_data();
 		$this->load->view('backend/dashboard/index', $data);

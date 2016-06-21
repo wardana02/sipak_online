@@ -84,7 +84,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="fa fa-bars"></span>
                     </button>
-                    <a class="navbar-brand" href="#">AplikasiAkta<span> Online</span></a>
+                    <a class="navbar-brand" href="#">Aplikasi Akta<span>Online</span></a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">

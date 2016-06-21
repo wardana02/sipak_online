@@ -126,8 +126,11 @@ class Home extends CI_Controller {
    		{
         $this->_rules(); 
 
-        if ($this->form_validation->run() == FALSE) {
-            $this->create();
+        if ($this->input->post('nama')=='') {
+            echo "<script language=\"Javascript\">\n";
+                echo "window.alert('Data Pendaftaran Gagal Diproses, Identitas Pengaju Tidak Ditemukan #NF')";
+                header("refresh:0; lahir");
+                echo "</script>";
         } else {
         	//PF02170316001icvcx
             $NUM = $this->Akta_kelahiran_model->get_all();
@@ -188,9 +191,11 @@ class Home extends CI_Controller {
         {
         $this->_rules(); 
 
-        if ($this->form_validation->run() == FALSE) {
-            echo "string";
-            $this->create();
+        if ($this->input->post('nama')=='') {
+            echo "<script language=\"Javascript\">\n";
+                echo "window.alert('Data Pendaftaran Gagal Diproses, Identitas Pengaju Tidak Ditemukan #NF')";
+                header("refresh:0; mati");
+                echo "</script>";
         } else {
             //PF29170316001
 
@@ -221,7 +226,7 @@ class Home extends CI_Controller {
 
             //$dt for save in session & make a message
             $dt = array(  
-                's_idal'     => $ID_AM,
+                's_idam'     => $ID_AM,
                 's_nik'      => $NIK,
                 's_nama'     => $NAMA,
                 's_hp'       => $NOHP,
@@ -295,8 +300,11 @@ class Home extends CI_Controller {
         {
         $this->_rules(); 
 
-        if ($this->form_validation->run() == FALSE) {
-            $this->create();
+        if ($this->input->post('nama')=='') {
+            echo "<script language=\"Javascript\">\n";
+                echo "window.alert('Data Pendaftaran Gagal Diproses, Identitas Pengaju Tidak Ditemukan #NF')";
+                header("refresh:0; a_kawin");
+                echo "</script>";
         } else {
             //PF02170316001
             $NUM = $this->Akta_perkawinan_model->get_all();
@@ -367,8 +375,11 @@ class Home extends CI_Controller {
         {
         $this->_rules(); 
 
-        if ($this->form_validation->run() == FALSE) {
-            $this->create();
+        if ($this->input->post('nama')=='') {
+            echo "<script language=\"Javascript\">\n";
+                echo "window.alert('Data Pendaftaran Gagal Diproses, Identitas Pengaju Tidak Ditemukan #NF')";
+                header("refresh:0; a_cerai");
+                echo "</script>";
         } else {
             //PF02170316001
             $NUM = $this->Akta_perceraian_model->get_all();

@@ -57,15 +57,15 @@
                 </tr>
                 <tr>
                   <td>c.</td><td> Kab/Kota </td><td>:</td><td> <?php echo $suami_data->a_kabkota; ?></td>
-                  <td>d.</td><td> Provinsi </td><td>:</td><td> <?php echo $suami_data->a_provinsi; ?></td>
+                  <td>d.</td><td> Provinsi </td><td>:</td><td> JAWA TENGAH</td>
                 </tr>
               </table></td>
           </tr>
           <tr><td>7.</td><td>Pendidikan Terakhir</td><td>:</td><td><?php echo $suami_data->agama; ?></td></tr>
           <tr><td>8.</td><td>Agama</td><td>:</td><td><?php echo $suami_data->agama; ?></td></tr>
-          <tr><td>9.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php echo $suami_data->agama; ?></td></tr>
+          <tr><td>9.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php if($suami_data->nm_organisasi!=NULL) echo $suami_data->nm_organisasi;else echo "-"; ?></td></tr>
           <tr><td>10.</td><td>Pekerjaan</td><td>:</td><td><?php echo $suami_data->pekerjaan; ?></td></tr>
-          <tr><td>11.</td><td>Perceraian Yang Ke</td><td>:</td><td><?php echo $suami_data->anak_ke; ?></td></tr>
+          <tr><td>11.</td><td>Perceraian Yang Ke</td><td>:</td><td><?php echo $suami_data->perceraian_ke; ?></td></tr>
           </table>
       <br>
       
@@ -90,13 +90,13 @@
                 </tr>
                 <tr>
                   <td>c.</td><td> Kab/Kota </td><td>:</td><td> <?php echo $istri_data->a_kabkota; ?></td>
-                  <td>d.</td><td> Provinsi </td><td>:</td><td> <?php echo $istri_data->a_provinsi; ?></td>
+                  <td>d.</td><td> Provinsi </td><td>:</td><td> JAWA TENGAH</td>
                 </tr>
               </table></td>
           </tr>
           <tr><td>17.</td><td>Pendidikan Terakhir</td><td>:</td><td><?php echo $istri_data->agama; ?></td></tr>
           <tr><td>18.</td><td>Agama</td><td>:</td><td><?php echo $istri_data->agama; ?></td></tr>
-          <tr><td>19.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php echo $istri_data->agama; ?></td></tr>
+          <tr><td>19.</td><td>Nama Organisasi / Penghayat</td><td>:</td><td><?php if($istri_data->nm_organisasi!=NULL) echo $istri_data->nm_organisasi;else echo "-"; ?></td></tr>
           <tr><td>20.</td><td>Pekerjaan</td><td>:</td><td><?php echo $istri_data->pekerjaan; ?></td></tr>
           </table>
       <br>

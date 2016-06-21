@@ -73,6 +73,14 @@ class B2_29 extends CI_Controller
 				}$b++;
 				
 			}
+			$this->session->set_flashdata('message', "
+		                <div class='alert alert-success alert-dismissable'>
+		                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
+		                   Berkas Yang Anda Lampirkan Telah Tersimpan. Apabila Sudah Lengkap, kemudian lanjut tahap verifikasi dengan cara, <br>
+		                   <h4> Klik Pada Tombol 3. Oke, Saya Selesai </h4>
+		                   
+		            </div>
+		                ");
 			redirect(site_url("b2_29/berkas/$id"));
 
 			
@@ -119,13 +127,12 @@ class B2_29 extends CI_Controller
      public function selesai($id){
      	$c = $this->_akses($id);
     		if ($c) {
-    			
-    		$akta = $this->m_akta->get_by_al($id);
+    		$akta = $this->Akta_kematian_model->get_by_am($id);
 			$data = array(
 				'akta'	=> $akta,
 				'berkas' => site_url('b2_29/berkas/'.$id),
 				'formulir' => site_url('f2_29/edit/'.$id),
-				'conten' => "frontend/aktakematian/sudah_selesai",
+				'conten' => "frontend/aktamati/sudah_selesai",
 				'B'		 => "active",'B2'		 => "active",
 				'ID_AC'  => $this->session->userdata('s_idac'),
 				'PENGAJU'  => $this->session->userdata('s_nama'),

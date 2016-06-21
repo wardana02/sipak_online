@@ -89,8 +89,8 @@
                             </div>
 
                             <input type="hidden" name="id_user" value="<?php echo $id_user; ?>" /> 
-                            <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
-                            <a href="<?php echo site_url('user') ?>" class="btn btn-default">Cancel</a>
+                            <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-floppy-saved"></i> <?php echo $button ?></button> 
+                            <a href="<?php echo site_url('user') ?>" class="btn btn-default"><i class="glyphicon glyphicon-floppy-remove"></i> Batal</a>
                         </form>
                     <!--FRO GENERATE -->
 

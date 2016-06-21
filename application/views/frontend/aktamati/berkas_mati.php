@@ -18,6 +18,23 @@
                               <?php echo $this->session->userdata('message') <> '' ? $this->session->userdata('message') : ''; ?>
                           </div>
                       </div><br>
+                      <div class="col-sm-12">
+                          <div class="col-sm-12 alert alert-warning fade in">
+                             <center><h4>
+                          <?php
+                            if ($app->by_rw=='revisi') {
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_rw." Kemudian Pilih Tombol Oke, Sudah Selesai";
+                            }elseif ($app->by_kelurahan=='revisi') {
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_kelurahan;
+                            }elseif ($app->by_dukcapil=='revisi') {
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_dukcapil;
+                            } else{
+                              echo "<i class='glyphicon glyphicon-tag'></i><strong> Isi Formulir</strong> ";
+                            }
+                          ?>
+                          </h4></center>
+                          </div>
+                          </div>
                           
                             <center>
                             <a href="<?php echo "$berkas";?>">
@@ -57,12 +74,12 @@
                               <form class="form-horizontal" method="post" action="<?php echo site_url("b2_29/loop/$ID_AM") ?>" enctype="multipart/form-data" id="form-upload">
                                   <fieldset title="Daftar Berkas" class="step" id="form-upload-step-0">
                                       <legend> </legend>
-                                      <h3>Unggah berkas guna kelengkapan dokumen akta kelahiran anda.</h3>
+                                      <h3>Unggah berkas guna kelengkapan dokumen pendaftaran akta Kematian yang anda ajukan.</h3>
                                       <h4>Daftar berkas yang harus anda upload</h4>
                                       <table class="table table-striped table-advance table-hover">
                               <thead>
                               <tr>
-                                  <th><i class="fa fa-bullhorn"></i> Nomor</th>
+                                  <th width="100"><i class="fa fa-bullhorn"></i> Nomor</th>
                                   <th><i class="fa fa-bullhorn"></i> Nama Berkas</th>
                                   <th><i class=" fa fa-edit"></i> Keterangaan</th>
                               </tr>
@@ -71,12 +88,12 @@
                                   <tr>
                                   <td><a href="#">1</a></td>
                                   <td><b><?php echo $judul['0'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan Surat Keterangan Kematian atas nama Jenazah yang dikeluarkan oleh rumahsakit/ instansi yang menyatakan terjadinya kematian.</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">2</a></td>
                                   <td><b><?php echo $judul['1'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan Akta Perkawinan dari jenazah, Apabila yang bersangkutan telah menikah. Apabila belum menikah, maka kosongkan kolom upload tersebut.</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">3</a></td>
@@ -86,22 +103,22 @@
                                   <tr>
                                   <td><a href="#">4</a></td>
                                   <td><b><?php echo $judul['3'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan Akta Kelahiran/Surat Kelahiran dari Jenazah yang bersangkutan.</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">5</a></td>
                                   <td><b><?php echo $judul['4'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan KTP pelapor terjadinya kematian ini.</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">6</a></td>
                                   <td><b><?php echo $judul['5'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan KTP dari SAKSI 1 terjadinya peristiwa kematian tersebut.</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">7</a></td>
                                   <td><b><?php echo $judul['6'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan KTP dari SAKSI 2 terjadinya peristiwa kematian tersebut.</td>
                                   </tr>
                                
                               </tbody>
@@ -115,8 +132,7 @@
                                       <legend> </legend>
                                       <center>
                                         <h4><p>
-                                        Lampirkan hasil scan berkas dokumen surat keterangan 
-                                        kelahiran yang dikeluarkan oleh tempat/instansi terjadinya kelahiran
+                                        Lampirkan hasil scan berkas dokumen. Pastikan file scan berkas bertipe ekstensi *jpg / *.jpeg
                                         </p></h4>
                                       </center><br><br>
 
@@ -131,8 +147,8 @@
                                               <b><?php echo $i-2; echo ". ".$judul[$num];?></b><br>
                                           <?php 
                                             if ($data->$value=='') {
-                                              echo "<span class='label label-danger'>BERKAS KOSONG</span>";
-                                            }else{echo"<span class='label label-success'>BERKAS TERSIMPAN</span>";}
+                                              echo "<span class='label label-danger'>TIDAK TERLAMPIR</span>";
+                                            }else{echo"<span class='label label-success'>BERKAS TERLAMPIR</span>";}
                                           ?><br>
                                           <div class="fileupload fileupload-new" data-provides="fileupload">
                                                             <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
@@ -149,7 +165,7 @@
                                                             <div class="fileupload-preview fileupload-exists thumbnail" style="width: 200px; height: 150px; line-height: 20px;"></div>
                                                             <div>
                                                              <span class="btn btn-primary btn-file">
-                                                             <span class="fileupload-new"><i class="glyphicon glyphicon-pencil"></i> Pilih Berkas</span>
+                                                             <span class="fileupload-new"><i class="glyphicon glyphicon-folder-open"></i>  Pilih Berkas</span>
                                                              <span class="fileupload-exists"><i class="fa fa-undo"></i> Ganti</span>
                                                              <input type="file" accept="image/*"  name="<?php echo $value;?>" class="default">
                                                              </span>
@@ -169,8 +185,8 @@
                                 
                                   <fieldset title="Selesai" class="step" id="form-upload-step-2" >
                                   <center>
-                                    <h3>Pastikan Berkas Yang Anda Unggah Benar, Kemudian Klik Selesai Agar Kelengkapan berkas
-                                  persyaratan pengajuan Akta Kelahiran anda diproses.</h3>
+                                    <h4>Pastikan Berkas Yang Anda Unggah Benar, Kemudian Klik Tombol "Simpan Data Formulir" Untuk Proses
+                                  pengunggah berkas yang anda lampirkan untuk pengajuan Akta Kematian yang anda ajukan.</h4>
                                   </center>
                                   
                                       <legend> </legend>
@@ -184,7 +200,7 @@
 
                                       </div>
                                       <center>
-                                      <h4>Data Berkas Anda Yang Telah Terunggah</h4>
+                                      <h4>Klik Tombol Simpan Data Formulir (warna merah)</h4>
                                       <div class="form-group"></center>
                                           
                                   </fieldset>

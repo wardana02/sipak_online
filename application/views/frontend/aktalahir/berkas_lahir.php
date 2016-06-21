@@ -76,32 +76,32 @@
                                   <tr>
                                   <td><a href="#">2</a></td>
                                   <td><b>Akta Nikah Orang Tua</b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan akta perkawinan dari orangtua bayi</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">3</a></td>
                                   <td><b>Kartu Keluarga Baru</b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan kartu keluarga, dimana Nama Bayi sudah tercantum</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">4</a></td>
                                   <td><b>KTP 1 (IBU)</b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan KTP ibu kandung bayi</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">5</a></td>
                                   <td><b>KTP 2 (AYAH)</b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan KTP Ayah Biologis bayi</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">6</a></td>
                                   <td><b>KTP SAKSI 1</b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan KTP Saksi 1 terjadinya kelahiran</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">7</a></td>
                                   <td><b>KTP SAKSI 2</b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan KTP Saksi 2 terjadinya kelahiran</td>
                                   </tr>
                                
                               </tbody>
@@ -115,8 +115,7 @@
                                       <legend> </legend>
                                       <center>
                                         <h4><p>
-                                        Lampirkan hasil scan berkas dokumen surat keterangan 
-                                        kelahiran yang dikeluarkan oleh tempat/instansi terjadinya kelahiran
+                                        Lampirkan hasil scan berkas dokumen. Pastikan file scan berkas bertipe ekstensi *jpg / *.jpeg
                                         </p></h4>
                                       </center><br><br>
                                       
@@ -132,8 +131,8 @@
                                               <b><?php echo $i-2; echo ". ".$judul[$num];?></b><br>
                                           <?php 
                                             if ($data->$value=='') {
-                                              echo "<span class='label label-danger'>BERKAS KOSONG</span>";
-                                            }else{echo"<span class='label label-success'>BERKAS TERSIMPAN</span>";}
+                                              echo "<span class='label label-danger'>TIDAK TERLAMPIR</span>";
+                                            }else{echo"<span class='label label-success'>BERKAS TERLAMPIR</span>";}
                                           ?><br>
                                           <div class="fileupload fileupload-new" data-provides="fileupload">
                                                             <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
@@ -150,9 +149,9 @@
                                                             <div class="fileupload-preview fileupload-exists thumbnail" style="width: 200px; height: 150px; line-height: 20px;"></div>
                                                             <div>
                                                              <span class="btn btn-primary btn-file">
-                                                             <span class="fileupload-new"><i class="glyphicon glyphicon-pencil"></i> Pilih Berkas</span>
+                                                             <span class="fileupload-new"><i class="glyphicon glyphicon-folder-open"></i> Pilih Berkas</span>
                                                              <span class="fileupload-exists"><i class="fa fa-undo"></i> Ganti</span>
-                                                             <input type="file" accept="image/*"  name="<?php echo $value;?>" class="default">
+                                                             <input type="file" accept="image/jpeg"  name="<?php echo $value;?>" class="default">
                                                              </span>
                                                              <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash"></i> Batalkan</a>
                                                             </div>
@@ -168,8 +167,8 @@
                                 
                                   <fieldset title="Selesai" class="step" id="form-upload-step-2" >
                                   <center>
-                                    <h3>Pastikan Berkas Yang Anda Unggah Benar, Kemudian Klik Selesai Agar Kelengkapan berkas
-                                  persyaratan pengajuan Akta Kelahiran anda diproses.</h3>
+                                    <h4>Pastikan Berkas Yang Anda Unggah Benar, Kemudian Klik Tombol "Simpan Data Formulir" Untuk Proses
+                                  pengunggah berkas yang anda lampirkan untuk pengajuan Akta Kematian yang anda ajukan.</h4>
                                   </center>
                                   
                                       <legend> </legend>
@@ -183,7 +182,7 @@
 
                                       </div>
                                       <center>
-                                      <h4>Data Berkas Anda Yang Telah Terunggah</h4>
+                                      <h4>Upload Berkas File yang dibutuhkan, Kemudian Klik Simpan data Formulir</h4>
                                       <div class="form-group"></center>
                                           
                                   </fieldset>

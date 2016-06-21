@@ -17,7 +17,7 @@
                                     <div class="form-group">
                                           <label class="col-lg-2">Nomor Pendaftaran</label>
                                           <div class="col-lg-6">
-                                               <input type="text" class="form-control" name="no_pendaftaran" value="PF02170316001" placeholder="Masukan Nomor Pendaftaran Dengan Huruf Kapital">
+                                               <input type="text" class="form-control" name="no_pendaftaran" value="" placeholder="Masukan Nomor Pendaftaran Dengan Huruf Kapital">
                                           </div>
                                       </div>     
 
@@ -31,7 +31,7 @@
                                       <div class="form-group">
                                            <label class="col-lg-2">Kode Unik</label>
                                             <div class="col-lg-6">
-                                                <input type="text" name="kode_unik" class="form-control" value="VCuOhf" id="exampleInputEmail3" placeholder="Kode Unik Pendaftaran Yang Didapat">
+                                                <input type="text" name="kode_unik" class="form-control" value="" id="exampleInputEmail3" placeholder="Kode Unik Pendaftaran Yang Didapat">
                                                 <input type="hidden" name="sub" value="sub">
                                              </div>
                                       </div>   
@@ -60,6 +60,11 @@
                   <div class="col-lg-8">
                       <section class="panel">
                       <?php if((isset($hasil)) && $SUBMITED){ ?>
+                          <div class='alert alert-success fade in'>
+                              <center><h4>
+                                 <strong>Data Ditemukan </strong> 
+                                   </h4></center>
+                            </div>
                           <header class="panel-heading">
                               <h2>Hasil Monitoring & Tracking Berkas</h2>
                           </header>
@@ -68,8 +73,8 @@
                               <thead>
                               <tr>
                                   <th><i class="fa fa-bullhorn"></i> Nomor</th>
-                                  <th><i class="fa fa-bullhorn"></i> Keterangan</th>
-                                  <th class="hidden-phone"><i class="fa fa-question-circle"></i> Tanggal Approve</th>
+                                  <th><i class="fa fa-bullhorn"></i> Tahapan </th>
+                                  <th class="hidden-phone"><i class="fa fa-question-circle"></i> Keterangan Tanggal</th>
                                   <th><i class=" fa fa-edit"></i> Status</th>
                                   <th></th>
                               </tr>
@@ -77,9 +82,9 @@
                               <tbody> 
                               <tr>
                                   <td><a href="#">1</a></td>
-                                  <td class="hidden-phone">Pendaftaran Selesai</td>
+                                  <td class="hidden-phone">Pengisian Data Pendaftaran</td>
                                   <td><?php echo dateindo($hasil->selesai);?></td>
-                                  <td><span class="label label-success label-mini">Diverifikasi</span></td>
+                                  <td><span class="label label-success label-mini">Selesai</span></td>
                                 
                               </tr>
                               <tr>
@@ -87,9 +92,9 @@
                                   <td class="hidden-phone">Disetujui Ketua RW</td>
                                   <td><?php echo dateindo($hasil->by_rw);?></td>
                                   <?php if ($hasil->by_rw == NULL) {
-                                      echo "<td><span class='label label-danger label-mini'>Belum Diverifikasi</span></td>";
+                                      echo "<td><span class='label label-danger label-mini'>Belum Disetujui</span></td>";
                                   }else{
-                                      echo "<td><span class='label label-success label-mini'>Diverifikasi</span></td>";
+                                      echo "<td><span class='label label-success label-mini'>Pendaftaran Disetujui</span></td>";
                                     }?>
                                   
                                 
@@ -101,9 +106,9 @@
                                   <td class="hidden-phone">Disetujui Kelurahan</td>
                                   <td><?php echo dateindo($hasil->by_kelurahan);?></td>
                                   <?php if ($hasil->by_kelurahan == NULL) {
-                                      echo "<td><span class='label label-danger label-mini'>Belum Diverifikasi</span></td>";
-                                  }elseif($SUBMITED==TRUE){
-                                      echo "<td><span class='label label-success label-mini'>Diverifikasi</span></td>";
+                                      echo "<td><span class='label label-danger label-mini'>Belum Disetujui</span></td>";
+                                  }else{
+                                      echo "<td><span class='label label-success label-mini'>Pendaftaran Disetujui</span></td>";
                                     }?>
                                   
                                 
@@ -115,9 +120,9 @@
                                   <td class="hidden-phone">Disetujui Disdukcapil</td>
                                   <td><?php echo dateindo($hasil->by_dukcapil);?></td>
                                   <?php if ($hasil->by_dukcapil == NULL) {
-                                      echo "<td><span class='label label-danger label-mini'>Belum Diverifikasi</span></td>";
+                                      echo "<td><span class='label label-danger label-mini'>Belum Disetujui</span></td>";
                                   }else{
-                                      echo "<td><span class='label label-success label-mini'>Diverifikasi</span></td>";
+                                      echo "<td><span class='label label-success label-mini'>Pendaftaran Disetujui</span></td>";
                                     }?>
                                   
                                 
@@ -128,7 +133,7 @@
                                       <a href="#">5</a>
                                   </td>
                                   <td class="hidden-phone">Status Pengerjaan Dokumen</td>
-                                  <td><?php echo dateindo($hasil->tgl_ambil);?></td>
+                                  <td><?php if($hasil->tgl_ambil!=NULL){}else{echo dateindo($hasil->tgl_ambil);}?></td>
                                   <?php if ($hasil->progres == 'diproses') {
                                       echo "<td><span class='label label-warning label-mini'>Sedang Proses</span></td>";
                                   }elseif ($hasil->progres == 'jadi'){
@@ -136,11 +141,14 @@
                                   }elseif ($hasil->progres == 'diambil'){
                                       echo "<td><span class='label label-success label-mini'>Sudah Diambil</span></td>";
                                   }else{
-                                      echo "<td><span class='label label-danger'>Belum Diverifikasi</span></td>";
+                                      echo "<td><span class='label label-danger'>Belum Dikerjakan</span></td>";
                                   }?>
                                   
                                 
                               </tr>
+                              <tr>
+                          <td colspan="4"><a href=<?php echo base_url("home");?> class="btn btn-large btn-danger">Keluar Dari Halaman Ini!</a></td>
+                        </tr>
                         
 
                               </tbody>

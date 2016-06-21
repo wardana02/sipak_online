@@ -7,13 +7,13 @@
         <h2 style="margin-top:0px">Verifikasi Berkas Akta Jadi</h2>
         <table class="table">
         <tr>
-          <td colspan="2">Anda Yakin Bahwa Berkas dan Kelengkapan Akta Kelahiran Atas</td>
+          <td colspan="2">Anda Yakin Bahwa Berkas dan Kelengkapan <?= $head; ?> Atas</td>
         </tr>
         <tr>
-          <td><b>Nama Bayi</b></td><td><b><?php echo $bayi;?></b></td>
+          <td><b><?php echo $h1;?></b></td><td><b><?php echo $i1;?></b></td>
         </tr> 
         <tr>
-          <td><b>Nama Ibu</b></td><td><b><?php echo $ibu;?></b></td>
+          <td><b><?php echo $h2;?></b></td><td><b><?php echo $i2;?></b></td>
         </tr>
         <tr>
           <td colspan="2">sudah Jadi??</td>

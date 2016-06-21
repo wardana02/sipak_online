@@ -3,7 +3,7 @@
     <head>   
     </head>
     <body>
-        <h2 style="margin-top:0px">User Read</h2>
+        <h2 style="margin-top:0px">Data User/Pengguna</h2>
         <table class="table">
 	    <tr><td>Previlage</td><td><?php echo $previlage; ?></td></tr>
 	    <tr><td>Username</td><td><?php echo $username; ?></td></tr>

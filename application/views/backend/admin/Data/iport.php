@@ -40,9 +40,23 @@
                   
                   
                 </div>
-                <form action="<?php echo base_url();?>excel/upload/" method="post" enctype="multipart/form-data">
+                <script type="text/javascript" language="javascript">
+                    function checkfile(sender) {
+                        var validExts = new Array(".xlsx", ".xls");
+                        var fileExt = sender.value;
+                        fileExt = fileExt.substring(fileExt.lastIndexOf('.'));
+                        if (validExts.indexOf(fileExt) < 0) {
+                          alert("Invalid file selected, valid files are of " +
+                                   validExts.toString() + " types.");
+                          return false;
+                        }
+                        else return true;
+                    }
+                    </script>
+
+                <form action="<?php echo base_url();?>data/upload/" method="post" enctype="multipart/form-data">
                         
-                        <input type="file" name="file"/>
+                        <input type="file" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" onchange="checkfile(this);"  />
                         <input class="btn btn-success" type="submit" value="Unggah File Excel !!"/>
                     </form>
               </div>

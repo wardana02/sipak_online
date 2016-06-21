@@ -70,6 +70,7 @@ class F2_01 extends CI_Controller
         		$S1 	= $this->Data_saksi_model->get_by_al($id_al,1);
         		$S2 	= $this->Data_saksi_model->get_by_al($id_al,2);
         		$PELAPOR = $this->Data_pelapor_model->get_by_al($id_al,2);
+        		$akta  = $this->Akta_kelahiran_model->get_by_al($id_al);
         		$app = $this->Approval_model->get_join($id_al,"akta_kelahiran","id_al");
         		
  
@@ -91,7 +92,7 @@ class F2_01 extends CI_Controller
 		        			's_no_daftar'=>	$app->no_registrasi,
 		        			'oleh'		=>	$app->oleh_ambil,
 		        			'denda'		=>	$app->denda,
-		        			'jenis'		=> "Akta Kematian",
+		        			'jenis'		=> "Akta Kelahiran",
 		        			);
 		        		$data['conten'] = "frontend/info/terkunci";
 		        		$this->load->view('backend/dashboard/index2', $data);
@@ -119,8 +120,10 @@ class F2_01 extends CI_Controller
 		        		foreach ($PELAPOR as $key => $value) { $data["p_$pelapor[$n]"] = set_value("p_$pelapor[$n]", $value); $n++;}
 		        		foreach ($S1 as $key => $value) { $data["s1_$saksi[$l]"] = set_value("s1_$saksi[$l]", $value); $l++;}
 		        		foreach ($S2 as $key => $value) { $data["s2_$saksi[$m]"] = set_value("s2_$saksi[$m]", $value); $m++;}
-		 
+		 				
+		 				$data['app'] = $app;
 		        		$data['button']		= 'Update';
+		        		$data['selesai'] = site_url('approval/create_action/'.$id_al.'/'.$akta->nik_pengaju);
 		        		$data['action'] = site_url('F2_01/update_action');
 		        		$data['berkas'] = site_url('F2_01/berkas');
 						$data['conten'] = "frontend/aktalahir/akta_lahir";
@@ -164,7 +167,7 @@ class F2_01 extends CI_Controller
 		            $this->session->set_flashdata('message', "
 		                <div class='alert alert-success alert-dismissable'>
 		              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-		                <h4><i class='icon fa fa-ban'></i> Berhasil!</h4>
+		                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
 		                   Data Formulir Akta Anda Telah Diperbaharui<br>
 		                   <h4>Lanjut Ke Tahap Unggah Berkas Anda?</h4>
 		                   
@@ -211,11 +214,11 @@ class F2_01 extends CI_Controller
 					'tgl_lahir' => $this->input->post('i_tgl_lahir',TRUE),
 					'umur' => $this->input->post('i_umur',TRUE),
 					'pekerjaan' => $this->input->post('i_pekerjaan',TRUE),
-					'a_alamat' => $this->input->post('ia_alamat',TRUE),
-					'a_desa' => $this->input->post('ia_desa',TRUE),
-					'a_kecamatan' => $this->input->post('ia_kecamatan',TRUE),
-					'a_kabkota' => $this->input->post('ia_kabkota',TRUE),
-					'a_provinsi' => $this->input->post('ia_provinsi',TRUE),
+					'a_alamat' => $this->input->post('i_a_alamat',TRUE),
+					'a_desa' => $this->input->post('i_a_desa',TRUE),
+					'a_kecamatan' => $this->input->post('i_a_kecamatan',TRUE),
+					'a_kabkota' => $this->input->post('i_a_kabkota',TRUE),
+					'a_provinsi' => $this->input->post('i_a_provinsi',TRUE),
 					'tgl_pencatatan_kawin' => $this->input->post('tgl_pencatatan_kawin',TRUE),
 					'status' => "IBU",
 				    );
@@ -260,11 +263,11 @@ class F2_01 extends CI_Controller
 					'nik' => $this->input->post('p_nik',TRUE),
 					'nama' => $this->input->post('p_nama',TRUE),
 					'umur' => $this->input->post('p_umur',TRUE),
-					'a_desa' => $this->input->post('pa_desa',TRUE),
-					'a_alamat' => $this->input->post('pa_alamat',TRUE),
-					'a_kecamatan' => $this->input->post('pa_kecamatan',TRUE),
-					'a_kabkota' => $this->input->post('pa_kabkota',TRUE),
-					'a_provinsi' => $this->input->post('pa_provinsi',TRUE),
+					'a_desa' => $this->input->post('p_a_desa',TRUE),
+					'a_alamat' => $this->input->post('p_a_alamat',TRUE),
+					'a_kecamatan' => $this->input->post('p_a_kecamatan',TRUE),
+					'a_kabkota' => $this->input->post('p_a_kabkota',TRUE),
+					'a_provinsi' => $this->input->post('p_a_provinsi',TRUE),
 					'jk' => $this->input->post('p_jk',TRUE),
 					'pekerjaan' => $this->input->post('p_pekerjaan',TRUE),
 				    );
@@ -353,11 +356,11 @@ class F2_01 extends CI_Controller
 
 			$this->form_validation->set_rules('p_nik', 'nik', 'trim|required');
 			$this->form_validation->set_rules('p_nama', 'nama', 'trim|required');
-			$this->form_validation->set_rules('p_umur', 'umur', 'trim|required');
-			$this->form_validation->set_rules('pa_desa', 'desa', 'trim|required');
-			$this->form_validation->set_rules('pa_kecamatan', ' kecamatan', 'trim|required');
-			$this->form_validation->set_rules('pa_kabkota', ' kabkota', 'trim|required');
-			$this->form_validation->set_rules('pa_provinsi', ' provinsi', 'trim|required');
+			$this->form_validation->set_rules('p_umur', 'umur', 'trim|required|numeric');
+			$this->form_validation->set_rules('p_a_desa', 'desa', 'trim|required');
+			$this->form_validation->set_rules('p_a_kecamatan', ' kecamatan', 'trim|required');
+			$this->form_validation->set_rules('p_a_kabkota', ' kabkota', 'trim|required');
+			$this->form_validation->set_rules('p_a_provinsi', ' provinsi', 'trim|required');
 			//$this->form_validation->set_rules('p_pekerjaan', 'pekerjaan', 'trim|required');
 
 			$this->form_validation->set_rules('i_nik', 'nik', 'trim|required');
@@ -365,10 +368,10 @@ class F2_01 extends CI_Controller
 			$this->form_validation->set_rules('i_pekerjaan', 'pekerjaan', 'trim|required');
 			$this->form_validation->set_rules('i_nama', 'nama', 'trim|required');
 			$this->form_validation->set_rules('i_umur', 'umur', 'trim|required');
-			$this->form_validation->set_rules('ia_desa', 'desa', 'trim|required');
-			$this->form_validation->set_rules('ia_kecamatan', 'kecamatan', 'trim|required');
-			$this->form_validation->set_rules('ia_kabkota', 'kabkota', 'trim|required');
-			$this->form_validation->set_rules('ia_provinsi', 'provinsi', 'trim|required');
+			$this->form_validation->set_rules('i_a_desa', 'desa', 'trim|required');
+			$this->form_validation->set_rules('i_a_kecamatan', 'kecamatan', 'trim|required');
+			$this->form_validation->set_rules('i_a_kabkota', 'kabkota', 'trim|required');
+			$this->form_validation->set_rules('i_a_provinsi', 'provinsi', 'trim|required');
 			$this->form_validation->set_rules('tgl_pencatatan_kawin', 'tgl pencatatan kawin', 'trim|required');
 
 
@@ -377,29 +380,29 @@ class F2_01 extends CI_Controller
 			$this->form_validation->set_rules('a_pekerjaan', 'pekerjaan', 'trim|required');
 			$this->form_validation->set_rules('a_nama', 'nama', 'trim|required');
 			$this->form_validation->set_rules('a_umur', 'umur', 'trim|required');
-			$this->form_validation->set_rules('aa_desa', 'desa', 'trim|required');
-			$this->form_validation->set_rules('aa_kecamatan', 'kecamatan', 'trim|required');
-			$this->form_validation->set_rules('aa_kabkota', 'kabkota', 'trim|required');
-			$this->form_validation->set_rules('aa_provinsi', 'provinsi', 'trim|required');
+			$this->form_validation->set_rules('a_a_desa', 'desa', 'trim|required');
+			$this->form_validation->set_rules('a_a_kecamatan', 'kecamatan', 'trim|required');
+			$this->form_validation->set_rules('a_a_kabkota', 'kabkota', 'trim|required');
+			$this->form_validation->set_rules('a_a_provinsi', 'provinsi', 'trim|required');
 
 			$this->form_validation->set_rules('s1_nik', 'nik', 'trim|required');
 			$this->form_validation->set_rules('s1_nama', 'nama', 'trim|required');
 			$this->form_validation->set_rules('s1_umur', 'umur', 'trim|required');
-			$this->form_validation->set_rules('s1a_alamat', 'alamat', 'trim|required');
-			$this->form_validation->set_rules('s1a_desa', 'desa', 'trim|required');
-			$this->form_validation->set_rules('s1a_kecamatan', 'kecamatan', 'trim|required');
-			$this->form_validation->set_rules('s1a_kabkota', 'kabkota', 'trim|required');
-			$this->form_validation->set_rules('s1a_provinsi', 'provinsi', 'trim|required');
+			$this->form_validation->set_rules('s1_a_alamat', 'alamat', 'trim|required');
+			$this->form_validation->set_rules('s1_a_desa', 'desa', 'trim|required');
+			$this->form_validation->set_rules('s1_a_kecamatan', 'kecamatan', 'trim|required');
+			$this->form_validation->set_rules('s1_a_kabkota', 'kabkota', 'trim|required');
+			$this->form_validation->set_rules('s1_a_provinsi', 'provinsi', 'trim|required');
 			$this->form_validation->set_rules('s1_pekerjaan', 'pekerjaan', 'trim|required');
 
 			$this->form_validation->set_rules('s2_nik', 'nik', 'trim|required');
 			$this->form_validation->set_rules('s2_nama', 'nama', 'trim|required');
 			$this->form_validation->set_rules('s2_umur', 'umur', 'trim|required');
-			$this->form_validation->set_rules('s2a_alamat', 'alamat', 'trim|required');
-			$this->form_validation->set_rules('s2a_desa', 'desa', 'trim|required');
-			$this->form_validation->set_rules('s2a_kecamatan', 'kecamatan', 'trim|required');
-			$this->form_validation->set_rules('s2a_kabkota', 'kabkota', 'trim|required');
-			$this->form_validation->set_rules('s2a_provinsi', 'provinsi', 'trim|required');
+			$this->form_validation->set_rules('s2_a_alamat', 'alamat', 'trim|required');
+			$this->form_validation->set_rules('s2_a_desa', 'desa', 'trim|required');
+			$this->form_validation->set_rules('s2_a_kecamatan', 'kecamatan', 'trim|required');
+			$this->form_validation->set_rules('s2_a_kabkota', 'kabkota', 'trim|required');
+			$this->form_validation->set_rules('s2_a_provinsi', 'provinsi', 'trim|required');
 			$this->form_validation->set_rules('s2_pekerjaan', 'pekerjaan', 'trim|required');
 			
 			$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');

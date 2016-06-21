@@ -56,7 +56,7 @@ class Approval_model extends CI_Model
     function get_app_list($wil)
     {
         $qw = "
-            SELECT *, data_bayi.nama as nm, ortu_bayi.nama as ibu FROM akta_kelahiran 
+            SELECT *, akta_kelahiran.nama as nama_p, data_bayi.nama as nm, ortu_bayi.nama as ibu FROM akta_kelahiran 
             JOIN data_bayi ON akta_kelahiran.id_AL=data_bayi.id_al
             JOIN ortu_bayi ON data_bayi.id_bayi=ortu_bayi.id_bayi
             JOIN approval ON akta_kelahiran.id_AL=approval.id_akta
@@ -70,7 +70,7 @@ class Approval_model extends CI_Model
     function get_am_list($wil)
     {
         $qw = "
-            SELECT *, data_jenazah.nama as nm, ortu_jenazah.nama as ibu FROM akta_kematian 
+            SELECT *, akta_kematian.nama as nama_p, data_jenazah.nama as nm, ortu_jenazah.nama as ibu FROM akta_kematian 
             JOIN data_jenazah ON akta_kematian.id_AM=data_jenazah.id_am
             JOIN ortu_jenazah ON data_jenazah.id_jenazah=ortu_jenazah.id_jenazah
             JOIN approval ON akta_kematian.id_AM=approval.id_akta
@@ -84,17 +84,13 @@ class Approval_model extends CI_Model
     function get_ap_list($wil)
     {
         $qw = "
-            SELECT * ,
-            (SELECT data_mempelai.nama
-                        FROM akta_perkawinan
-                        JOIN data_mempelai ON akta_perkawinan.id_ap=data_mempelai.id_ap
-                        JOIN approval ON akta_perkawinan.id_ap=approval.id_akta
-                        WHERE data_mempelai.status_mempelai='SUAMI') as nm,
-            (SELECT data_mempelai.nama
-                        FROM akta_perkawinan
-                        JOIN data_mempelai ON akta_perkawinan.id_ap=data_mempelai.id_ap
-                        JOIN approval ON akta_perkawinan.id_ap=approval.id_akta
-                        WHERE data_mempelai.status_mempelai='ISTRI') as ibu
+            SELECT *, akta_perkawinan.nama as nama_p ,
+            (SELECT data_mempelai.nama 
+                FROM data_mempelai WHERE data_mempelai.status_mempelai='SUAMI' 
+                AND data_mempelai.id_ap=id_akta) as nm,
+            (SELECT data_mempelai.nama 
+                FROM data_mempelai WHERE data_mempelai.status_mempelai='ISTRI' 
+                AND data_mempelai.id_ap=id_akta) as ibu
 
 
             FROM approval 
@@ -110,7 +106,7 @@ class Approval_model extends CI_Model
     function get_ac_list($wil)
     {
         $qw = "
-            SELECT * ,
+            SELECT *, akta_perceraian.nama as nama_p ,
             (SELECT data_bercerai.nama
                         FROM akta_perceraian
                         JOIN data_bercerai ON akta_perceraian.id_ac=data_bercerai.id_ac

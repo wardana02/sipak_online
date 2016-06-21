@@ -17,9 +17,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://tugaskita.com/sip_capil';
-$config['fonts_path']= 'system/fonts/';
-//$config['base_url'] = 'http://192.168.2.2/project/bpsb';
+$config['base_url'] = 'http://localhost/sip_capil';
+//$config['fonts_path']= 'system/fonts/';
+//$config['base_url'] = 'http://192.168.25.1/sip_capil';
 
 /*
 |--------------------------------------------------------------------------

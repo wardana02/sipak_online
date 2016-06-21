@@ -21,7 +21,9 @@
                 <div class="box-body">
                   <div class="">
                   <h3 class="box-title">
-                    <?php echo anchor(site_url('user/create'), 'Tambah User Baru', 'class="btn btn-success"'); ?>
+                    <a href=<?=site_url('user/create')?> class="btn btn-success">
+                      <i class="glyphicon glyphicon-plus"></i> Tambah User Baru 
+                    </a>
                   </h3>
                   
                   <!--FRO GENERATE -->

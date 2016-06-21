@@ -6,15 +6,15 @@
                   <div class="col-lg-10">
 
                       <section class="panel">
-                      <center>
+                      <center><br>
+                      <img src=<?=base_url("assets/frontend2/img/f_icon/divorce.png")?> width="70px">
                         <h2>Akta Perceraian Online</h2>
                       </center>
 
                           <div class="panel-body">
                                    <center>
                                     <h3>Anda Sudah Terdaftar?</h3>
-                                  <p> Diperlukan Edit Data Pendafaran dikarenakan suatu hal? Klik tombol berikut untuk dapat mengedit Data Pen
-                                  daftaran anda!</p>
+                                  <p> Anda telah mendaftarkan jenis pelayanan akta, terdapat revisi data Pendafaran dikarenakan suatu hal? Klik tombol berikut untuk dapat mengedit Data Pendaftaran anda!</p>
                                   
                               
                               <!--UNTUK SUDAH TERDAFTAR MUNCUL POP UP FORM-->
@@ -56,8 +56,9 @@
                               <form class="form-horizontal" method="post" action="<?php echo $action; ?>" id="default">
                                   <fieldset title="Daftar Baru" class="step" id="default-step-2" >
                                   <center>
-                                    <h3>Pastikan Data Yang Anda Isikan Benar.</h3>
-                                  <p> Konfirmasi keberhasilan pendaftaran akan ditandai dengan SMS yang akan dikirimkan
+                                    <h3>Atau Akan Mengajukan Pelayanan Akta Baru?</h3>
+                                  <p> Apabila akan mengajukan pelayanan akta baru, maka isi pada formulir berikut.
+                                  Konfirmasi keberhasilan pendaftaran akan ditandai dengan SMS yang akan dikirimkan
                                   kenomor telepon yang anda isikan, setelah melengkapi data pada tahap selanjutnya. Sehingga pastikan nomor telepon yang anda isikan benar.</p>
                                   </center>
                                   

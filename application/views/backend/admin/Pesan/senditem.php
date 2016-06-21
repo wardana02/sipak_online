@@ -23,6 +23,8 @@
                 </div>
             </div><br>
                 <div class="box-body">
+                <a href="<?= base_url("mail/terkirim"); ?>" class="btn btn-primary"><i class="glyphicon glyphicon-transfer"></i>  Muat Ulang Data/Refresh</a> 
+                  
                   <div class="mailbox-controls">
                     <!-- Check all button -->
                     

@@ -172,15 +172,13 @@ class User extends CI_Controller
             if ($this->input->post('password')!='') {
                  $data['password'] = sha1($this->input->post('password',TRUE));
             }
-
-            //print_r($data);exit();
            
 
             $this->User_model->update($this->input->post('id_user', TRUE), $data);
             $this->session->set_flashdata('message', "
                 <div class='alert alert-success alert-dismissable'>
               <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-                <h4><i class='icon fa fa-ban'></i> Berhasil!</h4>
+                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
                     Data Berhasil Diperbaharui, !
             </div>
                 ");
@@ -194,7 +192,7 @@ class User extends CI_Controller
             $this->session->set_flashdata('message', "
                 <div class='alert alert-success alert-dismissable'>
               <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-                <h4><i class='icon fa fa-ban'></i> Berhasil!</h4>
+                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
                     Data Berhasil Diperbaharui, !
             </div>
                 ");
@@ -210,7 +208,7 @@ class User extends CI_Controller
             $this->session->set_flashdata('message', "
                 <div class='alert alert-success alert-dismissable'>
               <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-                <h4><i class='icon fa fa-ban'></i> Berhasil!</h4>
+                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
                     Data Berhasil Di Hapus!
             </div>
                 ");

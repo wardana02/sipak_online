@@ -18,21 +18,38 @@
                               <?php echo $this->session->userdata('message') <> '' ? $this->session->userdata('message') : ''; ?>
                           </div>
                       </div><br>
-                      </section>
-
-                      <section class="panel">
+                      <div class="col-sm-12">
+                          <div class="col-sm-12 alert alert-warning fade in">
+                             <center><h4>
+                          <?php
+                            if ($app->by_rw=='revisi') {
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_rw." Kemudian Pilih Tombol Oke, Sudah Selesai";
+                            }elseif ($app->by_kelurahan=='revisi') {
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_kelurahan;
+                            }elseif ($app->by_dukcapil=='revisi') {
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_dukcapil;
+                            } else{
+                              echo "<i class='glyphicon glyphicon-tag'></i><strong> Isi Formulir</strong> ";
+                            }
+                          ?>
+                          </h4></center>
+                          </div>
+                          </div>
                           <header class="panel-heading">
                               Formulir Akta Perkawinan Online
                           </header>
                           <center>
-                            <div class="btn btn-group">
                             <header class="panel-heading btn btn-primary">
                                 1. Formulir Akta Perkawinan
                             </header>
                             <a href="<?php echo site_url('b2_12/berkas/'.$ID_AP) ?>">
                             <header class="panel-heading btn btn-default">
                                 2. Berkas Akta Perkawinan
-                            </header></a></div>
+                            </header></a>
+                            <a href="<?php echo "$selesai";?>" onclick="javasciprt: return confirm('Anda Yakin Telah Melengkapi Data dan Masuk Tahap Verifikasi?? ?')">
+                          <header class="panel-heading btn btn-default">
+                              3. Oke, Saya Selesai
+                          </header></a>
                           </center>
                           <div class="panel-body">
                               <div class="stepy-tab">
@@ -76,7 +93,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="s_nik" id="s_nik" value="3311112302960002" class="form-control tooltips" data-toggle="tooltip"  data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="s_nik" id="s_nik" value="<?= $s_nik; ?>" onkeypress="return runScript(event)"  maxlength="16" class="form-control tooltips" data-toggle="tooltip"  data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('s_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
@@ -86,7 +103,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Nomor KK</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="s_no_kk" id="s_no_kk" value="<?php echo $s_no_kk; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Nomor KK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="s_no_kk" id="s_no_kk" value="<?php echo $s_no_kk; ?>" onkeypress="return runScript(event)"  maxlength="16" class="form-control tooltips" data-toggle="tooltip " data-original-title="Nomor KK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('s_no_kk') ?></p>
                                           </div>
                                       </div>
@@ -199,7 +216,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Pekerjaan</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="s_pekerjaan" id="s_pekerjaan" value="<?php echo $s_pekerjaan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
+                                              <input type="text" name="s_pekerjaan" id="s_pekerjaan" readonly="" value="<?php echo $s_pekerjaan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
                                               <p class="help-block"><?php echo form_error('s_pekerjaan') ?></p>
                                           </div>
                                       </div>
@@ -239,14 +256,14 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Perkawinan Yang Ke-</label>
                                           <div class="col-lg-10">
-                                              <input type="text" class="form-control tooltips" name="s_perkawinan_ke" value="<?php echo $s_perkawinan_ke; ?>" data-toggle="tooltip " placeholder="" data-original-title="Angka" >
+                                              <input type="text" class="form-control tooltips" name="s_perkawinan_ke" onkeypress="return runScript(event)" value="<?php echo $s_perkawinan_ke; ?>" data-toggle="tooltip " placeholder="" data-original-title="Isi dengan angka 1,2,3, dst" >
                                               <p class="help-block"><?php echo form_error('s_perkawinan_ke') ?></p> 
                                           </div>
                                       </div>
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Istri Yang Ke- (Pologami)</label>
                                           <div class="col-lg-10">
-                                              <input type="text" class="form-control tooltips" name="s_istri_ke" value="<?php echo $s_istri_ke; ?>" ata-toggle="tooltip " placeholder="" data-original-title="Isi Dengan Format Angka" >
+                                              <input type="text" class="form-control tooltips" name="s_istri_ke" onkeypress="return runScript(event)" value="<?php echo $s_istri_ke; ?>" ata-toggle="tooltip " placeholder="" data-original-title="Isi Dengan Format Angka 1,2,3, dst" >
                                               <p class="help-block"><?php echo form_error('s_istri_ke') ?></p>
                                           </div>
                                       </div>
@@ -263,7 +280,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="as_nik" id="as_nik" value="<?php echo $as_nik; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="as_nik" id="as_nik" onkeypress="return runScript(event)"  maxlength="16" value="<?php echo $as_nik; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
                                           </div>
                                           <div class="col-lg-2">
                                             <a class="btn btn-info" href="javascript:void(0)" onclick="updateAyahSuami()">Cek NIK !!</a>
@@ -371,7 +388,7 @@
                                        <div class="form-group">
                                           <label class="col-lg-2 control-label">Pekerjaan</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="as_pekerjaan" id="as_pekerjaan" class="form-control tooltips" value="<?php echo $as_pekerjaan; ?>" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="as_pekerjaan" id="as_pekerjaan" readonly="" class="form-control tooltips" value="<?php echo $as_pekerjaan; ?>" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('as_pekerjaan') ?></p>
                                           </div>
                                       </div>
@@ -386,7 +403,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="is_nik" id="is_nik" class="form-control tooltips" value="<?php echo $is_nik; ?>" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="is_nik" id="is_nik" onkeypress="return runScript(event)"  maxlength="16" class="form-control tooltips" value="<?php echo $is_nik; ?>" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('is_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
@@ -495,7 +512,7 @@
                                        <div class="form-group">
                                           <label class="col-lg-2 control-label">Pekerjaan</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="is_pekerjaan" id="is_pekerjaan" class="form-control tooltips" value="<?php echo $is_pekerjaan; ?>" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="is_pekerjaan" id="is_pekerjaan" readonly="" class="form-control tooltips" value="<?php echo $is_pekerjaan; ?>" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('is_pekerjaan') ?></p>
                                           </div>
                                       </div>
@@ -514,7 +531,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="i_nik" id="i_nik" value="3311112302960002" class="form-control tooltips" data-toggle="tooltip"  data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="i_nik" id="i_nik" value="<?= $i_nik; ?>" onkeypress="return runScript(event)"  maxlength="16" class="form-control tooltips" data-toggle="tooltip"  data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('i_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
@@ -524,7 +541,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Nomor KK</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="i_no_kk" id="i_no_kk" value="<?php echo $i_no_kk; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Nomor KK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="i_no_kk" id="i_no_kk" value="<?php echo $i_no_kk; ?>" onkeypress="return runScript(event)"  maxlength="16" class="form-control tooltips" data-toggle="tooltip " data-original-title="Nomor KK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('i_no_kk') ?></p>
                                           </div>
                                       </div>
@@ -637,7 +654,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Pekerjaan</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="i_pekerjaan" id="i_pekerjaan" value="<?php echo $i_pekerjaan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
+                                              <input type="text" name="i_pekerjaan" id="i_pekerjaan" readonly="" value="<?php echo $i_pekerjaan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
                                               <p class="help-block"><?php echo form_error('i_pekerjaan') ?></p>
                                           </div>
                                       </div>
@@ -647,7 +664,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Anak Ke-</label>
                                           <div class="col-lg-10">
-                                              <input type="text" class="form-control tooltips" name="i_anak_ke" value="<?php echo $i_anak_ke; ?>" placeholder="" data-toggle="tooltip " data-original-title="Isi Dengan Angka" >
+                                              <input type="text" class="form-control tooltips" onkeypress="return runScript(event)" name="i_anak_ke" value="<?php echo $i_anak_ke; ?>" placeholder="" data-toggle="tooltip " data-original-title="Isi Dengan Angka" >
                                               <p class="help-block"><?php echo form_error('i_anak_ke') ?></p>
                                           </div>
                                       </div>
@@ -677,7 +694,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Perkawinan Yang Ke-</label>
                                           <div class="col-lg-10">
-                                              <input type="text" class="form-control tooltips" name="i_perkawinan_ke" value="<?php echo $i_perkawinan_ke; ?>" data-toggle="tooltip " placeholder="" data-original-title="Angka" >
+                                              <input type="text" class="form-control tooltips" name="i_perkawinan_ke" onkeypress="return runScript(event)" value="<?php echo $i_perkawinan_ke; ?>" data-toggle="tooltip " placeholder="" data-original-title="Isi dengan angka 1,2,3, dst" >
                                               <p class="help-block"><?php echo form_error('i_perkawinan_ke') ?></p> 
                                           </div>
                                       </div>
@@ -694,7 +711,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="ai_nik" id="ai_nik" value="<?php echo $ai_nik; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="ai_nik" id="ai_nik" onkeypress="return runScript(event)"  maxlength="16" value="<?php echo $ai_nik; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
                                           </div>
                                           <div class="col-lg-2">
                                             <a class="btn btn-info" href="javascript:void(0)" onclick="updateAyahIstri()">Cek NIK !!</a>
@@ -802,7 +819,7 @@
                                        <div class="form-group">
                                           <label class="col-lg-2 control-label">Pekerjaan</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="ai_pekerjaan" id="ai_pekerjaan" class="form-control tooltips" value="<?php echo $ai_pekerjaan; ?>" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="ai_pekerjaan" id="ai_pekerjaan" readonly="" class="form-control tooltips" value="<?php echo $ai_pekerjaan; ?>" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('ai_pekerjaan') ?></p>
                                           </div>
                                       </div>
@@ -818,7 +835,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="ii_nik" id="ii_nik" class="form-control tooltips" value="<?php echo $ii_nik; ?>" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="ii_nik" id="ii_nik" class="form-control tooltips" onkeypress="return runScript(event)" maxlength="16" value="<?php echo $ii_nik; ?>" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('ii_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
@@ -913,7 +930,7 @@
                                        <div class="form-group">
                                           <label class="col-lg-2 control-label">Pekerjaan</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="ii_pekerjaan" id="ii_pekerjaan" class="form-control tooltips" value="<?php echo $ii_pekerjaan; ?>" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="ii_pekerjaan" id="ii_pekerjaan" readonly="" class="form-control tooltips" value="<?php echo $ii_pekerjaan; ?>" data-toggle="tooltip " data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('ii_pekerjaan') ?></p>
                                           </div>
                                       </div>
@@ -931,7 +948,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="s1_nik" id="s1_nik" value="<?php echo $s1_nik; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Benar NIK" >
+                                              <input type="text" name="s1_nik" id="s1_nik" value="<?php echo $s1_nik; ?>" onkeypress="return runScript(event)" maxlength="16" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Benar NIK" >
                                               <p class="help-block"><?php echo form_error('s1_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
@@ -1001,7 +1018,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Alamat</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="s1_a_alamat" readonly="" id="s1a_alamat" value="<?php echo $s1_a_alamat; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Nama Dusun/Jalan" >
+                                              <input type="text" name="s1_a_alamat" readonly="" id="s1_a_alamat" value="<?php echo $s1_a_alamat; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Nama Dusun/Jalan" >
                                               <p class="help-block"><?php echo form_error('s1_a_alamat') ?></p>
                                           </div>
                                       </div>
@@ -1010,13 +1027,13 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Desa/Kelurahan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s1_a_desa" readonly="" id="s1a_desa" value="<?php echo $s1_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Desa Alamat">
+                                              <input type="text" name="s1_a_desa" readonly="" id="s1_a_desa" value="<?php echo $s1_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Desa Alamat">
                                               <p class="help-block"><?php echo form_error('s1_a_desa') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Kecamatan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s1_a_kecamatan" readonly="" id="s1a_kecamatan" value="<?php echo $s1_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kecamatan Alamat">
+                                              <input type="text" name="s1_a_kecamatan" readonly="" id="s1_a_kecamatan" value="<?php echo $s1_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kecamatan Alamat">
                                               <p class="help-block"><?php echo form_error('s1_a_kecamatan') ?></p>
                                           </div>
                                       </div>
@@ -1024,13 +1041,13 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Kabupaten/Kota</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s1_a_kabkota" readonly="" id="s1a_kabkota" value="<?php echo $s1_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kabupaten/Kota Alamat">
+                                              <input type="text" name="s1_a_kabkota" readonly="" id="s1_a_kabkota" value="<?php echo $s1_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kabupaten/Kota Alamat">
                                               <p class="help-block"><?php echo form_error('s1a_kabkota') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Provinsi</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s1_a_provinsi" readonly="" id="s1a_provinsi" value="<?php echo $s1_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Proinsi Alamat">
+                                              <input type="text" name="s1_a_provinsi" readonly="" id="s1_a_provinsi" value="<?php echo $s1_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Proinsi Alamat">
                                               <p class="help-block"><?php echo form_error('s1_a_provinsi') ?></p>
                                           </div>
                                       </div>
@@ -1056,7 +1073,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="s2_nik" id="s2_nik" value="<?php echo $s2_nik; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Benar NIK" >
+                                              <input type="text" name="s2_nik" id="s2_nik" value="<?php echo $s2_nik; ?>" onkeypress="return runScript(event)" maxlength="16" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Benar NIK" >
                                               <p class="help-block"><?php echo form_error('s2_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
@@ -1126,7 +1143,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Alamat</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="s2_a_alamat" readonly="" id="s2a_alamat" value="<?php echo $s2_a_alamat; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Nama Dusun/Jalan" >
+                                              <input type="text" name="s2_a_alamat" readonly="" id="s2_a_alamat" value="<?php echo $s2_a_alamat; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Nama Dusun/Jalan" >
                                               <p class="help-block"><?php echo form_error('s2_a_alamat') ?></p>
                                           </div>
                                       </div>
@@ -1134,13 +1151,13 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Desa/Kelurahan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s2_a_desa" readonly="" id="s2a_desa" value="<?php echo $s2_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Desa Alamat">
+                                              <input type="text" name="s2_a_desa" readonly="" id="s2_a_desa" value="<?php echo $s2_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Desa Alamat">
                                               <p class="help-block"><?php echo form_error('s2_a_desa') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Kecamatan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s2_a_kecamatan" readonly="" id="s2a_kecamatan" value="<?php echo $s2_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kecamatan Alamat">
+                                              <input type="text" name="s2_a_kecamatan" readonly="" id="s2_a_kecamatan" value="<?php echo $s2_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kecamatan Alamat">
                                               <p class="help-block"><?php echo form_error('s2_a_kecamatan') ?></p>
                                           </div>
                                       </div>
@@ -1148,13 +1165,13 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Kabupaten/Kota</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s2_a_kabkota" readonly="" id="s2a_kabkota" value="<?php echo $s2_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kabupaten/Kota Alamat">
+                                              <input type="text" name="s2_a_kabkota" readonly="" id="s2_a_kabkota" value="<?php echo $s2_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kabupaten/Kota Alamat">
                                               <p class="help-block"><?php echo form_error('s2_a_kabkota') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Provinsi</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s2_a_provinsi" readonly="" id="s2a_provinsi" value="<?php echo $s2_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Proinsi Alamat">
+                                              <input type="text" name="s2_a_provinsi" readonly="" id="s2_a_provinsi" value="<?php echo $s2_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Proinsi Alamat">
                                               <p class="help-block"><?php echo form_error('s2_a_provinsi') ?></p>
                                           </div>
                                       </div>
@@ -1209,6 +1226,22 @@
                                             </div>
                                       </div>
 
+                                      <div class="form-group">
+                                          <label class="col-lg-2 control-label">Hari Pelaporan</label>
+                                          <div class="col-lg-10">
+                                              <select name="hari_lapor" class="form-control">
+                                                <option value="<?php echo $hari_lapor; ?>"><?php echo $hari_lapor; ?></option>
+                                                <option value="SENIN">SENIN</option>
+                                                <option value="SELASA">SELASA</option>
+                                                <option value="RABU">RABU</option>
+                                                <option value="KAMIS">KAMIS</option>
+                                                <option value="JUMAT">JUMAT</option>
+                                                <option value="SABTU">SABTU</option>
+                                                <option value="MINGGU">MINGGU</option>
+                                            </select>
+                                          </div>
+                                      </div>
+
                                       <script type="text/javascript">
                                         function agamaPerkawinan() {
                                             var selMenu = document.getElementById('agama');
@@ -1250,14 +1283,14 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Nama Badan Peradilan</label>
                                           <div class="col-lg-10">
-                                              <input type="text" class="form-control tooltips" name="nama_peradilan" id="nama_peradilan" value="<?php echo $nama_peradilan; ?>" data-toggle="tooltip" data-original-title=" isi " value="<?php echo $nama_peradilan; ?>" />
+                                              <input type="text" class="form-control tooltips" name="nama_peradilan" id="nama_peradilan" value="<?php echo $nama_peradilan; ?>" data-toggle="tooltip" data-original-title=" Nama pengadilan negeri diisi sesuai dengan Kab/Kota" value="<?php echo $nama_peradilan; ?>" />
                                               <p class="help-block"><?php echo form_error('nama_peradilan') ?></p>
                                           </div>
                                       </div>
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Nomer Putusan Penetapan Pengadilan</label>
                                           <div class="col-lg-10">
-                                              <input type="text" class="form-control tooltips" name="nomor_putusan" id="nomor_putusan" value="<?php echo $nomor_putusan; ?>" data-toggle="tooltip" data-original-title=" isi " value="<?php echo $nomor_putusan; ?>" />
+                                              <input type="text" class="form-control tooltips" name="nomor_putusan" id="nomor_putusan" value="<?php echo $nomor_putusan; ?>" data-toggle="tooltip" data-original-title="Diisi sesuai nomor penetapan pengadilan negeri" value="<?php echo $nomor_putusan; ?>" />
                                               <p class="help-block"><?php echo form_error('nomor_putusan') ?></p></div>
                                       </div>
 
@@ -1265,7 +1298,7 @@
                                         <label class="col-lg-2 control-label">Tanggal Putusan Penetapan Pengadilan</label>
                                           <div class="col-lg-4">
                                               <div data-date-viewmode="years" data-date-format="yyyy-mm-dd" data-date="2016-07-10" class="input-append date dpYears">
-                                                     <input type="text" readonly="" name="tgl_putusan" id="tgl_putusan" value="<?php echo $tgl_putusan; ?>" size="16" class="form-control">
+                                                     <input type="text" readonly="" name="tgl_putusan" id="tgl_putusan" value="<?php echo $tgl_putusan; ?>" size="16" class="form-control" data-toggle="tooltip" data-original-title="Nama Pe">
                                                       <span class="input-group-btn add-on">
                                                         <button class="btn btn-danger" type="button"><i class="fa fa-calendar"></i></button>
                                                       </span>
@@ -1278,7 +1311,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Nama Pemuka Agama/Penghayat</label>
                                           <div class="col-lg-10">
-                                              <input type="text" class="form-control tooltips" name="nama_pemuka" id="nama_pemuka" value="<?php echo $nama_pemuka; ?>" data-toggle="tooltip" data-original-title=" isi " value="<?php echo $nama_pemuka; ?>" />
+                                              <input type="text" class="form-control tooltips" name="nama_pemuka" id="nama_pemuka" value="<?php echo $nama_pemuka; ?>" data-toggle="tooltip" data-original-title="Nama Pemuka Agama/kepercayaan diisi sesuai dengan nama Pemuka Agama/kepercayaan  yang mengesahkan perkawinan." value="<?php echo $nama_pemuka; ?>" />
                                               <p class="help-block"><?php echo form_error('nama_pemuka') ?></p> </div>
                                       </div>
                                   </fieldset>
@@ -1304,7 +1337,7 @@
                                               <td class="hidden-phone"><?php echo $key->nama_anak;?></td>
                                               <td><?php echo $key->nomor_akta;?></td>
                                               <td><?php echo dateindo($key->tgl_akta);?></td>
-                                              <td><a href=<?php echo base_url("f2_12/hapus_anak/".$key->id_dataanak)?> class="btn btn-danger"><i class="fa fa-question-circle"></i> HAPUS </a></td>
+                                              <td><a href=<?php echo base_url("f2_12/hapus_anak/".$key->id_dataanak)?> class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> HAPUS </a></td>
                                           </tr>
                                           <?php } ?>
                                           </tbody>

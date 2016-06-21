@@ -18,6 +18,23 @@
                               <?php echo $this->session->userdata('message') <> '' ? $this->session->userdata('message') : ''; ?>
                           </div>
                       </div><br>
+                      <div class="col-sm-12">
+                          <div class="col-sm-12 alert alert-warning fade in">
+                             <center><h4>
+                          <?php
+                            if ($app->by_rw=='revisi') {
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_rw." Kemudian Pilih Tombol Oke, Sudah Selesai";
+                            }elseif ($app->by_kelurahan=='revisi') {
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_kelurahan;
+                            }elseif ($app->by_dukcapil=='revisi') {
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_dukcapil;
+                            } else{
+                              echo "<i class='glyphicon glyphicon-tag'></i><strong> Isi Formulir</strong> ";
+                            }
+                          ?>
+                          </h4></center>
+                          </div>
+                          </div>
                           
                             <center>
                             <a href="<?php echo "$berkas";?>">
@@ -57,7 +74,7 @@
                               <form class="form-horizontal" method="post" action="<?php echo site_url("b2_12/loop/$ID_AP") ?>" enctype="multipart/form-data" id="form-upload">
                                   <fieldset title="Daftar Berkas" class="step" id="form-upload-step-0">
                                       <legend> </legend>
-                                      <h3>Unggah berkas guna kelengkapan dokumen akta kelahiran anda.</h3>
+                                      <h3>Unggah berkas guna kelengkapan dokumen pendaftaran Akta Perkawinan yang anda ajukan.</h3>
                                       <h4>Daftar berkas yang harus anda upload</h4>
                                       <table class="table table-striped table-advance table-hover">
                               <thead>
@@ -71,72 +88,72 @@
                                   <tr>
                                   <td><a href="#">1</a></td>
                                   <td><b><?php echo $judul['0'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan Surat Keterangan Pernikahan yang dikeluarkan oleh peradilan.</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">2</a></td>
                                   <td><b><?php echo $judul['1'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan Kartu Keluarga suami, dimana kartu keluarga yang digunakan dimana identitas Suami tercantum.</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">3</a></td>
                                   <td><b><?php echo $judul['2'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan KTP dari Suami. </td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">4</a></td>
                                   <td><b><?php echo $judul['3'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan Akta Kelahiran dari Suami. </td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">5</a></td>
                                   <td><b><?php echo $judul['4'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan Kartu Keluarga istri, dimana kartu keluarga yang digunakan dimana identitas Istri tercantum.</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">6</a></td>
                                   <td><b><?php echo $judul['5'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan KTP dari Istri. </td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">7</a></td>
                                   <td><b><?php echo $judul['6'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan Akta Kelahiran dari Istri. </td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">8</a></td>
                                   <td><b><?php echo $judul['7'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan Surat Keterangan Terjadinya Pernikahan yang dikeluarkan oleh kelurahan tempat terjadinya pernikahan. </td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">9</a></td>
                                   <td><b><?php echo $judul['8'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan dari Akta Kematian Ibu dari Suami apabila yangbersangkutan telah meninggal. Apabila belum meninggal, maka kosongkan pada kolom berkas ini.</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">10</a></td>
                                   <td><b><?php echo $judul['9'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan dari Akta Kematian Ibu dari Suami apabila yangbersangkutan telah meninggal. Apabila belum meninggal, maka kosongkan pada kolom berkas ini.</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">11</a></td>
                                   <td><b><?php echo $judul['10'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan dari Akta Kematian Ayah dari Istri apabila yangbersangkutan telah meninggal. Apabila belum meninggal, maka kosongkan pada kolom berkas ini.</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">12</a></td>
                                   <td><b><?php echo $judul['11'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil scan dari Akta Kematian Ibu dari Istri apabila yangbersangkutan telah meninggal. Apabila belum meninggal, maka kosongkan pada kolom berkas ini.</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">13</a></td>
                                   <td><b><?php echo $judul['12'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil KTP dari Saksi 1 atas terjadinya pernikahan tersebut.</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">14</a></td>
                                   <td><b><?php echo $judul['13'];?></b></td>
-                                  <td>Berupa Hasil scan Surat Keterangan Kelahiran bayi yang dikeluarkan oleh rumahsakit/ instansi tempat kelahiran bayi</td>
+                                  <td>Berupa Hasil KTP dari Saksi 2 atas terjadinya pernikahan tersebut.</td>
                                   </tr>
                                   <tr>
                                   <td><a href="#">15</a></td>
@@ -157,8 +174,7 @@
                                       <legend> </legend>
                                       <center>
                                         <h4><p>
-                                        Lampirkan hasil scan berkas dokumen surat keterangan 
-                                        kelahiran yang dikeluarkan oleh tempat/instansi terjadinya kelahiran
+                                        Lampirkan hasil scan berkas dokumen. Pastikan file scan berkas bertipe ekstensi *jpg / *.jpeg
                                         </p></h4>
                                       </center><br><br>
 
@@ -173,8 +189,8 @@
                                               <b><?php echo $i-2; echo ". ".$judul[$num];?></b><br>
                                           <?php 
                                             if ($data->$value=='') {
-                                              echo "<span class='label label-danger'>BERKAS KOSONG</span>";
-                                            }else{echo"<span class='label label-success'>BERKAS TERSIMPAN</span>";}
+                                              echo "<span class='label label-danger'>TIDAK TERLAMPIR</span>";
+                                            }else{echo"<span class='label label-success'>BERKAS TERLAMPIR</span>";}
                                           ?><br>
                                           <div class="fileupload fileupload-new" data-provides="fileupload">
                                                             <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">

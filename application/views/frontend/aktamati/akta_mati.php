@@ -18,15 +18,38 @@
                               <?php echo $this->session->userdata('message') <> '' ? $this->session->userdata('message') : ''; ?>
                           </div>
                       </div><br>
+                      <div class="col-sm-12">
+                          <div class="col-sm-12 alert alert-warning fade in">
+                             <center><h4>
+                          <?php
+                            if ($app->by_rw=='revisi') {
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_rw." Kemudian Pilih Tombol Oke, Sudah Selesai";
+                            }elseif ($app->by_kelurahan=='revisi') {
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_kelurahan;
+                            }elseif ($app->by_dukcapil=='revisi') {
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_dukcapil;
+                            } else{
+                              echo "<i class='glyphicon glyphicon-tag'></i><strong> Isi Formulir</strong> ";
+                            }
+                          ?>
+                          </h4></center>
+                          </div>
+                          </div>
+
                           <center>
-                          <div class="btn btn-group">
                           <header class="panel-heading btn btn-primary">
                               1. Formulir Akta Kematian
                           </header>
                           <a href="<?php echo site_url('b2_29/berkas/'.$ID_AM) ?>">
                           <header class="panel-heading btn btn-default">
                               2. Berkas Akta Kematian
-                          </header></a></div></center>
+                          </header></a>
+                          <a href="<?php echo "$selesai";?>">
+                          <header class="panel-heading btn btn-default">
+                              3. Oke, Saya Selesai
+                          </header></a>
+
+                          </center>
                           <div class="panel-body">
                               <div class="stepy-tab">
                                   <ul id="default-titles" class="stepy-titles clearfix">
@@ -78,10 +101,10 @@
                                           <div class="col-lg-10">
                                             <div class="radios">
                                               <label class="label_radio r_on" for="radio-01">
-                                                  <input name="j_jk" id="j_jk" <?php if($j_jk=='LAKI-LAKI') echo "checked=''"; ?> value="Laki-Laki" type="radio" > Laki-Laki
+                                                  <input name="j_jk" id="j_jk" <?php if($j_jk=='LAKI-LAKI') echo "checked=''"; ?> value="LAKI-LAKI" type="radio" > LAKI-LAKI
                                               </label>
                                               <label class="label_radio r_off" for="radio-02">
-                                                  <input name="j_jk" id="j_jk" <?php if($j_jk=='PEREMPUAN') echo "checked=''"; ?> value="Perempuan" type="radio"> Perempuan
+                                                  <input name="j_jk" id="j_jk" <?php if($j_jk=='PEREMPUAN') echo "checked=''"; ?> value="PEREMPUAN" type="radio"> PEREMPUAN
                                               </label>
                                           </div>
                                           <p class="help-block"><?php echo form_error('j_jk') ?></p>
@@ -116,6 +139,7 @@
                                           <label class="col-lg-2 control-label">Agama</label>
                                           <div class="col-lg-10">
                                               <select class="form-control" id="j_agama" name="j_agama">
+                                                <option value="<?php echo $j_agama; ?>"><?php echo $j_agama; ?></option>
                                                 <option>Islam</option>
                                                 <option>Kristen</option>
                                                 <option>Katolik</option>
@@ -175,7 +199,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Anak Ke-</label>
                                           <div class="col-lg-10">
-                                              <input type="text" value="<?php echo $j_anak_ke; ?>" class="form-control tooltips" name="j_anak_ke" id="j_anak_ke" data-toggle="tooltip " placeholder="" data-original-title="Isi Dengan Nama Dusun/Jalan" >
+                                              <input type="text" value="<?php echo $j_anak_ke; ?>" class="form-control tooltips" name="j_anak_ke" id="j_anak_ke" data-toggle="tooltip " placeholder="" data-original-title="iSI dengan angka 1,2,3,dst" >
                                               <p class="help-block"><?php echo form_error('j_anak_ke') ?></p>
                                           </div>
                                       </div>
@@ -229,7 +253,7 @@
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Tempat Kematian</label>
                                           <div class="col-lg-4">
-                                              <input type="text" value="<?php echo $j_tmp_kematian; ?>" class="form-control tooltips" name="j_tmp_kematian" id="j_tmp_kematian" data-toggle="tooltip " placeholder="" data-original-title="Panjang Bayi Dalam satuan m">
+                                              <input type="text" value="<?php echo $j_tmp_kematian; ?>" class="form-control tooltips" name="j_tmp_kematian" id="j_tmp_kematian" data-toggle="tooltip " placeholder="" data-original-title="Isi Dengan Nama Kab/Kota Tempat Kematian">
                                               <p class="help-block"><?php echo form_error('j_tmp_kematian') ?></p>
                                           </div>
                                       </div>
@@ -306,8 +330,8 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Alamat</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="i_a_alamat" readonly="" id="ia_alamat" value="<?php echo $i_a_alamat; ?>" class="form-control tooltips" placeholder="" data-toggle="tooltip " placeholder="" data-original-title="Isi Dengan Nama Dusun/Jalan" >
-                                              <p class="help-block"><?php echo form_error('ia_alamat') ?></p>
+                                              <input type="text" name="i_a_alamat" readonly="" id="i_a_alamat" value="<?php echo $i_a_alamat; ?>" class="form-control tooltips" placeholder="" data-toggle="tooltip " placeholder="" data-original-title="Isi Dengan Nama Dusun/Jalan" >
+                                              <p class="help-block"><?php echo form_error('i_a_alamat') ?></p>
                                           </div>
                                       </div>
 
@@ -315,28 +339,28 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Desa/Kelurahan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="i_a_desa" readonly="" id="ia_desa" value="<?php echo $i_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Desa Alamat">
-                                              <p class="help-block"><?php echo form_error('ia_desa') ?></p>
+                                              <input type="text" name="i_a_desa" readonly="" id="i_a_desa" value="<?php echo $i_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Desa Alamat">
+                                              <p class="help-block"><?php echo form_error('i_a_desa') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Kecamatan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="i_a_kecamatan" readonly="" id="ia_kecamatan" value="<?php echo $i_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Kecamatan Alamat">
-                                              <p class="help-block"><?php echo form_error('ia_kecamatan') ?></p>
+                                              <input type="text" name="i_a_kecamatan" readonly="" id="i_a_kecamatan" value="<?php echo $i_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Kecamatan Alamat">
+                                              <p class="help-block"><?php echo form_error('i_a_kecamatan') ?></p>
                                           </div>
                                       </div>
 
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Kabupaten/Kota</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="i_a_kabkota" readonly="" id="ia_kabkota" value="<?php echo $i_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Kabupaten/Kota Alamat">
-                                              <p class="help-block"><?php echo form_error('ia_kabkota') ?></p>
+                                              <input type="text" name="i_a_kabkota" readonly="" id="i_a_kabkota" value="<?php echo $i_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Kabupaten/Kota Alamat">
+                                              <p class="help-block"><?php echo form_error('i_a_kabkota') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Provinsi</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="i_a_provinsi" readonly="" id="ia_provinsi" value="<?php echo $i_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Proinsi Alamat">
-                                              <p class="help-block"><?php echo form_error('ia_provinsi') ?></p>
+                                              <input type="text" name="i_a_provinsi" readonly="" id="i_a_provinsi" value="<?php echo $i_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Proinsi Alamat">
+                                              <p class="help-block"><?php echo form_error('i_a_provinsi') ?></p>
                                           </div>
                                       </div>
                                   </fieldset>
@@ -391,8 +415,8 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Alamat</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="a_a_alamat" readonly="" id="aa_alamat" value="<?php echo $a_a_alamat; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Nama Dusun/Jalan" >
-                                              <p class="help-block"><?php echo form_error('aa_alamat') ?></p>
+                                              <input type="text" name="a_a_alamat" readonly="" id="a_a_alamat" value="<?php echo $a_a_alamat; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Nama Dusun/Jalan" >
+                                              <p class="help-block"><?php echo form_error('a_a_alamat') ?></p>
                                           </div>
                                       </div>
 
@@ -400,28 +424,28 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Desa/Kelurahan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="a_a_desa" readonly="" id="aa_desa" value="<?php echo $a_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Desa Alamat">
-                                              <p class="help-block"><?php echo form_error('aa_desa') ?></p>
+                                              <input type="text" name="a_a_desa" readonly="" id="a_a_desa" value="<?php echo $a_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Desa Alamat">
+                                              <p class="help-block"><?php echo form_error('a_a_desa') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Kecamatan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="a_a_kecamatan" readonly="" id="aa_kecamatan" value="<?php echo $a_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Kecamatan Alamat">
-                                              <p class="help-block"><?php echo form_error('aa_kecamatan') ?></p>
+                                              <input type="text" name="a_a_kecamatan" readonly="" id="a_a_kecamatan" value="<?php echo $a_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Kecamatan Alamat">
+                                              <p class="help-block"><?php echo form_error('a_a_kecamatan') ?></p>
                                           </div>
                                       </div>
 
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Kabupaten/Kota</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="a_a_kabkota" readonly="" id="aa_kabkota" value="<?php echo $a_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Kabupaten/Kota Alamat">
-                                              <p class="help-block"><?php echo form_error('aa_kabkota') ?></p>
+                                              <input type="text" name="a_a_kabkota" readonly="" id="a_a_kabkota" value="<?php echo $a_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Kabupaten/Kota Alamat">
+                                              <p class="help-block"><?php echo form_error('a_a_kabkota') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Provinsi</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="a_a_provinsi" readonly="" id="aa_provinsi" value="<?php echo $a_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Proinsi Alamat">
-                                              <p class="help-block"><?php echo form_error('aa_provinsi') ?></p>
+                                              <input type="text" name="a_a_provinsi" readonly="" id="a_a_provinsi" value="<?php echo $a_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Proinsi Alamat">
+                                              <p class="help-block"><?php echo form_error('a_a_provinsi') ?></p>
                                           </div>
                                       </div>
 
@@ -432,11 +456,11 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="p_nik" id="p_nik" value="<?php echo $p_nik; ?>" class="form-control tooltips" data-toggle="tooltip " onblur="updateDataPelapor()" data-original-title="Isi Dengan Benar NIK" >
+                                              <input type="text" name="p_nik" id="p_nik" value="<?php echo $p_nik; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Benar NIK" >
                                               <p class="help-block"><?php echo form_error('p_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
-                                            <a class="btn btn-info" href="javascript:void(0)" onclick="updateDataJenazah()">Cek NIK !!</a>
+                                            <a class="btn btn-info" href="javascript:void(0)" onclick="updateDataPelapor()">Cek NIK !!</a>
                                           </div>
                                       </div>
                                       <div class="form-group">
@@ -479,8 +503,8 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Alamat</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="p_a_alamat" readonly="" id="pa_alamat" value="<?php echo $p_a_alamat; ?>" class="form-control tooltips" placeholder="" data-toggle="tooltip " placeholder="" data-original-title="Isi Dengan Nama Dusun/Jalan" >
-                                              <p class="help-block"><?php echo form_error('pa_alamat') ?></p>
+                                              <input type="text" name="p_a_alamat" readonly="" id="p_a_alamat" value="<?php echo $p_a_alamat; ?>" class="form-control tooltips" placeholder="" data-toggle="tooltip " placeholder="" data-original-title="Isi Dengan Nama Dusun/Jalan" >
+                                              <p class="help-block"><?php echo form_error('p_a_alamat') ?></p>
                                           </div>
                                       </div>
 
@@ -488,28 +512,28 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Desa/Kelurahan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="p_a_desa" readonly="" id="pa_desa" value="<?php echo $p_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Desa Alamat">
-                                              <p class="help-block"><?php echo form_error('pa_desa') ?></p>
+                                              <input type="text" name="p_a_desa" readonly="" id="p_a_desa" value="<?php echo $p_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Desa Alamat">
+                                              <p class="help-block"><?php echo form_error('p_a_desa') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Kecamatan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="p_a_kecamatan" readonly="" id="pa_kecamatan" value="<?php echo $p_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Kecamatan Alamat">
-                                              <p class="help-block"><?php echo form_error('pa_kecamatan') ?></p>
+                                              <input type="text" name="p_a_kecamatan" readonly="" id="p_a_kecamatan" value="<?php echo $p_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Kecamatan Alamat">
+                                              <p class="help-block"><?php echo form_error('p_a_kecamatan') ?></p>
                                           </div>
                                       </div>
 
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Kabupaten/Kota</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="p_a_kabkota" readonly="" id="pa_kabkota" value="<?php echo $p_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Kabupaten/Kota Alamat">
-                                              <p class="help-block"><?php echo form_error('pa_kabkota') ?></p>
+                                              <input type="text" name="p_a_kabkota" readonly="" id="p_a_kabkota" value="<?php echo $p_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Kabupaten/Kota Alamat">
+                                              <p class="help-block"><?php echo form_error('p_a_kabkota') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Provinsi</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="p_a_provinsi" readonly="" id="pa_provinsi" value="<?php echo $p_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Proinsi Alamat">
-                                              <p class="help-block"><?php echo form_error('pa_provinsi') ?></p>
+                                              <input type="text" name="p_a_provinsi" readonly="" id="p_a_provinsi" value="<?php echo $p_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Proinsi Alamat">
+                                              <p class="help-block"><?php echo form_error('p_a_provinsi') ?></p>
                                           </div>
                                       </div>
                                   </fieldset>
@@ -553,7 +577,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Alamat</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="s1_a_alamat" readonly="" id="s1a_alamat" value="<?php echo $s1_a_alamat; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Nama Dusun/Jalan" >
+                                              <input type="text" name="s1_a_alamat" readonly="" id="s1_a_alamat" value="<?php echo $s1_a_alamat; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Nama Dusun/Jalan" >
                                               <p class="help-block"><?php echo form_error('s1_a_alamat') ?></p>
                                           </div>
                                       </div>
@@ -562,13 +586,13 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Desa/Kelurahan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s1_a_desa" readonly="" id="s1a_desa" value="<?php echo $s1_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Desa Alamat">
+                                              <input type="text" name="s1_a_desa" readonly="" id="s1_a_desa" value="<?php echo $s1_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Desa Alamat">
                                               <p class="help-block"><?php echo form_error('s1_a_desa') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Kecamatan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s1_a_kecamatan" readonly="" id="s1a_kecamatan" value="<?php echo $s1_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kecamatan Alamat">
+                                              <input type="text" name="s1_a_kecamatan" readonly="" id="s1_a_kecamatan" value="<?php echo $s1_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kecamatan Alamat">
                                               <p class="help-block"><?php echo form_error('s1_a_kecamatan') ?></p>
                                           </div>
                                       </div>
@@ -576,13 +600,13 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Kabupaten/Kota</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s1_a_kabkota" readonly="" id="s1a_kabkota" value="<?php echo $s1_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kabupaten/Kota Alamat">
+                                              <input type="text" name="s1_a_kabkota" readonly="" id="s1_a_kabkota" value="<?php echo $s1_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kabupaten/Kota Alamat">
                                               <p class="help-block"><?php echo form_error('s1a_kabkota') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Provinsi</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s1_a_provinsi" readonly="" id="s1a_provinsi" value="<?php echo $s1_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Proinsi Alamat">
+                                              <input type="text" name="s1_a_provinsi" readonly="" id="s1_a_provinsi" value="<?php echo $s1_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Proinsi Alamat">
                                               <p class="help-block"><?php echo form_error('s1_a_provinsi') ?></p>
                                           </div>
                                       </div>
@@ -627,7 +651,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Alamat</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="s2_a_alamat" readonly="" id="s2a_alamat" value="<?php echo $s2_a_alamat; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Nama Dusun/Jalan" >
+                                              <input type="text" name="s2_a_alamat" readonly="" id="s2_a_alamat" value="<?php echo $s2_a_alamat; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi Dengan Nama Dusun/Jalan" >
                                               <p class="help-block"><?php echo form_error('s2_a_alamat') ?></p>
                                           </div>
                                       </div>
@@ -636,13 +660,13 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Desa/Kelurahan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s2_a_desa" readonly="" id="s2a_desa" value="<?php echo $s2_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Desa Alamat">
+                                              <input type="text" name="s2_a_desa" readonly="" id="s2_a_desa" value="<?php echo $s2_a_desa; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Desa Alamat">
                                               <p class="help-block"><?php echo form_error('s2_a_desa') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Kecamatan</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s2_a_kecamatan" readonly="" id="s2a_kecamatan" value="<?php echo $s2_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kecamatan Alamat">
+                                              <input type="text" name="s2_a_kecamatan" readonly="" id="s2_a_kecamatan" value="<?php echo $s2_a_kecamatan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kecamatan Alamat">
                                               <p class="help-block"><?php echo form_error('s2_a_kecamatan') ?></p>
                                           </div>
                                       </div>
@@ -650,13 +674,13 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Kabupaten/Kota</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s2_a_kabkota" readonly="" id="s2a_kabkota" value="<?php echo $s2_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kabupaten/Kota Alamat">
+                                              <input type="text" name="s2_a_kabkota" readonly="" id="s2_a_kabkota" value="<?php echo $s2_a_kabkota; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Kabupaten/Kota Alamat">
                                               <p class="help-block"><?php echo form_error('s2_a_kabkota') ?></p>
                                           </div>
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Provinsi</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s2_a_provinsi" readonly="" id="s2a_provinsi" value="<?php echo $s2_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Proinsi Alamat">
+                                              <input type="text" name="s2_a_provinsi" readonly="" id="s2_a_provinsi" value="<?php echo $s2_a_provinsi; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Proinsi Alamat">
                                               <p class="help-block"><?php echo form_error('s2_a_provinsi') ?></p>
                                           </div>
                                       </div>

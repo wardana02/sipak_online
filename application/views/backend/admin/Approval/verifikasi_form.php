@@ -5,7 +5,7 @@
         <section class="content">
           <div class="row">
             <div class="col-md-12">
-                <h2 style="margin-top:0px">Data Kontak Tersimpan</h2>
+                <h2 style="margin-top:0px">Verifikasi Pendaftaran Akta Kelahiran</h2>
             </div>
             <div class="col-md-12 text-center">
                 <div style="margin-top: 4px"  id="message">
@@ -313,7 +313,7 @@
                                                 </div>
                                           <input type="hidden" name="id_akta" value="<?php echo $bayi_data->id_AL; ?>" /> 
                                           <input type="hidden" name="no_hp" value="<?php echo $no_hp; ?>" />
-                                          <input type="hidden" name="no_registrasi" value="<?php echo $no_registrasi; ?>" /> 
+                                          <input type="text" name="no_registrasi" value="<?php echo $no_registrasi; ?>" /> 
 
                                           <button type="submit" class="btn btn-large btn-primary"> <i class="glyphicon glyphicon-check"></i> Simpan Verifikasi</button> 
                                       </form>

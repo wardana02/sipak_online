@@ -19,7 +19,6 @@
                 <div class="box-header with-border">
                   <h3 class="box-title">
                   <a href="#" class="create btn btn-success"> Tambah Kontak Baru</a> 
-                    
                   </h3>
                 </div><!-- /.box-header -->
 
@@ -55,7 +54,7 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                   <li><a href=<?php echo site_url('pbk/update/'.$pbk->ID); ?>>Ubah</a></li>
-                                  <li><a href=<?php echo site_url('pbk/delete/'.$pbk->ID); ?> onclick="javasciprt: return confirm('Anda Yakin Menghapus Data Alumni Ini ?')">Hapus</a></li>
+                                  <li><a href=<?php echo site_url('pbk/delete/'.$pbk->ID); ?> onclick="javasciprt: return confirm('Anda Yakin Menghapus Data Kontak Ini ?')">Hapus</a></li>
                                 </ul>
                               </div> 
                         </td>

@@ -93,15 +93,17 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                   <li><a href="#" class="read" data-id="<?php echo $approval->id_approval; ?>"> Lihat Status</a></li>
-                                  <li><a href=<?php echo site_url('approval/verifikasi/'.$approval->id_akta.'/'.$approval->no_registrasi); ?>>Verifikasi</a></li>
+                                  <li><a href="#" class="read2" data-id="<?php echo "$approval->no_regis,$approval->nik_pengaju,$approval->nama_p,$approval->no_hp" ?>"> Detail Pendaftaran</a></li>
+                                  <li class="divider"></li>
+                                  <li><a href=<?php if($approval->perbaikan==0) echo site_url('approval/verifikasi/'.$approval->id_akta.'/'.$approval->no_registrasi); ?>>Verifikasi</a></li>
                                   <?php if($status=="DUKCAPIL"){?>
                                   <li><a href=<?php echo site_url('cetak/form/'.$approval->id_akta); ?> target="_blank" onclick="javasciprt: return confirm('Anda Yakin Mencetak Formulir ?')">Cetak Formulir</a></li>
                                   <?php } if($status=="KELURAHAN"){?>
                                   <li><a href=<?php echo site_url('cetak/registrasi/'.$approval->id_akta); ?> target="_blank" onclick="javasciprt: return confirm('Anda Yakin Mencetak Bukti Registrasi? ?')">Cetak Bukti</a></li>
                                   <?php }elseif($status=="DUKCAPIL"){?>
                                   <li class="divider"></li>
-                                  <li><a class="create" href="#" data-id="<?php echo "$approval->nm,$approval->ibu,$approval->id_akta,$tname,$approval->no_regis" ?>" >Akta Jadi</a></li>
-                                  <li><a class="pengambilan" href="#" data-id="<?php echo "$approval->nm,$approval->ibu,$approval->id_akta" ?>" >Pengambilan Akta</a></li>
+                                  <li><a <?php if(($approval->by_dukcapil == 'revisi') || ($approval->by_dukcapil == NULL)){} else {echo "class='create'";} ?> href="#" data-id="<?php echo "$approval->nm,$approval->ibu,$approval->id_akta,$tname,$approval->no_regis,$h1,$h2,$head" ?>" >Akta Jadi</a></li>
+                                  <li><a <?php if(($approval->by_dukcapil == 'revisi') || ($approval->by_dukcapil == NULL)){} else {echo "class='pengambilan'";} ?> href="#" data-id="<?php echo "$approval->nm,$approval->ibu,$approval->id_akta" ?>" >Pengambilan Akta</a></li>
                                   <?php }?>
                                 
                                 </ul>
@@ -139,6 +141,7 @@
               $datetime1 = new DateTime($date1);
               $datetime2 = new DateTime($date2);
               $difference = $datetime1->diff($datetime2);
+              $D = 7-$difference->days;
                 ?>
                 <tr>
             <td><?php echo ++$start ?></td>
@@ -146,7 +149,7 @@
             <td><?php echo dateindo($approval->tgl_registrasi) ?></td>
             <td><?php echo $approval->nama ?></td>
             <td><?php echo $approval->nik_pengaju ?></td>
-            <td><?php echo 7-$difference->days." Hari" ?></td>
+            <td><?php if($D<0) echo "Kadaluarsa"; else echo $D." Hari"; ?></td>
             <td style="text-align:left" width="100px">
                         <div class="btn-group"> 
                                 <button type="button" class="btn btn.bg-navy dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
