@@ -1,4 +1,44 @@
     <script>
+
+    window.onload=function(){
+            $('#ibuU').click(function(event){
+                var dob = new Date(document.getElementById("i_tgl_lahir").value);
+                var today = new Date();
+                var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
+                $('#i_umur').val(age);
+            });
+            $('#ayahU').click(function(event){
+                var dob = new Date(document.getElementById("a_tgl_lahir").value);
+                var today = new Date();
+                var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
+                $('#a_umur').val(age);
+            });
+            $('#pelaporU').click(function(event){
+                var dob = new Date(document.getElementById("p_tgl_lahir").value);
+                var today = new Date();
+                var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
+                $('#p_umur').val(age);
+            });
+            $('#saksi1U').click(function(event){
+                var dob = new Date(document.getElementById("s1_tgl_lahir").value);
+                var today = new Date();
+                var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
+                $('#s1_umur').val(age);
+            });
+            $('#saksi2U').click(function(event){
+                var dob = new Date(document.getElementById("s2_tgl_lahir").value);
+                var today = new Date();
+                var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
+                $('#s2_umur').val(age);
+            });
+            $('#jenazahU').click(function(event){
+                var dob = new Date(document.getElementById("j_tgl_lahir").value);
+                var today = new Date();
+                var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
+                $('#j_umur').val(age);
+            });
+        }
+
         var ayah = getHTTPObject();
         var ibu = getHTTPObject();
         var pelapor = getHTTPObject();
@@ -212,7 +252,7 @@
             }
 
             var fullname = document.getElementById('p_nama');
-
+            var dob = document.getElementById('p_tgl_lahir');
             var place = document.getElementById('p_a_alamat');
             var desa = document.getElementById('p_a_desa');
             var kecamatan = document.getElementById('p_a_kecamatan');
@@ -223,7 +263,7 @@
             
 
             fullname.value = valBack[0];
-            
+            dob.value = valBack[1];
             place.value = valBack[2];
             desa.value = valBack[3];
             kecamatan.value = valBack[4];
