@@ -18,30 +18,26 @@
                               <?php echo $this->session->userdata('message') <> '' ? $this->session->userdata('message') : ''; ?>
                           </div>
                       </div><br>
-                      </section>
-
-                      <section class="panel">
-                          <header class="panel-heading">
-                              Formulir Akta Perceraian Online
-                          </header>
-                          <div class="col-sm-12">
-                          <div class="col-sm-4"></div>
-                          <div class="col-sm-4 alert alert-warning fade in">
+                      <div class="col-sm-12">
+                          <div class="col-sm-12 alert alert-warning fade in">
                              <center><h4>
-                               <strong>Harap Revisi!</strong> 
-                               
                           <?php
                             if ($app->by_rw=='revisi') {
-                              echo $app->status_rw;
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_rw." Kemudian Pilih Tombol Oke, Sudah Selesai";
                             }elseif ($app->by_kelurahan=='revisi') {
-                              echo $app->status_kelurahan;
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_kelurahan;
                             }elseif ($app->by_dukcapil=='revisi') {
-                              echo $app->status_dukcapil;
+                              echo "<strong>Harap Revisi!</strong> ".$app->status_dukcapil;
+                            } else{
+                              echo "<i class='glyphicon glyphicon-tag'></i><strong> Isi Formulir</strong> ";
                             }
                           ?>
                           </h4></center>
                           </div>
                           </div>
+                          <header class="panel-heading">
+                              Formulir Akta Perceraian Online
+                          </header>
 
                           <center>
                             <header class="panel-heading btn btn-primary">
@@ -92,7 +88,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="s_nik" id="s_nik" value="<?php echo $s_nik; ?>" class="form-control tooltips" data-toggle="tooltip"  data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="s_nik" id="s_nik" onkeypress="return runScript(event)" maxlength="16" value="<?php echo $s_nik; ?>" class="form-control tooltips" data-toggle="tooltip"  data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('s_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
@@ -102,7 +98,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Nomor KK</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="s_no_kk" id="s_no_kk" value="<?php echo $s_no_kk; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Nomor KK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="s_no_kk" id="s_no_kk" onkeypress="return runScript(event)" maxlength="16" value="<?php echo $s_no_kk; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Nomor KK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('s_no_kk') ?></p>
                                           </div>
                                       </div>
@@ -215,7 +211,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Pekerjaan</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="s_pekerjaan" id="s_pekerjaan" value="<?php echo $s_pekerjaan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
+                                              <input type="text" name="s_pekerjaan" id="s_pekerjaan" value="<?php echo $s_pekerjaan; ?>" readonly="" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
                                               <p class="help-block"><?php echo form_error('s_pekerjaan') ?></p>
                                           </div>
                                       </div>
@@ -223,7 +219,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Perceraian Yang Ke-</label>
                                           <div class="col-lg-10">
-                                              <input type="text" class="form-control tooltips" name="s_perceraian_ke" value="<?php echo $s_perceraian_ke; ?>" data-toggle="tooltip " placeholder="" data-original-title="Angka" >
+                                              <input type="text" class="form-control tooltips" onkeypress="return runScript(event)" maxlength="2" name="s_perceraian_ke" value="<?php echo $s_perceraian_ke; ?>" data-toggle="tooltip " placeholder="" data-original-title="Perceraian yang ke.... diisi yang menunjukan urutan perceraian ke berapa yang dilakukan oleh suami" >
                                               <p class="help-block"><?php echo form_error('s_perceraian_ke') ?></p> 
                                           </div>
                                       </div>
@@ -244,7 +240,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">NIK</label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="i_nik" id="i_nik" value="<?php echo $i_nik; ?>" class="form-control tooltips" data-toggle="tooltip"  data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="i_nik" id="i_nik" onkeypress="return runScript(event)" maxlength="16" value="<?php echo $i_nik; ?>" class="form-control tooltips" data-toggle="tooltip"  data-original-title="NIK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('i_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
@@ -254,7 +250,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Nomor KK</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="i_no_kk" id="i_no_kk" value="<?php echo $i_no_kk; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Nomor KK Diisikan Tanpa Huruf & Spasi" required>
+                                              <input type="text" name="i_no_kk" id="i_no_kk" onkeypress="return runScript(event)" maxlength="16" value="<?php echo $i_no_kk; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Nomor KK Diisikan Tanpa Huruf & Spasi" required>
                                               <p class="help-block"><?php echo form_error('i_no_kk') ?></p>
                                           </div>
                                       </div>
@@ -367,7 +363,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Pekerjaan</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="i_pekerjaan" id="i_pekerjaan" value="<?php echo $i_pekerjaan; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
+                                              <input type="text" name="i_pekerjaan" id="i_pekerjaan" value="<?php echo $i_pekerjaan; ?>" readonly="" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
                                               <p class="help-block"><?php echo form_error('i_pekerjaan') ?></p>
                                           </div>
                                       </div>
@@ -396,14 +392,14 @@
                                       <div class="form-group">
                                         <label class="col-lg-2 control-label">Nomor Akta Perkawinan</label>
                                           <div class="col-lg-4">
-                                                <input type="text" class="form-control tooltips" name="no_akta_perkawinan" id="no_akta_perkawinan" value="<?php echo $no_akta_perkawinan; ?>" data-toggle="tooltip" data-original-title=" isi " value="<?php echo $no_akta_perkawinan; ?>" />
+                                                <input type="text" class="form-control tooltips" name="no_akta_perkawinan" id="no_akta_perkawinan" value="<?php echo $no_akta_perkawinan; ?>" data-toggle="tooltip" data-original-title="Nomor akta perkawinan diisi sesuai dengan nomor yang tertulis sesuai dengan akta perkawinan" value="<?php echo $no_akta_perkawinan; ?>" />
                                                 <p class="help-block"><?php echo form_error('no_akta_perkawinan') ?></p>
                                             </div>
 
                                           <div  class="col-lg-1"></div>
                                           <label class="col-lg-1 control-label">Tanggal Akta Perkawinan</label>
                                             <div class="col-lg-3">
-                                                <div data-date-viewmode="years" data-date-format="dd-mm-yyyy" data-date="12-02-2016" class="input-append date dpYears">
+                                                <div data-date-viewmode="years" data-date-format="yyyy-mm-dd" data-date="2016-06-01" class="input-append date dpYears">
                                                        <input type="text" readonly="" name="tgl_akta_perkawinan" id="tgl_akta_perkawinan" value="<?php echo $tgl_akta_perkawinan; ?>" size="16" class="form-control">
                                                         <span class="input-group-btn add-on">
                                                           <button class="btn btn-danger" type="button"><i class="fa fa-calendar"></i></button>
@@ -418,7 +414,7 @@
                                       <div class="form-group">
                                             <label class="col-lg-2 control-label" for="varchar">Tempat Pencatatan Perkawinan</label>
                                             <div class="col-lg-10">
-                                                <input type="text" class="form-control tooltips" name="tmp_pencatatan" id="tmp_pencatatan" value="<?php echo $tmp_pencatatan; ?>" data-toggle="tooltip" data-original-title=" isi " value="<?php echo $tmp_pencatatan; ?>" />
+                                                <input type="text" class="form-control tooltips" name="tmp_pencatatan" id="tmp_pencatatan" value="<?php echo $tmp_pencatatan; ?>" data-toggle="tooltip" data-original-title="Tempat pencatatan perceraian diisi sesuai dengan tempat pencatatan perceraian dilaksanakan" value="<?php echo $tmp_pencatatan; ?>" />
                                                 <p class="help-block"><?php echo form_error('tmp_pencatatan') ?></p>
                                             </div>
                                         </div>
@@ -426,13 +422,13 @@
                                         <div class="form-group">
                                         <label class="col-lg-2 control-label">Nomor Putusan Pengadilan</label>
                                           <div class="col-lg-4">
-                                                <input type="text" class="form-control tooltips" name="no_putusan" id="no_putusan" value="<?php echo $no_putusan; ?>" data-toggle="tooltip" data-original-title=" isi " value="<?php echo $no_putusan; ?>" />
+                                                <input type="text" class="form-control tooltips" name="no_putusan" id="no_putusan" value="<?php echo $no_putusan; ?>" data-toggle="tooltip" data-original-title="Nomor surat keterangan panitera Pengadilan diisi sesuai dengan Nomor surat keterangan panitera Pengadilan" value="<?php echo $no_putusan; ?>" />
                                                 <p class="help-block"><?php echo form_error('no_putusan') ?></p>
                                             </div>
                                           <div  class="col-lg-1"></div>
                                           <label class="col-lg-1 control-label">Tanggal Putusan Pengadilan</label>
                                             <div class="col-lg-3">
-                                                <div data-date-viewmode="years" data-date-format="dd-mm-yyyy" data-date="12-02-2016" class="input-append date dpYears">
+                                                <div data-date-viewmode="years" data-date-format="yyyy-mm-dd" data-date="2016-06-01" class="input-append date dpYears">
                                                        <input type="text" readonly="" name="tgl_putusan" id="tgl_putusan" value="<?php echo $tgl_putusan; ?>" size="16" class="form-control">
                                                         <span class="input-group-btn add-on">
                                                           <button class="btn btn-danger" type="button"><i class="fa fa-calendar"></i></button>
@@ -460,7 +456,7 @@
                                       <div class="form-group">
                                         <label class="col-lg-2 control-label" for="varchar">Tempat kedudukan/lembaga Peradilan</label>
                                         <div class="col-lg-10">
-                                            <input type="text" class="form-control tooltips" name="tmp_peradilan" id="tmp_peradilan" value="<?php echo $tmp_peradilan; ?>" data-toggle="tooltip" data-original-title=" isi " value="<?php echo $tmp_peradilan; ?>" />
+                                            <input type="text" class="form-control tooltips" name="tmp_peradilan" id="tmp_peradilan" value="<?php echo $tmp_peradilan; ?>" data-toggle="tooltip" data-original-title="Tempat Lembaga Peradilan diisi sesuai dengan lokasi keberadan Pengadilan" value="<?php echo $tmp_peradilan; ?>" />
                                             <p class="help-block"><?php echo form_error('tmp_peradilan') ?></p>
                                         </div>
         </div>
@@ -468,7 +464,7 @@
                                       <div class="form-group">
                                             <label class="col-lg-2 control-label" for="varchar">Nama Lembaga Peradilan yang Menerbitkan Putusan Perceraian</label>
                                             <div class="col-lg-10">
-                                                <input type="text" class="form-control tooltips" name="nama_lembaga" id="nama_lembaga" value="<?php echo $nama_lembaga; ?>" data-toggle="tooltip" data-original-title=" isi " value="<?php echo $nama_lembaga; ?>" />
+                                                <input type="text" class="form-control tooltips" name="nama_lembaga" id="nama_lembaga" value="<?php echo $nama_lembaga; ?>" data-toggle="tooltip" data-original-title="Nama lembaga peradilan yang menerbitkan Putusan Perceraian diisi sesuai dengan lokasi keberadaan Pengadilan" value="<?php echo $nama_lembaga; ?>" />
                                                 <p class="help-block"><?php echo form_error('nama_lembaga') ?></p>
                                             </div>
                                         </div>
@@ -511,8 +507,8 @@
                                       <div class="form-group">
                                             <label class="col-lg-2 control-label" for="date">Tgl Melapor</label>
                                             <div class="col-lg-9">
-                                                <div data-date-viewmode="years" data-date-format="dd-mm-yyyy" data-date="12-02-2016" class="input-append date dpYears">
-                                                       <input type="text" readonly="" name="tgl_melapor" id="tgl_melapor" value="<?php echo $tgl_melapor; ?>" size="16" class="form-control">
+                                                <div data-date-viewmode="years" data-date-format="yyyy-mm-dd" data-date="2016-06-01" class="input-append date dpYears">
+                                                       <input type="text" readonly="" name="tgl_melapor" id="tgl_melapor" value="<?php if($tgl_melapor=="0000-00-00") echo date("Y-m-d"); else echo $tgl_melapor; ?>" size="16" class="form-control">
                                                         <span class="input-group-btn add-on">
                                                           <button class="btn btn-danger" type="button"><i class="fa fa-calendar"></i></button>
                                                         </span>
@@ -527,8 +523,6 @@
                                   <center>
                                     <h3>Pastikan Data Yang Anda Isikan Benar, Kemudian Upload Kelengkapan berkas
                                   persyaratan pengajuan Akta Kelahiran.</h3>
-                                  <p> Konfirmasi keberhasilan pendaftaran akan ditandai dengan SMS yang akan dikirimkan
-                                  kenomor telepon yang anda isikan, sehingga pastikan nomor telepon yang anda isikan benar.</p>
                                   </center>
                                   
                                       <legend> </legend>

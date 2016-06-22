@@ -13,18 +13,19 @@
                     </address>
                 </div>
                 <div class="col-lg-5 col-sm-5">
-                    <h1>latest tweet</h1>
+                    <h1>CEK NIK ANDA DISINI!</h1>
                     <div class="tweet-box">
-                        <i class="fa fa-twitter"></i>
-                        <em>
-                        <?php
-                          foreach($tweets as $tweet)
-                            {
-                              echo "$tweet->text <br>";
-                            } 
-                        ?>
-                          
-                        </em>
+                        <form class="form-horizontal" method="post">
+                          <div class="form-group">
+                                          <div class="col-sm-8">
+                                              <input type="text" name="nik" id="nik" onkeypress="return runScript(event)" class="form-control tooltips" data-toggle="tooltip" maxlength="16" data-original-title="Isi Dengan Benar NIK" >
+                                          </div>
+                                          <div class="col-sm-2">
+                                            <a class="btn btn-info" href="javascript:void(0)" onclick="cekNik()">Cek NIK !!</a>
+                                          </div>
+                                      </div>
+                        </form>
+                        <b><span id='text'> </span></b>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-3 col-lg-offset-1">

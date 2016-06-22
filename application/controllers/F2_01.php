@@ -34,6 +34,7 @@ class F2_01 extends CI_Controller
 		        if (FALSE) {
 		            $this->index();
 		        } else {
+		        	$link = 'edit/'.$this->session->userdata('s_idal');
 		        	$DT = date("ymdhis");
 		        	$TD = date("sihdmy");
 		        	$IDBAYI = "DB".$DT;
@@ -48,8 +49,8 @@ class F2_01 extends CI_Controller
 		            $this->session->set_flashdata('message', 'Create Record Success');
 		            echo "<script language=\"Javascript\">\n";
 					echo "window.alert('Data Formulir Pendaftaran Berhasil Disimpan')";
+					header("refresh:0; $link");
 					echo "</script>";
-		            $this->edit($this->session->userdata('s_idal'));
 		        }
 
 		    }

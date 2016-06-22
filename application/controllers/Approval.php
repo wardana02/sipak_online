@@ -335,13 +335,13 @@ class Approval extends CI_Controller
             $this->session->set_flashdata('message', "
                         <div class='alert alert-success'>
                         <h4><i class='glyphicon glyphicon-ok'></i> SELESAI!</h4>
-                           <p>Data Formulir Pendaftaran Anda Telah Selesai, 
-                           akan segera masuk ke tahap Approval
+                           <p>Pengajuan Pendaftaran Akta Anda Telah Selesai, 
+                           pengajuan anda sekarang pada tahap VERIFIKASI
                            </p>
-                           <p>Tahap Selanjutnya adalah melakukan Monitoring dan Mendatangi Kelurahan Anda Untuk melakukan
-                           Approval berkas anda.
+                           <p>Tugas anda sekarang adalah mendatangi Kelurahan Anda Untuk mendapatkan cetak bukti pendaftaran online
+                            atas pengajuan akta anda. Monitoring pengajuan dapat melalui Online atau via SMS Tracking.
                            </p>
-                           <p>Silahkan Keluar dari halaman pendaftaran ini dengan cara MEMILIH MENU LAIN yang ada di atas.
+                           <p>Silahkan Keluar dari halaman pendaftaran ini dengan cara MEMILIH MENU LAIN yang ada di atas atau Klik KELUAR pada bagian bawah halaman ini.
                            </p>
                            <p>Terimakasih :)
                            </p>

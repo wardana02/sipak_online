@@ -60,7 +60,15 @@ class Data extends CI_Controller {
                 $objReader = IOFactory::createReader($inputFileType);
                 $objPHPExcel = $objReader->load($inputFileName);
             } catch(Exception $e) {
-                die('Error loading file "'.pathinfo($inputFileName,PATHINFO_BASENAME).'": '.$e->getMessage());
+                $string = 'Error loading file "'.pathinfo($inputFileName,PATHINFO_BASENAME).'": '.$e->getMessage();
+                $this->session->set_flashdata('message', "
+                <div class='alert alert-danger alert-dismissable'>
+                      <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+                        <h4><i class='icon fa fa-ban'></i> Gagal!</h4>
+                            $string
+                    </div>
+                        ");
+                redirect("data/import");
             }
  
             $sheet = $objPHPExcel->getSheet(0);

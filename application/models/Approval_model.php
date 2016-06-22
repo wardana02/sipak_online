@@ -108,21 +108,14 @@ class Approval_model extends CI_Model
         $qw = "
             SELECT *, akta_perceraian.nama as nama_p ,
             (SELECT data_bercerai.nama
-                        FROM akta_perceraian
-                        JOIN data_bercerai ON akta_perceraian.id_ac=data_bercerai.id_ac
-                        JOIN approval ON akta_perceraian.id_ac=approval.id_akta
-                        WHERE data_bercerai.status_mempelai='SUAMI') as nm,
+                        FROM data_bercerai WHERE data_bercerai.status_mempelai='SUAMI'
+                        AND data_bercerai.id_ac=id_akta) as nm,
             (SELECT data_bercerai.nama
-                        FROM akta_perceraian
-                        JOIN data_bercerai ON akta_perceraian.id_ac=data_bercerai.id_ac
-                        JOIN approval ON akta_perceraian.id_ac=approval.id_akta
-                        WHERE data_bercerai.status_mempelai='ISTRI') as ibu
-
-
+                        FROM data_bercerai WHERE data_bercerai.status_mempelai='ISTRI'
+                        AND data_bercerai.id_ac=id_akta) as ibu
             FROM approval 
             JOIN akta_perceraian ON akta_perceraian.id_ac=approval.id_akta
             JOIN dps ON akta_perceraian.nik_pengaju=dps.nik
-
             $wil
             ";
         $query = $this->db->query($qw);

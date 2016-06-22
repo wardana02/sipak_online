@@ -8,7 +8,7 @@
                       <section class="panel">
                       <center>
                       <?php echo "
-                        <h2>Akta Kematian Online</h2>
+                        <h2>Akta Perkawinan Online</h2>
                         <h4>Nomor Pendaftaran : $NODAFTAR</h4>
                         <h4>a.n : $PENGAJU | $TELEPON </h4>";
                       ?>
@@ -22,13 +22,13 @@
                             <center>
                           <a href="<?php echo "$formulir";?>">
                             <header class="panel-heading btn btn-default">
-                                1. Formulir Akta Kematian
+                                1. Formulir Akta Perkawinan
                             </header>
                           </a>
                           
                           <a href="<?php echo "$berkas";?>">
                             <header class="panel-heading btn btn-default">
-                                2. Formulir Akta Kematian
+                                2. Formulir Akta Perkawinan
                             </header>
                           </a>
 

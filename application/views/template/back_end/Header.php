@@ -192,15 +192,12 @@
                     <p>
                       <?php echo $nama_user; ?><br>
                       <small><?php $wil = $this->session->userdata('status'); echo "Login Sebagai : $status"; ?><br>
-                      Bergabung Sejak => <?php echo dateindo($this->session->userdata('registerd')); ?></small>
+                      </small>
                     </p>
                   </li>
 
                   <!-- Menu Footer-->
                   <li class="user-footer">
-                    <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
-                    </div>
                     <div class="pull-right">
                       <a href=<?=base_url('login/logout');?> class="btn btn-default btn-flat">Keluar</a>
                     </div>

@@ -72,7 +72,14 @@ class B2_01 extends CI_Controller
 					}else{echo "<br>NOL = ".$value;}
 				}$b++;
 				
-			}
+			}$this->session->set_flashdata('message', "
+		                <div class='alert alert-success alert-dismissable'>
+		                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
+		                   Berkas Yang Anda Lampirkan Telah Tersimpan. Apabila Sudah Lengkap, kemudian lanjut tahap verifikasi dengan cara, <br>
+		                   <h4> Klik Pada Tombol 3. Oke, Saya Selesai </h4>
+		                   
+		            </div>
+		                ");
 			redirect(site_url("b2_01/berkas/$id"));
 
 			

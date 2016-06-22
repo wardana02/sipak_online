@@ -27,6 +27,8 @@ class Home extends CI_Controller {
        			//destroy session
        			$this->session->unset_userdata(array('on_register' => FALSE));
        		    $this->session->sess_destroy();
+                $array_items = array('s_idal', 's_idam','s_idap','s_idac');
+                $this->session->unset_userdata($array_items);
        		}
 			
 		}

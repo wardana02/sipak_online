@@ -10,11 +10,8 @@
 
         <!-- Main content -->
         <section class="content">
+        <?php echo   $this->session->userdata('message');?>
           <div class="box">
-
-          <?php echo   $this->session->userdata('pesan');?>
-
-
                       <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Baca Dahulu !!</h3>

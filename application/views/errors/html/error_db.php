@@ -58,7 +58,7 @@ p {
 
 </head>
 <body>
-<?php //redirect('error500','refresh')?>
+<?php redirect('error500','refresh')?>
 	<div id="container">
 		<h1><?php echo $heading; ?></h1>
 		<?php echo $message; ?>

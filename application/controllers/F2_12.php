@@ -35,6 +35,7 @@ class F2_12 extends CI_Controller
 		        if (FALSE) {
 		            $this->index();
 		        } else {
+		        	$link = 'edit/'.$this->session->userdata('s_idap');
 		        	$DT = date("ymdhis");
 		        	$TD = date("sihdmy");
 		        	$IDM_S = "DM".$DT;
@@ -53,12 +54,11 @@ class F2_12 extends CI_Controller
 		            $this->_arraySaksi("SI".$TD,"I",2);
 		            $this->_arrayBerkas("BP".$DT,$this->session->userdata('s_idap'),"I");
 
-		            $this->session->set_flashdata('message', 'Create Record Success');
+		            $this->session->set_flashdata('message', '');
 		            echo "<script language=\"Javascript\">\n";
 					echo "window.alert('Data Pendaftaran Berhasil Disimpan, Silahkan Lengkapi Formulir')";
+					header("refresh:0; $link");
 					echo "</script>";
-
-		            $this->edit($this->session->userdata('s_idap'));
 		        }
 
 		    }

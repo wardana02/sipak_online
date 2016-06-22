@@ -33,7 +33,6 @@
     
     <link href=<?=base_url("assets/frontend2/assets/bootstrap-fileupload/bootstrap-fileupload.css");?> type="text/css" rel="stylesheet">
     
-    
 
     <!-- Custom styles for this template -->
     <?php if($B=='active'){?>
@@ -66,6 +65,59 @@
         }
     
     </script>
+
+     <script>
+
+     var ajax = getHTTPObject();
+
+ function getHTTPObject()
+        {
+          var xmlhttp;
+          if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+          } else if (window.ActiveXObject) {
+            // code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+          } else {
+            //alert("Your browser does not support XMLHTTP!");
+          }
+          return xmlhttp;
+        }
+
+ function cekNik()
+{
+  if (ajax)
+  {
+    var nik = document.getElementById("nik").value;
+    if(nik)
+    {
+      var url = "<?=base_url('assets/Q.php');?>";
+      var param = "?q=" + escape(nik);
+
+      ajax.open("GET", url + param, true);
+      ajax.onreadystatechange = handleAjax;
+      ajax.send(null);
+    }else{
+              document.getElementById("text").innerHTML = "MASUKAN NIK DENGAN BENAR";
+          }
+  }
+}
+function handleAjax()
+{
+  if (ajax.readyState == 4)
+  {
+    valBack = ajax.responseText.split("|");
+    if (valBack[0]=='') {
+              document.getElementById("text").innerHTML = "DATA NIK TIDAK DITEMUKAN";
+            }
+            else{
+                document.getElementById("text").innerHTML = valBack[0];
+            }
+      
+  }
+}
+</script>
        
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->

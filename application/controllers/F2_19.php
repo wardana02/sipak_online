@@ -32,6 +32,7 @@ class F2_19 extends CI_Controller
 		        if (FALSE) {
 		            $this->index();
 		        } else {
+		        	$link = 'edit/'.$this->session->userdata('s_idac');
 		        	$DT = date("ymdhis");
 		        	$TD = date("sihdmy");
 		        	$IDM_S = "DB".$DT;//14 KARAKTER
@@ -45,9 +46,8 @@ class F2_19 extends CI_Controller
 		            $this->session->set_flashdata('message', 'Create Record Success');
 		            echo "<script language=\"Javascript\">\n";
 					echo "window.alert('Data Pendaftaran Berhasil Disimpan, Silahkan Lengkapi Formulir')";
+					header("refresh:0; $link");
 					echo "</script>";
-
-		            $this->edit($this->session->userdata('s_idac'));
 		        }
 
 		    }
@@ -144,8 +144,8 @@ class F2_19 extends CI_Controller
 		    public function update_action() 
 		    {
 		    	$this->_rules();//$this->form_validation->run() == 
-		        if (FALSE) {
-		            $this->edit($this->session->userdata('s_idap'));
+		        if ($this->form_validation->run() == FALSE) {
+		            $this->edit($this->session->userdata('s_idac'));
 		        } else {
 		        	//echo "MASUK";
 		        	
@@ -167,13 +167,13 @@ class F2_19 extends CI_Controller
 		            $this->session->set_flashdata('message', "
 		                <div class='alert alert-success alert-dismissable'>
 		              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-		                <h4><i class='icon fa fa-ban'></i> Berhasil!</h4>
+		                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
 		                   Data Formulir Akta Anda Telah Diperbaharui<br>
-		                   <h4>Lanjut Ke Tahap Unggah Berkas Anda?</h4>
+		                   <h4>Lanjut Ke Tahap Unggah Berkas Anda? Klik 2. Berkas Akta Perceraian</h4>
 		                   
 		            </div>
 		                ");
-		            redirect(site_url("F2_19/edit/".$this->session->userdata('s_idac')));
+		            $this->edit($this->session->userdata('s_idac'));
 		        }
 		    }
 
@@ -208,7 +208,7 @@ class F2_19 extends CI_Controller
 		    		//print_r($data);exit();
 	         
 	            	if ($c=="I") {
-		    			$this->perceraian->insert($data);
+	            		$this->perceraian->insert($data);
 		    		}elseif ($c=="U") {
 		    			$this->perceraian->update($ID, $data);
 		    		}
@@ -232,7 +232,7 @@ class F2_19 extends CI_Controller
 		    public function _rules() 
 		    {
 		     	$s = array(0 => 's_',1 => 'i_',);
-		    	for ($i=0; $i <3 ; $i++) { 
+		    	for ($i=0; $i <2 ; $i++) { 
 
 				$this->form_validation->set_rules($s[$i].'no_kk', 'no kk', 'trim|required');
 				$this->form_validation->set_rules($s[$i].'nik', 'nik', 'trim|required');
@@ -242,14 +242,13 @@ class F2_19 extends CI_Controller
 				$this->form_validation->set_rules($s[$i].'pendidikan_terakhir', 'pendidikan terakhir', 'trim|required');
 				$this->form_validation->set_rules($s[$i].'agama', 'agama', 'trim|required');
 				$this->form_validation->set_rules($s[$i].'pekerjaan', 'pekerjaan', 'trim|required');
-				$this->form_validation->set_rules($s[$i].'perceraian_ke', 'perceraian ke', 'trim|required');
 				$this->form_validation->set_rules($s[$i].'a_alamat', 'a alamat', 'trim|required');
 				$this->form_validation->set_rules($s[$i].'a_desa', 'a desa', 'trim|required');
 				$this->form_validation->set_rules($s[$i].'a_kecamatan', 'a kecamatan', 'trim|required');
 				$this->form_validation->set_rules($s[$i].'a_kabkota', 'a kabkota', 'trim|required');
 			}
 
-			$this->form_validation->set_rules('yang mengajukan', 'yang mengajukan', 'trim|required');
+			$this->form_validation->set_rules('yang_mengajukan', 'yang mengajukan', 'trim|required');
 			$this->form_validation->set_rules('no_akta_perkawinan', 'no akta perkawinan', 'trim|required');
 			$this->form_validation->set_rules('tgl_akta_perkawinan', 'tgl akta perkawinan', 'trim|required');
 			$this->form_validation->set_rules('tmp_pencatatan', 'tmp pencatatan', 'trim|required');

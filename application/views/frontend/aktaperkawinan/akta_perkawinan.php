@@ -1206,9 +1206,8 @@
                                         <label class="col-lg-2 control-label">Tanggal Pelaporan Perkawinan</label>
                                           <div class="col-lg-4">
                                               <div data-date-viewmode="years" data-date-format="yyyy-mm-dd" data-date="2016-07-10" class="input-append date dpYears">
-                                                     <input type="text" readonly="" name="tgl_lapor" id="tgl_lapor" value="<?php echo $tgl_lapor; ?>" size="16" class="form-control">
+                                                     <input type="text" readonly="" name="tgl_lapor" id="tgl_lapor" value="<?php if($tgl_lapor=='')echo date("Y-m-d");else echo $tgl_lapor; ?>" size="16" class="form-control">
                                                       <span class="input-group-btn add-on">
-                                                        <button class="btn btn-danger" type="button"><i class="fa fa-calendar"></i></button>
                                                       </span>
                                               </div>
                                               <p class="help-block"><?php echo form_error('tgl_lapor') ?></p>
@@ -1217,9 +1216,8 @@
                                           <label class="col-lg-1 control-label">Pukul Melapor</label>
                                             <div class="col-lg-4">
                                                 <div class="input-group bootstrap-timepicker">
-                                                        <input type="text" value="<?php echo $pukul; ?>" readonly name="pukul" id="pukul" class="form-control timepicker-24">
+                                                        <input type="text" value="<?php if($pukul=='')echo date("H:i:s");else echo $pukul; ?>" readonly name="pukul" id="pukul" class="form-control timepicker-24">
                                                            <span class="input-group-btn">
-                                                           <button class="btn btn-danger" type="button"><i class="fa fa-clock-o"></i></button>
                                                            </span>
                                                </div>
                                                 <p class="help-block"><?php echo form_error('pukul') ?></p>
@@ -1380,9 +1378,7 @@
                                   <fieldset title="Selesai" class="step" id="default-step-2" >
                                   <center>
                                     <h3>Pastikan Data Yang Anda Isikan Benar, Kemudian Upload Kelengkapan berkas
-                                  persyaratan pengajuan Akta Kelahiran.</h3>
-                                  <p> Konfirmasi keberhasilan pendaftaran akan ditandai dengan SMS yang akan dikirimkan
-                                  kenomor telepon yang anda isikan, sehingga pastikan nomor telepon yang anda isikan benar.</p>
+                                  persyaratan pengajuan Akta Perceraian.</h3>
                                   </center>
                                   
                                       <legend> </legend>

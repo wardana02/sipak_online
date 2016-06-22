@@ -66,7 +66,7 @@
                                       <div class="form-group">
                                           <label for="varchar" class="col-lg-2 control-label">NIK <?php echo form_error('nik_pengaju') ?></label>
                                           <div class="col-lg-8">
-                                              <input type="text" name="nik_pengaju" onkeypress="return runScript(event)" id="nik_pengaju" class="form-control tooltips" data-toggle="tooltip" required maxlength="16" data-original-title="Isi Dengan Benar NIK" >
+                                              <input type="text" name="nik_pengaju" onkeypress="return runScript(event)" maxlength="16" id="nik_pengaju" class="form-control tooltips" data-toggle="tooltip" required maxlength="16" data-original-title="Isi Dengan Benar NIK" >
                                           </div>
                                           <div class="col-lg-2">
                                             <a class="btn btn-info" href="javascript:void(0)" onclick="getPendaftar()">Cek NIK !!</a>
@@ -81,13 +81,13 @@
                                       <div class="form-group">
                                           <label for="varchar" class="col-lg-2 control-label">Nomor KK <?php echo form_error('no_kk') ?></label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="no_kk" onkeypress="return runScript(event)" id="no_kk" class="form-control tooltips" required data-toggle="tooltip" data-original-title="Isi Dengan Benar NOmor KK" >
+                                              <input type="text" name="no_kk" maxlength="16" onkeypress="return runScript(event)" id="no_kk" class="form-control tooltips" required data-toggle="tooltip" data-original-title="Isi Dengan Benar NOmor KK" >
                                           </div>
                                       </div>
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label" for="varchar">Nomor HP <?php echo form_error('no_hp') ?></label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="no_hp" onkeypress="return runScript(event)" id="no_hp" class="form-control tooltips" required data-toggle="tooltip " placeholder="" data-original-title="Isi Nomor Tanpa Spasi" >
+                                              <input type="text" name="no_hp" maxlength="13" onkeypress="return runScript(event)" id="no_hp" class="form-control tooltips" required data-toggle="tooltip " placeholder="" data-original-title="Isi Nomor Tanpa Spasi" >
                                           </div>
                                       </div>    
                                       

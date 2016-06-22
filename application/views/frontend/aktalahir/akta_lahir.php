@@ -246,15 +246,14 @@
                                               <div data-date-viewmode="years" data-date-format="yyyy-mm-dd" data-date="2012-02-23" class="input-append date dpYears">
                                                   <input type="text" name="i_tgl_lahir" id="i_tgl_lahir" readonly=""  value="<?php echo $i_tgl_lahir; ?>" size="16" class="form-control">
                                                       <span class="input-group-btn add-on">
-                                                        <button class="btn btn-danger" type="button"><i class="fa fa-calendar"></i></button>
                                                       </span>
                                                   <p class="help-block"><?php echo form_error('i_tgl_lahir') ?></p>
                                               </div>
                                           </div>
-                                          <div class="col-lg-1 control-label"></div>
+                                          <div class="col-lg-1 control-label"><a class="btn btn-info" href="javascript:void(0)" id="ibuU" ><i class="glyphicon glyphicon-refresh"></i></a></div>
                                           <label class="col-lg-1 control-label">Umur</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="i_umur" id="i_umur" onkeypress="return runScript(event)" value="<?php echo $i_umur; ?>" class="form-control tooltips"  data-toggle="tooltip " placeholder="" data-original-title="Masukan Angka Umur">
+                                              <input type="text" name="i_umur" id="i_umur" readonly="" value="<?php echo $i_umur; ?>" class="form-control tooltips"  data-toggle="tooltip " placeholder="" data-original-title="Klik Tombol Disamping Untuk Menghitung Umur Otomatis">
                                               <p class="help-block"><?php echo form_error('i_umur') ?></p>
                                           </div>
                                       </div>
@@ -336,7 +335,7 @@
                                               <p class="help-block"><?php echo form_error('a_nik') ?></p>
                                           </div>
                                           <div class="col-lg-2">
-                                            <a class="btn btn-info" href="javascript:void(0)" onclick="updateDataAyah()">Cek NIK !!</a>
+                                            <a class="btn btn-info" href="javascript:void(0)"  onclick="updateDataAyah()">Cek NIK !!</a>
                                           </div>
                                       </div>
                                       <div class="form-group">
@@ -350,17 +349,15 @@
                                           <label class="col-lg-2 control-label">Tanggal Lahir</label>
                                           <div class="col-lg-4">
                                               <div data-date-viewmode="years" data-date-format="dd-mm-yyyy" data-date="12-02-2012" class="input-append date dpYears">
-                                                  <input type="text" name="a_tgl_lahir" id="a_tgl_lahir" readonly="" value="<?php echo $a_tgl_lahir; ?>" size="16" class="form-control">
+                                                  <input type="text" name="a_tgl_lahir" readonly="" id="a_tgl_lahir" value="<?php if($a_tgl_lahir=='') echo "0000-00-00"; else echo $a_tgl_lahir; ?>" size="16" class="form-control">
                                                       <span class="input-group-btn add-on">
-                                                        <button class="btn btn-danger" type="button"><i class="fa fa-calendar"></i></button>
-                                                      </span>
                                                   <p class="help-block"><?php echo form_error('a_tgl_lahir') ?></p>
                                               </div>
                                           </div>
-                                          <div class="col-lg-1 control-label"></div>
+                                          <div class="col-lg-1 control-label"><a class="btn btn-info" href="javascript:void(0)" id="ayahU" ><i class="glyphicon glyphicon-refresh"></i></a></div>
                                           <label class="col-lg-1 control-label">Umur</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="a_umur" onkeypress="return runScript(event)" id="a_umur" value="<?php echo $a_umur; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Masukan Angka Umur">
+                                              <input type="text" name="a_umur" readonly="" onkeypress="return runScript(event)" id="a_umur" value="<?php echo $a_umur; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Klik Tombol Disamping Untuk Menghitung Umur Otomatis">
                                               <p class="help-block"><?php echo form_error('a_umur') ?></p>
                                           </div>
                                       </div>
@@ -439,14 +436,24 @@
                                       </div>
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Pekerjaan</label>
-                                          <div class="col-lg-4">
+                                          <div class="col-lg-10">
                                               <input type="text" name="p_pekerjaan" readonly="" id="p_pekerjaan" value="<?php echo $p_pekerjaan; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="15:00" data-original-title="Gunakan Format 24Jam">
                                               <p class="help-block"><?php echo form_error('p_pekerjaan') ?></p>
                                           </div>
-                                          <div class="col-lg-1 control-label"></div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="col-lg-2 control-label">Tanggal Lahir</label>
+                                          <div class="col-lg-4">
+                                              <div data-date-viewmode="years" data-date-format="dd-mm-yyyy" data-date="12-02-2012" class="input-append date dpYears">
+                                                  <input type="text" name="p_tgl_lahir" readonly="" id="p_tgl_lahir" value="<?php if($a_tgl_lahir=='') echo "0000-00-00"; else echo $a_tgl_lahir; ?>" size="16" class="form-control">
+                                                      <span class="input-group-btn add-on">
+                                                  <p class="help-block"><?php echo form_error('p_tgl_lahir') ?></p>
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-1 control-label"><a class="btn btn-info" href="javascript:void(0)" id="pelaporU" ><i class="glyphicon glyphicon-refresh"></i></a></div>
                                           <label class="col-lg-1 control-label">Umur</label>
                                           <div class="col-lg-4">
-                                              <input type="text" onkeypress="return runScript(event)" name="p_umur" value="<?php echo $p_umur; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Masukan Angka Umur">
+                                              <input type="text" id="p_umur" name="p_umur" readonly="" value="<?php echo $p_umur; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Klik Tombol Disamping Untuk Menghitung Umur Otomatis">
                                               <p class="help-block"><?php echo form_error('p_umur') ?></p>
                                           </div>
                                       </div>
@@ -532,10 +539,19 @@
                                       </div>
 
                                       <div class="form-group">
-                                          <label class="col-lg-2 control-label">Umur</label>
+                                          <label class="col-lg-2 control-label">Tanggal Lahir</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s1_umur" onkeypress="return runScript(event)" id="s1_umur" value="<?php echo $s1_umur; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Masukan Angka Umur">
-                                              <p class="help-block"><?php echo form_error('s1_umur') ?></p>
+                                              <div data-date-viewmode="years" data-date-format="dd-mm-yyyy" data-date="12-02-2012" class="input-append date dpYears">
+                                                  <input type="text" name="s1_tgl_lahir" readonly="" id="s1_tgl_lahir" value="<?php if($s1_tgl_lahir=='') echo "0000-00-00"; else echo $s1_tgl_lahir; ?>" size="16" class="form-control">
+                                                      <span class="input-group-btn add-on">
+                                                  <p class="help-block"><?php echo form_error('s1_tgl_lahir') ?></p>
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-1 control-label"><a class="btn btn-info" href="javascript:void(0)" id="saksi1U" ><i class="glyphicon glyphicon-refresh"></i></a></div>
+                                          <label class="col-lg-1 control-label">Umur</label>
+                                          <div class="col-lg-4">
+                                              <input type="text" id="s1_umur" name="s1_umur" readonly="" value="<?php echo $s1_umur; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Klik Tombol Disamping Untuk Menghitung Umur Otomatis">
+                                              <p class="help-block"><?php echo form_error('p_umur') ?></p>
                                           </div>
                                       </div>
 
@@ -612,9 +628,18 @@
                                       </div>
 
                                       <div class="form-group">
-                                          <label class="col-lg-2 control-label">Umur</label>
+                                          <label class="col-lg-2 control-label">Tanggal Lahir</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="s2_umur" id="s2_umur" onkeypress="return runScript(event)" value="<?php echo $s2_umur; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Masukan Angka Umur">
+                                              <div data-date-viewmode="years" data-date-format="dd-mm-yyyy" data-date="12-02-2012" class="input-append date dpYears">
+                                                  <input type="text" name="s2_tgl_lahir" readonly="" id="s2_tgl_lahir" value="<?php if($s2_tgl_lahir=='') echo "0000-00-00"; else echo $s2_tgl_lahir; ?>" size="16" class="form-control">
+                                                      <span class="input-group-btn add-on">
+                                                  <p class="help-block"><?php echo form_error('s2_tgl_lahir') ?></p>
+                                              </div>
+                                          </div>
+                                          <div class="col-lg-1 control-label"><a class="btn btn-info" href="javascript:void(0)" id="saksi2U" ><i class="glyphicon glyphicon-refresh"></i></a></div>
+                                          <label class="col-lg-1 control-label">Umur</label>
+                                          <div class="col-lg-4">
+                                              <input type="text" id="s2_umur" name="s2_umur" readonly="" value="<?php echo $s2_umur; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Klik Tombol Disamping Untuk Menghitung Umur Otomatisr">
                                               <p class="help-block"><?php echo form_error('s2_umur') ?></p>
                                           </div>
                                       </div>

@@ -35,7 +35,7 @@ class F2_29 extends CI_Controller
 		        if (FALSE) {
 		            $this->index();
 		        } else {
-		        	//echo $this->session->userdata('s_idam');exit();
+		        	$link = 'edit/'.$this->session->userdata('s_idam');
 		        	$DT = date("ymdhis");
 		        	$TD = date("sihdmy");
 		        	$IDJENAZAH = "DJ".$DT;
@@ -50,6 +50,7 @@ class F2_29 extends CI_Controller
 		            $this->session->set_flashdata('message', 'Create Record Success');
 		            echo "<script language=\"Javascript\">\n";
 					echo "window.alert('Data Formulir Pendaftaran Berhasil Disimpan')";
+					header("refresh:0; $link");
 					echo "</script>";
 
 		            $this->edit($this->session->userdata('s_idam'));
@@ -167,9 +168,10 @@ class F2_29 extends CI_Controller
 		            $link = site_url('F2_29/edit/'.$this->session->userdata('s_idam'));
 		            $this->session->set_flashdata('message', "
 		                <div class='alert alert-success alert-dismissable'>
+		              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
 		                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
 		                   Data Formulir Akta Anda Telah Diperbaharui<br>
-		                   <h4>Lanjut Ke Tahap Unggah Berkas Anda? Klik Pada Tombol 2. Berkas Akta Kematian </h4>
+		                   <h4>Lanjut Ke Tahap Unggah Berkas Anda?</h4>
 		                   
 		            </div>
 		                ");

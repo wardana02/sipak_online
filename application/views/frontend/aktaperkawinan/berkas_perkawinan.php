@@ -226,9 +226,9 @@
                                   </fieldset>
                                 
                                   <fieldset title="Selesai" class="step" id="form-upload-step-2" >
-                                  <center>
-                                    <h3>Pastikan Berkas Yang Anda Unggah Benar, Kemudian Klik Selesai Agar Kelengkapan berkas
-                                  persyaratan pengajuan Akta Kelahiran anda diproses.</h3>
+                                 <center>
+                                    <h4>Pastikan Berkas Yang Anda Unggah Benar, Kemudian Klik Tombol "Simpan Data Formulir" Untuk Proses
+                                  pengunggah berkas yang anda lampirkan untuk pengajuan Akta Kematian yang anda ajukan.</h4>
                                   </center>
                                   
                                       <legend> </legend>
@@ -242,7 +242,7 @@
 
                                       </div>
                                       <center>
-                                      <h4>Data Berkas Anda Yang Telah Terunggah</h4>
+                                      <h4>Upload Berkas File yang dibutuhkan, Kemudian Klik Simpan data Formulir</h4>
                                       <div class="form-group"></center>
                                           
                                   </fieldset>

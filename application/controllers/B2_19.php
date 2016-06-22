@@ -74,6 +74,16 @@ class B2_19 extends CI_Controller
 				}$b++;
 				
 			}
+			$this->session->set_flashdata('message', "
+		                <div class='alert alert-success alert-dismissable'>
+		                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
+		                   Berkas Yang Anda Lampirkan Telah Tersimpan. 
+		                   Lihat lagi file berkas yang telah anda upload.
+		                   Apabila Sudah Lengkap, kemudian lanjut tahap verifikasi dengan cara, <br>
+		                   <h4> Klik Pada Tombol 3. Oke, Saya Selesai </h4>
+		                   
+		            </div>
+		                ");
 			redirect(site_url("b2_19/berkas/$id"));
 
 			
@@ -95,7 +105,7 @@ class B2_19 extends CI_Controller
 		    $config['allowed_types'] = 'gif|jpg|png';
 		    $config['max_size'] = '4048'; //maksimum besar file 2M
        		$config['max_width']  = '3840'; //lebar maksimum 1288 px
-       		$config['max_height']  = '2160'; //tinggi maksimu 768 px
+       		$config['max_height']  = '3840'; //tinggi maksimu 768 px
 
 		    if (!is_dir('assets/uploads/'.$no)) {
 				    mkdir('./assets/uploads/' . $no, 0777, TRUE);

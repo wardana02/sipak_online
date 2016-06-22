@@ -18,7 +18,7 @@
 
    <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Version</b> Beta
+          <b>Version</b> Ready
         </div>
         <strong>Copyright &copy; 2016 <a href="http://#">Tugas Akhir D3 Teknik Informatika</a>.</strong> All rights reserved by aaji.
       </footer>

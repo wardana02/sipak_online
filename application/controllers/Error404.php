@@ -25,6 +25,7 @@ class Error404 extends CI_Controller {
 
 	public function debug(){
 		        		$data['action'] = site_url('');
+		        		//$data['conten'] = "frontend/aktaperkawinan/akta_perkawinan";
 		        		$data['conten'] = "frontend/aktaperkawinan/akta_perkawinan";
 		        		//$data['conten'] = "frontend/aktalahir/akta_lahir";
 						//$data['conten'] = "frontend/aktaperkawinan/berkas_perkawinan";
