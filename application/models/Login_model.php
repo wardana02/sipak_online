@@ -64,12 +64,18 @@ class Login_model extends CI_Model {
             }
 
             if($query->row()->previlage == "DUKCAPIL"){$area = "";}
+
+            //untuk menentukan previlage approval dibawahnya.
+            $iam = $query->row()->previlage;
+            if($iam=='DUKCAPIL'){$you="KELURAHAN";}
+            elseif($iam=='KELURAHAN'){$you="RW";}
             
             
             $data = array(  
                             'who'       => "ADMIN",
                             'login'     => TRUE,
                             'status'    => $query->row()->previlage,
+                            'under'     => $you,
                             'id_user'   => $query->row()->id_user,
                             'nama_user' => $query->row()->nama_user,
                             'jabatan'   => $query->row()->jabatan,

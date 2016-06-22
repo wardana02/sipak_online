@@ -17,7 +17,7 @@ class Approval_model extends CI_Model
 
     //cek transaksi atau tidak
     function cek_on_trans($id){
-        $a = "SELECT on_trans FROM approval WHERE id_akta='$id'";
+        $a = "SELECT * FROM approval WHERE id_akta='$id'";
         $qw = $this->db->query($a);
         return $qw->row();
     }
@@ -53,6 +53,7 @@ class Approval_model extends CI_Model
                 return $query->result();
     }
 
+  
     function get_app_list($wil)
     {
         $qw = "
@@ -61,7 +62,22 @@ class Approval_model extends CI_Model
             JOIN ortu_bayi ON data_bayi.id_bayi=ortu_bayi.id_bayi
             JOIN approval ON akta_kelahiran.id_AL=approval.id_akta
             JOIN dps ON akta_kelahiran.nik_pengaju=dps.nik
-            WHERE ortu_bayi.status='IBU' $wil
+            WHERE ortu_bayi.status='IBU' AND approval.progres!='diambil'
+            AND (approval.progres IS NULL OR approval.progres='jadi' OR approval.progres='diproses') $wil
+            ";
+        $query = $this->db->query($qw);
+                return $query->result();
+    }
+
+    function get_riwayat_al($wil)
+    {
+        $qw = "
+            SELECT *, akta_kelahiran.nama as nama_p, data_bayi.nama as nm, ortu_bayi.nama as ibu FROM akta_kelahiran 
+            JOIN data_bayi ON akta_kelahiran.id_AL=data_bayi.id_al
+            JOIN ortu_bayi ON data_bayi.id_bayi=ortu_bayi.id_bayi
+            JOIN approval ON akta_kelahiran.id_AL=approval.id_akta
+            JOIN dps ON akta_kelahiran.nik_pengaju=dps.nik
+            WHERE ortu_bayi.status='IBU' AND approval.progres='diambil' $wil ORDER BY approval.tgl_ambil DESC
             ";
         $query = $this->db->query($qw);
                 return $query->result();
@@ -75,7 +91,21 @@ class Approval_model extends CI_Model
             JOIN ortu_jenazah ON data_jenazah.id_jenazah=ortu_jenazah.id_jenazah
             JOIN approval ON akta_kematian.id_AM=approval.id_akta
             JOIN dps ON akta_kematian.nik_pengaju=dps.nik
-            WHERE ortu_jenazah.status='IBU' $wil
+            WHERE ortu_jenazah.status='IBU' AND (approval.progres IS NULL OR approval.progres='jadi' OR approval.progres='diproses') $wil
+            ";
+        $query = $this->db->query($qw);
+                return $query->result();
+    }
+
+    function get_riwayat_am($wil)
+    {
+        $qw = "
+            SELECT *, akta_kematian.nama as nama_p, data_jenazah.nama as nm, ortu_jenazah.nama as ibu FROM akta_kematian 
+            JOIN data_jenazah ON akta_kematian.id_AM=data_jenazah.id_am
+            JOIN ortu_jenazah ON data_jenazah.id_jenazah=ortu_jenazah.id_jenazah
+            JOIN approval ON akta_kematian.id_AM=approval.id_akta
+            JOIN dps ON akta_kematian.nik_pengaju=dps.nik
+            WHERE ortu_jenazah.status='IBU' AND approval.progres='diambil' $wil ORDER BY approval.tgl_ambil DESC
             ";
         $query = $this->db->query($qw);
                 return $query->result();
@@ -96,8 +126,28 @@ class Approval_model extends CI_Model
             FROM approval 
             JOIN akta_perkawinan ON akta_perkawinan.id_ap=approval.id_akta
             JOIN dps ON akta_perkawinan.nik_pengaju=dps.nik
+            WHERE approval.progres!='diambil' $wil
+            ";
+        $query = $this->db->query($qw);
+                return $query->result();
+    }
 
-            $wil
+    function get_riwayat_ap($wil)
+    {
+        $qw = "
+            SELECT *, akta_perkawinan.nama as nama_p ,
+            (SELECT data_mempelai.nama 
+                FROM data_mempelai WHERE data_mempelai.status_mempelai='SUAMI' 
+                AND data_mempelai.id_ap=id_akta) as nm,
+            (SELECT data_mempelai.nama 
+                FROM data_mempelai WHERE data_mempelai.status_mempelai='ISTRI' 
+                AND data_mempelai.id_ap=id_akta) as ibu
+
+
+            FROM approval 
+            JOIN akta_perkawinan ON akta_perkawinan.id_ap=approval.id_akta
+            JOIN dps ON akta_perkawinan.nik_pengaju=dps.nik
+            WHERE approval.progres='diambil' $wil ORDER BY approval.tgl_ambil DESC
             ";
         $query = $this->db->query($qw);
                 return $query->result();
@@ -116,7 +166,26 @@ class Approval_model extends CI_Model
             FROM approval 
             JOIN akta_perceraian ON akta_perceraian.id_ac=approval.id_akta
             JOIN dps ON akta_perceraian.nik_pengaju=dps.nik
-            $wil
+            WHERE approval.progres!='diambil' $wil
+            ";
+        $query = $this->db->query($qw);
+                return $query->result();
+    }
+
+    function get_riwayat_ac($wil)
+    {
+        $qw = "
+            SELECT *, akta_perceraian.nama as nama_p ,
+            (SELECT data_bercerai.nama
+                        FROM data_bercerai WHERE data_bercerai.status_mempelai='SUAMI'
+                        AND data_bercerai.id_ac=id_akta) as nm,
+            (SELECT data_bercerai.nama
+                        FROM data_bercerai WHERE data_bercerai.status_mempelai='ISTRI'
+                        AND data_bercerai.id_ac=id_akta) as ibu
+            FROM approval 
+            JOIN akta_perceraian ON akta_perceraian.id_ac=approval.id_akta
+            JOIN dps ON akta_perceraian.nik_pengaju=dps.nik
+            WHERE approval.progres='diambil' $wil ORDER BY approval.tgl_ambil DESC
             ";
         $query = $this->db->query($qw);
                 return $query->result();

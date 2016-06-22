@@ -69,6 +69,21 @@
               </ul>
             </li>
 
+            <li class="treeview <?php echo $r;?>">  
+              <a href=<?=base_url('#');?>>
+                <i class="glyphicon glyphicon-th-list"></i> <span> Riwayat Verifikasi</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+              
+                  <li class="<?php echo $r1;?>"><a href=<?=base_url("riwayat/index/AL");?>><i class="glyphicon glyphicon-leaf"></i> Riwayat Akta Kelahiran</a></li>
+                    <li class="<?php echo $r2;?>"><a href=<?=base_url("riwayat/index/AM");?>><i class="glyphicon glyphicon-plus-sign"></i> Riwayat Akta Kematatian</a></li>
+                    <li class="<?php echo $r3;?>"><a href=<?=base_url("riwayat/index/AP");?>><i class="glyphicon glyphicon-heart"></i> Riwayat Akta Perkawinan</a></li>
+                    <li class="<?php echo $r4;?>"><a href=<?=base_url("riwayat/index/AC");?>><i class="glyphicon glyphicon-fire"></i> Riwayat Akta Perceraian</a></li>
+                
+              </ul>
+            </li>
+
             <?php } if($status=='ADMIN'){ ?>
             <li class="treeview <?php echo $b;?>">
               <a href="#"> 

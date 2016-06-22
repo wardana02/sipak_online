@@ -88,7 +88,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Nama Bayi </label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="nama" value="<?php echo $nama; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Huruf Seperti Contoh">
+                                              <input type="text" name="nama" value="<?php echo $nama; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Nama, diisi nama lengkap bayi/anak (tidak boleh disingkat).">
                                               <p class="help-block"><?php echo form_error('nama') ?></p>
                                           </div>
                                       </div>
@@ -127,43 +127,36 @@
                                       </div>
 
                                       <div class="form-group">
-                                          <label class="col-lg-2 control-label">Hari Kelahiran</label>
-                                          <div class="col-lg-10">
-                                              <select name="hari_kelahiran" class="form-control">
-                                                <option value="<?php echo $hari_kelahiran; ?>"><?php echo $hari_kelahiran; ?></option>
-                                                <option value="Senin">Senin</option>
-                                                <option value="Selasa">Selasa</option>
-                                                <option value="Rabu">Rabu</option>
-                                                <option value="Kamis">Kamis</option>
-                                                <option value="Jumat">Jumat</option>
-                                                <option value="Sabtu">Sabtu</option>
-                                                <option value="Minggu">Minggu</option>
-                                            </select>
-                                          </div>
+                                          <label class="col-lg-2 control-label">Pukul</label>
+                                                <div class="col-lg-4">
+                                                    <div class="input-group bootstrap-timepicker">
+                                                        <input type="text" value="<?php echo $pukul; ?>" readonly name="pukul" class="form-control timepicker-24 tooltips" data-toggle="tooltip" data-original-title="Pukul, diisi pukul/waktu kelahiran bayi">
+                                                          <span class="input-group-btn">
+                                                          <button class="btn btn-danger" type="button"><i class="fa fa-clock-o"></i></button>
+                                                          </span>
+                                                    </div>
+                                                    <p class="help-block"><?php echo form_error('tgl_kelahiran') ?></p>
+                                                </div>
+                                          
                                       </div>
 
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Tanggal Kelahiran</label>
-                                          <div class="col-lg-4">
+                                          <div class="col-lg-3">
                                               <div data-date-viewmode="years" data-date-format="yyyy-mm-dd"  data-date="2016-02-23" class="input-append date dpYears">
-                                                  <input type="text" name="tgl_kelahiran" value="<?php echo $tgl_kelahiran; ?>" readonly="" size="16" class="form-control">
+                                                  <input type="text" name="tgl_kelahiran" readonly id="tgl_kelahiran" value="<?php echo $tgl_kelahiran; ?>" size="16" class="form-control tooltips" data-toggle="tooltip" data-original-title="Tanggal Lahir, diisi tanggal, bulan dan tahun kelahiran bayi.">
                                                       <span class="input-group-btn add-on">
                                                         <button class="btn btn-danger" type="button"><i class="fa fa-calendar"></i></button>
                                                       </span>
                                                       <p class="help-block"><?php echo form_error('tgl_kelahiran') ?></p>
                                               </div>
+                                          </div><div class="col-lg-1 control-label"></div>
+                                          <div class="col-lg-1 control-label"><a class="btn btn-info" id="hari" ><i class="glyphicon glyphicon-refresh"></i></a></div>
+                                          <label class="col-lg-1 control-label">Hari Kelahiran</label>
+                                          <div class="col-lg-4">
+                                              <input type="text" name="hari_kelahiran" readonly="" id="hari_kelahiran" value="<?php echo $hari_kelahiran; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Klik Pada Tombol disamping Untuk Memunculkan Hari Otomatis">
+                                              <p class="help-block"><?php echo form_error('hari_kelahiran') ?></p>
                                           </div>
-                                          <div class="col-lg-1 control-label"></div>
-                                          <label class="col-lg-1 control-label">Pukul</label>
-                                            <div class="col-lg-4">
-                                                <div class="input-group bootstrap-timepicker">
-                                                    <input type="text" value="<?php echo $pukul; ?>" readonly name="pukul" class="form-control timepicker-24">
-                                                      <span class="input-group-btn">
-                                                      <button class="btn btn-danger" type="button"><i class="fa fa-clock-o"></i></button>
-                                                      </span>
-                                                </div>
-                                                <p class="help-block"><?php echo form_error('tgl_kelahiran') ?></p>
-                                            </div>
                                       </div>
 
                                       <div class="form-group">
@@ -189,7 +182,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Penolong Kelahiran</label>
                                           <div class="col-lg-10">
-                                              <select name="penolong" class="form-control">
+                                              <select name="penolong" class="form-control tooltips" data-toggle="tooltip" data-original-title="Penolong kelahiran, diisi dengan memilih penolong dari kelahiran bayi.">
                                                 <option value="<?php echo $penolong; ?>"><?php echo $penolong; ?></option>
                                                 <option value="Dokter">Dokter</option>
                                                 <option value="Bidan/Perawat">Bidan/Perawat</option>
@@ -208,7 +201,7 @@
                                           <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Panjang Bayi</label>
                                           <div class="col-lg-4">
-                                              <input type="text" name="panjang_bayi" class="form-control tooltips" data-toggle="tooltip " value="<?php echo $panjang_bayi; ?>" data-original-title="Panjang Bayi Dalam satuan m">
+                                              <input type="text" name="panjang_bayi" class="form-control tooltips" data-toggle="tooltip " value="<?php echo $panjang_bayi; ?>" data-original-title="Panjang Bayi Dalam satuan Cm">
                                                <p class="help-block"><?php echo form_error('panjang_bayi') ?></p>
                                           </div>
                                       </div>
@@ -309,7 +302,7 @@
                                           <div class="col-lg-9">
                                             <div data-date-viewmode="years" data-date-format="yyyy-mm-dd" data-date="2016-02-23" class="input-append date dpYears">
                                                   <input type="hidden" name="status" value="Data Istri" >
-                                                  <input type="text" name="tgl_pencatatan_kawin" readonly="" value="<?php echo $i_tgl_pencatatan_kawin; ?>" size="16" class="form-control">
+                                                  <input type="text" name="tgl_pencatatan_kawin" readonly="" value="<?php echo $i_tgl_pencatatan_kawin; ?>" size="16" class="form-control tooltips" data-toggle="tooltip " data-original-title="Tanggal dari Pencatatan perkawinan, diisi/ditulis tanggal, bulan dan tahun perkawinan ibu bayi.">
                                                       <span class="input-group-btn add-on">
                                                         <button class="btn btn-danger" type="button"><i class="fa fa-calendar"></i></button>
                                                       </span>
@@ -461,14 +454,8 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Jenis Kelamin</label>
                                           <div class="col-lg-10">
-                                            <div class="radios">
-                                              <label class="label_radio r_on" for="radio-01">
-                                                  <input name="p_jk" id="p_jk" <?php if($p_jk=='LAKI-LAKI') echo "checked=''"; ?> value="LAKI-LAKI" type="radio" > Laki-Laki
-                                              </label>
-                                              <label class="label_radio r_off" for="radio-02">
-                                                  <input name="p_jk" id="p_jk" <?php if($p_jk=='PEREMPUAN') echo "checked=''"; ?> value="PEREMPUAN" type="radio"> Perempuan
-                                              </label>
-                                          </div>
+                                              <input type="text" name="p_jk" readonly="" id="p_jk" value="<?php echo $p_jk; ?>" class="form-control tooltips" placeholder="" data-toggle="tooltip " placeholder="" data-original-title="Jenis Kelamin Dari Pelapor" >
+                                              <p class="help-block"><?php echo form_error('p_jk') ?></p>
                                           </div>
                                       </div>
 

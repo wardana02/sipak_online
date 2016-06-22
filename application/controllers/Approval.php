@@ -365,10 +365,12 @@ class Approval extends CI_Controller
             $keyword = substr($id, 0, 2);
             $re = base_url().'approval/index/'.$keyword;
             $ID_USER = $this->session->userdata('id_user');
+            $iam = $this->session->userdata('status');
+            $y = $this->session->userdata('under');
+            $you = 'by_'.$y;
 
             $on_trans = $this->Approval_model->cek_on_trans($id);
             $C = $on_trans->on_trans!=NULL;
-
 
             if ($C = $on_trans->on_trans!=NULL) {
                 echo "<script language=\"Javascript\">\n";
@@ -378,7 +380,31 @@ class Approval extends CI_Controller
             }
             if($C!=1){
                 $this->Approval_model->make_on_trans($id,$ID_USER);
-            }             
+            }
+
+            //print_r($on_trans);exit();
+
+            if(($on_trans->progres=='jadi')OR($on_trans->progres=='diambil')){
+                $this->session->set_flashdata('message', "
+                <div class='alert alert-warning alert-dismissable'>
+                  <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+                    <h4><i class='glyphicon glyphicon-remove'></i> $no TIDAK DAPAT DIVERIFIKASI!!</h4>
+                        Pengajuan Akta Telah Selesai, Anda Tidak Diperkenankan Untuk Melakukan verifikasi ulang.
+                </div>
+                ");
+                redirect('approval/index/'.$keyword);
+            }
+            elseif ($iam!='RW' AND (($on_trans->$you==NULL) OR ($on_trans->$you=='revisi'))) {
+                $this->session->set_flashdata('message', "
+                <div class='alert alert-danger alert-dismissable'>
+                  <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+                    <h4><i class='glyphicon glyphicon-remove'></i> $no TIDAK DAPAT DIVERIFIKASI!!</h4>
+                        Anda Tidak Diperkenankan Melakukan Verifikasi Pengajuan Akta Tersebut, dikarenakan $y
+                        belum melakukan Verifikasi terhadap pengajuan akta tersebut. !
+                </div>
+                ");
+                redirect('approval/index/'.$keyword);
+            }else{//boleh dilakukan, masuk paling bawah            
             
             if ($keyword=='AL') {
                 $akta = $this->Akta_kelahiran_model->get_by_al($id);
@@ -488,6 +514,7 @@ class Approval extends CI_Controller
             $data['status']    = $this->session->userdata('status');
             $data['action']    = site_url('approval/update_action');
          $this->load->view('backend/dashboard/index', $data);
+     }
 
     }
     
