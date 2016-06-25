@@ -57,7 +57,7 @@ class Dps_model extends CI_Model
     // update data
     function update($id, $data)
     {
-        $this->db->where($this->id, $id);
+        $this->db->where('nik', $id);
         $this->db->update($this->table, $data);
     }
 

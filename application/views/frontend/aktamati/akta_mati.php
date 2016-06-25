@@ -96,20 +96,15 @@
                                               <p class="help-block"><?php echo form_error('j_nama') ?></p>
                                           </div>
                                       </div>
+
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Jenis Kelamin</label>
                                           <div class="col-lg-10">
-                                            <div class="radios">
-                                              <label class="label_radio r_on" for="radio-01">
-                                                  <input name="j_jk" id="j_jk" <?php if($j_jk=='LAKI-LAKI') echo "checked=''"; ?> value="LAKI-LAKI" type="radio" > LAKI-LAKI
-                                              </label>
-                                              <label class="label_radio r_off" for="radio-02">
-                                                  <input name="j_jk" id="j_jk" <?php if($j_jk=='PEREMPUAN') echo "checked=''"; ?> value="PEREMPUAN" type="radio"> PEREMPUAN
-                                              </label>
-                                          </div>
-                                          <p class="help-block"><?php echo form_error('j_jk') ?></p>
+                                              <input type="text" name="j_jk" readonly="" id="j_jk" value="<?php echo $j_jk; ?>" class="form-control tooltips" placeholder="" data-toggle="tooltip " placeholder="" data-original-title="Jenis Kelamin Dari Pelapor" >
+                                              <p class="help-block"><?php echo form_error('j_jk') ?></p>
                                           </div>
                                       </div>
+
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Tanggal Lahir</label>
                                           <div class="col-lg-4">
@@ -118,7 +113,7 @@
                                               </div>
                                               <p class="help-block"><?php echo form_error('j_tgl_lahir') ?></p>
                                           </div>
-                                          <div class="col-lg-1 control-label"><a class="btn btn-info" href="javascript:void(0)" id="jenazahU" ><i class="glyphicon glyphicon-refresh"></i></a></div>
+                                          <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Umur</label>
                                           <div class="col-lg-4">
                                               <input type="text" id="j_umur" name="j_umur" readonly="" value="<?php echo $j_umur; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Klik Tombol Disamping Untuk Menghitung Umur Otomatisr">
@@ -132,22 +127,16 @@
                                               <p class="help-block"><?php echo form_error('j_tmp_lahir') ?></p>
                                           </div>
                                       </div>
+
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Agama</label>
                                           <div class="col-lg-10">
-                                              <select class="form-control" id="j_agama" name="j_agama">
-                                                <option value="<?php echo $j_agama; ?>"><?php echo $j_agama; ?></option>
-                                                <option>Islam</option>
-                                                <option>Kristen</option>
-                                                <option>Katolik</option>
-                                                <option>Hindu</option>
-                                                <option>Budha</option>
-                                                <option>Lainnya</option>
-                                            </select>
-                                            <p class="help-block"><?php echo form_error('j_agama') ?></p>
+                                              <input type="text" value="<?php echo $j_agama; ?>" readonly class="form-control tooltips" name="j_agama" id="j_agama" data-toggle="tooltip " data-original-title="Isi Dengan Nama Kabupaten / Kota">
+                                              <p class="help-block"><?php echo form_error('j_agama') ?></p>
                                           </div>
                                       </div>
 
+                                      
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Pekerjaan</label>
                                           <div class="col-lg-10">
@@ -307,7 +296,7 @@
                                                   <p class="help-block"><?php echo form_error('i_tgl_lahir') ?></p>
                                               </div>
                                           </div>
-                                          <div class="col-lg-1 control-label"><a class="btn btn-info" href="javascript:void(0)" id="ibuU" ><i class="glyphicon glyphicon-refresh"></i></a></div>
+                                          <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Umur</label>
                                           <div class="col-lg-4">
                                               <input type="text" name="i_umur" id="i_umur" readonly="" value="<?php echo $i_umur; ?>" class="form-control tooltips"  data-toggle="tooltip " placeholder="" data-original-title="Klik Tombol Disamping Untuk Menghitung Umur Otomatis">
@@ -390,7 +379,7 @@
                                                   <p class="help-block"><?php echo form_error('a_tgl_lahir') ?></p>
                                               </div>
                                           </div>
-                                          <div class="col-lg-1 control-label"><a class="btn btn-info" href="javascript:void(0)" id="ayahU" ><i class="glyphicon glyphicon-refresh"></i></a></div>
+                                          <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Umur</label>
                                           <div class="col-lg-4">
                                               <input type="text" name="a_umur" readonly="" onkeypress="return runScript(event)" id="a_umur" value="<?php echo $a_umur; ?>" class="form-control tooltips" data-toggle="tooltip " placeholder="" data-original-title="Klik Tombol Disamping Untuk Menghitung Umur Otomatis">
@@ -480,7 +469,7 @@
                                                   <p class="help-block"><?php echo form_error('p_tgl_lahir') ?></p>
                                               </div>
                                           </div>
-                                          <div class="col-lg-1 control-label"><a class="btn btn-info" href="javascript:void(0)" id="pelaporU" ><i class="glyphicon glyphicon-refresh"></i></a></div>
+                                          <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Umur</label>
                                           <div class="col-lg-4">
                                               <input type="text" id="p_umur" name="p_umur" readonly="" value="<?php echo $p_umur; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Klik Tombol Disamping Untuk Menghitung Umur Otomatis">
@@ -491,14 +480,8 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Jenis Kelamin</label>
                                           <div class="col-lg-10">
-                                            <div class="radios">
-                                              <label class="label_radio r_on" for="radio-01">
-                                                  <input name="p_jk" id="p_jk" <?php if($p_jk=='LAKI-LAKI') echo "checked=''"; ?> value="LAKI-LAKI" type="radio" > Laki-Laki
-                                              </label>
-                                              <label class="label_radio r_off" for="radio-02">
-                                                  <input name="p_jk" id="p_jk" <?php if($p_jk=='PEREMPUAN') echo "checked=''"; ?> value="PEREMPUAN" type="radio"> Perempuan
-                                              </label>
-                                          </div>
+                                              <input type="text" name="p_jk" readonly="" id="p_jk" value="<?php echo $p_jk; ?>" class="form-control tooltips" placeholder="" data-toggle="tooltip " placeholder="" data-original-title="Jenis Kelamin Dari Pelapor" >
+                                              <p class="help-block"><?php echo form_error('p_jk') ?></p>
                                           </div>
                                       </div>
 
@@ -571,7 +554,7 @@
                                                   <p class="help-block"><?php echo form_error('s1_tgl_lahir') ?></p>
                                               </div>
                                           </div>
-                                          <div class="col-lg-1 control-label"><a class="btn btn-info" href="javascript:void(0)" id="saksi1U" ><i class="glyphicon glyphicon-refresh"></i></a></div>
+                                          <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Umur</label>
                                           <div class="col-lg-4">
                                               <input type="text" id="s1_umur" name="s1_umur" readonly="" value="<?php echo $s1_umur; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Klik Tombol Disamping Untuk Menghitung Umur Otomatis">
@@ -654,7 +637,7 @@
                                                   <p class="help-block"><?php echo form_error('s2_tgl_lahir') ?></p>
                                               </div>
                                           </div>
-                                          <div class="col-lg-1 control-label"><a class="btn btn-info" href="javascript:void(0)" id="saksi2U" ><i class="glyphicon glyphicon-refresh"></i></a></div>
+                                          <div class="col-lg-1 control-label"></div>
                                           <label class="col-lg-1 control-label">Umur</label>
                                           <div class="col-lg-4">
                                               <input type="text" id="s2_umur" name="s2_umur" readonly="" value="<?php echo $s2_umur; ?>" class="form-control tooltips" data-toggle="tooltip " data-original-title="Klik Tombol Disamping Untuk Menghitung Umur Otomatisr">
@@ -710,8 +693,8 @@
                                   </fieldset>
                                   <fieldset title="Selesai" class="step" id="default-step-2" >
                                   <center>
-                                    <h3>Pastikan Data Yang Anda Isikan Benar, Kemudian Upload Kelengkapan berkas
-                                  persyaratan pengajuan Akta Kelahiran.</h3>
+                                    <h3>Pastikan Data Yang Anda Isikan Benar, Kemudian Klik Tombol "Simpan Formulir" untuk menyimpan data Kelengkapan formulir
+                                  persyaratan pengajuan Akta Kematian.</h3>
                                   </center>
                                   
                                       <legend> </legend>

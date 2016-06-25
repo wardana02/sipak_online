@@ -1218,8 +1218,8 @@
                   
                                   <fieldset title="Selesai" class="step" id="default-step-2" >
                                   <center>
-                                    <h3>Pastikan Data Yang Anda Isikan Benar, Kemudian Klik Tombol "Simpan Formulir" untuk menyimpan data Kelengkapan formulir
-                                  persyaratan pengajuan Akta Perkawinan.</h3>
+                                    <h3>Pastikan Data Yang Anda Isikan Benar, Kemudian Upload Kelengkapan berkas
+                                  persyaratan pengajuan Akta Perceraian.</h3>
                                   </center>
                                   
                                       <legend> </legend>

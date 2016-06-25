@@ -313,7 +313,7 @@
                                                 </div>
                                           <input type="hidden" name="id_akta" value="<?php echo $bayi_data->id_AL; ?>" /> 
                                           <input type="hidden" name="no_hp" value="<?php echo $no_hp; ?>" />
-                                          <input type="text" name="no_registrasi" value="<?php echo $no_registrasi; ?>" /> 
+                                          <input type="hidden" name="no_registrasi" value="<?php echo $no_registrasi; ?>" /> 
 
                                           <button type="submit" class="btn btn-large btn-primary"> <i class="glyphicon glyphicon-check"></i> Simpan Verifikasi</button> 
                                       </form>

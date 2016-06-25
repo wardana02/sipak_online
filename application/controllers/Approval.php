@@ -116,6 +116,7 @@ class Approval extends CI_Controller
         'oleh'  => $row->oleh,
         'oleh_ambil'  => $row->oleh_ambil,
         'tgl' => $row->tgl_ambil,
+        'nama_pengambil' => $row->nama_pengambil,
 	    );
             $this->load->view('backend/admin/Approval/approval_read', $data);
         } else {
@@ -214,14 +215,14 @@ class Approval extends CI_Controller
                 $re = base_url("approval/index/AM");
                 $JENIS = "Akta Kematian";
             }elseif ($ctrl=='AP') {
-                $ST = $this->Akta_kematian_model->check($A,$B,$C);//return an object not array
-                $id_query = $ST->id_am;
-                $re = base_url("approval/index/AM");
+                $ST = $this->Akta_perkawinan_model->check($A,$B,$C);//return an object not array
+                $id_query = $ST->id_ap;
+                $re = base_url("approval/index/AP");
                 $JENIS = "Akta Perkawinan";
             }elseif ($ctrl=='AC') {
-                $ST = $this->Akta_kematian_model->check($A,$B,$C);//return an object not array
-                $id_query = $ST->id_am;
-                $re = base_url("approval/index/AM");
+                $ST = $this->Akta_perceraian_model->check($A,$B,$C);//return an object not array
+                $id_query = $ST->id_ac;
+                $re = base_url("approval/index/AC");
                 $JENIS = "Akta Perceraian";
             }
             else {
@@ -232,7 +233,7 @@ class Approval extends CI_Controller
                 //jika 3 data login cocok maka
                 $data = array(
                 'sb'  => ' sidebar-collapse',  
-                'id_al'     => $id_query,
+                'id_akta'     => $id_query,
                 'nik_pengaju'      => $ST->nik_pengaju,
                 'nama'      => $ST->nama,
                 's_no_daftar'=> $ST->no_registrasi,
@@ -594,6 +595,15 @@ class Approval extends CI_Controller
                 redirect($re);
             }
 
+        if($ctrl=='AM'){
+            $dt_jenazah = $this->Data_jenazah_model->get_by_am($id_akta);
+            $NIKJENAZAH = $dt_jenazah->nik;
+            $data = array('status' => 'meninggal' );
+            $this->Dps_model->update($NIKJENAZAH,$data);
+
+
+        }
+
         $data['progres'] = $status;
         if ($status=="diambil") {//set field yang diisi apabila status adalah diambil
             $data['tgl_ambil'] = date("Y-m-d");
@@ -620,6 +630,45 @@ class Approval extends CI_Controller
             </div>
                 ");
             $keyword = substr($id_akta, 0, 2);
+                redirect(site_url('approval/index/'.$keyword));
+            
+    }
+
+    //FUNGSI Untuk set nilai tb.approval bahwa akta sudah diambil
+    public function aktajadi(){
+
+        $id_akta = $this->input->post('id_akta');
+        $nik_pengambil = $this->input->post('nik_pengambil');
+        $nama_pengambil = $this->input->post('nama_pengambil');
+        $ctrl = substr($id_akta,0,2);
+        $re = base_url().'approval/index/'.$ctrl;
+
+
+        if ($id_akta!='') {
+            $data['progres'] = "diambil";
+            $data['tgl_ambil'] = date("Y-m-d");
+            $data['oleh_ambil'] = $this->session->userdata('nama_user');
+            $data['nik_pengambil'] = $nik_pengambil;
+            $data['nama_pengambil'] = $nama_pengambil;
+
+            $this->Approval_model->update($id_akta, $data);
+            $this->session->set_flashdata('message', "
+                <div class='alert alert-success alert-dismissable'>
+              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+                <h4><i class='glyphicon glyphicon-ok'></i> Berhasil!</h4>
+                    Status Akta Telah Berhasil Diperbaharui => Berkas $status !
+            </div>
+                ");
+        }else{
+            $this->session->set_flashdata('message', "
+                <div class='alert alert-danger alert-dismissable'>
+                  <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+                    <h4><i class='glyphicon glyphicon-remove'></i> $verified->no_regis !!</h4>
+                        Proses Pengambilan Akta Gagal, Silahkan Ulangi Lagi Proses Pengambilan Akta.
+                </div>
+                ");
+        }        
+                $keyword = substr($id_akta, 0, 2);
                 redirect(site_url('approval/index/'.$keyword));
             
     }

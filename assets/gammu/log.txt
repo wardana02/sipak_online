@@ -3012,3 +3012,75 @@ Wed 2016/06/22 10:45:07 gammu-smsd[3620]: Can't open device: Error opening devic
 Wed 2016/06/22 10:45:07 gammu-smsd[3620]: Failed to start SMSD, Error 5: Access is denied.
 
 
+Wed 2016/06/22 20:25:27 gammu-smsd[2132]: mysql service is deprecated. Please use SQL service with correct driver.
+Wed 2016/06/22 20:25:27 gammu-smsd[2132]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Wed 2016/06/22 20:25:30 gammu-smsd[2132]: Error connecting to database!
+Wed 2016/06/22 20:25:30 gammu-smsd[2132]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Wed 2016/06/22 20:25:30 gammu-smsd[2132]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Wed 2016/06/22 20:25:30 gammu-smsd[2132]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/06/23 09:07:43 gammu-smsd[2420]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/06/23 09:07:43 gammu-smsd[2420]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/06/23 09:07:44 gammu-smsd[2420]: Error connecting to database!
+Thu 2016/06/23 09:07:44 gammu-smsd[2420]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/06/23 09:07:44 gammu-smsd[2420]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/06/23 09:07:44 gammu-smsd[2420]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Thu 2016/06/23 19:26:44 gammu-smsd[2376]: mysql service is deprecated. Please use SQL service with correct driver.
+Thu 2016/06/23 19:26:44 gammu-smsd[2376]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Thu 2016/06/23 19:26:45 gammu-smsd[2376]: Error connecting to database!
+Thu 2016/06/23 19:26:45 gammu-smsd[2376]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Thu 2016/06/23 19:26:45 gammu-smsd[2376]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Thu 2016/06/23 19:26:45 gammu-smsd[2376]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/06/24 04:00:24 gammu-smsd[2372]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/06/24 04:00:24 gammu-smsd[2372]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/06/24 04:00:25 gammu-smsd[2372]: Error connecting to database!
+Fri 2016/06/24 04:00:25 gammu-smsd[2372]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/06/24 04:00:25 gammu-smsd[2372]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/06/24 04:00:25 gammu-smsd[2372]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/06/24 04:08:31 gammu-smsd[572]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/06/24 04:08:31 gammu-smsd[572]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/06/24 04:08:32 gammu-smsd[572]: Error connecting to database!
+Fri 2016/06/24 04:08:32 gammu-smsd[572]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/06/24 04:08:32 gammu-smsd[572]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/06/24 04:08:32 gammu-smsd[572]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/06/24 11:12:32 gammu-smsd[2200]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/06/24 11:12:32 gammu-smsd[2200]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/06/24 11:12:33 gammu-smsd[2200]: Error connecting to database!
+Fri 2016/06/24 11:12:33 gammu-smsd[2200]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/06/24 11:12:33 gammu-smsd[2200]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/06/24 11:12:33 gammu-smsd[2200]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/06/24 12:45:31 gammu-smsd[2248]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/06/24 12:45:31 gammu-smsd[2248]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/06/24 12:45:32 gammu-smsd[2248]: Error connecting to database!
+Fri 2016/06/24 12:45:32 gammu-smsd[2248]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/06/24 12:45:32 gammu-smsd[2248]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/06/24 12:45:32 gammu-smsd[2248]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Fri 2016/06/24 21:34:25 gammu-smsd[2280]: mysql service is deprecated. Please use SQL service with correct driver.
+Fri 2016/06/24 21:34:25 gammu-smsd[2280]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Fri 2016/06/24 21:34:26 gammu-smsd[2280]: Error connecting to database!
+Fri 2016/06/24 21:34:26 gammu-smsd[2280]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Fri 2016/06/24 21:34:26 gammu-smsd[2280]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Fri 2016/06/24 21:34:26 gammu-smsd[2280]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+
+Sat 2016/06/25 11:47:55 gammu-smsd[2404]: mysql service is deprecated. Please use SQL service with correct driver.
+Sat 2016/06/25 11:47:55 gammu-smsd[2404]: Warning: No PIN code in C:\xampp\htdocs\sip_capil\assets\gammu\bin\smsdrc file
+Sat 2016/06/25 11:47:56 gammu-smsd[2404]: Error connecting to database!
+Sat 2016/06/25 11:47:56 gammu-smsd[2404]: Error code: 2003, Error: Can't connect to MySQL server on 'localhost' (10061)
+Sat 2016/06/25 11:47:56 gammu-smsd[2404]: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Sat 2016/06/25 11:47:56 gammu-smsd[2404]: Failed to start SMSD, Error 3: The system cannot find the path specified.
+
+

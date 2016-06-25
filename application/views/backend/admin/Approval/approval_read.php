@@ -4,7 +4,7 @@
     
     </head>
     <body>
-        <h2 style="margin-top:0px">Approval Read</h2>
+        <h2 style="margin-top:0px">Detail Verifikasi Online</h2>
         <table class="table">
 	    <tr><td>RW</td><td><?php if($by_rw=='revisi'){echo "<span class='label label-warning'><i class='glyphicon glyphicon-wrench'></i> Terdapat Revisi </span>";} elseif($by_rw != NULL){echo "<span class='label label-success'><i class='glyphicon glyphicon-ok'></i> Diverifikasi | ".dateindo($by_rw)."</span>";}else{echo "<span class='label label-danger'><i class='glyphicon glyphicon-remove'></i> Belum Diverifikasi</span>";} ?></td></tr>
 	    <tr><td>Keterangan RW</td><td><?php echo $status_rw; ?></td></tr>
@@ -13,7 +13,7 @@
 	    <tr><td>Dukcapil</td><td><?php if($by_dukcapil=='revisi'){echo "<span class='label label-warning'><i class='glyphicon glyphicon-wrench'></i> Terdapat Revisi  </span>";} elseif($by_dukcapil != NULL){echo "<span class='label label-success'><i class='glyphicon glyphicon-ok'></i> Diverifikasi | ".dateindo($by_dukcapil)."</span>";}else{echo "<span class='label label-danger'><i class='glyphicon glyphicon-remove'></i> Belum Diverifikasi</span>";} ?></td></tr>
 	    <tr><td>Keterangan Dukcapil</td><td><?php echo $status_dukcapil; ?></td></tr>
       <?php if($oleh!=NULL){
-        echo "<tr><td>Oleh </td><td> $oleh</td></tr>";
+        echo "<tr><td>Verifikator </td><td> $oleh</td></tr>";
         }?>
       
 	    <tr><td>Progres Berkas</td><td>
@@ -30,6 +30,7 @@
         </td></tr>
         <?php if($progres=='diambil'){
         echo "<tr><td>Diserahkan Oleh Petugas </td><td> $oleh_ambil</td></tr>";
+        echo "<tr><td>Diambil Oleh </td><td> $nama_pengambil</td></tr>";
         }?>
 	    </table>
         </body>

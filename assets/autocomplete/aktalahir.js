@@ -1,41 +1,13 @@
     <script>
 
     window.onload=function(){
-            $('#ibuU').click(function(event){
-                var dob = new Date(document.getElementById("i_tgl_lahir").value);
-                var today = new Date();
-                var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
-                $('#i_umur').val(age);
-            });
-            $('#ayahU').click(function(event){
-                var dob = new Date(document.getElementById("a_tgl_lahir").value);
-                var today = new Date();
-                var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
-                $('#a_umur').val(age);
-            });
-            $('#pelaporU').click(function(event){
-                var dob = new Date(document.getElementById("p_tgl_lahir").value);
-                var today = new Date();
-                var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
-                $('#p_umur').val(age);
-            });
-            $('#saksi1U').click(function(event){
-                var dob = new Date(document.getElementById("s1_tgl_lahir").value);
-                var today = new Date();
-                var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
-                $('#s1_umur').val(age);
-            });
-            $('#saksi2U').click(function(event){
-                var dob = new Date(document.getElementById("s2_tgl_lahir").value);
-                var today = new Date();
-                var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
-                $('#s2_umur').val(age);
-            });
-            $('#jenazahU').click(function(event){
-                var dob = new Date(document.getElementById("j_tgl_lahir").value);
-                var today = new Date();
-                var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
-                $('#j_umur').val(age);
+            
+            $('#hari').click(function(){
+                var myDays = ['MINGGU', 'SENIN', 'SELASA', 'RABU', 'KAMIS', 'JUMAT', 'SABTU'];
+                var dob = new Date(document.getElementById("tgl_kelahiran").value);
+                var thisDay = dob.getDay(),
+                    thisDay = myDays[thisDay];
+                $('#hari_kelahiran').val(thisDay);
             });
         }
 
@@ -96,7 +68,9 @@
             valBack = jenazah.responseText.split("|");
             if (valBack[0]=='') {
               window.alert('Data NIK Tidak Ditemukan');
-            }
+            }else if(valBack[11]=='meninggal'){
+              window.alert('Data NIK yang Anda Masukkan telah Tercatat sebagai Warga Sudah Meninggal');
+            }else{
 
             var fullname = document.getElementById('j_nama');
             var date = document.getElementById('j_tgl_lahir');
@@ -109,8 +83,12 @@
             var jk = document.getElementById('j_jk');
             var tmp = document.getElementById('j_tmp_lahir');
             var agama = document.getElementById('j_agama');
+            var umur = document.getElementById('j_umur');
+            var dob = new Date(valBack[1]);
+            var today = new Date();
+            var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
             
-
+            umur.value = age;
             fullname.value = valBack[0];
             date.value = valBack[1];
             place.value = valBack[2];
@@ -122,6 +100,7 @@
             jk.value = valBack[8];
             tmp.value = valBack[9];
             agama.value = valBack[10];
+          }
           }
         }
 
@@ -161,8 +140,12 @@
             var kabkota = document.getElementById('a_a_kabkota');
             var provinsi = document.getElementById('a_a_provinsi');
             var pekerjaan = document.getElementById('a_pekerjaan');
+            var umur = document.getElementById('a_umur');
+            var dob = new Date(valBack[1]);
+            var today = new Date();
+            var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
             
-
+            umur.value = age;
             fullname.value = valBack[0];
             date.value = valBack[1];
             place.value = valBack[2];
@@ -210,8 +193,12 @@
             var kabkota = document.getElementById('i_a_kabkota');
             var provinsi = document.getElementById('i_a_provinsi');
             var pekerjaan = document.getElementById('i_pekerjaan');
+            var umur = document.getElementById('i_umur');
+            var dob = new Date(valBack[1]);
+            var today = new Date();
+            var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
             
-
+            umur.value = age;
             fullname.value = valBack[0];
             date.value = valBack[1];
             place.value = valBack[2];
@@ -220,6 +207,7 @@
             kabkota.value = valBack[5];
             provinsi.value = valBack[6];
             pekerjaan.value = valBack[7];
+            
           }
         }
 
@@ -249,28 +237,35 @@
             valBack = pelapor.responseText.split("|");
             if (valBack[0]=='') {
               window.alert('Data NIK Tidak Ditemukan');
-            }
+            }else if(valBack[11]=='meninggal'){
+              window.alert('Data NIK yang Anda Masukkan telah Tercatat sebagai Warga Sudah Meninggal');
+            }else{
 
             var fullname = document.getElementById('p_nama');
-            var dob = document.getElementById('p_tgl_lahir');
+            var doba = document.getElementById('p_tgl_lahir');
             var place = document.getElementById('p_a_alamat');
             var desa = document.getElementById('p_a_desa');
             var kecamatan = document.getElementById('p_a_kecamatan');
             var kabkota = document.getElementById('p_a_kabkota');
             var provinsi = document.getElementById('p_a_provinsi');
-
+            var jk = document.getElementById('p_jk');
             var job = document.getElementById('p_pekerjaan');
+            var umur = document.getElementById('p_umur');
+            var dob = new Date(valBack[1]);
+            var today = new Date();
+            var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
             
-
+            umur.value = age;
             fullname.value = valBack[0];
-            dob.value = valBack[1];
+            doba.value = valBack[1];
             place.value = valBack[2];
             desa.value = valBack[3];
             kecamatan.value = valBack[4];
             kabkota.value = valBack[5];
             provinsi.value = valBack[6];
-
+            jk.value = valBack[8];
             job.value = valBack[7];
+          }
           }
         }
 
@@ -299,30 +294,44 @@
             valBack = saksi1.responseText.split("|");
             if (valBack[0]=='') {
               window.alert('Data NIK Tidak Ditemukan');
-            }
+            }else if(valBack[11]=='meninggal'){
+              window.alert('Data NIK yang Anda Masukkan telah Tercatat sebagai Warga Sudah Meninggal');
+            }else{
 
-            var fullname = document.getElementById('s1_nama');
+            var fullname    = document.getElementById('s1_nama');
+            var place       = document.getElementById('s1_a_alamat');
+            var desa        = document.getElementById('s1_a_desa');
+            var kecamatan   = document.getElementById('s1_a_kecamatan');
+            var kabkota     = document.getElementById('s1_a_kabkota');
+            var provinsi    = document.getElementById('s1_a_provinsi');
+            var job         = document.getElementById('s1_pekerjaan');
+            var tlahir      = document.getElementById('s1_tmp_lahir');
+            var dlahir      = document.getElementById('s1_tgl_lahir');
+            var umur        = document.getElementById('s1_umur');
+            var hasil       = document.getElementById('s1_nama_organisasi');
+            var agama       = document.getElementById('s1_agama');
+            var dob         = new Date(valBack[1]);
+            var today       = new Date();
+            var age         = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
+            if('PENGHAYAT KEPERCAYAAN' == valBack[10]){
+                   hasil.disabled = false;
+                 }else{
+                   hasil.disabled = true;
+                 }
 
-            var place = document.getElementById('s1_a_alamat');
-            var desa = document.getElementById('s1_a_desa');
-            var kecamatan = document.getElementById('s1_a_kecamatan');
-            var kabkota = document.getElementById('s1_a_kabkota');
-            var provinsi = document.getElementById('s1_a_provinsi');
-            var job = document.getElementById('s1_pekerjaan');
-            var tlahir = document.getElementById('s1_tmp_lahir');
-            var dlahir = document.getElementById('s1_tgl_lahir');
             
-
-            fullname.value = valBack[0];
-            
-            place.value = valBack[2];
-            desa.value = valBack[3];
-            kecamatan.value = valBack[4];
-            kabkota.value = valBack[5];
-            provinsi.value = valBack[6];
-            job.value = valBack[7];
-            dlahir.value = valBack[1];
-            tlahir.value = valBack[9];
+            umur.value        = age;
+            fullname.value    = valBack[0];
+            dlahir.value      = valBack[1];
+            place.value       = valBack[2];
+            desa.value        = valBack[3];
+            kecamatan.value   = valBack[4];
+            kabkota.value     = valBack[5];
+            provinsi.value    = valBack[6];
+            job.value         = valBack[7];
+            tlahir.value      = valBack[9];
+            agama.value       = valBack[10];
+          }
           }
         }
 
@@ -352,7 +361,9 @@
             valBack = saksi2.responseText.split("|");
             if (valBack[0]=='') {
               window.alert('Data NIK Tidak Ditemukan');
-            }
+            }else if(valBack[11]=='meninggal'){
+              window.alert('Data NIK yang Anda Masukkan telah Tercatat sebagai Warga Sudah Meninggal');
+            }else{
 
             var fullname = document.getElementById('s2_nama');
 
@@ -364,10 +375,23 @@
             var job = document.getElementById('s2_pekerjaan');
             var tlahir = document.getElementById('s2_tmp_lahir');
             var dlahir = document.getElementById('s2_tgl_lahir');
+            var umur = document.getElementById('s2_umur');
+            var dob = new Date(valBack[1]);
+            var today = new Date();
+            var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
+            var hasil = document.getElementById('s2_nama_organisasi');
+            var agama = document.getElementById('s2_agama');
+                                            if('PENGHAYAT KEPERCAYAAN' == valBack[10]){
+                                              hasil.disabled = false;
+                                            }   
+                                            else{
+                                              hasil.disabled = true;
+                                            }
             
-
+            agama.value = valBack[10];
+            
+            umur.value = age;
             fullname.value = valBack[0];
-            
             place.value = valBack[2];
             desa.value = valBack[3];
             kecamatan.value = valBack[4];
@@ -376,6 +400,7 @@
             job.value = valBack[7];
             dlahir.value = valBack[1];
             tlahir.value = valBack[9];
+          }
           }
         }
 
@@ -405,14 +430,16 @@
             valBack = pendaftar.responseText.split("|");
             if (valBack[0]=='') {
               window.alert('Data NIK Tidak Ditemukan');
+            }else if(valBack[11]=='meninggal'){
+              window.alert('Data NIK yang Anda Masukkan telah Tercatat sebagai Warga Sudah Meninggal');
+            }else{
+              var fullname = document.getElementById('nama');
+              var fullname2 = document.getElementById('nama2');
+              fullname.value = valBack[0];
+              fullname2.value = valBack[0];
             }
 
-            var fullname = document.getElementById('nama');
-            var fullname2 = document.getElementById('nama2');
             
-
-            fullname.value = valBack[0];
-            fullname2.value = valBack[0];
           }
         }
 
@@ -442,7 +469,9 @@
             valBack = suami.responseText.split("|");
             if (valBack[0]=='') {
               window.alert('Data NIK Tidak Ditemukan');
-            }
+            }else if(valBack[11]=='meninggal'){
+              window.alert('Data NIK yang Anda Masukkan telah Tercatat sebagai Warga Sudah Meninggal');
+            }else{
 
             
             var fullname = document.getElementById('s_nama');
@@ -454,17 +483,26 @@
             var provinsi = document.getElementById('s_a_provinsi');
             var pekerjaan = document.getElementById('s_pekerjaan');
             var pbirth = document.getElementById('s_tmp_lahir');
+            var hasil = document.getElementById('s_nama_organisasi');
+            var agama = document.getElementById('s_agama');
+              if('PENGHAYAT KEPERCAYAAN' == valBack[10]){
+                 hasil.disabled = false;
+              } else{
+                 hasil.disabled = true;
+              }
             
-
-            fullname.value = valBack[0];
-            date.value = valBack[1];
-            place.value = valBack[2];
-            desa.value = valBack[3];
+            
+            fullname.value  = valBack[0];
+            date.value      = valBack[1];
+            place.value     = valBack[2];
+            desa.value      = valBack[3];
             kecamatan.value = valBack[4];
-            kabkota.value = valBack[5];
-            provinsi.value = valBack[6];
+            kabkota.value   = valBack[5];
+            provinsi.value  = valBack[6];
             pekerjaan.value = valBack[7];
-            pbirth.value = valBack[9];
+            pbirth.value    = valBack[9];
+            agama.value     = valBack[10];
+          }
           }
         }
 
@@ -493,9 +531,9 @@
             valBack = istri.responseText.split("|");
             if (valBack[0]=='') {
               window.alert('Data NIK Tidak Ditemukan');
-            }
-
-            
+            }else if(valBack[11]=='meninggal'){
+              window.alert('Data NIK yang Anda Masukkan telah Tercatat sebagai Warga Sudah Meninggal');
+            }else{
             var fullname = document.getElementById('i_nama');
             var date = document.getElementById('i_tgl_lahir');
             var place = document.getElementById('i_a_alamat'); 
@@ -505,17 +543,26 @@
             var provinsi = document.getElementById('i_a_provinsi');
             var pekerjaan = document.getElementById('i_pekerjaan');
             var pbirth = document.getElementById('i_tmp_lahir');
+            var hasil = document.getElementById('i_nama_organisasi');
+            var agama = document.getElementById('i_agama');
+              if('PENGHAYAT KEPERCAYAAN' == valBack[10]){
+                hasil.disabled = false;
+              }else{
+                hasil.disabled = true;
+              }
             
-
-            fullname.value = valBack[0];
-            date.value = valBack[1];
-            place.value = valBack[2];
-            desa.value = valBack[3];
-            kecamatan.value = valBack[4];
-            kabkota.value = valBack[5];
-            provinsi.value = valBack[6];
-            pekerjaan.value = valBack[7];
-            pbirth.value = valBack[9];
+            
+              fullname.value  = valBack[0];
+              date.value      = valBack[1];
+              place.value     = valBack[2];
+              desa.value      = valBack[3];
+              kecamatan.value = valBack[4];
+              kabkota.value   = valBack[5];
+              provinsi.value  = valBack[6];
+              pekerjaan.value = valBack[7];
+              pbirth.value    = valBack[9];
+              agama.value     = valBack[10];
+            }
           }
         }
 
@@ -556,16 +603,26 @@
             var job = document.getElementById('as_pekerjaan');
             var tlahir = document.getElementById('as_tmp_lahir');
             var dlahir = document.getElementById('as_tgl_lahir');
-
-            fullname.value = valBack[0];
-            place.value = valBack[2];
-            desa.value = valBack[3];
+            var agama = document.getElementById('as_agama');
+            var hasil = document.getElementById('as_nama_organisasi');
+                if('PENGHAYAT KEPERCAYAAN' == valBack[10]){
+                    hasil.disabled = false;
+                  }else{
+                   hasil.disabled = true;
+                   }
+            
+            
+            fullname.value  = valBack[0];
+            dlahir.value    = valBack[1];
+            place.value     = valBack[2];
+            desa.value      = valBack[3];
             kecamatan.value = valBack[4];
-            kabkota.value = valBack[5];
-            provinsi.value = valBack[6];
-            job.value = valBack[7];
-            tlahir.value = valBack[9];
-            dlahir.value = valBack[1];
+            kabkota.value   = valBack[5];
+            provinsi.value  = valBack[6];
+            job.value       = valBack[7];
+            tlahir.value    = valBack[9];
+            agama.value     = valBack[10];
+            
 
           }
         }
@@ -606,16 +663,24 @@
             var job = document.getElementById('is_pekerjaan');
             var tlahir = document.getElementById('is_tmp_lahir');
             var dlahir = document.getElementById('is_tgl_lahir');
-
-            fullname.value = valBack[0];
-            place.value = valBack[2];
-            desa.value = valBack[3];
+            var agama = document.getElementById('is_agama');
+            var hasil = document.getElementById('is_nama_organisasi');
+                if('PENGHAYAT KEPERCAYAAN' == valBack[10]){
+                    hasil.disabled = false;
+                  }else{
+                   hasil.disabled = true;
+                   }
+            
+            fullname.value  = valBack[0];
+            dlahir.value    = valBack[1];
+            place.value     = valBack[2];
+            desa.value      = valBack[3];
             kecamatan.value = valBack[4];
-            kabkota.value = valBack[5];
-            provinsi.value = valBack[6];
-            job.value = valBack[7];
-            tlahir.value = valBack[9];
-            dlahir.value = valBack[1];
+            kabkota.value   = valBack[5];
+            provinsi.value  = valBack[6];
+            job.value       = valBack[7];
+            tlahir.value    = valBack[9];
+            agama.value     = valBack[10];
           }
         }
 
@@ -655,16 +720,24 @@
             var job = document.getElementById('ai_pekerjaan');
             var tlahir = document.getElementById('ai_tmp_lahir');
             var dlahir = document.getElementById('ai_tgl_lahir');
-
-            fullname.value = valBack[0];
-            place.value = valBack[2];
-            desa.value = valBack[3];
+            var agama = document.getElementById('ai_agama');
+            var hasil = document.getElementById('ai_nama_organisasi');
+                if('PENGHAYAT KEPERCAYAAN' == valBack[10]){
+                    hasil.disabled = false;
+                  }else{
+                   hasil.disabled = true;
+                   }
+            
+            fullname.value  = valBack[0];
+            dlahir.value    = valBack[1];
+            place.value     = valBack[2];
+            desa.value      = valBack[3];
             kecamatan.value = valBack[4];
-            kabkota.value = valBack[5];
-            provinsi.value = valBack[6];
-            job.value = valBack[7];
-            tlahir.value = valBack[9];
-            dlahir.value = valBack[1];
+            kabkota.value   = valBack[5];
+            provinsi.value  = valBack[6];
+            job.value       = valBack[7];
+            tlahir.value    = valBack[9];
+            agama.value     = valBack[10];
 
           }
         }
@@ -695,26 +768,39 @@
             if (valBack[0]=='') {
               window.alert('Data NIK Tidak Ditemukan');
             }
-
-            var fullname = document.getElementById('ii_nama');
-            var place = document.getElementById('ii_a_alamat');
-            var desa = document.getElementById('ii_a_desa');
+            else {
+            var fullname  = document.getElementById('ii_nama');
+            var place     = document.getElementById('ii_a_alamat');
+            var desa      = document.getElementById('ii_a_desa');
             var kecamatan = document.getElementById('ii_a_kecamatan');
-            var kabkota = document.getElementById('ii_a_kabkota');
-            var provinsi = document.getElementById('ii_a_provinsi');
-            var job = document.getElementById('ii_pekerjaan');
-            var tlahir = document.getElementById('ii_tmp_lahir');
-            var dlahir = document.getElementById('ii_tgl_lahir');
-
-            fullname.value = valBack[0];
-            place.value = valBack[2];
-            desa.value = valBack[3];
+            var kabkota   = document.getElementById('ii_a_kabkota');
+            var provinsi  = document.getElementById('ii_a_provinsi');
+            var job       = document.getElementById('ii_pekerjaan');
+            var tlahir    = document.getElementById('ii_tmp_lahir');
+            var dlahir    = document.getElementById('ii_tgl_lahir');
+            var agama     = document.getElementById('ii_agama');
+            var hasil     = document.getElementById('ii_nama_organisasi');
+            if('PENGHAYAT KEPERCAYAAN' == valBack[10]){
+                    hasil.disabled = false;
+                  }else{
+                   hasil.disabled = true;
+                   }
+           
+            
+            fullname.value  = valBack[0];
+            dlahir.value    = valBack[1];
+            place.value     = valBack[2];
+            desa.value      = valBack[3];
             kecamatan.value = valBack[4];
-            kabkota.value = valBack[5];
-            provinsi.value = valBack[6];
-            job.value = valBack[7];
-            tlahir.value = valBack[9];
-            dlahir.value = valBack[1];
+            kabkota.value   = valBack[5];
+            provinsi.value  = valBack[6];
+            job.value       = valBack[7];
+            tlahir.value    = valBack[9];
+            agama.value     = valBack[10];
+
+            }
+
+            
           }
         }
 

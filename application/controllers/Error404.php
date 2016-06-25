@@ -25,12 +25,13 @@ class Error404 extends CI_Controller {
 
 	public function debug(){
 		        		$data['action'] = site_url('');
-		        		//$data['conten'] = "frontend/aktaperkawinan/akta_perkawinan";
-		        		//$data['conten'] = "frontend/aktaperkawinan/akta_perkawinan";
-		        		$data['conten'] = "frontend/aktalahir/akta_lahir";
+		        		//$data['conten'] = 'backend/admin/Approval/approval_surat';
+		        		$data['conten'] = "frontend/aktaperceraian/akta_perceraian";
+		        		//$data['conten'] = "frontend/aktamati/akta_mati";
 						//$data['conten'] = "frontend/aktaperkawinan/berkas_perkawinan";
 						$data['B']		 = "active";
 						$data['B2']		 = "active";
 		            $this->load->view('backend/dashboard/index2', $data);
+
 		    }
 }

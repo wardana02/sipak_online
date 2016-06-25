@@ -126,7 +126,7 @@ class Approval_model extends CI_Model
             FROM approval 
             JOIN akta_perkawinan ON akta_perkawinan.id_ap=approval.id_akta
             JOIN dps ON akta_perkawinan.nik_pengaju=dps.nik
-            WHERE approval.progres!='diambil' $wil
+            WHERE (approval.progres IS NULL OR approval.progres='jadi' OR approval.progres='diproses') $wil
             ";
         $query = $this->db->query($qw);
                 return $query->result();
@@ -166,7 +166,7 @@ class Approval_model extends CI_Model
             FROM approval 
             JOIN akta_perceraian ON akta_perceraian.id_ac=approval.id_akta
             JOIN dps ON akta_perceraian.nik_pengaju=dps.nik
-            WHERE approval.progres!='diambil' $wil
+            WHERE (approval.progres IS NULL OR approval.progres='jadi' OR approval.progres='diproses') $wil
             ";
         $query = $this->db->query($qw);
                 return $query->result();

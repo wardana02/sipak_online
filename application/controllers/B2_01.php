@@ -101,7 +101,7 @@ class B2_01 extends CI_Controller
 		    $config['allowed_types'] = 'gif|jpg|png';
 		    $config['max_size'] = '4048'; //maksimum besar file 2M
        		$config['max_width']  = '3840'; //lebar maksimum 1288 px
-       		$config['max_height']  = '2160'; //tinggi maksimu 768 px
+       		$config['max_height']  = '3840'; //tinggi maksimu 768 px
 
 		    if (!is_dir('assets/uploads/'.$no)) {
 				    mkdir('./assets/uploads/' . $no, 0777, TRUE);

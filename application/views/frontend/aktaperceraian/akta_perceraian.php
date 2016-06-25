@@ -165,38 +165,16 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Pendidikan Terakhir</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="s_pendidikan_terakhir" id="s_pendidikan_terakhir" value="<?php echo $s_pendidikan_terakhir; ?>" class="form-control tooltips" placeholder="" data-toggle="tooltip " data-original-title="" >
+                                              <input type="text" name="s_pendidikan_terakhir" id="s_pendidikan_terakhir" value="<?php echo $s_pendidikan_terakhir; ?>" class="form-control tooltips" placeholder="" data-toggle="tooltip " data-original-title="Isi dengan Derajat pendidikan terkahir yang telah selesai ditempuh"  >
                                               <p class="help-block"><?php echo form_error('s_pendidikan_terakhir') ?></p>
                                           </div>
                                       </div>
 
-                                      <script type="text/javascript">
-                                        function agamaSuami() {
-                                            var selMenu = document.getElementById('s_agama');
-                                            var hasil = document.getElementById('s_nama_organisasi');
-                                            if(selMenu.value == 'Penghayat Kepercayaan'){
-                                              hasil.disabled = false;
-                                            }   
-                                            else{
-                                              hasil.disabled = true;
-                                            }    
-                                        }
-                                      </script>
-                                      
                                       <div class="form-group">
-                                          <label class="col-lg-2 control-label">Agama / Penghayat Kepercayaan</label>
+                                          <label class="col-lg-2 control-label">Agama (Sesuai Pada Data KTP)</label>
                                           <div class="col-lg-10">
-                                              <select class="form-control" name="s_agama" id="s_agama" onChange="agamaSuami()">
-                                                <option value="Islam">Islam</option>
-                                                <option value="Kristen">Kristen</option>
-                                                <option value="Katolik">Katolik</option>
-                                                <option value="Hindu">Hindu</option>
-                                                <option value="Budha">Budha</option>
-                                                <option value="Konghucu">Konghucu</option>
-                                                <option value="Penghayat Kepercayaan">Penghayat Kepercayaan</option>
-                                                <option value="Lainnya">Lainnya</option>
-                                            </select>
-                                            <p class="help-block"><?php echo form_error('s_agama') ?></p>
+                                              <input type="text" name="s_agama" disabled="" id="s_agama" value="<?php echo $s_agama; ?>" disabled="" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
+                                              <p class="help-block"><?php echo form_error('s_agama') ?></p>
                                           </div>
                                       </div>
 
@@ -317,38 +295,16 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Pendidikan Terakhir</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="i_pendidikan_terakhir" id="i_pendidikan_terakhir" value="<?php echo $i_pendidikan_terakhir; ?>" class="form-control tooltips" placeholder="" data-toggle="tooltip " data-original-title="" >
+                                              <input type="text" name="i_pendidikan_terakhir" id="i_pendidikan_terakhir" value="<?php echo $i_pendidikan_terakhir; ?>" class="form-control tooltips" data-toggle="tooltip" data-original-title="Isi dengan Derajat pendidikan terkahir yang telah selesai ditempuh" >
                                               <p class="help-block"><?php echo form_error('i_pendidikan_terakhir') ?></p>
                                           </div>
                                       </div>
 
-                                      <script type="text/javascript">
-                                        function agamaIstri() {
-                                            var selMenu = document.getElementById('i_agama');
-                                            var hasil = document.getElementById('i_nama_organisasi');
-                                            if(selMenu.value == 'Penghayat Kepercayaan'){
-                                              hasil.disabled = false;
-                                            }   
-                                            else{
-                                              hasil.disabled = true;
-                                            }    
-                                        }
-                                      </script>
-                                      
                                       <div class="form-group">
-                                          <label class="col-lg-2 control-label">Agama / Penghayat Kepercayaan</label>
+                                          <label class="col-lg-2 control-label">Agama (Sesuai Pada Data KTP)</label>
                                           <div class="col-lg-10">
-                                              <select class="form-control" name="i_agama" id="i_agama" onChange="agamaIstri()">
-                                                <option value="Islam">Islam</option>
-                                                <option value="Kristen">Kristen</option>
-                                                <option value="Katolik">Katolik</option>
-                                                <option value="Hindu">Hindu</option>
-                                                <option value="Budha">Budha</option>
-                                                <option value="Konghucu">Konghucu</option>
-                                                <option value="Penghayat Kepercayaan">Penghayat Kepercayaan</option>
-                                                <option value="Lainnya">Lainnya</option>
-                                            </select>
-                                            <p class="help-block"><?php echo form_error('i_agama') ?></p>
+                                              <input type="text" name="i_agama" disabled="" id="i_agama" value="<?php echo $i_agama; ?>" disabled="" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
+                                              <p class="help-block"><?php echo form_error('i_agama') ?></p>
                                           </div>
                                       </div>
 
@@ -363,7 +319,7 @@
                                       <div class="form-group">
                                           <label class="col-lg-2 control-label">Pekerjaan</label>
                                           <div class="col-lg-10">
-                                              <input type="text" name="i_pekerjaan" id="i_pekerjaan" value="<?php echo $i_pekerjaan; ?>" readonly="" class="form-control tooltips" data-toggle="tooltip " data-original-title="Isi Dengan Nama Organisasi Penghayat Kepercayaan" >
+                                              <input type="text" name="i_pekerjaan" id="i_pekerjaan" value="<?php echo $i_pekerjaan; ?>" readonly="" class="form-control tooltips" data-toggle="tooltip " data-original-title="Pekerjaan Dari Data Suami, Sesuai dengan Elemen data pada KTP" >
                                               <p class="help-block"><?php echo form_error('i_pekerjaan') ?></p>
                                           </div>
                                       </div>
@@ -521,15 +477,14 @@
                
                                   <fieldset title="Selesai" class="step" id="default-step-2" >
                                   <center>
-                                    <h3>Pastikan Data Yang Anda Isikan Benar, Kemudian Upload Kelengkapan berkas
-                                  persyaratan pengajuan Akta Kelahiran.</h3>
+                                    <h3>Pastikan Data Yang Anda Isikan Benar, Kemudian Klik Tombol "Simpan Formulir" untuk menyimpan data Kelengkapan formulir
+                                  persyaratan pengajuan Akta Perceraian.</h3>
                                   </center>
                                   
                                       <legend> </legend>
-
                                       <div class="alert alert-info fade in">
                                        <center><h4>
-                                          <strong>Layanan SMS Tracking Dokumen!</strong> 
+                                          <strong>Layanan SMS Tracking Dokumen</strong><br> 
                                           dengan format "STATUS_NOMOR PENDAFTARAN" kirim sms ke 0857-25-4858-10
                                           </h4></center>
                                       </div>

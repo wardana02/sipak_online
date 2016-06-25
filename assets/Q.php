@@ -21,7 +21,7 @@ if(mysql_num_rows($result)==0){
 	$row = mysql_fetch_array($result);
 	echo $row['nama_lengkap']."|".$row['tgl_lahir']."|".$row['ps_alamat'].
 	"|".$row['ps_kelurahan']."|".$row['ps_kecamatan']."|SURAKARTA|JAWA TENGAH|".$row['pekerjaan'].
-	"|".$row['jk']."|".$row['tmp_lahir']."|".$row['agama'];
+	"|".$row['jk']."|".$row['tmp_lahir']."|".$row['agama']."|".$row['status'];
 }
 
 ?>
